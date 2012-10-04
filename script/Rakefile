@@ -1,0 +1,20 @@
+require 'hoe'
+require './lib/sportdb.rb'
+
+Hoe.spec 'sportdb' do
+  
+  self.version = SportDB::VERSION
+  
+  self.summary = 'sportdb - sport.db command line tool'
+  self.description = summary
+
+  self.urls    = ['http://geraldb.github.com/sport.db']
+  
+  self.author  = 'Gerald Bauer'
+  self.email   = 'opensport@googlegroups.com'
+    
+  # switch extension to .markdown for gihub formatting
+  self.readme_file  = 'README.markdown'
+  self.history_file = 'History.markdown'
+  
+end
