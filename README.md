@@ -1,4 +1,6 @@
 sport.db
 ========
 
-Open Sports Database &amp; Schema
+Open Sports Database & Schema
+
+
