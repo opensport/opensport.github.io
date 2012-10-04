@@ -5,6 +5,10 @@
 
 # core and stlibs
 
+
+### fix/todo: rename to create.rb
+
+
 require 'yaml'
 require 'pp'
 require 'logger'
@@ -16,6 +20,13 @@ require 'fileutils'
 require 'active_record'   ## todo: add sqlite3? etc.
 
  
+ 
+## fix: use yaml for db config!!! 
+## fix: rename to create_db
+
+
+
+
 def setup_db( db_config )
         
   ActiveRecord::Base.establish_connection( db_config )
