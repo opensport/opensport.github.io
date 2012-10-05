@@ -1,5 +1,5 @@
 require 'hoe'
-require './lib/sportdb.rb'
+require './lib/sportdb/version.rb'
 
 Hoe.spec 'sportdb' do
   
