@@ -1,3 +1,3 @@
-### 0.0.1 / 2012-10-04
+### 0.1.0 / 2012-10-06
 
 * Everything is new. First release

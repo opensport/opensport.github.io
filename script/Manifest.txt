@@ -2,4 +2,11 @@ History.markdown
 Manifest.txt
 README.markdown
 Rakefile
+bin/sportdb
 lib/sportdb.rb
+lib/sportdb/cli/opts.rb
+lib/sportdb/cli/runner.rb
+lib/sportdb/models.rb
+lib/sportdb/schema.rb
+lib/sportdb/utils.rb
+lib/sportdb/version.rb
