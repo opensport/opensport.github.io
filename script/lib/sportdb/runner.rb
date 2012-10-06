@@ -74,32 +74,48 @@ EOS
     #
     
     
-      name = File.basename( arg, '.*' )
+ #     name = File.basename( arg, '.*' )
  
-      config_path = arg.dup   # add .yml file extension if missing (for convenience)
-      config_path << '.yml'  unless config_path.ends_with?( '.yml' )
+ #     config_path = arg.dup   # add .yml file extension if missing (for convenience)
+ #     config_path << '.yml'  unless config_path.ends_with?( '.yml' )
 
-      config = YAML.load_file( config_path )
+ #     config = YAML.load_file( config_path )
       
-      puts "dump >#{config_path}<:"
-      pp config
+ #     puts "dump >#{config_path}<:"
+ #     pp config
+   
+=begin
+
+## todo: add ruby version, etc.
+
+puts "working directory: #{Dir.pwd}"
+
+
+DB_CONFIG = {
+  :adapter  => 'sqlite3',
+  :database => 'sport.db'
+}
+
+ActiveRecord::Base.establish_connection( DB_CONFIG )
+
+
+['cl/teams', 'cl/2012_13/cl'].each do |seed|
+    puts "*** loading seed data in '#{seed}'..."
+    require "#{Dir.pwd}/db/#{seed}.rb"
+end
+
+Prop.create!( :key => 'db.version', :value => '1' )
+
+
+=end
+   
+   
       
     end
     
     puts 'Done.'
     
   end   # method run
-
-
-private
-
-  def create_db( db_config )
-        
-    ActiveRecord::Base.establish_connection( db_config )
-
-
-    
-  end # method create_db
 
   
 end # class Runner

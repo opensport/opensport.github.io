@@ -19,6 +19,7 @@ require 'active_record'   ## todo: add sqlite3? etc.
 
 # our own code
 
+require 'sportdb/schema'
 require 'sportdb/models'
 require 'sportdb/version'
 require 'sportdb/opts'
