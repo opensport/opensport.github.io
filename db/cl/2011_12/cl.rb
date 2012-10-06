@@ -10,6 +10,7 @@ cl = Event.create!( :key => 'cl',
                     :title => 'Champions League 2011/12',
                     :start_at => Time.cet( '2011-10-10 17:00' ) )
 
+
 inter     = Team.find_by_key!( 'inter' )
 marseille = Team.find_by_key!( 'marseille' )
 bayern    = Team.find_by_key!( 'bayern' )
@@ -82,5 +83,6 @@ Game.create_knockout_pairs_from_ary!( games_cl16, cl16, cl16_2 )
 Game.create_knockout_pairs_from_ary!( games_cl8,  cl8,  cl8_2  )
 Game.create_knockout_pairs_from_ary!( games_cl4,  cl4,  cl4_2  )
 Game.create_knockouts_from_ary!( games_cl1,  cl1 )
+
 
 Prop.create!( :key => 'db.cl.2011/12.version', :value => '1' )
