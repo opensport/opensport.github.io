@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-
 teams = [
   [ 'porto',        'FC Porto' ],
   [ 'kiew',         'Dynamo Kiew' ],

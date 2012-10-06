@@ -1,12 +1,10 @@
 
 module SportDB
 
-class Runner
+class CreateDB
 
-def create_db( db_config )
-        
-  ActiveRecord::Base.establish_connection( db_config )
-    
+def self.up
+  
   ActiveRecord::Schema.define do
 
 create_table :props do |t|
@@ -111,10 +109,10 @@ add_index :groups_teams, :group_id
   end # block Schema.define
 
 
-  Prop.create!( :key => 'db.schema.version', :value => '1' )
+  Prop.create!( :key => 'db.schema.version', :value => SportDB::VERSION )
 
-end # method create_db
+end # method up
 
-end # class Runner
+end # class CreateDB
 
 end # module SportDB

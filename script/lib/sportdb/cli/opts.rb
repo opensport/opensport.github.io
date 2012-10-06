@@ -19,6 +19,15 @@ class Opts
   def output_path
     @output_path || '.'
   end
+  
+
+  def data_path=(value)
+    @data_path = value
+  end
+
+  def data_path
+    @data_path || '.'
+  end
 
 
 end # class Opts
