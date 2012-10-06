@@ -22,6 +22,7 @@ require 'active_record'   ## todo: add sqlite3? etc.
 require 'sportdb/schema'
 require 'sportdb/models'
 require 'sportdb/utils'
+require 'sportdb/loader'
 require 'sportdb/version'
 require 'sportdb/cli/opts'
 require 'sportdb/cli/runner'
@@ -38,6 +39,14 @@ module SportDB
 
   def self.main
     Runner.new.run(ARGV)
+  end
+  
+
+  # load built-in (that is, bundled within the gem) named seeds
+  # - pass in an array of seed names e.g. [ 'cl/teams', 'cl/2012_13/cl' ] etc.
+
+  def self.load( args )
+    Loader.new.run( args )
   end
 
 end  # module SportDB

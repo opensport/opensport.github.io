@@ -12,6 +12,7 @@ class Runner
 
   attr_reader :logger, :opts
 
+
   def run( args )
     opt=OptionParser.new do |cmd|
     
@@ -19,6 +20,8 @@ class Runner
 
       ## todo: change to different flag??   use -c/--config ???
       cmd.on( '-c', '--create', 'Create DB Schema' ) { opts.create = true }
+      
+      cmd.on( '--load', 'Use Loader for Builtin Sports Data' ) { opts.load = true }
       
       cmd.on( '-o', '--output PATH', "Output Path (default is #{opts.output_path})" ) { |path| opts.output_path = path }
 
@@ -80,8 +83,30 @@ EOS
       CreateDB.up
     end
 
+    loader = nil
+    if opts.load?
+      loader = Loader.new
+    end
+
     args.each do |arg|
       name = arg     # File.basename( arg, '.*' )
+      
+      if opts.load?
+        loader.load_fixtures( name )  # load from gem (built-in)
+      else
+        load_fixtures( name )  # load from file system
+      end
+    end
+    
+    dump_stats
+    dump_props
+    
+    puts 'Done.'
+    
+  end   # method run
+
+
+  def load_fixtures( name )
       path = "#{opts.data_path}/#{name}.rb"
  
       puts "*** loading data '#{name}' (#{path})..."
@@ -100,16 +125,11 @@ EOS
       # require "#{Dir.pwd}/db/#{seed}.rb"
 
       # Prop.create!( :key => "db.#{name}.version", :value => SportDB::VERSION )
-   
-    end
-    
-    dump_stats
-    dump_props
-    
-    puts 'Done.'
-    
-  end   # method run
+  end
 
+
+
+  ##### fix/todo: reuse between runner/loader - include w/ helper module?
   def dump_stats
     # todo: use %5d or similar to format string
     puts "Stats:"
