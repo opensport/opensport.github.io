@@ -1,25 +1,118 @@
-sport.db
-========
+Welcome to `sport.db`
+=====================
 
-Open Sports Database & Schema
+A Free Open Sports Database & Schema
+
+## Usage
+
+Get a copy of the `sport.db` file. That's it.
+
+## Example events include:
+
+* [UEFA Champions League 2012/13](https://github.com/geraldb/sport.db/tree/master/db/cl)
+* [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/db/cl)
+* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
+* [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
+* [UEFA European Football Championship aka Euro 2012](https://github.com/geraldb/sport.db/tree/master/db/euro)
+* [Romania Liga 1 2012/13](https://github.com/geraldb/sport.db/tree/master/db/ro)
+* [México Primera División Apertura 2012](https://github.com/geraldb/sport.db/tree/master/db/mx)
+* [World Cup Quali 2012/13](https://github.com/geraldb/sport.db/tree/master/db/world)
+* [National Hockey League (NHL) 2012](https://github.com/geraldb/sport.db/tree/master/db/nhl)
+
+## Demo
+
+Try the `sport.db` Web Admin demo install running
+on Heroku [`sportdbdemo.herokuapp.com`](http://sportdbdemo.herokuapp.com).
 
 
+## Tables, Schema
 
+The `sport.db` includes the following tables:
+
+* teams
+* games
+* events
+  * events_teams (join table)
+* rounds
+* groups
+  * groups_teams (join table)
+
+
+[add schema pic here]
+
+
+###  `teams` Table
+
+[tbd]
+
+###  `games` Table
+
+[tbd]
+
+###  `events` Table
+
+[tbd]
+
+
+## Command Line Tool
+
+
+    sportdb - sport.db command line tool
+    
+    Usage: sportdb [options]
+      -c, --create                     Create DB Schema
+          --load                       Use Loader for Builtin Sports Data
+      -o, --output PATH                Output Path (default is .)
+      -i, --include PATH               Data Path (default is .)
+      -v, --version                    Show version
+          --verbose                    Show debug trace
+      -h, --help                       Show this message
+    
+    
+    Examples:
+       sportdb cl/teams cl/2012_13/cl                     # import champions league (cl)
+       sportdb -c                                         # create database schema
+
+
+See the [`sportdb` documentation](https://github.com/geraldb/sport.db/tree/master/script) for more.
+
+
+## Build Your Own `sport.db` Version
+
+Step 1:  Use the `sportdb` command line tool to create an empty database, that is, `sport.db`.
+Issue the command:
+
+    sportdb --create
+
+Step 2:  Add your events and game fixtures of choice. For example,
+let's use the Champions League 2012/13 and the World Cup 2012/13 Quali events and fixtures:
+
+    sportdb --include <your_path_to_fixtures> cl/teams cl/2012_13/cl
+    sportdb --include <your_path_to_fixtures> euro/teams world/2012_13/quali_2012_13
+
+That's it.
 
 
 ## Real World Usage
 
-[Wettpool](http://geraldb.github.com/wettpool) - A free, open source sports betting pool
+[sport.db Web Admin](https://github.com/geraldb/sport.db.admin) - `sport.db` Web Admin Tool in Ruby on Rails (version 3.2 and up).
+
+[Sportbook](http://geraldb.github.com/sportbook) - A free, open source sports betting pool
 in Ruby on Rails (version 3.2 and up). 
 
 
 ## Alternatives
 
-* [SportsDB](http://www.sportsdb.org)  - open database schema for sports information (formerly known as XTOSS: The XML Team Open Sports Schema.)
-* [openLigaDB](http://www.openligadb.de) -  community-based sport results
+[SportsDB](http://www.sportsdb.org)  - open database schema for sports information (formerly known as XTOSS: The XML Team Open Sports Schema.)
+
+[openLigaDB](http://www.openligadb.de) -  community-based sport results
 
 
 ## License
 
 The `sport.db` schema, data and scripts are dedicated to the public domain.
 Use it as you please with no restrictions whatsoever.
+
+## Questions? Comments?
+
+Send them along to the [Open Sports Database & Friends Forum/Mailing List](http://groups.google.com/group/opensport). Thanks!
