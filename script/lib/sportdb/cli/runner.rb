@@ -20,6 +20,8 @@ class Runner
 
       ## todo: change to different flag??   use -c/--config ???
       cmd.on( '-c', '--create', 'Create DB Schema' ) { opts.create = true }
+
+      cmd.on( '--delete', 'Delete all records' ) { opts.delete = true }
       
       cmd.on( '--load', 'Use Loader for Builtin Sports Data' ) { opts.load = true }
       
@@ -81,6 +83,10 @@ EOS
     
     if opts.create?
       CreateDB.up
+    end
+    
+    if opts.delete?
+      SportDB.delete!
     end
 
     loader = nil

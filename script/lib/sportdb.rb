@@ -48,6 +48,19 @@ module SportDB
   def self.load( args )
     Loader.new.run( args )
   end
+  
+  
+  # delete ALL records (use with care!)
+  def self.delete!
+    Team.delete_all
+    Game.delete_all
+    Event.delete_all
+    EventTeam.delete_all
+    Group.delete_all
+    GroupTeam.delete_all
+    Round.delete_all
+    Prop.delete_all
+  end # method delete!
 
 end  # module SportDB
 

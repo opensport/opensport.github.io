@@ -12,6 +12,16 @@ class Opts
   end
 
 
+  def delete=(boolean)
+    @delete = boolean
+  end
+
+  def delete?
+    return false if @delete.nil?   # default create flag is false
+    @delete == true
+  end
+
+
   # use loader? (that is, built-in seed data)
   def load=(boolean)
     @load = boolean

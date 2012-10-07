@@ -7,7 +7,7 @@ A Free Open Sports Database & Schema
 
 Get a copy of the `sport.db` file. That's it.
 
-## Example events include:
+## Events include:
 
 * [UEFA Champions League 2012/13](https://github.com/geraldb/sport.db/tree/master/db/cl)
 * [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/db/cl)
@@ -21,7 +21,7 @@ Get a copy of the `sport.db` file. That's it.
 
 ## Demo
 
-Try the `sport.db` Web Admin demo install running
+Try the `sport.db` Web Admin demo running
 on Heroku [`sportdbdemo.herokuapp.com`](http://sportdbdemo.herokuapp.com).
 
 
@@ -74,13 +74,12 @@ The `sport.db` includes the following tables:
        sportdb -c                                         # create database schema
 
 
-See the [`sportdb` documentation](https://github.com/geraldb/sport.db/tree/master/script) for more.
+See the [`sportdb` command line tool documentation](https://github.com/geraldb/sport.db/tree/master/script) for more.
 
 
 ## Build Your Own `sport.db` Version
 
-Step 1:  Use the `sportdb` command line tool to create an empty database, that is, `sport.db`.
-Issue the command:
+Step 1:  Create an empty database, that is, `sport.db`. Issue the command:
 
     sportdb --create
 
