@@ -7,6 +7,13 @@ def self.up
   
   ActiveRecord::Schema.define do
 
+create_table :countries do |t|
+  t.string :title, :null => false
+  t.string :tag,   :null => false  # short three letter tag
+  t.string :key,   :null => false
+  t.timestamps
+end
+
 create_table :props do |t|
   t.string :key,   :null => false
   t.string :value, :null => false
@@ -18,6 +25,9 @@ create_table :teams do |t|
   t.string  :title2
   t.string  :key,   :null => false   # import/export key
   t.string  :tag     # make it not null?  - three letter tag (short title)
+  t.references :country,   :null => false
+  t.boolean  :club,     :null => false, :default => false  # is it a club (not a national team)?
+  t.boolean  :national, :null => false, :default => false  # is it a national selection team (not a club)?
   t.timestamps
 end
 

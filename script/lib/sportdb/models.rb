@@ -1,12 +1,40 @@
 module SportDB
 
+
+class Country < ActiveRecord::Base
+  self.table_name = 'countries'
+
+  def self.create_from_ary!( countries )
+    countries.each do |values|
+      
+      ## key & title required
+      attr = {
+        :key   => values[0],
+        :title => values[1],
+        :tag   => values[2]
+      }
+      
+      Country.create!( attr )
+    end # each country
+  end
+
+end
+
 class Team < ActiveRecord::Base
 
   has_many :home_games, :class_name => 'Game', :foreign_key => 'team1_id'
   has_many :away_games, :class_name => 'Game', :foreign_key => 'team2_id'
 
 
-  def self.create_from_ary!( teams )
+  def self.create_clubs_from_ary_for_country!( teams, country )
+    more_values = {
+      :country_id => country.id,
+      :club       => true
+    }
+    self.create_from_ary( teams, more_values )
+  end
+
+  def self.create_from_ary!( teams, more_values={} )
     teams.each do |values|
       
       ## key & title required
@@ -14,6 +42,9 @@ class Team < ActiveRecord::Base
         :key   => values[0],
         :title => values[1]
       }
+      
+      # todo/fix: check if these merge
+      attr.merge( more_values )
       
       ## check for optional values
       values[2..-1].each do |value|
