@@ -27,15 +27,6 @@ class Team < ActiveRecord::Base
       Team.create!( attr )
     end # each team
   end
-
-  def key
-     #todo/fix:   generate_key w/ on save callback
-     
-     # generate key if necessary (for debugging only - should be not null field!)
-     value = read_attribute(:key)
-     value = "?#{title.downcase.gsub( /\s/, '_').gsub( /[^a-z0-9_]/, '*' )}?"  if value.blank?
-     value
-  end  
   
 end  # class Team
 

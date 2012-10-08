@@ -45,13 +45,60 @@ The `sport.db` includes the following tables:
 
 [tbd]
 
+    CREATE TABLE teams ( 
+        id         INTEGER         PRIMARY KEY AUTOINCREMENT NOT NULL,
+        title      VARCHAR( 255 )  NOT NULL,
+        title2     VARCHAR( 255 ),
+        [key]      VARCHAR( 255 )  NOT NULL,
+        tag        VARCHAR( 255 ),
+        created_at DATETIME        NOT NULL,
+        updated_at DATETIME        NOT NULL 
+    );
+
+
 ###  `games` Table
 
 [tbd]
 
+    CREATE TABLE games ( 
+        id           INTEGER         PRIMARY KEY AUTOINCREMENT NOT NULL,
+        round_id     INTEGER         NOT NULL,
+        pos          INTEGER         NOT NULL,
+        group_id     INTEGER,
+        team1_id     INTEGER         NOT NULL,
+        team2_id     INTEGER         NOT NULL,
+        play_at      DATETIME        NOT NULL,
+        knockout     BOOLEAN         DEFAULT 'f'   NOT NULL,
+        home         BOOLEAN         DEFAULT 't'   NOT NULL,
+        score1       INTEGER,
+        score2       INTEGER,
+        score3       INTEGER,
+        score4       INTEGER,
+        score5       INTEGER,
+        score6       INTEGER,
+        next_game_id INTEGER,
+        prev_game_id INTEGER,
+        toto12x      VARCHAR( 255 ),
+        [key]        VARCHAR( 255 ),
+        created_at   DATETIME        NOT NULL,
+        updated_at   DATETIME        NOT NULL 
+    );
+
+
 ###  `events` Table
 
 [tbd]
+
+    CREATE TABLE events ( 
+        id         INTEGER         PRIMARY KEY AUTOINCREMENT NOT NULL,
+        title      VARCHAR( 255 )  NOT NULL,
+        [key]      VARCHAR( 255 )  NOT NULL,
+        start_at   DATETIME        NOT NULL,
+        created_at DATETIME        NOT NULL,
+        updated_at DATETIME        NOT NULL 
+    );
+
+
 
 
 ## Command Line Tool

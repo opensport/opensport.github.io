@@ -139,11 +139,11 @@ games_bl10 = [
 ]
 
 games_bl11 = [
-  [ 1, wac,         [], ried,       Time.cet('2012-10-06 00:00') ],
-  [ 2, rapid,       [], neustadt,   Time.cet('2012-10-06 00:00') ],
-  [ 3, mattersburg, [], salzburg,   Time.cet('2012-10-06 00:00') ],
-  [ 4, sturm,       [], austria,    Time.cet('2012-10-06 00:00') ],
-  [ 5, admira,      [], wacker,     Time.cet('2012-10-06 00:00') ]
+  [ 1, wac,         [2,5], ried,       Time.cet('2012-10-06 00:00') ],
+  [ 2, rapid,       [1,1], neustadt,   Time.cet('2012-10-06 00:00') ],
+  [ 3, mattersburg, [1,3], salzburg,   Time.cet('2012-10-06 00:00') ],
+  [ 4, sturm,       [1,1], austria,    Time.cet('2012-10-06 00:00') ],
+  [ 5, admira,      [4,1], wacker,     Time.cet('2012-10-06 00:00') ]
 ]
 
 games_bl12 = [
