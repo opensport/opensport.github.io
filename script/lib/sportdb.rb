@@ -60,6 +60,7 @@ module SportDB
     GroupTeam.delete_all
     Round.delete_all
     Prop.delete_all
+    Country.delete_all    
   end # method delete!
 
 end  # module SportDB

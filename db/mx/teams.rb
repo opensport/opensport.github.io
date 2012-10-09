@@ -21,6 +21,8 @@ teams = [
  [ 'pumas',     'Pumas UNAM',          'México'  ]
 ]
 
-Team.create_from_ary!( teams )
+mx = Country.find_by_key!( 'mx' )
 
-Prop.create!( :key => 'db.mx.teams.version', :value => '1' )
+Team.create_from_ary!( teams, club: true, country: mx )
+
+Prop.create!( key: 'db.mx.teams.version', value: '1' )

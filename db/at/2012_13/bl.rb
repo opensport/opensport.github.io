@@ -58,84 +58,86 @@ bl19 = Round.create!( :event => bl, :pos => 19, :title => '19. Runde', :title2 =
 bl20 = Round.create!( :event => bl, :pos => 20, :title => '20. Runde', :title2 => '15. Dez 2012' )
 
 
+## todo: fix game dates - do not use 00:00
+
 games_bl01 = [
-  [ 1, sturm,       [], salzburg,  Time.cet('2012-07-21 16:00') ],
-  [ 2, rapid,       [], wacker,    Time.cet('2012-07-21 18:30') ],
-  [ 3, mattersburg, [], neustadt,  Time.cet('2012-07-21 18:30') ],
-  [ 4, wac,         [], austria,   Time.cet('2012-07-21 18:30') ],
-  [ 5, admira,      [], ried,      Time.cet('2012-07-22 16:00') ]
+  [ 1, sturm,       [0,2], salzburg,  Time.cet('2012-07-21 16:00') ],
+  [ 2, rapid,       [4,0], wacker,    Time.cet('2012-07-21 18:30') ],
+  [ 3, mattersburg, [2,0], neustadt,  Time.cet('2012-07-21 18:30') ],
+  [ 4, wac,         [0,1], austria,   Time.cet('2012-07-25 18:30') ],  # NB: date changed
+  [ 5, admira,      [0,2], ried,      Time.cet('2012-07-22 16:00') ]
 ]
 
 games_bl02 = [
-  [ 1, neustadt,    [], rapid,       Time.cet('2012-07-28 18:30') ],
-  [ 2, salzburg,    [], mattersburg, Time.cet('2012-07-28 18:30') ],
-  [ 3, austria,     [], sturm,       Time.cet('2012-07-28 18:30') ],
-  [ 4, wacker,      [], admira,      Time.cet('2012-07-29 16:00') ],
-  [ 5, ried,        [], wac,         Time.cet('2012-07-29 18:30') ]
+  [ 1, neustadt,    [0,1], rapid,       Time.cet('2012-07-28 18:30') ],
+  [ 2, salzburg,    [3,2], mattersburg, Time.cet('2012-07-28 18:30') ],
+  [ 3, austria,     [0,1], sturm,       Time.cet('2012-07-28 18:30') ],
+  [ 4, wacker,      [1,2], admira,      Time.cet('2012-07-29 16:00') ],
+  [ 5, ried,        [0,2], wac,         Time.cet('2012-07-29 18:30') ]
 ]
 
 games_bl03 = [
-  [ 1, ried,        [], wacker,       Time.cet('2012-08-04 18:30') ],
-  [ 2, mattersburg, [], sturm,        Time.cet('2012-08-04 18:30') ],
-  [ 3, wac,         [], salzburg,     Time.cet('2012-08-04 18:30') ],
-  [ 4, admira,      [], neustadt,     Time.cet('2012-08-04 18:30') ],
-  [ 5, rapid,       [], austria,      Time.cet('2012-08-05 16:00') ]
+  [ 1, ried,        [2,0], wacker,       Time.cet('2012-08-04 18:30') ],
+  [ 2, mattersburg, [3,1], sturm,        Time.cet('2012-08-04 18:30') ],
+  [ 3, wac,         [0,2], salzburg,     Time.cet('2012-08-04 18:30') ],
+  [ 4, admira,      [4,0], neustadt,     Time.cet('2012-08-04 18:30') ],
+  [ 5, rapid,       [0,3], austria,      Time.cet('2012-08-05 16:00') ]
 ]
 
 games_bl04 = [
-  [ 1, neustadt,    [], ried,        Time.cet('2012-08-11 00:00') ],
-  [ 2, sturm,       [], wac,         Time.cet('2012-08-11 00:00') ],
-  [ 3, salzburg,    [], rapid,       Time.cet('2012-08-11 00:00') ],
-  [ 4, austria,     [], admira,      Time.cet('2012-08-11 00:00') ],
-  [ 5, wacker,      [], mattersburg, Time.cet('2012-08-11 00:00') ]
+  [ 1, neustadt,    [2,3], ried,        Time.cet('2012-08-11 00:00') ],
+  [ 2, sturm,       [4,1], wac,         Time.cet('2012-08-11 00:00') ],
+  [ 3, salzburg,    [0,2], rapid,       Time.cet('2012-08-11 00:00') ],
+  [ 4, austria,     [1,0], admira,      Time.cet('2012-08-11 00:00') ],
+  [ 5, wacker,      [2,1], mattersburg, Time.cet('2012-08-11 00:00') ]
 ]
 
 games_bl05 = [
-  [ 1, ried,     [], austria,       Time.cet('2012-08-18 00:00') ],
-  [ 2, rapid,    [], sturm,         Time.cet('2012-08-18 00:00') ],
-  [ 3, wacker,   [], neustadt,      Time.cet('2012-08-18 00:00') ],
-  [ 4, wac,      [], mattersburg,   Time.cet('2012-08-18 00:00') ],
-  [ 5, admira,   [], salzburg,      Time.cet('2012-08-18 00:00') ]
+  [ 1, ried,     [0,1], austria,       Time.cet('2012-08-18 00:00') ],
+  [ 2, rapid,    [3,0], sturm,         Time.cet('2012-08-18 00:00') ],
+  [ 3, wacker,   [2,3], neustadt,      Time.cet('2012-08-18 00:00') ],
+  [ 4, wac,      [0,1], mattersburg,   Time.cet('2012-08-18 00:00') ],
+  [ 5, admira,   [4,4], salzburg,      Time.cet('2012-08-18 00:00') ]
 ]
 
 games_bl06 = [
-  [ 1, sturm,       [], admira,       Time.cet('2012-08-25 00:00') ],
-  [ 2, salzburg,    [], neustadt,     Time.cet('2012-08-25 00:00') ],
-  [ 3, austria,     [], wacker,       Time.cet('2012-08-25 00:00') ],
-  [ 4, mattersburg, [], ried,         Time.cet('2012-08-25 00:00') ],
-  [ 5, wac,         [], rapid,        Time.cet('2012-08-25 00:00') ]
+  [ 1, sturm,       [3,2], admira,       Time.cet('2012-08-25 00:00') ],
+  [ 2, salzburg,    [1,1], neustadt,     Time.cet('2012-08-25 00:00') ],
+  [ 3, austria,     [2,0], wacker,       Time.cet('2012-08-25 00:00') ],
+  [ 4, mattersburg, [2,1], ried,         Time.cet('2012-08-25 00:00') ],
+  [ 5, wac,         [1,0], rapid,        Time.cet('2012-08-25 00:00') ]
 ]
 
 games_bl07 = [
-  [ 1, ried,    [], sturm,       Time.cet('2012-09-01 00:00') ],
-  [ 2, neustadt,[], austria,     Time.cet('2012-09-01 00:00') ],
-  [ 3, rapid,   [], mattersburg, Time.cet('2012-09-01 00:00') ],
-  [ 4, wacker,  [], salzburg,    Time.cet('2012-09-01 00:00') ],
-  [ 5, admira,  [], wac,         Time.cet('2012-09-01 00:00') ]
+  [ 1, ried,    [0,1], sturm,       Time.cet('2012-09-01 00:00') ],
+  [ 2, neustadt,[0,2], austria,     Time.cet('2012-09-01 00:00') ],
+  [ 3, rapid,   [3,0], mattersburg, Time.cet('2012-09-01 00:00') ],
+  [ 4, wacker,  [0,4], salzburg,    Time.cet('2012-09-01 00:00') ],
+  [ 5, admira,  [1,1], wac,         Time.cet('2012-09-01 00:00') ]
 ]
 
 games_bl08 = [
-  [ 1, sturm,       [], wacker,       Time.cet('2012-09-15 00:00') ],
-  [ 2, salzburg,    [], ried,         Time.cet('2012-09-15 00:00') ],
-  [ 3, rapid,       [], admira,       Time.cet('2012-09-15 00:00') ],
-  [ 4, mattersburg, [], austria,      Time.cet('2012-09-15 00:00') ],
-  [ 5, wac,         [], neustadt,     Time.cet('2012-09-15 00:00') ]
+  [ 1, sturm,       [3,0], wacker,       Time.cet('2012-09-15 00:00') ],
+  [ 2, salzburg,    [1,1], ried,         Time.cet('2012-09-15 00:00') ],
+  [ 3, rapid,       [0,0], admira,       Time.cet('2012-09-15 00:00') ],
+  [ 4, mattersburg, [2,4], austria,      Time.cet('2012-09-15 00:00') ],
+  [ 5, wac,         [6,0], neustadt,     Time.cet('2012-09-15 00:00') ]
 ]
 
 games_bl09 = [
-  [ 1, ried,    [], rapid,       Time.cet('2012-09-22 00:00') ],
-  [ 2, neustadt,[], sturm,       Time.cet('2012-09-22 00:00') ],
-  [ 3, austria, [], salzburg,    Time.cet('2012-09-22 00:00') ],
-  [ 4, wacker,  [], wac,         Time.cet('2012-09-22 00:00') ],
-  [ 5, admira,  [], mattersburg, Time.cet('2012-09-22 00:00') ]
+  [ 1, ried,    [0,2], rapid,       Time.cet('2012-09-22 00:00') ],
+  [ 2, neustadt,[1,1], sturm,       Time.cet('2012-09-22 00:00') ],
+  [ 3, austria, [0,1], salzburg,    Time.cet('2012-09-22 00:00') ],
+  [ 4, wacker,  [0,1], wac,         Time.cet('2012-09-22 00:00') ],
+  [ 5, admira,  [5,1], mattersburg, Time.cet('2012-09-22 00:00') ]
 ]
 
 games_bl10 = [
-  [ 1, salzburg,  [], sturm,       Time.cet('2012-09-29 00:00') ],
-  [ 2, wacker,    [], rapid,       Time.cet('2012-09-29 00:00') ],
-  [ 3, neustadt,  [], mattersburg, Time.cet('2012-09-29 00:00') ],
-  [ 4, austria,   [], wac,         Time.cet('2012-09-29 00:00') ],
-  [ 5, ried,      [], admira,      Time.cet('2012-09-29 00:00') ]
+  [ 1, salzburg,  [3,2], sturm,       Time.cet('2012-09-29 00:00') ],
+  [ 2, wacker,    [0,2], rapid,       Time.cet('2012-09-29 00:00') ],
+  [ 3, neustadt,  [0,0], mattersburg, Time.cet('2012-09-29 00:00') ],
+  [ 4, austria,   [1,1], wac,         Time.cet('2012-09-29 00:00') ],
+  [ 5, ried,      [1,1], admira,      Time.cet('2012-09-29 00:00') ]
 ]
 
 games_bl11 = [

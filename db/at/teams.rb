@@ -1,7 +1,5 @@
 # encoding: utf-8
 
-at = Country.find_by_key!( 'at' )
-
 bl = [
   [ 'salzburg',    'FC RB Salzburg',      'RBS' ],
   [ 'rapid',       'SK Rapid Wien',       'RAP' ],
@@ -85,13 +83,8 @@ misc = [
   [ 'juniors',       'FC RB Juniors Salzburg' ]
 ]
 
+at = Country.find_by_key!( 'at' )
 
-Team.create_clubs_from_ary_for_country!( bl, at )
-Team.create_clubs_from_ary_for_country!( ersteliga, at )
-Team.create_clubs_from_ary_for_country!( rlwest, at )
-Team.create_clubs_from_ary_for_country!( rlmitte, at )
-Team.create_clubs_from_ary_for_country!( rlost, at )
-Team.create_clubs_from_ary_for_country!( misc, at )
+Team.create_from_ary!( bl+ersteliga+rlwest+rlmitte+rlost+misc, club: true, country: at )
 
-
-Prop.create!( :key => 'db.at.teams.version', :value => '1' )
+Prop.create!( key: 'db.at.teams.version', value: '1' )

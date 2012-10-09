@@ -23,7 +23,9 @@ l1 = [
   [ 'viitorul_constanta', 'Viitorul Constanta',     'VCT' ]
 ]
 
-Team.create_from_ary!( l1 )
+ro = Country.find_by_key!( 'ro' )
+
+Team.create_from_ary!( l1, club: true, country: ro )
 
 
-Prop.create!( :key => 'db.ro.teams.version', :value => '1' )
+Prop.create!( key: 'db.ro.teams.version', value: '1' )

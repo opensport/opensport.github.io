@@ -141,6 +141,7 @@ EOS
     puts "Stats:"
     puts "  #{Event.count} events"
     puts "  #{Team.count} teams"
+    puts "  #{Country.count} countries"
     puts "  #{Game.count} games"
   end
 

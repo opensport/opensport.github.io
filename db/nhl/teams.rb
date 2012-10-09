@@ -41,6 +41,8 @@ teams = [
  [ 'sanjose',      'San Jose Sharks', '  West/Pacific' ]
 ]
 
-Team.create_from_ary!( teams )
+us = Country.find_by_key!( 'us' )
 
-Prop.create!( :key => 'db.nhl.teams.version', :value => '1' )
+Team.create_from_ary!( teams, club: true, country: us )
+
+Prop.create!( key: 'db.nhl.teams.version', value: '1' )
