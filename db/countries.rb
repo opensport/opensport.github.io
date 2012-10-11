@@ -32,6 +32,9 @@ countries = [
   [ 'ch', 'Schweiz',      'CHE' ],
   [ 'mt', 'Malta',        'MLT' ],
   
+  [ 'fi', 'Finnland',     'FIN' ],
+  [ 'ge', 'Georgien',     'GEO' ],
+  
   [ 'kz', 'Kasachstan',   'KAZ' ],
   
   [ 'mx', 'Mexiko',        'MEX' ],

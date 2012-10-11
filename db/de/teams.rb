@@ -6,24 +6,24 @@
 
 
 teams = [
-  [ 'bayern',      'FC Bayern' ],
-  [ 'frankfurt',   'E Frankfurt' ],
-  [ 'schalke',     'FC Schalke 04' ],
-  [ 'dortmund',    'B Dortmund' ],
-  [ 'hannover',    'Hannover 96' ],
-  [ 'leverkusen',  'B Leverkusen' ],
-  [ 'duesseldorf', 'F Düsseldorf' ],
-  [ 'hsv',         'Hamburger SV' ],
-  [ 'mainz',       'Mainz 05' ],
-  [ 'mgladbach',   'B M gladbach' ],
-  [ 'freiburg',    'SC Freiburg' ],
-  [ 'bremen',      'W Bremen' ],
-  [ 'hoffenheim',  'Hoffenheim' ],
-  [ 'nuernberg',   '1 FC Nürnberg' ],
-  [ 'stuttgart',   'VfB Stuttgart' ],
-  [ 'augsburg',    'FC Augsburg' ],
-  [ 'wolfsburg',   'VfL Wolfsburg' ],
-  [ 'fuerth',      'G Fuerth' ]
+  [ 'bayern',      'FC Bayern  München',  'FCB' ],
+  [ 'frankfurt',   'Eintracht Frankfurt', 'FFM' ],
+  [ 'schalke',     'FC Schalke 04',       'S04' ],
+  [ 'dortmund',    'Borussia Dortmund',   'BVB' ],
+  [ 'hannover',    'Hannover 96',         'H96' ],
+  [ 'leverkusen',  'Bayer 04 Leverkusen', 'B04' ],
+  [ 'duesseldorf', 'Fortuna Düsseldorf',  'F95' ],
+  [ 'hsv',         'Hamburger SV',        'HSV' ],
+  [ 'mainz',       '1. FSV Mainz 05',     'M05' ],
+  [ 'mgladbach',   "Borussia M'gladbach", 'BMG' ],
+  [ 'freiburg',    'SC Freiburg',         'SCF' ],
+  [ 'bremen',      'Werder Bremen',       'BRE' ],
+  [ 'hoffenheim',  '1899 Hoffenheim',     'HOF' ],
+  [ 'nuernberg',   '1 FC Nürnberg',       'FCN' ],
+  [ 'stuttgart',   'VfB Stuttgart',       'VFB' ],
+  [ 'augsburg',    'FC Augsburg',         'FCA' ],
+  [ 'wolfsburg',   'VfL Wolfsburg',       'WOB' ],
+  [ 'fuerth',      'Greuther Fürth',      'SGF' ]
 ]
 
 de = Country.find_by_key!( 'de' )
