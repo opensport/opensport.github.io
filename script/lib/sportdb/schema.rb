@@ -3,6 +3,12 @@ module SportDB
 
 class CreateDB
 
+
+## make models available in sportdb module by default with namespace
+#  e.g. lets you use Team instead of Models::Team 
+  include SportDB::Models
+
+  
 def self.up
   
   ActiveRecord::Schema.define do
@@ -119,7 +125,7 @@ add_index :groups_teams, :group_id
   end # block Schema.define
 
 
-  Prop.create!( :key => 'db.schema.version', :value => SportDB::VERSION )
+  Prop.create!( key: 'db.schema.version', value: SportDB::VERSION )
 
 end # method up
 

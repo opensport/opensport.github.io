@@ -19,8 +19,16 @@ require 'active_record'   ## todo: add sqlite3? etc.
 
 # our own code
 
-require 'sportdb/schema'
-require 'sportdb/models'
+require 'sportdb/models/country'
+require 'sportdb/models/event'
+require 'sportdb/models/event_team'
+require 'sportdb/models/game'
+require 'sportdb/models/group'
+require 'sportdb/models/group_team'
+require 'sportdb/models/prop'
+require 'sportdb/models/round'
+require 'sportdb/models/team'
+require 'sportdb/schema'       # NB: requires sportdb/models (include SportDB::Models)
 require 'sportdb/utils'
 require 'sportdb/loader'
 require 'sportdb/version'
