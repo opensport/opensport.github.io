@@ -1,6 +1,9 @@
 module SportDB
+  module Models
 
-
+## todo: move each model in its own file;
+##  use models folder
+  
 class Country < ActiveRecord::Base
   self.table_name = 'countries'
 
@@ -235,4 +238,6 @@ class Prop < ActiveRecord::Base
 end  # class Prop
 
 
+  end # module Models
 end # module SportDB
+

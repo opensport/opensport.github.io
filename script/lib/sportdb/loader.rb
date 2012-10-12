@@ -3,6 +3,11 @@ module SportDB
 
 class Loader
 
+## make models available in sportdb module by default with namespace
+#  e.g. lets you use Team instead of Models::Team 
+  include SportDB::Models
+
+
   def initialize
     @logger = Logger.new(STDOUT)
     @logger.level = Logger::INFO
@@ -43,7 +48,7 @@ class Loader
 
     text = File.read( path )
 
-    SportDB.module_eval( text )
+    self.class_eval( text )
 
     # NB: same as
     #

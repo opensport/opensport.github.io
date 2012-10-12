@@ -3,6 +3,11 @@ module SportDB
 
 class Runner
 
+
+## make models available in sportdb module by default with namespace
+#  e.g. lets you use Team instead of Models::Team 
+  include SportDB::Models
+
   def initialize
     @logger = Logger.new(STDOUT)
     @logger.level = Logger::INFO
@@ -39,7 +44,7 @@ class Runner
         logger.datetime_format = "%H:%H:%S"
         logger.level = Logger::DEBUG
         
-        ## todo: set ActiveRecord Logger to stdout??
+        ActiveRecord::Base.logger = Logger.new(STDOUT)
       end
 
       cmd.on_tail( "-h", "--help", "Show this message" ) do
@@ -119,7 +124,11 @@ EOS
 
       text = File.read( path )
 
-      SportDB.module_eval( text )
+      # SportDB.module_eval( text )
+      
+      ## evaluate in class context of SportDB::Runner
+      ## change to loader class later
+      self.class_eval( text )
 
       # NB: same as
       #

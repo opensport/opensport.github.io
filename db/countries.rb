@@ -2,9 +2,12 @@
 
 ## NB: for keys use internet two letter code
 
+## todo: sort by key
+## todo: note if three letter or two letter code is different from iso standard code
+
 countries = [
-  [ 'de', 'Deutschland',  'GER' ],
   [ 'at', 'Österreich',   'AUT' ],
+  [ 'de', 'Deutschland',  'GER' ],
   [ 'es', 'Spanien',      'ESP' ],
   [ 'fr', 'Frankreich',   'FRA' ],
 

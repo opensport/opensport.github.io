@@ -53,11 +53,11 @@ games_world1i = [
  [ 4,  fra, [3,1], blr, Time.cet( '2012-09-11 00:00' ) ]]
 
 games_world2i = [
- [  5,  fin, [], geo, Time.cet( '2012-10-12 00:00' ) ],
- [  6,  blr, [], esp, Time.cet( '2012-10-12 00:00' ) ],
- [  7,  esp, [], fra, Time.cet( '2012-10-16 00:00' ) ],
- [  8,  blr, [], geo, Time.cet( '2012-10-16 00:00' ) ]],
-
+ [ 5, fin, [], geo, Time.cet( '2012-10-12 00:00' ) ],
+ [ 6, blr, [], esp, Time.cet( '2012-10-12 00:00' ) ],
+ [ 7, esp, [], fra, Time.cet( '2012-10-16 00:00' ) ],
+ [ 8, blr, [], geo, Time.cet( '2012-10-16 00:00' ) ]]
+ 
 games_world3i = [
  [  9,  fra, [], geo, Time.cet( '2013-03-22 00:00' ) ],
  [ 10,  esp, [], fin, Time.cet( '2013-03-22 00:00' ) ],
@@ -78,13 +78,12 @@ games_world6i = [
  [ 19,  fra, [], fin, Time.cet( '2013-10-15 00:00' ) ],
  [ 20,  esp, [], geo, Time.cet( '2013-10-15 00:00' ) ]]
 
-=begin
+
 Game.create_from_ary!( games_world1i, world1 )
 Game.create_from_ary!( games_world2i, world2 )
 Game.create_from_ary!( games_world3i, world3 )
 Game.create_from_ary!( games_world4i, world4 )
 Game.create_from_ary!( games_world5i, world5 )
 Game.create_from_ary!( games_world6i, world6 )
-=end
 
 Prop.create!( key: 'db.world.quali.2012/13.i.version', value: '1' )
