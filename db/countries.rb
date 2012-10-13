@@ -6,6 +6,11 @@
 #  -> http://en.wikipedia.org/wiki/ISO_3166-1
 #  two letter codes   -> http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 #  three letter codes -> http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
+#
+#  for three letter codes use fifa code or iso code
+#  - fifa three letter country codes
+#    -> http://en.wikipedia.org/wiki/List_of_FIFA_country_codes
+#    -> differences (fifa,ioc,iso) -> http://en.wikipedia.org/wiki/Comparison_of_IOC,_FIFA,_and_ISO_3166_country_codes 
 
 
 countries = [
@@ -18,32 +23,32 @@ countries = [
   ## [ 'am', 'Armenien',     'ARM' ],
   [ 'at', 'Österreich',   'AUT' ],
   [ 'be', 'Belgien',      'BEL' ],
-  ## [ 'bg', 'Bulgarien',  'BGR' ],
+  ## [ 'bg', 'Bulgarien',  'BUL' ],  # NB: ISO (BGR) <> FIFA (BUL)
   [ 'by', 'Weißrussland', 'BLR' ],
-  [ 'ch', 'Schweiz',      'SUI' ],  # NB: *** CHE is iso standard
+  [ 'ch', 'Schweiz',      'SUI' ],  # NB: ISO (CHE) <> FIFA (SUI)
   ## [ 'cy', 'Zypern',    'CYP' ],
   [ 'cz', 'Tschechien',   'CZE' ],
-  [ 'de', 'Deutschland',  'GER' ],  # NB: *** DEU is iso standard
-  [ 'dk', 'Dänemark',     'DEN' ],  # NB: *** DNK is iso standard  
-  [ 'en', 'England',      'ENG' ],  # NB: not a valid iso country n internet domain / it's uk - what to use - anything better?
+  [ 'de', 'Deutschland',  'GER' ],  # NB: ISO (DEU) <> FIFA (GER)
+  [ 'dk', 'Dänemark',     'DEN' ],  # NB: ISO (DNK) <> FIFA (DEN)
+  [ 'en', 'England',      'ENG' ],  # NB: FIFA (ENG); not a valid iso country n internet domain / it's uk - what to use - anything better?
   [ 'es', 'Spanien',      'ESP' ],
   [ 'fi', 'Finnland',     'FIN' ],
   [ 'fo', 'Färöer',       'FRO' ],
   [ 'fr', 'Frankreich',   'FRA' ],
   [ 'ge', 'Georgien',     'GEO' ],
-  [ 'gr', 'Griechenland', 'GRE' ],  # NB: *** GRC is iso standard
-  [ 'hr', 'Kroatien',     'CRO' ],  # NB: *** HRV is iso standard;  local name: Hrvatska
+  [ 'gr', 'Griechenland', 'GRE' ],  # NB: ISO (GRC) <> FIFA (GRE)
+  [ 'hr', 'Kroatien',     'CRO' ],  # NB: ISO (HRV) <> FIFA (CRO);  local name: Hrvatska
   ## [ 'hu', 'Ungarn',       'HUN' ],
   [ 'ie', 'Irland',       'IRL' ],
   [ 'it', 'Italien',      'ITA' ],
   [ 'kz', 'Kasachstan',   'KAZ' ],
   [ 'mt', 'Malta',        'MLT' ],
-  [ 'nl', 'Niederlande',  'NED' ],  # NB: *** NLD is iso standard
+  [ 'nl', 'Niederlande',  'NED' ],  # NB: ISO (NLD) <> FIFA (NED)
   [ 'pl', 'Polen',        'POL' ],
-  [ 'pt', 'Portugal',     'POR' ],  # NB: *** PRT is iso standard
-  [ 'ro', 'Rumänien',     'ROM' ],  # NB: *** ROU is iso standard
+  [ 'pt', 'Portugal',     'POR' ],  # NB: ISO (PRT) <> FIFA (POR)
+  [ 'ro', 'Rumänien',     'ROU' ],
   [ 'ru', 'Russland',     'RUS' ],
-  [ 'sc', 'Schottland',   'SCO' ],    # NB: not a valid iso country/internet domain - it's uk - what to use - anything better?
+  [ 'sc', 'Schottland',   'SCO' ],  # NB: FIFA (SCO); not a valid iso country/internet domain - it's uk - what to use - anything better?
   [ 'se', 'Schweden',     'SWE' ],
   [ 'tr', 'Türkei',       'TUR' ],
   [ 'ua', 'Ukraine',      'UKR' ],

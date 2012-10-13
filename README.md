@@ -7,28 +7,27 @@ A Free Open Sports Database & Schema
 
 Get a copy of the `sport.db` file. That's it.
 
-## Events include:
+### Events include
 
-National football teams (e.g. Austria, England, etc.):
+National football teams (e.g. Austria, England, etc.)
 
-* [UEFA European Football Championship (Euro) 2012](https://github.com/geraldb/sport.db/tree/master/db/euro)
 * [World Cup Quali 2012/13](https://github.com/geraldb/sport.db/tree/master/db/world)
+* [UEFA European Football Championship (Euro) 2012](https://github.com/geraldb/sport.db/tree/master/db/euro)
 
-Football club teams (e.g. FC Barcelona, Manchester Utd, etc.) / International:
+Football club teams (e.g. FC Barcelona, Manchester Utd, etc.) / International
 
 * [UEFA Champions League 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/cl)
 * [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/db/cl)
 
-Football club teams / National:
+Football club teams / National
 
 * [English Permier League 2012/13](https://github.com/geraldb/sport.db/tree/master/db/en)
 * [Deutsche Bundesliga 2012/13](https://github.com/geraldb/sport.db/tree/master/db/de)
-* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
-* [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
+* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at), [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
 * [Romania Liga 1 2012/13](https://github.com/geraldb/sport.db/tree/master/db/ro)
 * [México Primera División Apertura 2012](https://github.com/geraldb/sport.db/tree/master/db/mx)
 
-Hockey club teams:
+Hockey club teams
 
 * [National Hockey League (NHL) 2012](https://github.com/geraldb/sport.db/tree/master/db/nhl)
 
