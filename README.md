@@ -9,15 +9,30 @@ Get a copy of the `sport.db` file. That's it.
 
 ## Events include:
 
-* [UEFA Champions League 2012/13](https://github.com/geraldb/sport.db/tree/master/db/cl)
+National football teams (e.g. Austria, England, etc.):
+
+* [UEFA European Football Championship (Euro) 2012](https://github.com/geraldb/sport.db/tree/master/db/euro)
+* [World Cup Quali 2012/13](https://github.com/geraldb/sport.db/tree/master/db/world)
+
+Football club teams (e.g. FC Barcelona, Manchester Utd, etc.) / International:
+
+* [UEFA Champions League 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/cl)
 * [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/db/cl)
+
+Football club teams / National:
+
+* [English Permier League 2012/13](https://github.com/geraldb/sport.db/tree/master/db/en)
+* [Deutsche Bundesliga 2012/13](https://github.com/geraldb/sport.db/tree/master/db/de)
 * [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
 * [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
-* [UEFA European Football Championship aka Euro 2012](https://github.com/geraldb/sport.db/tree/master/db/euro)
 * [Romania Liga 1 2012/13](https://github.com/geraldb/sport.db/tree/master/db/ro)
 * [México Primera División Apertura 2012](https://github.com/geraldb/sport.db/tree/master/db/mx)
-* [World Cup Quali 2012/13](https://github.com/geraldb/sport.db/tree/master/db/world)
+
+Hockey club teams:
+
 * [National Hockey League (NHL) 2012](https://github.com/geraldb/sport.db/tree/master/db/nhl)
+
+Anything missing? Add your leagues, teams, fixtures and more.
 
 ## Demo
 

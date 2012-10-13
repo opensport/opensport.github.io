@@ -5,6 +5,8 @@
 ##  change create to create_or_update or similar (check for name convention in Rails?)
 
 
+## nb: three letter codes (tags) taken from official bundesliga.de site
+
 teams = [
   [ 'bayern',      'FC Bayern  München',  'FCB' ],
   [ 'frankfurt',   'Eintracht Frankfurt', 'FFM' ],
