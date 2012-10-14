@@ -18,21 +18,33 @@ class Game < ActiveRecord::Base
   end
 
   def self.create_from_ary!( games, round, knockout=false )
-    games.each do |values|
+    games.each_with_index do |values,index|
+      
+      ## check if first value (that is, values[0]) is a numeric/number
+      ##  if NOT add pos automatic (counting from 1 to n)
+      
+      if values[0].kind_of? Numeric
+        pos    = values[0]
+        offset = 1
+      else
+        pos    = index
+        offset = 0
+      end
+      
       Game.create!(
-        :round     =>round,
-        :pos       =>values[0],
-        :team1     =>values[1],
-        :score1    =>values[2][0],
-        :score2    =>values[2][1],
-        :score3    =>values[2][2],
-        :score4    =>values[2][3],
-        :score5    =>values[2][4],
-        :score6    =>values[2][5],
-        :team2     =>values[3],
-        :play_at   =>values[4],
-        :group     =>values[5],    # Note: group is optional (may be null/nil)
-        :knockout  =>knockout )
+        :round     => round,
+        :pos       => pos,
+        :team1     => values[offset],
+        :score1    => values[offset+1][0],
+        :score2    => values[offset+1][1],
+        :score3    => values[offset+1][2],
+        :score4    => values[offset+1][3],
+        :score5    => values[offset+1][4],
+        :score6    => values[offset+1][5],
+        :team2     => values[offset+2],
+        :play_at   => values[offset+3],
+        :group     => values[offset+4],    # Note: group is optional (may be null/nil)
+        :knockout  => knockout )
     end # each games
   end
 

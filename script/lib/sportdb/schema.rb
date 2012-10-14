@@ -51,11 +51,12 @@ add_index :events, :key, :unique => true
 
 
 create_table :rounds do |t|
-  t.references :event,   :null => false
-  t.string     :title,   :null => false
+  t.references :event,    :null => false
+  t.string     :title,    :null => false
   t.string     :title2
-  t.integer    :pos,     :null => false
-  t.boolean    :playoff, :null => false, :default => false  # "regular" season (group) games or post-season (playoff) knockouts (k.o's)
+  t.integer    :pos,      :null => false
+  t.boolean    :playoff,  :null => false, :default => false  # "regular" season (group) games or post-season (playoff) knockouts (k.o's)
+  t.datetime   :start_at, :null => false
   t.timestamps
 end
 

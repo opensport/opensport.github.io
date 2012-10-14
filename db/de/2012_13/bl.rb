@@ -67,28 +67,28 @@ bl08 = Round.create!( event: bl, pos: 8, title: '8. Runde', title2: '19.+21. Okt
 
 ## 24.08-26.08
 games_bl01 = [
-  [ 1, dortmund,  [2,1], bremen,      Time.cet('2012-08-24 20:30') ],                
-  [ 2, mgladbach, [2,1], hoffenheim,  Time.cet('2012-08-25 15:30') ],                
-  [ 3, freiburg,  [1,1], mainz,       Time.cet('2012-08-25 15:30') ],                
-  [ 4, augsburg,  [0,2], duesseldorf, Time.cet('2012-08-25 15:30') ],                
-  [ 5, hsv,       [0,1], nuernberg,   Time.cet('2012-08-25 15:30') ],                
-  [ 6, fuerth,    [0,3], bayern,      Time.cet('2012-08-25 15:30') ],                
-  [ 7, frankfurt, [2,1], leverkusen,  Time.cet('2012-08-25 18:30') ],                
-  [ 8, stuttgart, [0,1], wolfsburg,   Time.cet('2012-08-25 20:45') ],                
-  [ 9, hannover,  [2,2], schalke,     Time.cet('2012-08-26 17:30') ]                
+  [ dortmund,  [2,1], bremen,      Time.cet('2012-08-24 20:30') ],
+  [ mgladbach, [2,1], hoffenheim,  Time.cet('2012-08-25 15:30') ],
+  [ freiburg,  [1,1], mainz,       Time.cet('2012-08-25 15:30') ],
+  [ augsburg,  [0,2], duesseldorf, Time.cet('2012-08-25 15:30') ],
+  [ hsv,       [0,1], nuernberg,   Time.cet('2012-08-25 15:30') ],
+  [ fuerth,    [0,3], bayern,      Time.cet('2012-08-25 15:30') ],
+  [ frankfurt, [2,1], leverkusen,  Time.cet('2012-08-25 18:30') ],
+  [ stuttgart, [0,1], wolfsburg,   Time.cet('2012-08-25 20:45') ],
+  [ hannover,  [2,2], schalke,     Time.cet('2012-08-26 17:30') ]
 ]
 
 ## 31.08-02.09
 games_bl02 = [
-  [ 1, mainz,       [0,1], fuerth,    Time.cet('2012-08-31 20:30') ],                
-  [ 2, schalke,     [3,1], augsburg,  Time.cet('2012-09-01 15:30') ],                
-  [ 3, leverkusen,  [2,0], freiburg,  Time.cet('2012-09-01 15:30') ],                
-  [ 4, bremen,      [2,0], hsv,       Time.cet('2012-09-01 15:30') ],                
-  [ 5, nuernberg,   [1,1], dortmund,  Time.cet('2012-09-01 15:30') ],                
-  [ 6, hoffenheim,  [0,4], frankfurt, Time.cet('2012-09-01 15:30') ],                
-  [ 7, duesseldorf, [0,0], mgladbach, Time.cet('2012-09-01 18:30') ],                
-  [ 8, wolfsburg,   [0,4], hannover,  Time.cet('2012-09-02 15:30') ],                
-  [ 9, bayern,      [6,1], stuttgart, Time.cet('2012-09-02 17:30') ]                
+  [ mainz,       [0,1], fuerth,    Time.cet('2012-08-31 20:30') ],
+  [ schalke,     [3,1], augsburg,  Time.cet('2012-09-01 15:30') ],
+  [ leverkusen,  [2,0], freiburg,  Time.cet('2012-09-01 15:30') ],
+  [ bremen,      [2,0], hsv,       Time.cet('2012-09-01 15:30') ],
+  [ nuernberg,   [1,1], dortmund,  Time.cet('2012-09-01 15:30') ],
+  [ hoffenheim,  [0,4], frankfurt, Time.cet('2012-09-01 15:30') ],
+  [ duesseldorf, [0,0], mgladbach, Time.cet('2012-09-01 18:30') ],
+  [ wolfsburg,   [0,4], hannover,  Time.cet('2012-09-02 15:30') ],
+  [ bayern,      [6,1], stuttgart, Time.cet('2012-09-02 17:30') ]
 ]
 
 ## 14.09-16.09
