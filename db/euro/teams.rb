@@ -48,7 +48,7 @@ teams = [
   [ 'fro', 'Färöer',       'FRO', fo ],
   [ 'kaz', 'Kasachstan',   'KAZ', kz ],
   [ 'aut', 'Österreich',   'AUT', at ],
-  [ 'blr', 'Belarus',      'BLR', by ],
+  [ 'blr', 'Weißrussland', 'BLR', by ],
   [ 'fin', 'Finnland',     'FIN', fi ],
   [ 'geo', 'Georgien',     'GEO', ge ]
 ]

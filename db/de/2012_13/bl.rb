@@ -54,15 +54,15 @@ bl.teams << wolfsburg
 bl.teams << fuerth
 
 
-bl01 = Round.create!( event: bl, pos: 1, title: '1. Runde', title2: '24.,25.,26. Aug 2012' )
-bl02 = Round.create!( event: bl, pos: 2, title: '2. Runde', title2: '31. Aug, 1.+2. Sep 2012' )
-bl03 = Round.create!( event: bl, pos: 3, title: '3. Runde', title2: '14.,15.,16. Sep 2012' )
-bl04 = Round.create!( event: bl, pos: 4, title: '4. Runde', title2: '21.,22.,23. Sep 2012' )
+bl01 = Round.create!( event: bl, pos: 1, title: '1. Runde', start_at: Time.cet('2012-08-24'), title2: 'Fr,Sa,So 24.,25.,26. Aug 2012' )
+bl02 = Round.create!( event: bl, pos: 2, title: '2. Runde', start_at: Time.cet('2012-08-31'), title2: 'Fr,Sa,So 31. Aug, 1.+2. Sep 2012' )
+bl03 = Round.create!( event: bl, pos: 3, title: '3. Runde', start_at: Time.cet('2012-09-14'), title2: 'Fr,Sa,So 14.,15.,16. Sep 2012' )
+bl04 = Round.create!( event: bl, pos: 4, title: '4. Runde', start_at: Time.cet('2012-09-21'), title2: 'Fr,Sa,So 21.,22.,23. Sep 2012' )
 
 
 
-bl07 = Round.create!( event: bl, pos: 7, title: '7. Runde', title2: '5.,6.,7. Okt 2012  ??' )
-bl08 = Round.create!( event: bl, pos: 8, title: '8. Runde', title2: '19.+21. Okt 2012 ??' )
+bl07 = Round.create!( event: bl, pos: 7, title: '7. Runde', start_at: Time.cet('2012-10-05'), title2: 'Fr,Sa,So 5.,6.,7. Okt 2012  ??' )
+bl08 = Round.create!( event: bl, pos: 8, title: '8. Runde', start_at: Time.cet('2012-10-19'), title2: 'Fr,Sa,So 19.+21. Okt 2012 ??' )
 
 
 ## 24.08-26.08
@@ -93,28 +93,28 @@ games_bl02 = [
 
 ## 14.09-16.09
 games_bl03 = [
-  [ 1, augsburg,  [0,0], wolfsburg,   Time.cet('2012-09-14 20:30') ],                
-  [ 2, dortmund,  [3,0], leverkusen,  Time.cet('2012-09-15 15:30') ],                
-  [ 3, bayern,    [3,1], mainz,       Time.cet('2012-09-15 15:30') ],                
-  [ 4, mgladbach, [2,3], nuernberg,   Time.cet('2012-09-15 15:30') ],                
-  [ 5, stuttgart, [0,0], duesseldorf, Time.cet('2012-09-15 15:30') ],                
-  [ 6, hannover,  [3,2], bremen,      Time.cet('2012-09-15 15:30') ],                
-  [ 7, fuerth,    [0,2], schalke,     Time.cet('2012-09-15 18:30') ],                
-  [ 8, freiburg,  [5,3], hoffenheim,  Time.cet('2012-09-16 15:30') ],                
-  [ 9, frankfurt, [3,2], hsv,         Time.cet('2012-09-16 17:30') ]                
+  [ augsburg,  [0,0], wolfsburg,   Time.cet('2012-09-14 20:30') ],                
+  [ dortmund,  [3,0], leverkusen,  Time.cet('2012-09-15 15:30') ],                
+  [ bayern,    [3,1], mainz,       Time.cet('2012-09-15 15:30') ],                
+  [ mgladbach, [2,3], nuernberg,   Time.cet('2012-09-15 15:30') ],                
+  [ stuttgart, [0,0], duesseldorf, Time.cet('2012-09-15 15:30') ],                
+  [ hannover,  [3,2], bremen,      Time.cet('2012-09-15 15:30') ],                
+  [ fuerth,    [0,2], schalke,     Time.cet('2012-09-15 18:30') ],                
+  [ freiburg,  [5,3], hoffenheim,  Time.cet('2012-09-16 15:30') ],                
+  [ frankfurt, [3,2], hsv,         Time.cet('2012-09-16 17:30') ]                
 ]
 
 # 21.09-23.09
 games_bl04 = [
-  [ 1, nuernberg,   [1,2], frankfurt, Time.cet('2012-09-21 20:30') ],                
-  [ 2, schalke,     [0,2], bayern,    Time.cet('2012-09-22 15:30') ],                
-  [ 3, wolfsburg,   [1,1], fuerth,    Time.cet('2012-09-22 15:30') ],                
-  [ 4, mainz,       [2,0], augsburg,  Time.cet('2012-09-22 15:30') ],                
-  [ 5, hsv,         [3,2], dortmund,  Time.cet('2012-09-22 15:30') ],                
-  [ 6, duesseldorf, [0,0], freiburg,  Time.cet('2012-09-22 15:30') ],                
-  [ 7, leverkusen,  [1,1], mgladbach, Time.cet('2012-09-23 15:30') ],                
-  [ 8, bremen,      [2,2], stuttgart, Time.cet('2012-09-23 17:30') ],                
-  [ 9, hoffenheim,  [3,1], hannover,  Time.cet('2012-09-23 17:30') ]                
+  [ nuernberg,   [1,2], frankfurt, Time.cet('2012-09-21 20:30') ],                
+  [ schalke,     [0,2], bayern,    Time.cet('2012-09-22 15:30') ],                
+  [ wolfsburg,   [1,1], fuerth,    Time.cet('2012-09-22 15:30') ],                
+  [ mainz,       [2,0], augsburg,  Time.cet('2012-09-22 15:30') ],                
+  [ hsv,         [3,2], dortmund,  Time.cet('2012-09-22 15:30') ],                
+  [ duesseldorf, [0,0], freiburg,  Time.cet('2012-09-22 15:30') ],                
+  [ leverkusen,  [1,1], mgladbach, Time.cet('2012-09-23 15:30') ],                
+  [ bremen,      [2,2], stuttgart, Time.cet('2012-09-23 17:30') ],                
+  [ hoffenheim,  [3,1], hannover,  Time.cet('2012-09-23 17:30') ]                
 ]
 
 
@@ -125,41 +125,41 @@ games_bl04 = [
 
 
 games_bl07 = [
-  [ 1, augsburg,  [3,1], bremen,      Time.cet('2012-10-06 00:00') ], 
-  [ 2, bayern,    [2,0], hoffenheim,  Time.cet('2012-10-06 00:00') ], 
-  [ 3, schalke,   [3,0], wolfsburg,   Time.cet('2012-10-06 00:00') ], 
-  [ 4, freiburg,  [3,0], nuernberg,   Time.cet('2012-10-06 00:00') ], 
-  [ 5, mainz,     [1,0], duesseldorf, Time.cet('2012-10-06 00:00') ], 
-  [ 6, fuerth,    [0,1], hsv,         Time.cet('2012-10-06 00:00') ], 
-  [ 7, mgladbach, [2,0], frankfurt,   Time.cet('2012-10-06 00:00') ], 
-  [ 8, stuttgart, [2,2], leverkusen,  Time.cet('2012-10-06 00:00') ], 
-  [ 9, hannover,  [1,1], dortmund,    Time.cet('2012-10-06 00:00') ] 
+  [ augsburg,  [3,1], bremen,      Time.cet('2012-10-06 00:00') ], 
+  [ bayern,    [2,0], hoffenheim,  Time.cet('2012-10-06 00:00') ], 
+  [ schalke,   [3,0], wolfsburg,   Time.cet('2012-10-06 00:00') ], 
+  [ freiburg,  [3,0], nuernberg,   Time.cet('2012-10-06 00:00') ], 
+  [ mainz,     [1,0], duesseldorf, Time.cet('2012-10-06 00:00') ], 
+  [ fuerth,    [0,1], hsv,         Time.cet('2012-10-06 00:00') ], 
+  [ mgladbach, [2,0], frankfurt,   Time.cet('2012-10-06 00:00') ], 
+  [ stuttgart, [2,2], leverkusen,  Time.cet('2012-10-06 00:00') ], 
+  [ hannover,  [1,1], dortmund,    Time.cet('2012-10-06 00:00') ] 
 ]
 
 games_bl08 = [
-  [ 1, hoffenheim,  [], fuerth,    Time.cet('2012-10-19 00:00') ],                
-  [ 2, dortmund,    [], schalke,   Time.cet('2012-10-19 00:00') ],                
-  [ 3, leverkusen,  [], mainz,     Time.cet('2012-10-19 00:00') ],                
-  [ 4, wolfsburg,   [], freiburg,  Time.cet('2012-10-19 00:00') ],                
-  [ 5, frankfurt,   [], hannover,  Time.cet('2012-10-19 00:00') ],                
-  [ 6, duesseldorf, [], bayern,    Time.cet('2012-10-19 00:00') ],                
-  [ 7, bremen,      [], mgladbach, Time.cet('2012-10-19 00:00') ],                
-  [ 8, nuernberg,   [], augsburg,  Time.cet('2012-10-19 00:00') ],                
-  [ 9, hsv,         [], stuttgart, Time.cet('2012-10-19 00:00') ]                
+  [ hoffenheim,  [], fuerth,    Time.cet('2012-10-19 00:00') ],                
+  [ dortmund,    [], schalke,   Time.cet('2012-10-19 00:00') ],                
+  [ leverkusen,  [], mainz,     Time.cet('2012-10-19 00:00') ],                
+  [ wolfsburg,   [], freiburg,  Time.cet('2012-10-19 00:00') ],                
+  [ frankfurt,   [], hannover,  Time.cet('2012-10-19 00:00') ],                
+  [ duesseldorf, [], bayern,    Time.cet('2012-10-19 00:00') ],                
+  [ bremen,      [], mgladbach, Time.cet('2012-10-19 00:00') ],                
+  [ nuernberg,   [], augsburg,  Time.cet('2012-10-19 00:00') ],                
+  [ hsv,         [], stuttgart, Time.cet('2012-10-19 00:00') ]                
 ]
 
 
 =begin
 games_bl08 = [
-  [ 1, , [], , Time.cet('') ],                
-  [ 2, , [], , Time.cet('') ],                
-  [ 3, , [], , Time.cet('') ],                
-  [ 4, , [], , Time.cet('') ],                
-  [ 5, , [], , Time.cet('') ],                
-  [ 6, , [], , Time.cet('') ],                
-  [ 7, , [], , Time.cet('') ],                
-  [ 8, , [], , Time.cet('') ],                
-  [ 9, , [], , Time.cet('') ]                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ],                
+  [  , [], , Time.cet('') ]                
 ]
 =end
 
