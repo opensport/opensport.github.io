@@ -5,9 +5,9 @@
 #################################
 ##  Europa League 2012
 
-el = Event.create!( :key => 'el',
-                    :title => 'Europa League 2011/12',
-                    :start_at => Time.cet( '2011-10-10 17:00' ))
+el = Event.create!( key: 'el',
+                    title: 'Europa League 2011/12',
+                    start_at: Time.cet( '2011-10-10 17:00' ))
 
 az       = Team.find_by_key!( 'az' )
 valencia = Team.find_by_key!( 'valencia' )
@@ -27,11 +27,11 @@ el.teams << metalist
 el.teams << atletico
 el.teams << hannover
 
-el8    = Round.create!( :event => el, :pos => 1, :title => 'Viertelfinale',            :title2 => '29. März 2012' )
-el8_2  = Round.create!( :event => el, :pos => 2, :title => 'Viertelfinale Rückspiele', :title2 => '5. April 2012' )
-el4    = Round.create!( :event => el, :pos => 3, :title => 'Halbfinale',               :title2 => '19. April 2012' )
-el4_2  = Round.create!( :event => el, :pos => 4, :title => 'Halbfinale Rückspiele',    :title2 => '26. April 2012' )
-el1    = Round.create!( :event => el, :pos => 5, :title => 'Finale',                   :title2 => '9. Mai 2012' )
+el8    = Round.create!( event: el, pos: 1, title: 'Viertelfinale',            start_at: Time.cet( '2012-03-29' ), title2: 'Do 29. März 2012' )
+el8_2  = Round.create!( event: el, pos: 2, title: 'Viertelfinale Rückspiele', start_at: Time.cet( '2012-04-05' ), title2: 'Do 5. April 2012' )
+el4    = Round.create!( event: el, pos: 3, title: 'Halbfinale',               start_at: Time.cet( '2012-04-19' ), title2: 'Do 19. April 2012' )
+el4_2  = Round.create!( event: el, pos: 4, title: 'Halbfinale Rückspiele',    start_at: Time.cet( '2012-04-26' ), title2: 'Do 26. April 2012' )
+el1    = Round.create!( event: el, pos: 5, title: 'Finale',                   start_at: Time.cet( '2012-05-09' ), title2: 'Mi 9. Mai 2012' )
 
 
 games_el8 = [
@@ -61,4 +61,4 @@ Game.create_knockout_pairs_from_ary!( games_el4, el4, el4_2 )
 Game.create_knockouts_from_ary!( games_el1,  el1 )
 
 
-Prop.create!( :key => 'db.el.2011/12.version', :value => '1' )
+Prop.create!( key: 'db.el.2011/12.version', value: '1' )

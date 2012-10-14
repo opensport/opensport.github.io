@@ -42,19 +42,19 @@ ofb4    = Round.create!( event: ofb, pos: 2, title: 'Halbfinale',    start_at: T
 ofb1    = Round.create!( event: ofb, pos: 3, title: 'Finale',        start_at: Time.cet( '2012-05-20' ), title2: 'So 20. Mai 2012' )
 
 games_ofb8 = [
-  [ 1, groedig,   [2, 3],       ried,     Time.cet('2012-04-10 18:00') ],
-  [ 2, austrial,  [1, 2],       austria,  Time.cet('2012-04-11 18:00') ],
-  [ 3, sturm,     [2, 2, 2, 4], hartberg, Time.cet('2012-04-11 19:00') ], 
-  [ 4, salzburg,  [4, 1],       juniors,  Time.cet('2012-04-11 19:00') ]
+  [ groedig,   [2, 3],       ried,     Time.cet('2012-04-10 18:00') ],
+  [ austrial,  [1, 2],       austria,  Time.cet('2012-04-11 18:00') ],
+  [ sturm,     [2, 2, 2, 4], hartberg, Time.cet('2012-04-11 19:00') ],
+  [ salzburg,  [4, 1],       juniors,  Time.cet('2012-04-11 19:00') ]
 ]
 
 games_ofb4 = [
-  [ 1, hartberg,  [0, 1], salzburg, Time.cet('2012-05-01 18:00') ],
-  [ 2, ried,      [2, 0], austria,  Time.cet('2012-05-02 20:30') ]
+  [ hartberg,  [0, 1], salzburg, Time.cet('2012-05-01 18:00') ],
+  [ ried,      [2, 0], austria,  Time.cet('2012-05-02 20:30') ]
 ]
 
 games_ofb1 = [
-  [ 1, salzburg, [3,0], ried, Time.cet('2012-05-20 16:00') ]
+  [ salzburg, [3,0], ried, Time.cet('2012-05-20 16:00') ]
 ]
 
 Game.create_knockouts_from_ary!( games_ofb8, ofb8 )
