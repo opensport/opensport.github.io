@@ -9,9 +9,9 @@
 # or  http://de.wikipedia.org/wiki/Fu%C3%9Fball-Europameisterschaft_2012
 
 
-euro = Event.create!( :key => 'euro',
-                      :title => 'Euro 2012',
-                      :start_at => Time.cet( '2012-06-07 17:00' ))
+euro = Event.create!( key:     'euro',
+                      title:   'Euro 2012',
+                      start_at: Time.cet( '2012-06-07 17:00' ))
 
 pol = Team.find_by_key!( 'pol' )
 gre = Team.find_by_key!( 'gre' )
@@ -53,10 +53,10 @@ euro.teams << eng
 
 
 
-euroa = Group.create!( :event => euro, :pos => 1, :title => 'Gruppe A' )
-eurob = Group.create!( :event => euro, :pos => 2, :title => 'Gruppe B' )
-euroc = Group.create!( :event => euro, :pos => 3, :title => 'Gruppe C' )
-eurod = Group.create!( :event => euro, :pos => 4, :title => 'Gruppe D' )
+euroa = Group.create!( event: euro, pos: 1, title: 'Gruppe A' )
+eurob = Group.create!( event: euro, pos: 2, title: 'Gruppe B' )
+euroc = Group.create!( event: euro, pos: 3, title: 'Gruppe C' )
+eurod = Group.create!( event: euro, pos: 4, title: 'Gruppe D' )
 
 #################################
 # Gruppe A
@@ -93,9 +93,9 @@ eurod.teams << fra
 eurod.teams << eng
 
 
-euro_round1 = Round.create!( :event => euro, :pos => 1, :title => 'Vorrunde 1. Spieltag', :title2 => '8.-11. Juni' )
-euro_round2 = Round.create!( :event => euro, :pos => 2, :title => 'Vorrunde 2. Spieltag', :title2 => '12.-15. Juni' )
-euro_round3 = Round.create!( :event => euro, :pos => 3, :title => 'Vorrunde 3. Spieltag', :title2 => '16.-19. Juni' )
+euro_round1 = Round.create!( event: euro, pos: 1, title: 'Vorrunde 1. Spieltag', start_at: Time.cet( '2012-06-08' ), title2: '8.-11. Juni' )
+euro_round2 = Round.create!( event: euro, pos: 2, title: 'Vorrunde 2. Spieltag', start_at: Time.cet( '2012-06-12' ), title2: '12.-15. Juni' )
+euro_round3 = Round.create!( event: euro, pos: 3, title: 'Vorrunde 3. Spieltag', start_at: Time.cet( '2012-06-16' ), title2: '16.-19. Juni' )
 
 
 
@@ -138,9 +138,9 @@ Game.create_from_ary!( games_euro_round3, euro_round3 )
 
 
 
-euro8 = Round.create!( :event => euro, :pos => 4, :title => 'Viertelfinale' )
-euro4 = Round.create!( :event => euro, :pos => 5, :title => 'Halbfinale' )
-euro1 = Round.create!( :event => euro, :pos => 6, :title => 'Finale' )
+euro8 = Round.create!( event: euro, pos: 4, title: 'Viertelfinale', start_at: Time.cet( '2012-06-21' ) )
+euro4 = Round.create!( event: euro, pos: 5, title: 'Halbfinale',    start_at: Time.cet( '2012-06-27' ) )
+euro1 = Round.create!( event: euro, pos: 6, title: 'Finale',        start_at: Time.cet( '2012-07-01' ) )
 
 
 games_euro8 = [
@@ -162,4 +162,4 @@ Game.create_knockouts_from_ary!( games_euro4, euro4 )
 Game.create_knockouts_from_ary!( games_euro1, euro1 )
 
 
-Prop.create!( :key => 'db.euro.2012.version', :value => '1' )
+Prop.create!( key: 'db.euro.2012.version', value: '1' )

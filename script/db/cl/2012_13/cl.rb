@@ -5,9 +5,9 @@
 #################################
 ## Champions League 2012/13
 
-cl = Event.create!( :key => 'cl.2012/13',
-                    :title => 'Champions League 2012/13',
-                    :start_at => Time.cet( '2012-09-18 18:30' ) )
+cl = Event.create!( key:      'cl.2012/13',
+                    title:    'Champions League 2012/13',
+                    start_at: Time.cet( '2012-09-18 18:30' ) )
 
 porto         = Team.find_by_key!( 'porto' )
 kiew          = Team.find_by_key!( 'kiew' )
@@ -92,14 +92,14 @@ cl.teams << galatasaray
 cl.teams << cluj
 
 
-cla = Group.create!( :event => cl, :pos => 1, :title => 'Gruppe A' )
-clb = Group.create!( :event => cl, :pos => 2, :title => 'Gruppe B' )
-clc = Group.create!( :event => cl, :pos => 3, :title => 'Gruppe C' )
-cld = Group.create!( :event => cl, :pos => 4, :title => 'Gruppe D' )
-cle = Group.create!( :event => cl, :pos => 5, :title => 'Gruppe E' )
-clf = Group.create!( :event => cl, :pos => 6, :title => 'Gruppe F' )
-clg = Group.create!( :event => cl, :pos => 7, :title => 'Gruppe G' )
-clh = Group.create!( :event => cl, :pos => 8, :title => 'Gruppe H' )
+cla = Group.create!( event: cl, pos: 1, title: 'Gruppe A' )
+clb = Group.create!( event: cl, pos: 2, title: 'Gruppe B' )
+clc = Group.create!( event: cl, pos: 3, title: 'Gruppe C' )
+cld = Group.create!( event: cl, pos: 4, title: 'Gruppe D' )
+cle = Group.create!( event: cl, pos: 5, title: 'Gruppe E' )
+clf = Group.create!( event: cl, pos: 6, title: 'Gruppe F' )
+clg = Group.create!( event: cl, pos: 7, title: 'Gruppe G' )
+clh = Group.create!( event: cl, pos: 8, title: 'Gruppe H' )
 
 #################################
 # Gruppe A
@@ -172,20 +172,20 @@ clh.teams << galatasaray
 clh.teams << cluj
 
 
-clr1   = Round.create!( :event => cl, :pos => 1, :title => 'Spieltag 1', :title2 => 'Di./Mi., 18.+19. Sep 2012' )
-clr2   = Round.create!( :event => cl, :pos => 2, :title => 'Spieltag 2', :title2 => 'Di./Mi., 2.+3. Okt 2012' )
-clr3   = Round.create!( :event => cl, :pos => 3, :title => 'Spieltag 3', :title2 => 'Di./Mi., 23.+24. Okt 2012' )
-clr4   = Round.create!( :event => cl, :pos => 4, :title => 'Spieltag 4', :title2 => 'Di./Mi., 6.+7. Nov 2012' )
-clr5   = Round.create!( :event => cl, :pos => 5, :title => 'Spieltag 5', :title2 => 'Di./Mi., 20.+21. Nov 2012' )
-clr6   = Round.create!( :event => cl, :pos => 6, :title => 'Spieltag 6', :title2 => 'Di./Mi., 4.+5. Dez 2012' )
+clr1   = Round.create!( event: cl, pos: 1, title: 'Spieltag 1', start_at: Time.cet( '2012-09-18' ), title2: 'Di./Mi., 18.+19. Sep 2012' )
+clr2   = Round.create!( event: cl, pos: 2, title: 'Spieltag 2', start_at: Time.cet( '2012-10-02' ), title2: 'Di./Mi., 2.+3. Okt 2012' )
+clr3   = Round.create!( event: cl, pos: 3, title: 'Spieltag 3', start_at: Time.cet( '2012-10-23' ), title2: 'Di./Mi., 23.+24. Okt 2012' )
+clr4   = Round.create!( event: cl, pos: 4, title: 'Spieltag 4', start_at: Time.cet( '2012-11-06' ), title2: 'Di./Mi., 6.+7. Nov 2012' )
+clr5   = Round.create!( event: cl, pos: 5, title: 'Spieltag 5', start_at: Time.cet( '2012-11-20' ), title2: 'Di./Mi., 20.+21. Nov 2012' )
+clr6   = Round.create!( event: cl, pos: 6, title: 'Spieltag 6', start_at: Time.cet( '2012-12-04' ), title2: 'Di./Mi., 4.+5. Dez 2012' )
 
-cl16   = Round.create!( :event => cl, :pos => 7, :title => 'Achtelfinale', :title2 => 'Di./Mi., 12.+13./19.+20. Feb 2013' )
-cl16_2 = Round.create!( :event => cl, :pos => 8, :title => 'Achtelfinale Rückspiele', :title2 => 'Di./Mi., 5.+6./12.+13. Mär 2013' )
-cl8    = Round.create!( :event => cl, :pos => 9, :title => 'Viertelfinale',            :title2 => 'Di./Mi., 2.+3. Apr 2013' )
-cl8_2  = Round.create!( :event => cl, :pos => 10, :title => 'Viertelfinale Rückspiele', :title2 => 'Di./Mi., 9.+10. Apr 2013' )
-cl4    = Round.create!( :event => cl, :pos => 11, :title => 'Halbfinale',               :title2 => 'Di./Mi., 23.+24. Apr 2013' )
-cl4_2  = Round.create!( :event => cl, :pos => 12, :title => 'Halbfinale Rückspiele',    :title2 => 'Di./Mi., 30. Apr/1. Mai 2013' )
-cl1    = Round.create!( :event => cl, :pos => 13, :title => 'Finale',                   :title2 => 'Sa. 25. Mai 2013' )
+cl16   = Round.create!( event: cl, pos: 7, title: 'Achtelfinale',              start_at: Time.cet( '2013-02-12' ), title2: 'Di./Mi., 12.+13./19.+20. Feb 2013' )
+cl16_2 = Round.create!( event: cl, pos: 8, title: 'Achtelfinale Rückspiele',   start_at: Time.cet( '2013-03-05' ), title2: 'Di./Mi., 5.+6./12.+13. Mär 2013' )
+cl8    = Round.create!( event: cl, pos: 9, title: 'Viertelfinale',             start_at: Time.cet( '2013-04-02' ), title2: 'Di./Mi., 2.+3. Apr 2013' )
+cl8_2  = Round.create!( event: cl, pos: 10, title: 'Viertelfinale Rückspiele', start_at: Time.cet( '2013-04-09' ), title2: 'Di./Mi., 9.+10. Apr 2013' )
+cl4    = Round.create!( event: cl, pos: 11, title: 'Halbfinale',               start_at: Time.cet( '2013-04-23' ), title2: 'Di./Mi., 23.+24. Apr 2013' )
+cl4_2  = Round.create!( event: cl, pos: 12, title: 'Halbfinale Rückspiele',    start_at: Time.cet( '2013-04-30' ), title2: 'Di./Mi., 30. Apr/1. Mai 2013' )
+cl1    = Round.create!( event: cl, pos: 13, title: 'Finale',                   start_at: Time.cet( '2013-05-25' ), title2: 'Sa. 25. Mai 2013' )
 
 
 games_cla = [
@@ -319,4 +319,4 @@ Game.create_pairs_from_ary_for_group!( games_clg, clg )
 Game.create_pairs_from_ary_for_group!( games_clh, clh )
 
 
-Prop.create!( :key => 'db.cl.2012/13.version', :value => '1' )
+Prop.create!( key: 'db.cl.2012/13.version', value: '1' )

@@ -6,7 +6,9 @@
 ##################################
 ### ÖFB Cup 2011/12
 
-ofb = Event.create!( :key => 'at_cup_2011_12', :title => 'ÖFB Cup 2011/12', :start_at => Time.cet( '2011-10-10 17:00' ) )
+ofb = Event.create!( key:   'at.cup.2011/12',
+                     title: 'ÖFB Cup 2011/12',
+                     start_at: Time.cet( '2011-10-10 17:00' ) )
 
 
 sturm       = Team.find_by_key!( 'sturm' )
@@ -35,24 +37,24 @@ ofb.teams << juniors
 ofb.teams << austrial
 ofb.teams << austria
 
-ofb8    = Round.create!( :event => ofb, :pos => 1, :title => 'Viertelfinale', :title2 => '10.+11. April 2012' )
-ofb4    = Round.create!( :event => ofb, :pos => 2, :title => 'Halbfinale',    :title2 => '1.+2. Mai 2012' )
-ofb1    = Round.create!( :event => ofb, :pos => 3, :title => 'Finale',        :title2 => '20. Mai 2012' )
+ofb8    = Round.create!( event: ofb, pos: 1, title: 'Viertelfinale', start_at: Time.cet( '2012-04-10' ), title2: 'Di+Mi 10.+11. April 2012' )
+ofb4    = Round.create!( event: ofb, pos: 2, title: 'Halbfinale',    start_at: Time.cet( '2012-05-01' ), title2: 'Di+Mi 1.+2. Mai 2012' )
+ofb1    = Round.create!( event: ofb, pos: 3, title: 'Finale',        start_at: Time.cet( '2012-05-20' ), title2: 'So 20. Mai 2012' )
 
 games_ofb8 = [
-  [ 1, groedig,   [2, 3],       ried,     Time.cet('2012-04-10 18:00') ],
-  [ 2, austrial,  [1, 2],       austria,  Time.cet('2012-04-11 18:00') ],
-  [ 3, sturm,     [2, 2, 2, 4], hartberg, Time.cet('2012-04-11 19:00') ], 
-  [ 4, salzburg,  [4, 1],       juniors,  Time.cet('2012-04-11 19:00') ]
+  [ groedig,   [2, 3],       ried,     Time.cet('2012-04-10 18:00') ],
+  [ austrial,  [1, 2],       austria,  Time.cet('2012-04-11 18:00') ],
+  [ sturm,     [2, 2, 2, 4], hartberg, Time.cet('2012-04-11 19:00') ],
+  [ salzburg,  [4, 1],       juniors,  Time.cet('2012-04-11 19:00') ]
 ]
 
 games_ofb4 = [
-  [ 1, hartberg,  [0, 1], salzburg, Time.cet('2012-05-01 18:00') ],
-  [ 2, ried,      [2, 0], austria,  Time.cet('2012-05-02 20:30') ]
+  [ hartberg,  [0, 1], salzburg, Time.cet('2012-05-01 18:00') ],
+  [ ried,      [2, 0], austria,  Time.cet('2012-05-02 20:30') ]
 ]
 
 games_ofb1 = [
-  [ 1, salzburg, [3,0], ried, Time.cet('2012-05-20 16:00') ]
+  [ salzburg, [3,0], ried, Time.cet('2012-05-20 16:00') ]
 ]
 
 Game.create_knockouts_from_ary!( games_ofb8, ofb8 )
@@ -60,4 +62,4 @@ Game.create_knockouts_from_ary!( games_ofb4, ofb4 )
 Game.create_knockouts_from_ary!( games_ofb1, ofb1 )
 
 
-Prop.create!( :key => 'db.at.cup.2011/12.version', :value => '1' )
+Prop.create!( key: 'db.at.cup.2011/12.version', value: '1' )

@@ -17,9 +17,18 @@ Hoe.spec 'sportdb' do
   self.readme_file  = 'README.markdown'
   self.history_file = 'History.markdown'
   
-end
+  self.extra_deps = [
+    ['activerecord', '>= 3.2.8'],  # NB: will include activesupport,etc.
+    ['sqlite3', '>= 1.3.6']
+  ]
+  
+  self.post_install_message =<<EOS
+******************************************************************************
 
-## todo: add depends for
-##   - activerecord
-##     - ar-sqlite?
-##   - activesupport
+Questions? Comments? Send them along to the mailing list.
+https://groups.google.com/group/opensport
+
+******************************************************************************
+EOS
+  
+end
