@@ -18,10 +18,10 @@ Hoe.spec 'sportdb' do
   self.history_file = 'History.markdown'
   
   self.extra_deps = [
-    ['activerecord', '>= 3.2.8'],  # NB: will include activesupport,etc.
-    ['sqlite3', '>= 1.3.6']
+    ['activerecord', '~> 3.2'],  # NB: will include activesupport,etc.
+    ['sqlite3',      '~> 1.3']
   ]
-  
+
   self.post_install_message =<<EOS
 ******************************************************************************
 
