@@ -1,16 +1,16 @@
 # encoding: utf-8
 
 bl = [
-  [ 'salzburg',    'FC RB Salzburg',      'RBS' ],
-  [ 'rapid',       'SK Rapid Wien',       'RAP' ],
-  [ 'admira',      'FC Admira Wacker',    'ADM' ],
-  [ 'austria',     'FK Austria Wien',     'FAK' ],
-  [ 'sturm',       'SK Sturm Graz',       'STU' ],
-  [ 'ried',        'SV Ried',             'RIE' ],
-  [ 'wacker',      'FC Wacker Innsbruck', 'IBK' ],
-  [ 'mattersburg', 'SV Mattersburg',      'SVM' ],
-  [ 'neustadt',    'SC Wiener Neustadt',  'WRN' ],
-  [ 'wac',         'Wolfsberger AC',      'WAC' ]
+  [ 'salzburg',    'FC RB Salzburg|RB Salzburg',         'RBS' ],
+  [ 'rapid',       'SK Rapid Wien|Rapid Wien',           'RAP' ],
+  [ 'admira',      'FC Admira Wacker|Admira Wacker',     'ADM' ],
+  [ 'austria',     'FK Austria Wien|Austria Wien',       'FAK' ],
+  [ 'sturm',       'SK Sturm Graz|Sturm Graz',           'STU' ],
+  [ 'ried',        'SV Ried',                            'RIE' ],
+  [ 'wacker',      'FC Wacker Innsbruck|FC Wacker',      'IBK' ],
+  [ 'mattersburg', 'SV Mattersburg',                     'SVM' ],
+  [ 'neustadt',    'SC Wiener Neustadt|Wiener Neustadt', 'WRN' ],
+  [ 'wac',         'Wolfsberger AC',                     'WAC' ]
 ]
 
 ersteliga = [

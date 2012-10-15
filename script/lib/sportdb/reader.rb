@@ -65,7 +65,7 @@ class Reader
 
 
   def is_round?( line )
-    line =~ /Spieltag/
+    line =~ /Spieltag|Runde/
   end
   
   def find_date!( line )
@@ -74,7 +74,7 @@ class Reader
     # NB: side effect - removes date from line string
     
     # e.g. 14.09. 20:30
-    regex = /(\d{2})\.(\d{2})\.\s+(\d{2}):(\d{2})/
+    regex = /\b(\d{2})\.(\d{2})\.\s+(\d{2}):(\d{2})\b/
     
     if line =~ regex
       value = "2012-#{$2}-#{$1} #{$3}:#{$4}"
@@ -97,7 +97,7 @@ class Reader
     # NB: side effect - removes date from line string
     
     # e.g. 1:2 or 0:2 or 3:3
-    regex = /(\d):(\d)/
+    regex = /\b(\d):(\d)\b/
     
     if line =~ regex
       value = "#{$1}-#{$2}"
@@ -113,7 +113,7 @@ class Reader
   
 
   def find_team_worker!( line, index )
-    regex = /@@([^@]+?)@@/     # e.g. everything in @@ .... @@ (use non-greedy +? plus all chars but not @, that is [^@])
+    regex = /@@oo([^@]+?)oo@@/     # e.g. everything in @@ .... @@ (use non-greedy +? plus all chars but not @, that is [^@])
     
     if line =~ regex
       value = "#{$1}"
@@ -138,10 +138,11 @@ class Reader
   
   def match_team_worker!( line, key, values )
     values.each do |value|
-      regex = Regexp.new( value )
+      regex = Regexp.new( "\\b#{value}\\b" )   # wrap with world boundry (e.g. match only whole words e.g. not wac in wacker) 
       if line =~ regex
         puts "     match for team >#{key}< >#{value}<"
-        line.sub!( regex, "@@#{key}@@" )
+        # make sure @@oo{key}oo@@ doesn't match itself with other key e.g. wacker, wac, etc.
+        line.sub!( regex, "@@oo#{key}oo@@" )
         return true    # break out after first match (do NOT continue)
       end
     end
