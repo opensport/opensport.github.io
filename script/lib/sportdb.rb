@@ -31,6 +31,7 @@ require 'sportdb/models/team'
 require 'sportdb/schema'       # NB: requires sportdb/models (include SportDB::Models)
 require 'sportdb/utils'
 require 'sportdb/loader'
+require 'sportdb/reader'
 require 'sportdb/version'
 require 'sportdb/cli/opts'
 require 'sportdb/cli/runner'

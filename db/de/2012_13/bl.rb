@@ -117,8 +117,18 @@ games_bl04 = [
   [ hoffenheim,  [3,1], hannover,  Time.cet('2012-09-23 17:30') ]                
 ]
 
-
-
+# 25.09-26.09
+games_bl05 = [
+  [ Time.cet( '2012-09-25 20:00' ), frankfurt, [3,3],  dortmund    ],
+  [ Time.cet( '2012-09-25 20:00' ), fuerth,    [0,2],  duesseldorf ],
+  [ Time.cet( '2012-09-25 20:00' ), bayern,    [3,0],  wolfsburg   ],
+  [ Time.cet( '2012-09-25 20:00' ), schalke,   [3,0],  mainz       ],
+  [ Time.cet( '2012-09-26 20:00' ), hannover,  [4,1],  nuernberg   ],
+  [ Time.cet( '2012-09-26 20:00' ), augsburg,  [1,3],  leverkusen  ],
+  [ Time.cet( '2012-09-26 20:00' ), stuttgart, [0,3],  hoffenheim  ],
+  [ Time.cet( '2012-09-26 20:00' ), mgladbach, [2,2],  hsv         ],
+  [ Time.cet( '2012-09-26 20:00' ), freiburg,  [1,2],  bremen      ]
+]
 
 ## todo: fix game dates
 

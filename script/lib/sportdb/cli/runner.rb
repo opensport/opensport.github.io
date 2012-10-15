@@ -23,6 +23,8 @@ class Runner
     
       cmd.banner = "Usage: sportdb [options]"
 
+      cmd.on( '-g', '--generate', 'Generate Structured Fixtures from Unstructured Text' ) { opts.generate = true }
+
       ## todo: change to different flag??   use -c/--config ???
       cmd.on( '-c', '--create', 'Create DB Schema' ) { opts.create = true }
 
@@ -98,19 +100,29 @@ EOS
     if opts.load?
       loader = Loader.new
     end
-
-    args.each do |arg|
-      name = arg     # File.basename( arg, '.*' )
+    
+    if opts.generate?
       
-      if opts.load?
-        loader.load_fixtures( name )  # load from gem (built-in)
-      else
-        load_fixtures( name )  # load from file system
+      Reader.new.run( args )
+      
+    else
+
+      args.each do |arg|
+        name = arg     # File.basename( arg, '.*' )
+      
+        if opts.load?
+          loader.load_fixtures( name )  # load from gem (built-in)
+        else
+          load_fixtures( name )  # load from file system
+        end
       end
+    
+      dump_stats
+      dump_props    
+    
     end
     
-    dump_stats
-    dump_props
+
     
     puts 'Done.'
     

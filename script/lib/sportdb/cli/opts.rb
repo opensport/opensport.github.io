@@ -10,7 +10,17 @@ class Opts
     return false if @create.nil?   # default create flag is false
     @create == true
   end
+  
 
+  def generate=(boolean)
+    @generate = boolean
+  end
+
+  def generate?
+    return false if @generate.nil?   # default generate flag is false
+    @generate == true
+  end
+  
 
   def delete=(boolean)
     @delete = boolean
