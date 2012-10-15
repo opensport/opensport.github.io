@@ -21,6 +21,14 @@ class Opts
     @generate == true
   end
   
+  def event=(value)
+    @event = value
+  end
+  
+  def event
+    @event   # NB: option has no default; return nil  ## || '.'
+  end  
+  
 
   def delete=(boolean)
     @delete = boolean

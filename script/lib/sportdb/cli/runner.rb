@@ -23,7 +23,7 @@ class Runner
     
       cmd.banner = "Usage: sportdb [options]"
 
-      cmd.on( '-g', '--generate', 'Generate Structured Fixtures from Unstructured Text' ) { opts.generate = true }
+      cmd.on( '-g', '--generate EVENT_KEY', 'Generate Structured Fixtures from Unstructured Text' ) { |key| opts.event = key; opts.generate = true }
 
       ## todo: change to different flag??   use -c/--config ???
       cmd.on( '-c', '--create', 'Create DB Schema' ) { opts.create = true }
@@ -103,7 +103,7 @@ EOS
     
     if opts.generate?
       
-      Reader.new.run( args )
+      Reader.new( opts ).run( args )
       
     else
 

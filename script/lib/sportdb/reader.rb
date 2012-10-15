@@ -7,12 +7,14 @@ class Reader
   include SportDB::Models
 
 
-  def initialize
+  def initialize( opts )
     @logger = Logger.new(STDOUT)
     @logger.level = Logger::INFO
+    
+    @opts = opts
   end
 
-  attr_reader :logger
+  attr_reader :logger, :opts
 
   def run( args )
   
@@ -21,7 +23,35 @@ class Reader
     puts "working directory: #{Dir.pwd}"
  
     ## assume active activerecord connection
-    ## 
+    ##
+    
+    @event = Event.find_by_key!( opts.event )
+    
+    puts "Event #{@event.key} >#{@event.title}<"
+
+
+    ## build known teams table w/ synonyms e.g.
+    #
+    #   nb: synonyms can be a regex not just a literal string
+    # [[ 'wolfsbrug', [ 'VfL Wolfsburg' ]],
+    #  [ 'augsburg',  [ 'FC Augsburg', 'Augi2', 'Augi3' ]],
+    #  [ 'stuttgart', [ 'VfB Stuttgart' ]] ]
+    
+    @known_teams = []
+ 
+    @event.teams.each_with_index do |team,index|
+      
+      titles = []
+      titles << team.title
+      titles += team.synonyms.split('|')  if team.synonyms.present?
+      titles << team.tag                  if team.tag.present?
+      titles << team.key
+            
+      @known_teams << [ team.key, titles ]
+      
+      puts "  Team[#{index+1}] #{team.key} >#{titles.join('|')}<"
+    end
+ 
  
     args.each do |arg|
       name = arg     # File.basename( arg, '.*' )
@@ -80,52 +110,60 @@ class Reader
       return nil
     end
   end
+  
 
-  def find_team!( line )
+  def find_team_worker!( line, index )
     regex = /@@([^@]+?)@@/     # e.g. everything in @@ .... @@ (use non-greedy +? plus all chars but not @, that is [^@])
     
     if line =~ regex
       value = "#{$1}"
-      puts "   team: >#{value}<"
+      puts "   team#{index}: >#{value}<"
       
-      line.sub!( regex, '[TEAM]' )
+      line.sub!( regex, "[TEAM#{index}]" )
 
       return $1
     else
       return nil
     end
   end
-  
-  def translate_teams!( line )
 
-    ## nb: synonyms can be a regex not just a literal string
-    known_teams = [
-      [ 'wolfsbrug', [ 'VfL Wolfsburg' ]],
-      [ 'augsburg',  [ 'FC Augsburg', 'Augi2', 'Augi3' ]],
-      [ 'stuttgart', [ 'VfB Stuttgart' ]] ]
-    
-    known_teams.each do |rec|
+  def find_team1!( line )
+    find_team_worker!( line, 1 )
+  end
+  
+  def find_team2!( line )
+    find_team_worker!( line, 2 )
+  end
+  
+  
+  def match_team_worker!( line, key, values )
+    values.each do |value|
+      regex = Regexp.new( value )
+      if line =~ regex
+        puts "     match for team >#{key}< >#{value}<"
+        line.sub!( regex, "@@#{key}@@" )
+        return true    # break out after first match (do NOT continue)
+      end
+    end
+    return false
+  end
+
+  def match_teams!( line )
+    @known_teams.each do |rec|
       key    = rec[0]
       values = rec[1]
-      values.each do |value|
-        regex = Regexp.new( value )
-        if line =~ regex
-          puts "   team: >#{key}< from >#{value}<"
-          line.sub!( regex, "@@#{key}@@" )
-        end
-      end
-    end # each known_teams
-    
+      match_team_worker!( line, key, values )
+    end # each known_teams    
   end # method translate_teams!
   
   
   
 
   def parse_fixtures( name )
-    
-    path = name
+  
+    path = "#{opts.data_path}/#{name}.txt"
  
-    puts "*** loading data '#{name}' (#{path})..."
+    puts "*** parsing data '#{name}' (#{path})..."
 
     old_lines = File.read( path )
     
@@ -152,6 +190,9 @@ class Reader
         next
       end
 
+      # remove leading and trailing whitespace
+      line = line.strip
+
       if is_round?( line )
         puts "parsing round line: >#{line}<"  
       else
@@ -159,9 +200,9 @@ class Reader
         date  = find_date!( line )
         score = find_score!( line )
         
-        translate_teams!( line )
-        team1 = find_team!( line )
-        team2 = find_team!( line )
+        match_teams!( line )
+        team1 = find_team1!( line )
+        team2 = find_team2!( line )
         
         puts "  line: >#{line}<"
       end

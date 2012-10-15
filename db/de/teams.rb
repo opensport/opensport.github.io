@@ -21,7 +21,7 @@ teams = [
   [ 'freiburg',    'SC Freiburg',                         'SCF' ],
   [ 'bremen',      'Werder Bremen',                       'BRE' ],
   [ 'hoffenheim',  '1899 Hoffenheim',                     'HOF' ],
-  [ 'nuernberg',   '1 FC Nürnberg',                       'FCN' ],
+  [ 'nuernberg',   '1. FC Nürnberg',                      'FCN' ],
   [ 'stuttgart',   'VfB Stuttgart',                       'VFB' ],
   [ 'augsburg',    'FC Augsburg',                         'FCA' ],
   [ 'wolfsburg',   'VfL Wolfsburg',                       'WOB' ],
