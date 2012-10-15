@@ -15,9 +15,17 @@ class Team < ActiveRecord::Base
       
       ## key & title required
       attr = {
-        :key   => values[0],
-        :title => values[1]
+        :key   => values[0]
       }
+
+      ## title (split of optional synonyms)
+      # e.g. FC Bayern Muenchen|Bayern Muenchen|Bayern
+      titles = values[1].split('|')
+      
+      attr[ :title ]    =  titles[0]
+      ## add optional synonyms
+      attr[ :synonyms ] =  titles[1..-1].join('|')  if titles.size > 1
+
       
       attr = attr.merge( more_values )
       
