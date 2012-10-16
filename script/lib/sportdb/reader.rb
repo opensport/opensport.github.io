@@ -40,10 +40,15 @@ class Reader
     @known_teams = []
  
     @event.teams.each_with_index do |team,index|
-      
+
       titles = []
       titles << team.title
       titles += team.synonyms.split('|')  if team.synonyms.present?
+
+      ## NB: sort here by length (largest goes first - best match)
+      #  exclude tag and key (key should always go last)
+      titles = titles.sort { |left,right| right.length <=> left.length }
+      
       titles << team.tag                  if team.tag.present?
       titles << team.key
             
@@ -68,6 +73,21 @@ class Reader
     line =~ /Spieltag|Runde/
   end
   
+  def find_round_pos!( line )
+    regex = /\b(\d+)\b/
+    
+    if line =~ regex
+      value = $1.to_i
+      puts "   pos: >#{value}<"
+      
+      line.sub!( regex, '[POS]' )
+
+      return value
+    else
+      return nil
+    end    
+  end
+  
   def find_date!( line )
     # extract date from line
     # and return it
@@ -85,7 +105,7 @@ class Reader
       
       line.sub!( regex, '[DATE]' )
 
-      return Time.now
+      return DateTime.strptime( value, '%Y-%m-%d %H:%M' )
     else
       return nil
     end
@@ -105,9 +125,9 @@ class Reader
       
       line.sub!( regex, '[SCORE]' )
 
-      return [$1,$2]
+      return [$1.to_i,$2.to_i]
     else
-      return nil
+      return []
     end
   end
   
@@ -158,7 +178,25 @@ class Reader
   end # method translate_teams!
   
   
-  
+  def gen_fixtures
+
+    new_lines = []
+
+    header_lines = []
+
+    header_lines << "#####################################\n"
+    header_lines << "# generiert am  #{Time.now}\n"
+    header_lines << "#   version: #{SportDB::VERSION} -- banner here??\n"
+
+    ## NB: add parsing errors to header as we go along (see above)
+    
+    header_lines << "#####################################\n"
+    header_lines << "\n"
+
+    pp header_lines  
+    
+  end
+
 
   def parse_fixtures( name )
   
@@ -168,14 +206,6 @@ class Reader
 
     old_lines = File.read( path )
     
-    new_lines = []
-
-    header_lines = []
-
-    header_lines << "#####################################\n"
-    header_lines << "# generiert am  #{Time.now}\n"
-    header_lines << "#   version: #{SportDB::VERSION} -- banner here??\n"
-  
     old_lines.each_line do |line|
   
       if line =~ /^\s*#/
@@ -187,7 +217,6 @@ class Reader
       if line =~ /^\s*$/ 
         # kommentar oder leerzeile überspringen 
         logger.debug 'skipping blank line'
-        new_lines << line
         next
       end
 
@@ -195,7 +224,38 @@ class Reader
       line = line.strip
 
       if is_round?( line )
-        puts "parsing round line: >#{line}<"  
+        puts "parsing round line: >#{line}<"
+        pos = find_round_pos!( line )
+        
+        ## NB: dummy/placeholder start_at, end_at date
+        ##  replace/patch after adding all games for round
+        
+        round_attribs = {
+          title: "#{pos}. Runde"
+        }
+        
+        @round = Round.find_by_event_id_and_pos( @event.id, pos )
+        if @round.present?
+          puts "*** update round:"
+        else
+          puts "*** create round:"
+          @round = Round.new
+          
+          round_attribs = round_attribs.merge( {
+            event_id: @event.id,
+            pos:   pos,
+            start_at: Time.utc('1999-12-12'),
+            end_at:   Time.utc('1999-12-12')
+                                 })
+        end
+        
+        puts round_attribs.to_json
+   
+        @round.update_attributes!( round_attribs )
+
+        
+        puts "  line: >#{line}<"
+        
       else
         puts "parsing game (fixture) line: >#{line}<"
         date  = find_date!( line )
@@ -204,20 +264,50 @@ class Reader
         match_teams!( line )
         team1 = find_team1!( line )
         team2 = find_team2!( line )
+
+
+        ### todo: cache team lookups in hash?
+
+        team1_id = Team.find_by_key!( team1 ).id
+        team2_id = Team.find_by_key!( team2 ).id
+
+        ### check if games exists
+        ##  with this teams in this round if yes only update
+        @game = Game.find_by_round_id_and_team1_id_and_team2_id(
+                         @round.id, team1_id, team2_id
+        )
+
+        game_attribs = {
+          score1:    score[0],
+          score2:    score[1],
+          play_at:  date
+        }
+
+        if @game.present?
+          puts "*** update game:"
+        else
+          puts "*** create game:"
+          @game = Game.new
+
+          more_game_attribs = {
+          ## NB: use round.games.count for pos
+          ##  lets us add games out of order if later needed
+            pos:  @round.games.count+1,
+            round_id:  @round.id,
+            team1_id: team1_id,
+            team2_id: team2_id
+          }          
+          game_attribs = game_attribs.merge( more_game_attribs )
+        end
+
+        puts game_attribs.to_json
+
+        @game.update_attributes!( game_attribs )
         
         puts "  line: >#{line}<"
       end
-      
              
-    end # oldlines.each
-
-    ## NB: add parsing errors to header as we go along (see above)
-    
-    header_lines << "#####################################\n"
-    header_lines << "\n"
-
-    pp header_lines    
-    
+    end # oldlines.each    
   end # method parse_fixtures
 
   
