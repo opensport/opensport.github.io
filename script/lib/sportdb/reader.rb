@@ -236,7 +236,7 @@ class Reader
         
         @round = Round.find_by_event_id_and_pos( @event.id, pos )
         if @round.present?
-          puts "*** update round:"
+          puts "*** update round #{@round.id}:"
         else
           puts "*** create round:"
           @round = Round.new
@@ -253,6 +253,9 @@ class Reader
    
         @round.update_attributes!( round_attribs )
 
+        ### store list of round is for patching start_at/end_at at the end
+        @patch_rounds ||= {}
+        @patch_rounds[ @round.id ] = @round.id
         
         puts "  line: >#{line}<"
         
@@ -284,7 +287,7 @@ class Reader
         }
 
         if @game.present?
-          puts "*** update game:"
+          puts "*** update game #{@game.id}:"
         else
           puts "*** create game:"
           @game = Game.new
@@ -305,9 +308,27 @@ class Reader
         @game.update_attributes!( game_attribs )
         
         puts "  line: >#{line}<"
-      end
-             
-    end # oldlines.each    
+      end             
+    end # oldlines.each
+    
+    @patch_rounds ||= {}
+    @patch_rounds.each do |k,v|
+      puts "*** patch start_at/end_at date for round #{k}:"
+      round = Round.find( k )
+      games = round.games.order( 'play_at asc' ).all
+      
+      round_attribs = {}
+      
+      ## todo: check for no records
+      ##  e.g. if game[0].present? or just if game[0]  ??
+      
+      round_attribs[:start_at] = games[0].play_at
+      round_attribs[:end_at  ] = games[-1].play_at
+
+      puts round_attribs.to_json
+      round.update_attributes!( round_attribs )
+    end
+    
   end # method parse_fixtures
 
   
