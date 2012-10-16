@@ -7,6 +7,8 @@ A Free Open Sports Database & Schema
 
 Get a copy of the `sport.db` file. That's it.
 
+![](https://raw.github.com/geraldb/sport.db/master/i/sqlitestudio.png)
+
 ## Events
 
 ### Football (Soccer)
