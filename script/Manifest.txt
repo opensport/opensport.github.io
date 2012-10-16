@@ -40,6 +40,9 @@ lib/sportdb/models/group_team.rb
 lib/sportdb/models/prop.rb
 lib/sportdb/models/round.rb
 lib/sportdb/models/team.rb
+lib/sportdb/reader.rb
 lib/sportdb/schema.rb
+lib/sportdb/templater.rb
 lib/sportdb/utils.rb
 lib/sportdb/version.rb
+templates/fixtures.rb.erb

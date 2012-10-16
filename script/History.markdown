@@ -1,3 +1,8 @@
+### 0.4.0 / 2012-10-16
+
+* Add plain text fixture reader/loader
+* Add --generate/g option for generating fixtures from the DB using templates 
+
 ### 0.3.1 / 2012-10-14
 
 * Move models into its own namespace, that is, SportDB::Models

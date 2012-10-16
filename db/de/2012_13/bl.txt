@@ -3,9 +3,8 @@
 #
 # Note: to import into db use sport.db command line tool e.g.
 #
-#   $ sportdb -g <event> <fixtures>
-#   $ sportdb -g de de/2012_13/bl.txt
-# 
+#   $ sportdb -e de.2012/13 de/2012_13/bl     # import fixtures into DB from plain text
+#   $ sportdb -g -e de.2012/13 de/2012_13/bl  # generate Ruby fixtures from DB
 
 1. Spieltag
 
@@ -35,7 +34,7 @@
 
 14.09. 20:30  FC Augsburg      0:0     VfL Wolfsburg
 15.09. 15:30  VfB Stuttgart      0:0     F. Düsseldorf
-15.09. 15:30  Bor. M'gladbach      2:3     1. FC  Nürnberg
+15.09. 15:30  Bor. M'gladbach      2:3     1. FC Nürnberg
 15.09. 15:30  Hannover 96      3:2     Werder Bremen
 15.09. 15:30  Bor. Dortmund      3:0     Bay. Leverkusen
 15.09. 15:30  Bayern München      3:1     1. FSV Mainz 05
@@ -46,7 +45,7 @@
 
 4. Spieltag
 
-21.09. 20:30  1. FC  Nürnberg      1:2     E. Frankfurt
+21.09. 20:30  1. FC Nürnberg      1:2     E. Frankfurt
 22.09. 15:30  VfL Wolfsburg      1:1     Greuther Fürth
 22.09. 15:30  Hamburger SV      3:2     Bor. Dortmund
 22.09. 15:30  F. Düsseldorf      0:0     SC Freiburg
@@ -63,7 +62,7 @@
 25.09. 20:00  Greuther Fürth      0:2     F. Düsseldorf
 25.09. 20:00  Bayern München      3:0     VfL Wolfsburg
 25.09. 20:00  FC Schalke 04      3:0     1. FSV Mainz 05
-26.09. 20:00  Hannover 96      4:1     1. FC  Nürnberg
+26.09. 20:00  Hannover 96      4:1     1. FC Nürnberg
 26.09. 20:00  FC Augsburg      1:3     Bay. Leverkusen
 26.09. 20:00  VfB Stuttgart      0:3     1899 Hoffenheim
 26.09. 20:00  Bor. M'gladbach      2:2     Hamburger SV
@@ -73,7 +72,7 @@
 6. Spieltag
 
 28.09. 20:30  F. Düsseldorf      2:2     FC Schalke 04
-29.09. 15:30  1. FC  Nürnberg      0:2     VfB Stuttgart
+29.09. 15:30  1. FC Nürnberg      0:2     VfB Stuttgart
 29.09. 15:30  Werder Bremen      0:2     Bayern München
 29.09. 15:30  1899 Hoffenheim      0:0     FC Augsburg
 29.09. 15:30  Hamburger SV      1:0     Hannover 96
@@ -90,7 +89,7 @@
 06.10. 15:30  FC Schalke 04      3:0     VfL Wolfsburg
 06.10. 15:30  1. FSV Mainz 05      1:0     F. Düsseldorf
 06.10. 15:30  Greuther Fürth      0:1     Hamburger SV
-06.10. 15:30  SC Freiburg      3:0     1. FC  Nürnberg
+06.10. 15:30  SC Freiburg      3:0     1. FC Nürnberg
 07.10. 15:30  Bor. M'gladbach      2:0     E. Frankfurt
 07.10. 17:30  Hannover 96      1:1     Bor. Dortmund
 07.10. 17:30  VfB Stuttgart      2:2     Bay. Leverkusen
@@ -104,7 +103,7 @@
 20.10. 15:30  Bay. Leverkusen      -     1. FSV Mainz 05
 20.10. 15:30  VfL Wolfsburg      -     SC Freiburg
 20.10. 18:30  Werder Bremen      -     Bor. M'gladbach
-21.10. 15:30  1. FC  Nürnberg      -     FC Augsburg
+21.10. 15:30  1. FC Nürnberg      -     FC Augsburg
 21.10. 17:30  Hamburger SV      -     VfB Stuttgart
 
 9. Spieltag
@@ -112,7 +111,7 @@
 26.10. 20:30  FC Augsburg      -     Hamburger SV
 27.10. 15:30  Greuther Fürth      -     Werder Bremen
 27.10. 15:30  SC Freiburg      -     Bor. Dortmund
-27.10. 15:30  FC Schalke 04      -     1. FC  Nürnberg
+27.10. 15:30  FC Schalke 04      -     1. FC Nürnberg
 27.10. 15:30  1. FSV Mainz 05      -     1899 Hoffenheim
 27.10. 15:30  F. Düsseldorf      -     VfL Wolfsburg
 28.10. 15:30  VfB Stuttgart      -     E. Frankfurt
@@ -123,7 +122,7 @@
 
 02.11. 20:30  E. Frankfurt      -     Greuther Fürth
 03.11. 15:30  Hannover 96      -     FC Augsburg
-03.11. 15:30  1. FC  Nürnberg      -     VfL Wolfsburg
+03.11. 15:30  1. FC Nürnberg      -     VfL Wolfsburg
 03.11. 15:30  1899 Hoffenheim      -     FC Schalke 04
 03.11. 15:30  Bor. M'gladbach      -     SC Freiburg
 03.11. 15:30  Bor. Dortmund      -     VfB Stuttgart
@@ -133,7 +132,7 @@
 
 11. Spieltag
 
-09.11. 20:30  1. FSV Mainz 05      -     1. FC  Nürnberg
+09.11. 20:30  1. FSV Mainz 05      -     1. FC Nürnberg
 10.11. 15:30  FC Schalke 04      -     Werder Bremen
 10.11. 15:30  VfL Wolfsburg      -     Bay. Leverkusen
 10.11. 15:30  FC Augsburg      -     Bor. Dortmund
@@ -147,7 +146,7 @@
 
 17.11. 15:30  E. Frankfurt      -     FC Augsburg
 17.11. 15:30  Hamburger SV      -     1. FSV Mainz 05
-17.11. 15:30  1. FC  Nürnberg      -     Bayern München
+17.11. 15:30  1. FC Nürnberg      -     Bayern München
 17.11. 15:30  Hannover 96      -     SC Freiburg
 17.11. 15:30  Bor. Dortmund      -     Greuther Fürth
 17.11. 15:30  Bor. M'gladbach      -     VfB Stuttgart
@@ -162,7 +161,7 @@
 24.11. 15:30  FC Schalke 04      -     E. Frankfurt
 24.11. 15:30  Bayern München      -     Hannover 96
 24.11. 15:30  1. FSV Mainz 05      -     Bor. Dortmund
-24.11. 15:30  Greuther Fürth      -     1. FC  Nürnberg
+24.11. 15:30  Greuther Fürth      -     1. FC Nürnberg
 25.11. 15:30  SC Freiburg      -     VfB Stuttgart
 25.11. 17:30  1899 Hoffenheim      -     Bay. Leverkusen
 25.11. 17:30  FC Augsburg      -     Bor. M'gladbach
@@ -174,7 +173,7 @@
 27.11. 20:00  Bor. Dortmund      -     F. Düsseldorf
 27.11. 20:00  Hannover 96      -     Greuther Fürth
 28.11. 20:00  SC Freiburg      -     Bayern München
-28.11. 20:00  1. FC  Nürnberg      -     1899 Hoffenheim
+28.11. 20:00  1. FC Nürnberg      -     1899 Hoffenheim
 28.11. 20:00  Werder Bremen      -     Bay. Leverkusen
 28.11. 20:00  Bor. M'gladbach      -     VfL Wolfsburg
 28.11. 20:00  VfB Stuttgart      -     FC Augsburg
@@ -183,7 +182,7 @@
 
 30.11. 20:30  F. Düsseldorf      -     E. Frankfurt
 01.12. 15:30  FC Schalke 04      -     Bor. M'gladbach
-01.12. 15:30  Bay. Leverkusen      -     1. FC  Nürnberg
+01.12. 15:30  Bay. Leverkusen      -     1. FC Nürnberg
 01.12. 15:30  1. FSV Mainz 05      -     Hannover 96
 01.12. 15:30  FC Augsburg      -     SC Freiburg
 01.12. 15:30  Greuther Fürth      -     VfB Stuttgart
@@ -194,7 +193,7 @@
 16. Spieltag
 
 07.12. 20:30  Hamburger SV      -     1899 Hoffenheim
-08.12. 15:30  1. FC  Nürnberg      -     F. Düsseldorf
+08.12. 15:30  1. FC Nürnberg      -     F. Düsseldorf
 08.12. 15:30  VfB Stuttgart      -     FC Schalke 04
 08.12. 15:30  SC Freiburg      -     Greuther Fürth
 08.12. 15:30  FC Augsburg      -     Bayern München
@@ -206,7 +205,7 @@
 17. Spieltag
 
 15.12. 15:30  Bayern München      -     Bor. M'gladbach
-15.12. 15:30  Werder Bremen      -     1. FC  Nürnberg
+15.12. 15:30  Werder Bremen      -     1. FC Nürnberg
 15.12. 15:30  F. Düsseldorf      -     Hannover 96
 15.12. 15:30  VfL Wolfsburg      -     E. Frankfurt
 15.12. 15:30  Bay. Leverkusen      -     Hamburger SV

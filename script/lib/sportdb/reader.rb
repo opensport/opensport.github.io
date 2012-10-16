@@ -206,6 +206,7 @@ class Reader
       if is_round?( line )
         puts "parsing round line: >#{line}<"
         pos = find_round_pos!( line )
+        puts "  line: >#{line}<"
         
         ## NB: dummy/placeholder start_at, end_at date
         ##  replace/patch after adding all games for round
@@ -237,7 +238,6 @@ class Reader
         @patch_rounds ||= {}
         @patch_rounds[ @round.id ] = @round.id
         
-        puts "  line: >#{line}<"
         
       else
         puts "parsing game (fixture) line: >#{line}<"
@@ -247,6 +247,8 @@ class Reader
         match_teams!( line )
         team1 = find_team1!( line )
         team2 = find_team2!( line )
+
+        puts "  line: >#{line}<"
 
 
         ### todo: cache team lookups in hash?
@@ -286,8 +288,6 @@ class Reader
         puts game_attribs.to_json
 
         @game.update_attributes!( game_attribs )
-        
-        puts "  line: >#{line}<"
       end             
     end # oldlines.each
     
