@@ -23,7 +23,8 @@ class Runner
     
       cmd.banner = "Usage: sportdb [options]"
 
-      cmd.on( '-g', '--generate EVENT_KEY', 'Generate Structured Fixtures from Unstructured Text' ) { |key| opts.event = key; opts.generate = true }
+      cmd.on( '-e', '--event KEY', 'Event to Load or Generate' ) { |key| opts.event = key; }
+      cmd.on( '-g', '--generate', 'Generate Fixtures from Template' ) { opts.generate = true }
 
       ## todo: change to different flag??   use -c/--config ???
       cmd.on( '-c', '--create', 'Create DB Schema' ) { opts.create = true }
@@ -101,10 +102,12 @@ EOS
       loader = Loader.new
     end
     
-    if opts.generate?
-      
-      Reader.new( opts ).run( args )
-      
+    if opts.event.present?
+      if opts.generate?
+        Templater.new( opts ).run( args )
+      else
+        Reader.new( opts ).run( args )
+      end
     else
 
       args.each do |arg|

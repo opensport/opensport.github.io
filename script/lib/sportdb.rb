@@ -11,6 +11,7 @@ require 'pp'
 require 'logger'
 require 'optparse'
 require 'fileutils'
+require 'erb'
 
 # rubygems
 
@@ -32,6 +33,7 @@ require 'sportdb/schema'       # NB: requires sportdb/models (include SportDB::M
 require 'sportdb/utils'
 require 'sportdb/loader'
 require 'sportdb/reader'
+require 'sportdb/templater'
 require 'sportdb/version'
 require 'sportdb/cli/opts'
 require 'sportdb/cli/runner'

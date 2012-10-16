@@ -177,26 +177,6 @@ class Reader
     end # each known_teams    
   end # method translate_teams!
   
-  
-  def gen_fixtures
-
-    new_lines = []
-
-    header_lines = []
-
-    header_lines << "#####################################\n"
-    header_lines << "# generiert am  #{Time.now}\n"
-    header_lines << "#   version: #{SportDB::VERSION} -- banner here??\n"
-
-    ## NB: add parsing errors to header as we go along (see above)
-    
-    header_lines << "#####################################\n"
-    header_lines << "\n"
-
-    pp header_lines  
-    
-  end
-
 
   def parse_fixtures( name )
   
