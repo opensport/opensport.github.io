@@ -7,7 +7,8 @@ class Template
   end
 
   def render( binding )
-    ERB.new( load_template() ).result( binding )
+    ## '<>' means omit newline for lines starting with <% and ending in %>
+    ERB.new( load_template(), 0, '<>' ).result( binding )
   end
 
 private
@@ -35,6 +36,9 @@ class Templater
 
   attr_reader :logger, :opts
 
+  # make props available for template
+  attr_reader :event   
+  
   def run( args )
   
     puts SportDB.banner
