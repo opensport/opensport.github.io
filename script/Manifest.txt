@@ -6,6 +6,7 @@ bin/sportdb
 db/at/2011_12/bl.rb
 db/at/2011_12/cup.rb
 db/at/2012_13/bl.rb
+db/at/2012_13/bl.txt
 db/at/2012_13/cup.rb
 db/at/teams.rb
 db/cl/2011_12/cl.rb
@@ -14,13 +15,18 @@ db/cl/2012_13/cl.rb
 db/cl/teams.rb
 db/countries.rb
 db/de/2012_13/bl.rb
+db/de/2012_13/bl.txt
+db/de/2012_13/bl_fixtures.rb
 db/de/teams.rb
 db/en/2012_13/pl.rb
+db/en/2012_13/pl.txt
+db/en/2012_13/pl_fixtures.rb
 db/en/teams.rb
 db/euro/2012.rb
 db/euro/teams.rb
 db/mx/apertura_2012.rb
 db/mx/teams.rb
+db/nfl/teams.rb
 db/nhl/teams.rb
 db/ro/l1_2012_13.rb
 db/ro/teams.rb

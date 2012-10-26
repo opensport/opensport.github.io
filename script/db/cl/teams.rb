@@ -24,46 +24,51 @@ ch = Country.find_by_key!( 'ch' )
 mt = Country.find_by_key!( 'mt' )
 
 
+  ## use en/teams.rb
+  ### [ 'chelsea',      'FC Chelsea',           en ],
+  ### [ 'manunited',   'Manchester United',     en ],
+  ### [ 'arsenal',      'FC Arsenal',           en ],
+  ### [ 'mancity',      'Manchester City',      en ],
+
+  ## use de/teams.rb
+  ## [ 'bayern',    'Bayern München',          de ],
+  ## [ 'schalke',      'FC Schalke 04',        de ],
+  ## [ 'dortmund',     'Borussia Dortmund',    de ],
+
+
 teams = [
-  [ 'porto',        'FC Porto',             pt ],
-  [ 'kiew',         'Dynamo Kiew',          ua ],
-  [ 'paris',        'Paris St. Germain',    fr ],
-  [ 'zagreb',       'Dinamo Zagreb',        hr ],
+  [ 'porto',        'FC Porto|FC Porto POR',             pt ],
+  [ 'kiew',         'Dynamo Kiew|FC Dynamo Kiew UKR|Dynamo Kiev',          ua ],
+  [ 'paris',        'Paris St. Germain|Paris S.Germai FRA|Paris Saint Germain',    fr ],
+  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO|NK Dinamo Zagreb',        hr ],
 
-  [ 'arsenal',      'FC Arsenal',           en ],
-  [ 'schalke',      'FC Schalke 04',        de ],
-  [ 'olympiacos',   'Olympiakos Piräus',    gr ],
-  [ 'montpellier',  'HSC Montpellier',      fr ],
+  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE|Olympiakos Piraeus',    gr ],
+  [ 'montpellier',  'HSC Montpellier|Montpellier FRA',      fr ],
 
-  [ 'milan',        'AC Mailand',           it ],
-  [ 'zenit',        'Zenit St. Petersburg', ru ],
-  [ 'anderlecht',   'RSC Anderlecht',       be ],
-  [ 'malaga',       'FC Málaga',            es ],
+  [ 'milan',        'AC Mailand|AC Milan ITA|AC Milan',           it ],
+  [ 'zenit',        'Zenit St. Petersburg|Zenit Petersb. RUS|FC Zenit St Petersburg', ru ],
+  [ 'anderlecht',   'RSC Anderlecht|RSC Anderlecht BEL',       be ],
+  [ 'malaga',       'FC Málaga|Malaga CF ESP|CF Malaga',            es ],
 
-  [ 'madrid',       'Real Madrid',          es ],
-  [ 'mancity',      'Manchester City',      en ],
-  [ 'ajax',         'Ajax Amsterdam',       nl ],
-  [ 'dortmund',     'Borussia Dortmund',    de ],
+  [ 'madrid',       'Real Madrid|Real Madrid ESP',          es ],
+  [ 'ajax',         'Ajax Amsterdam|Ajax Amsterdam NED',       nl ],
 
-  [ 'chelsea',      'FC Chelsea',           en ],
-  [ 'donezk',       'Schachtjor Donezk',    ua ],
-  [ 'juventus',     'Juventus Turin',       it ],
-  [ 'nordsjalland', 'FC Nordsjælland',      dk ],
+  [ 'donezk',       'Schachtjor Donezk|Shakhtar Don. UKR|Shakhtar Donetsk',    ua ],
+  [ 'juventus',     'Juventus Turin|Juventus Turin ITA',       it ],
+  [ 'nordsjalland', 'FC Nordsjælland|Nordsjaelland DEN|FC Nordsjaelland',      dk ],
 
-  [ 'bayern',    'Bayern München',          de ],
-  [ 'valencia',  'FC Valencia',             es ],
-  [ 'lille',     'OSC Lille',               fr ],
-  [ 'borissow',  'BATE Borissow',           by ],
+  [ 'valencia',  'FC Valencia|FC Valencia ESP|CF Valencia',             es ],
+  [ 'lille',     'OSC Lille|Lille OSC FRA',               fr ],
+  [ 'borissow',  'BATE Borissow|Bate Borisov BLR|Bate Borisov',           by ],
 
-  [ 'barcelona', 'FC Barcelona',            es ],
-  [ 'benfica',   'Benfica Lissabon',        pt ],
-  [ 'spartak',   'Spartak Moskau',          ru ],
-  [ 'celtic',    'Celtic Glasgow',          sc ],
+  [ 'barcelona', 'FC Barcelona|FC Barcelona ESP',            es ],
+  [ 'benfica',   'Benfica Lissabon|Benfica Lis. POR',      pt ],
+  [ 'spartak',   'Spartak Moskau|Spartak Moskau RUS|Spartak Moscow',     ru ],
+  [ 'celtic',    'Celtic Glasgow|Celtic Glasgow SCO',          sc ],
 
-  [ 'manunited',   'Manchester United',     en ],
-  [ 'braga',       'Sporting Braga',        pt ],
-  [ 'galatasaray', 'Galatasaray',           tr ],
-  [ 'cluj',        'CFR Cluj',              ro ],
+  [ 'braga',       'Sporting Braga|Sporting Braga POR',        pt ],
+  [ 'galatasaray', 'Galatasaray|Galatasaray TUR',           tr ],
+  [ 'cluj',        'CFR Cluj|CFR Cluj ROU',              ro ],
 
 ###################
 # more teams from cl/el 2011-12

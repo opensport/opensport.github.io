@@ -45,7 +45,7 @@ teams = [
 
 ## some more teams for wm quali
 
-  [ 'fro', 'Färöer',       'FRO', fo ],
+  [ 'fro', 'Färöer|Färöer Inseln',       'FRO', fo ],
   [ 'kaz', 'Kasachstan',   'KAZ', kz ],
   [ 'aut', 'Österreich',   'AUT', at ],
   [ 'blr', 'Weißrussland', 'BLR', by ],

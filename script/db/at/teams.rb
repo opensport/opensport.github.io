@@ -1,16 +1,20 @@
 # encoding: utf-8
 
+### fix:
+# rename wacker to innsbruck
+#         neustadt to wrneustadt
+
 bl = [
-  [ 'salzburg',    'FC RB Salzburg',      'RBS' ],
-  [ 'rapid',       'SK Rapid Wien',       'RAP' ],
-  [ 'admira',      'FC Admira Wacker',    'ADM' ],
-  [ 'austria',     'FK Austria Wien',     'FAK' ],
-  [ 'sturm',       'SK Sturm Graz',       'STU' ],
-  [ 'ried',        'SV Ried',             'RIE' ],
-  [ 'wacker',      'FC Wacker Innsbruck', 'IBK' ],
-  [ 'mattersburg', 'SV Mattersburg',      'SVM' ],
-  [ 'neustadt',    'SC Wiener Neustadt',  'WRN' ],
-  [ 'wac',         'Wolfsberger AC',      'WAC' ]
+  [ 'salzburg',    'FC RB Salzburg|RB Salzburg|Red Bull Salzburg',     'RBS' ],
+  [ 'rapid',       'SK Rapid Wien|Rapid Wien',           'RAP' ],
+  [ 'admira',      'FC Admira Wacker|Admira Wacker|FC Admira Wacker Mödling',   'ADM' ],
+  [ 'austria',     'FK Austria Wien|Austria Wien',       'FAK' ],
+  [ 'sturm',       'SK Sturm Graz|Sturm Graz',           'STU' ],
+  [ 'ried',        'SV Ried|SV Josko Ried|SV Josko Fenster Ried',      'RIE' ],
+  [ 'wacker',      'FC Wacker Innsbruck|FC Wacker|Wacker Innsbruck',    'IBK' ],
+  [ 'mattersburg', 'SV Mattersburg',                     'SVM' ],
+  [ 'neustadt',    'SC Wiener Neustadt|Wiener Neustadt', 'WRN' ],
+  [ 'wac',         'Wolfsberger AC',                     'WAC' ]
 ]
 
 ersteliga = [
@@ -20,7 +24,7 @@ ersteliga = [
   [ 'stpoelten', 'SKN St. Pölten',       'Erste Liga/NÖ',    'POE' ],
   [ 'linz',      'FC Blau-Weiß Linz',    'Erste Liga/OÖ',    'BWL' ],
   [ 'groedig',   'SV Grödig',            'Erste Liga/Sbg.',  'GRO' ],
-  [ 'lustenau',  'FC Lustenau 1907',     'Erste Liga/Vbg.',  'LUS' ],
+  [ 'lustenau',  'FC Lustenau 1907|FC Lustenau',     'Erste Liga/Vbg.',  'LUS' ],
   [ 'vienna',    'Vienna FC 1894',       'Erste Liga/Wien',  'VIE' ],
   [ 'hartberg',  'TSV Hartberg',         'Erste Liga/Stmk.', 'HAR' ],
   [ 'horn',      'SV Horn',              'Erste Liga/NÖ',    'HOR' ]
@@ -36,6 +40,7 @@ rlwest = [
   [ 'pinzgau',  'FC Pinzgau Saalfelden', 'Regionalliga West/Sbg.',  'PIN' ],
   [ 'stjohann', 'TSV St. Johann',        'Regionalliga West/Sbg.',  'STJ' ]
 ]
+
 
 rlmitte = [
   [ 'vsv' ,          'Villacher SV',           'Regionalliga Mitte/Ktn.', 'VSV' ],
