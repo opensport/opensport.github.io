@@ -8,7 +8,7 @@
 ## nb: three letter codes (tags) taken from official bundesliga.de site
 
 teams = [
-  [ 'bayern',      'FC Bayern  München|Bayern München|Bayern München GER',   'FCB' ],
+  [ 'bayern',      'FC Bayern München|Bayern München|Bayern München GER',   'FCB' ],
   [ 'schalke',     'FC Schalke 04|FC Schalke 04 GER',                       'S04' ],
   [ 'dortmund',    'Borussia Dortmund|Bor. Dortmund|Bor. Dortmund GER',     'BVB' ],
   [ 'frankfurt',   'Eintracht Frankfurt|E. Frankfurt',    'FFM' ],

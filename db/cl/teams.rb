@@ -38,32 +38,32 @@ mt = Country.find_by_key!( 'mt' )
 
 teams = [
   [ 'porto',        'FC Porto|FC Porto POR',             pt ],
-  [ 'kiew',         'Dynamo Kiew|FC Dynamo Kiew UKR',          ua ],
-  [ 'paris',        'Paris St. Germain|Paris S.Germai FRA',    fr ],
-  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO',        hr ],
+  [ 'kiew',         'Dynamo Kiew|FC Dynamo Kiew UKR|Dynamo Kiev',          ua ],
+  [ 'paris',        'Paris St. Germain|Paris S.Germai FRA|Paris Saint Germain',    fr ],
+  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO|NK Dinamo Zagreb',        hr ],
 
-  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE',    gr ],
+  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE|Olympiakos Piraeus',    gr ],
   [ 'montpellier',  'HSC Montpellier|Montpellier FRA',      fr ],
 
-  [ 'milan',        'AC Mailand|AC Milan ITA',           it ],
-  [ 'zenit',        'Zenit St. Petersburg|Zenit Petersb. RUS', ru ],
+  [ 'milan',        'AC Mailand|AC Milan ITA|AC Milan',           it ],
+  [ 'zenit',        'Zenit St. Petersburg|Zenit Petersb. RUS|FC Zenit St Petersburg', ru ],
   [ 'anderlecht',   'RSC Anderlecht|RSC Anderlecht BEL',       be ],
-  [ 'malaga',       'FC Málaga|Malaga CF ESP',            es ],
+  [ 'malaga',       'FC Málaga|Malaga CF ESP|CF Malaga',            es ],
 
   [ 'madrid',       'Real Madrid|Real Madrid ESP',          es ],
   [ 'ajax',         'Ajax Amsterdam|Ajax Amsterdam NED',       nl ],
 
-  [ 'donezk',       'Schachtjor Donezk|Shakhtar Don. UKR',    ua ],
+  [ 'donezk',       'Schachtjor Donezk|Shakhtar Don. UKR|Shakhtar Donetsk',    ua ],
   [ 'juventus',     'Juventus Turin|Juventus Turin ITA',       it ],
-  [ 'nordsjalland', 'FC Nordsjælland|Nordsjaelland DEN',      dk ],
+  [ 'nordsjalland', 'FC Nordsjælland|Nordsjaelland DEN|FC Nordsjaelland',      dk ],
 
-  [ 'valencia',  'FC Valencia|FC Valencia ESP',             es ],
+  [ 'valencia',  'FC Valencia|FC Valencia ESP|CF Valencia',             es ],
   [ 'lille',     'OSC Lille|Lille OSC FRA',               fr ],
-  [ 'borissow',  'BATE Borissow|Bate Borisov BLR',           by ],
+  [ 'borissow',  'BATE Borissow|Bate Borisov BLR|Bate Borisov',           by ],
 
   [ 'barcelona', 'FC Barcelona|FC Barcelona ESP',            es ],
   [ 'benfica',   'Benfica Lissabon|Benfica Lis. POR',      pt ],
-  [ 'spartak',   'Spartak Moskau|Spartak Moskau RUS',     ru ],
+  [ 'spartak',   'Spartak Moskau|Spartak Moskau RUS|Spartak Moscow',     ru ],
   [ 'celtic',    'Celtic Glasgow|Celtic Glasgow SCO',          sc ],
 
   [ 'braga',       'Sporting Braga|Sporting Braga POR',        pt ],
