@@ -1,0 +1,91 @@
+##################################
+### ÖFB Cup 2012/13
+
+
+### todo: how to mark "plain" round as knockoff k.o round in text??
+### todo: how to mark overtime and penalty scores??
+
+
+## Game.create_knockouts_from_ary!( games_cuprunde1, cuprunde1 )
+## Game.create_knockouts_from_ary!( games_cuprunde2, cuprunde2 )
+## Game.create_knockouts_from_ary!( games_cup16, cup16 )
+
+
+1. Runde   -  Fr-So 13.-15. Juli 2012   !!Knockout (Knockout??)  // Knockout??
+
+fac            0:1               altach         2012-07-12 19:00
+# hard         1:0               schwaz         2012-07-13 18:30
+dsc            1:2               hartberg       2012-07-13 19:00
+gratkorn       0:0 0:0nV 4:5iE   wacker         2012-07-13 19:00
+# pasching     2:1               austrias       2012-07-13 19:00
+parndorf       0:3               admira         2012-07-13 19:00
+voecklamarkt   3:4               lustenau       2012-07-13 19:00
+#  kalsdorf    3:1               wallern        2012-07-13 19:00
+wattens        0:1               sturm          2012-07-13 19:00
+# vsv          4:2               rohrendorf     2012-07-13 19:00
+pinzgau        0:4               groedig        2012-07-13 19:15
+# amstetten    0:1               schwechat      2012-07-13 19:30
+stflorian      2:1               linz           2012-07-13 19:30
+austriak       3:2               horn           2012-07-13 19:30
+# sak          0:5               allerheiligen  2012-07-13 19:30
+gak            2:2 3:2nV         vienna         2012-07-13 20:00
+wienersk       0:2               salzburg       2012-07-13 20:30
+# stegersbach  2:2 3:2nV         reutte         2012-07-14 17:00
+badvoeslau     1:0               stpoelten      2012-07-14 17:00
+# micheldorf   0:1               viktoria       2012-07-14 17:00
+# klagenfurt   1:2               stjohann       2012-07-14 18:00
+# lask         7:0               spittal        2012-07-14 18:00
+ostbahn        1:8               wac            2012-07-14 18:00
+# gaflenz      1:2               sollenau       2012-07-14 18:00
+oberwart       1:3               austria        2012-07-14 18:00
+leoben         1:3               mattersburg    2012-07-14 18:00
+retz           1:7               austrial       2012-07-14 18:00
+bregenz        1:2               ksv            2012-07-14 18:30
+# ardagger     2:2 2:3nV         dornbirn       2012-07-14 19:00
+kufstein       1:4               ried           2012-07-14 19:00
+wolfurt        2:2 2:4nV         neustadt       2012-07-15 10:30
+heiligenkreuz  0:5               rapid          2012-07-15 18:00
+
+
+2. Runde   -  Di+Mi 25.+26. Sep 2012
+
+kalsdorf       3:0               hartberg       2012-09-24 19:00
+viktoria       2:2 3:3nV 7:4iE   ksv            2012-09-25 16:00
+hard           0:3               altach         2012-09-25 16:30
+stegersbach    1:3               salzburg       2012-09-25 18:00
+pasching       1:1 3:2nV         austrial       2012-09-25 19:00
+austriak       0:0 2:0nV         admira         2012-09-25 19:00
+schwechat      0:5               sturm          2012-09-25 19:00
+lask           2:0               groedig        2012-09-25 19:00
+stjohann       0:3,              lustenau       2012-09-25 19:00
+sollenau       1:1 1:5nV         wacker         2012-09-25 19:00
+vsv            3:1               neustadt       2012-09-25 19:00
+dornbirn       2:3               austria        2012-09-25 20:30
+badvoeslau     2:3               mattersburg    2012-09-26 16:00
+stflorian      1:1 1:1nV 5:6iE   ried           2012-09-26 19:00
+allerheiligen  1:4               rapid          2012-09-26 19:00
+gak            0:6               wac            2012-09-26 20:20
+
+
+3. Runde / Achtelfinale   -  Di+Mi 30.+31. Okt 2012
+
+lask      -  mattersburg   2012-10-30 15:00
+rapid     -  altach        2012-10-30 15:00
+viktoria  -  ried          2012-10-30 15:00
+sturm     -  wacker        2012-10-30 15:00
+pasching  -  austriak      2012-10-30 15:00
+lustenau  -  wac           2012-10-30 15:00
+kalsdorf  -  salzburg      2012-10-30 15:00
+vsv       -  austria       2012-10-30 15:00
+
+
+
+4. Runde / Viertelfinale  -  Di+Mi 16.+17. April 2013
+
+
+5. Runde / Halbfinale     -  Di+Mi 7.+8. Mai 2013
+
+
+6. Runde / Finale         -  Do 30. Mai 2013
+
+

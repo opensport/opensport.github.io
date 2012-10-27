@@ -7,39 +7,38 @@ cup = Event.create!( key:      'at_cup_2012_13',
                      title:    'ÖFB Cup 2012/13',
                      start_at: Time.cet( '2012-07-13 00:00' ) )
 
-cuprunde1  = Round.create!( event: cup, pos: 1, title: '1. Runde',      start_at: Time.cet( '2012-07-13' ), title2: 'Fr-So 13.-15. Juli 2012' )
-cuprunde2  = Round.create!( event: cup, pos: 2, title: '2. Runde',      start_at: Time.cet( '2012-09-25' ), title2: 'Di+Mi 25.+26. Sep 2012' )
-cup16      = Round.create!( event: cup, pos: 3, title: 'Achtelfinale',  start_at: Time.cet( '2012-10-30' ), title2: 'Di+Mi 30.+31. Okt 2012' )
-cup8       = Round.create!( event: cup, pos: 4, title: 'Viertelfinale', start_at: Time.cet( '2013-04-16' ), title2: 'Di+Mi 16.+17. April 2013' )
-cup4       = Round.create!( event: cup, pos: 5, title: 'Halbfinale',    start_at: Time.cet( '2013-05-07' ), title2: 'Di+Mi 7.+8. Mai 2013' )
-cup1       = Round.create!( event: cup, pos: 6, title: 'Finale',        start_at: Time.cet( '2013-05-30' ), title2: 'Do 30. Mai 2013' )
+
+## 10 Bundeliga Teams
+
+cup_bl_team_keys = [
+   'salzburg',
+   'rapid',
+   'admira',
+   'austria',
+   'sturm',
+   'ried',
+   'wacker',
+   'mattersburg',
+   'neustadt',
+   'wac' ]
+
+## 10 Erste Liga Teams
+
+cup_erste_team_keys = [
+   'ksv',
+   'altach',
+   'austrial',
+   'stpoelten',
+   'linz',
+   'groedig',
+   'lustenau',
+   'vienna',
+   'hartberg',
+   'horn']
 
 
-## bundesliga teams
+cup.add_teams_from_ary!( cup_bl_team_keys + cup_erste_team_keys )
 
-salzburg    = Team.find_by_key!( 'salzburg' )
-rapid       = Team.find_by_key!( 'rapid' )
-admira      = Team.find_by_key!( 'admira' )
-austria     = Team.find_by_key!( 'austria' )
-sturm       = Team.find_by_key!( 'sturm' )
-ried        = Team.find_by_key!( 'ried' )
-wacker      = Team.find_by_key!( 'wacker' )
-mattersburg = Team.find_by_key!( 'mattersburg' )
-neustadt    = Team.find_by_key!( 'neustadt' )
-wac         = Team.find_by_key!( 'wac' )
-
-## erste liga teams
-
-ksv           = Team.find_by_key!( 'ksv' )
-altach        = Team.find_by_key!( 'altach' )
-austrial      = Team.find_by_key!( 'austrial' )
-stpoelten     = Team.find_by_key!( 'stpoelten' )
-linz          = Team.find_by_key!( 'linz' )
-groedig       = Team.find_by_key!( 'groedig' )
-lustenau      = Team.find_by_key!( 'lustenau' )
-vienna        = Team.find_by_key!( 'vienna' )
-hartberg      = Team.find_by_key!( 'hartberg' )
-horn          = Team.find_by_key!( 'horn' )
 
 ## regionalliga west teams
 
@@ -96,104 +95,6 @@ ardagger      = Team.find_by_key!( 'ardagger' )
 rohrendorf    = Team.find_by_key!( 'rohrendorf' )
 heiligenkreuz = Team.find_by_key!( 'heiligenkreuz' )
 viktoria      = Team.find_by_key!( 'viktoria' )
-
-
-## 10 Bundeliga Teams
-
-cup.teams << salzburg
-cup.teams << rapid
-cup.teams << admira
-cup.teams << austria
-cup.teams << sturm
-cup.teams << ried
-cup.teams << wacker
-cup.teams << mattersburg
-cup.teams << neustadt
-cup.teams << wac
-
-## 10 Erste Liga Teams
-
-cup.teams << ksv
-cup.teams << altach
-cup.teams << austrial
-cup.teams << stpoelten
-cup.teams << linz
-cup.teams << groedig
-cup.teams << lustenau
-cup.teams << vienna
-cup.teams << hartberg
-cup.teams << horn
-
-
-
-games_cuprunde1 = [
-  [ fac,          [0,1], altach,        Time.cet('2012-07-12 19:00') ],
-#  [ hard,         [1,0], schwaz,        Time.cet('2012-07-13 18:30') ],
-  [ dsc,          [1,2], hartberg,      Time.cet('2012-07-13 19:00') ], 
-  [ gratkorn,     [0,0,0,0,4,5], wacker,        Time.cet('2012-07-13 19:00') ],
-#  [ pasching,     [2,1], austrias,      Time.cet('2012-07-13 19:00') ],
-  [ parndorf,     [0,3], admira,        Time.cet('2012-07-13 19:00') ],
-  [ voecklamarkt, [3,4], lustenau,      Time.cet('2012-07-13 19:00') ],
-#  [ kalsdorf,     [3,1], wallern,       Time.cet('2012-07-13 19:00') ],
-  [ wattens,      [0,1], sturm,         Time.cet('2012-07-13 19:00') ],
-#  [ vsv,          [4,2], rohrendorf,    Time.cet('2012-07-13 19:00') ],
-  [ pinzgau,      [0,4], groedig,       Time.cet('2012-07-13 19:15') ],
-#  [ amstetten,    [0,1], schwechat,     Time.cet('2012-07-13 19:30') ],
-  [ stflorian,    [2,1], linz,          Time.cet('2012-07-13 19:30') ],
-  [ austriak,     [3,2], horn,          Time.cet('2012-07-13 19:30') ],
-#  [ sak,          [0,5], allerheiligen, Time.cet('2012-07-13 19:30') ],
- [ gak,          [2,2,3,2], vienna,        Time.cet('2012-07-13 20:00') ],
-  [ wienersk,     [0,2], salzburg,      Time.cet('2012-07-13 20:30') ],
-#  [ stegersbach,  [2,2,3,2], reutte,        Time.cet('2012-07-14 17:00') ],
-  [ badvoeslau,   [1,0], stpoelten,     Time.cet('2012-07-14 17:00') ],
-#  [ micheldorf,   [0,1], viktoria,      Time.cet('2012-07-14 17:00') ],
-#  [ klagenfurt,   [1,2], stjohann,      Time.cet('2012-07-14 18:00') ],
-#  [ lask,         [7,0], spittal,       Time.cet('2012-07-14 18:00') ],
-  [ ostbahn,      [1,8], wac,           Time.cet('2012-07-14 18:00') ],
-# [ gaflenz,      [1,2], sollenau,      Time.cet('2012-07-14 18:00') ],
-  [ oberwart,     [1,3], austria,       Time.cet('2012-07-14 18:00') ],
-  [ leoben,       [1,3], mattersburg,   Time.cet('2012-07-14 18:00') ],
-  [ retz,         [1,7], austrial,      Time.cet('2012-07-14 18:00') ],
-  [ bregenz,      [1,2], ksv,           Time.cet('2012-07-14 18:30') ],
-#  [ ardagger,     [2,2,2,3], dornbirn,      Time.cet('2012-07-14 19:00') ],
-  [ kufstein,     [1,4], ried,          Time.cet('2012-07-14 19:00') ],
-  [ wolfurt,      [2,2,2,4], neustadt,      Time.cet('2012-07-15 10:30') ],
-  [ heiligenkreuz,[0,5], rapid,         Time.cet('2012-07-15 18:00') ]
-]
-
-games_cuprunde2 = [
-  [ kalsdorf,      [3,0],         hartberg,    Time.cet('2012-09-24 19:00') ],
-  [ viktoria,      [2,2,3,3,7,4], ksv,         Time.cet('2012-09-25 16:00') ],
-  [ hard,          [0,3],         altach,      Time.cet('2012-09-25 16:30') ],
-  [ stegersbach,   [1,3],         salzburg,    Time.cet('2012-09-25 18:00') ],
-  [ pasching,      [1,1,3,2],     austrial,    Time.cet('2012-09-25 19:00') ],
-  [ austriak,      [0,0,2,0],     admira,      Time.cet('2012-09-25 19:00') ],
-  [ schwechat,     [0,5],         sturm,       Time.cet('2012-09-25 19:00') ],
-  [ lask,          [2,0],         groedig,     Time.cet('2012-09-25 19:00') ],
-  [ stjohann,      [0,3],         lustenau,    Time.cet('2012-09-25 19:00') ],
-  [ sollenau,      [1,1,1,5],     wacker,      Time.cet('2012-09-25 19:00') ],
-  [ vsv,           [3,1],         neustadt,    Time.cet('2012-09-25 19:00') ],
-  [ dornbirn,      [2,3],         austria,     Time.cet('2012-09-25 20:30') ],
-  [ badvoeslau,    [2,3],         mattersburg, Time.cet('2012-09-26 16:00') ],
-  [ stflorian,     [1,1,1,1,5,6], ried,        Time.cet('2012-09-26 19:00') ],
-  [ allerheiligen, [1,4],         rapid,       Time.cet('2012-09-26 19:00') ],
-  [ gak,           [0,6],         wac,         Time.cet('2012-09-26 20:20') ]
-]
-
-games_cup16 = [
-  [ lask,     [], mattersburg, Time.cet('2012-10-30 00:00') ],
-  [ rapid,    [], altach,      Time.cet('2012-10-30 00:00') ],
-  [ viktoria, [], ried,        Time.cet('2012-10-30 00:00') ],
-  [ sturm,    [], wacker,      Time.cet('2012-10-30 00:00') ],
-  [ pasching, [], austriak,    Time.cet('2012-10-30 00:00') ],
-  [ lustenau, [], wac,         Time.cet('2012-10-30 00:00') ],
-  [ kalsdorf, [], salzburg,    Time.cet('2012-10-30 00:00') ],
-  [ vsv,      [], austria,     Time.cet('2012-10-30 00:00') ]]
-
-
-Game.create_knockouts_from_ary!( games_cuprunde1, cuprunde1 )
-Game.create_knockouts_from_ary!( games_cuprunde2, cuprunde2 )
-Game.create_knockouts_from_ary!( games_cup16, cup16 )
 
 
 

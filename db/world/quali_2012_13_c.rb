@@ -2,39 +2,26 @@
 
 ###########################################
 ##  WM 2014 - Qualification Europe Group C
+#
+# note: for teams see seeds/euro/teams.rb
 
 world = Event.find_by_key!( 'wmq' )
 
+worldc_team_keys = [ 'ger',
+                     'fro',
+                     'irl',
+                     'kaz',
+                     'aut',
+                     'swe' ]
+
+world.add_teams_from_ary( worldc_team_keys )
 
 #################################3
 # Gruppe C
 
-# note: for teams see seeds/euro/teams.rb
-
-ger = Team.find_by_key!( 'ger' )
-fro = Team.find_by_key!( 'fro' )
-irl = Team.find_by_key!( 'irl' )
-kaz = Team.find_by_key!( 'kaz' )
-aut = Team.find_by_key!( 'aut' )
-swe = Team.find_by_key!( 'swe' )
-
-
 worldc = Group.create!( event: world, pos: 3, title: 'Gruppe C' )
 
-worldc.teams << ger
-worldc.teams << fro
-worldc.teams << irl
-worldc.teams << kaz
-worldc.teams << aut
-worldc.teams << swe
-
-
-world.teams << ger
-world.teams << fro
-world.teams << irl
-world.teams << kaz
-world.teams << aut
-world.teams << swe
+worldc.add_teams_from_ary( worldc_team_keys )
 
 
 Prop.create!( key: 'db.world.quali.2012/13.c.version', value: '1' )
