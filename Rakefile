@@ -20,6 +20,9 @@ task :import => [:setup] do
   sh "sportdb --include #{DB_ROOT} -e de.2012/13 de/2012_13/bl"
   
   sh "sportdb --include #{DB_ROOT} -e en.2012/13 en/2012_13/pl"
+
+  sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_c"
+  sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_i"
 end
 
 ## export from db/generate fixtures
@@ -37,18 +40,23 @@ file "#{DB_ROOT}/de/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/de/2012_13/bl.txt" do
   sh "sportdb --generate -e de.2012/13 #{DB_ROOT}/de/2012_13/bl_fixtures"
 end
 
-
 file "#{DB_ROOT}/en/2012_13/pl_fixtures.rb" => "#{DB_ROOT}/en/2012_13/pl.txt" do
   sh "sportdb --generate -e en.2012/13 #{DB_ROOT}/en/2012_13/pl_fixtures"
 end
 
+file "#{DB_ROOT}/world/quali_2012_13_fixtures.rb" => ["#{DB_ROOT}/world/quali_2012_13_c.txt",
+                                                      "#{DB_ROOT}/world/quali_2012_13_i.txt"
+                                                      ] do
+  sh "sportdb --generate -e wmq #{DB_ROOT}/world/quali_2012_13_fixtures"
+end
 
 
 task :export => [:import,
                  "#{DB_ROOT}/at/2012_13/bl_fixtures.rb",
                  "#{DB_ROOT}/at/2011_12/bl_fixtures.rb",
                  "#{DB_ROOT}/de/2012_13/bl_fixtures.rb",
-                 "#{DB_ROOT}/en/2012_13/pl_fixtures.rb"
+                 "#{DB_ROOT}/en/2012_13/pl_fixtures.rb",
+                 "#{DB_ROOT}/world/quali_2012_13_fixtures.rb"
                  ] do
   # nothing here
 end
