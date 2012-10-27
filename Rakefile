@@ -7,26 +7,54 @@ DB_ROOT="./db"
 
 task :default => 'release'
 
-file "#{DB_ROOT}/at/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/at/2012_13/bl.txt" do
-  
+
+task :import => [:setup] do
   ## import into db
-  sh "echo 'Hello fixtures'"
+  ## sh "echo 'Hello fixtures'"
   
   puts "working directory: #{Dir.pwd}"
   
+  sh "sportdb --include #{DB_ROOT} -e at.2011/12 at/2011_12/bl"
   sh "sportdb --include #{DB_ROOT} -e at_bl_2012_13 at/2012_13/bl"
   
-  ## export from db/generate fixtures
+  sh "sportdb --include #{DB_ROOT} -e de.2012/13 de/2012_13/bl"
   
-  ### fix: use --output option
+  sh "sportdb --include #{DB_ROOT} -e en.2012/13 en/2012_13/pl"
+end
+
+## export from db/generate fixtures
+### fix: use --output option
+
+file "#{DB_ROOT}/at/2011_12/bl_fixtures.rb" => "#{DB_ROOT}/at/2011_12/bl.txt" do
+  sh "sportdb --generate -e at.2011/12 #{DB_ROOT}/at/2011_12/bl_fixtures"
+end
+
+file "#{DB_ROOT}/at/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/at/2012_13/bl.txt" do
   sh "sportdb --generate -e at_bl_2012_13 #{DB_ROOT}/at/2012_13/bl_fixtures"
 end
 
-task :import => [:setup, "#{DB_ROOT}/at/2012_13/bl_fixtures.rb"] do
-  
+file "#{DB_ROOT}/de/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/de/2012_13/bl.txt" do
+  sh "sportdb --generate -e de.2012/13 #{DB_ROOT}/de/2012_13/bl_fixtures"
 end
 
-task :release => [:import] do
+
+file "#{DB_ROOT}/en/2012_13/pl_fixtures.rb" => "#{DB_ROOT}/en/2012_13/pl.txt" do
+  sh "sportdb --generate -e en.2012/13 #{DB_ROOT}/en/2012_13/pl_fixtures"
+end
+
+
+
+task :export => [:import,
+                 "#{DB_ROOT}/at/2012_13/bl_fixtures.rb",
+                 "#{DB_ROOT}/at/2011_12/bl_fixtures.rb",
+                 "#{DB_ROOT}/de/2012_13/bl_fixtures.rb",
+                 "#{DB_ROOT}/en/2012_13/pl_fixtures.rb"
+                 ] do
+  # nothing here
+end
+
+
+task :release => [:export] do
   puts "hello from release build script"
 end
 
@@ -44,7 +72,20 @@ task :setup => :clean do
    'at/2011_12/bl',
    'at/2011_12/cup',
    'at/2012_13/bl',
-   'at/2012_13/cup'
+   'at/2012_13/cup',
+   'de/teams',
+   'de/2012_13/bl',
+   'en/teams',
+   'en/2012_13/pl',
+   'cl/teams',
+   'cl/2011_12/cl',
+   'cl/2011_12/el',
+   'cl/2012_13/cl',
+   'euro/teams',
+   'euro/2012',
+   'world/quali_2012_13',
+   'world/quali_2012_13_c',
+   'world/quali_2012_13_i'
    ].each do |seed|
     sh "sportdb --include #{DB_ROOT} #{seed}"
   end

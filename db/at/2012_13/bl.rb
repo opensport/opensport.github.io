@@ -35,4 +35,4 @@ bl.teams << mattersburg
 bl.teams << neustadt
 bl.teams << wac
 
-Prop.create!( key: 'db.at.bl.2012/13.version', value: '1' )
+Prop.create!( key: 'db.at.2012/13.version', value: '1' )
