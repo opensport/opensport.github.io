@@ -38,6 +38,8 @@ class Reader
     #  [ 'stuttgart', [ 'VfB Stuttgart' ]] ]
     
     @known_teams = []
+    
+    ## todo/fix: move calc known_teams to model!!! (for reuse)
  
     @event.teams.each_with_index do |team,index|
 
@@ -93,17 +95,30 @@ class Reader
     # and return it
     # NB: side effect - removes date from line string
     
-    # e.g. 14.09. 20:30
-    regex = /\b(\d{2})\.(\d{2})\.\s+(\d{2}):(\d{2})\b/
-    
-    if line =~ regex
+    # e.g. 2012-09-14 20:30   => YYYY-MM-DD HH:MM
+    regex_db = /\b(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})\b/
+
+    # e.g. 14.09. 20:30  => DD.MM. HH:MM
+    regex_de = /\b(\d{2})\.(\d{2})\.\s+(\d{2}):(\d{2})\b/
+
+    if line =~ regex_db
+      value = "#{$1}-#{$2}-#{$3} #{$4}:#{$5}"
+      puts "   date: >#{value}<"
+
+      ## todo: lets you configure year
+      ##  and time zone (e.g. cet, eet, utc, etc.)
+      
+      line.sub!( regex_db, '[DATE.DB]' )
+
+      return DateTime.strptime( value, '%Y-%m-%d %H:%M' )
+    elsif line =~ regex_de
       value = "2012-#{$2}-#{$1} #{$3}:#{$4}"
       puts "   date: >#{value}<"
 
       ## todo: lets you configure year
       ##  and time zone (e.g. cet, eet, utc, etc.)
       
-      line.sub!( regex, '[DATE]' )
+      line.sub!( regex_de, '[DATE.DE]' )
 
       return DateTime.strptime( value, '%Y-%m-%d %H:%M' )
     else
@@ -241,25 +256,26 @@ class Reader
         
       else
         puts "parsing game (fixture) line: >#{line}<"
+
+        match_teams!( line )
+        team1_key = find_team1!( line )
+        team2_key = find_team2!( line )
+
         date  = find_date!( line )
         score = find_score!( line )
         
-        match_teams!( line )
-        team1 = find_team1!( line )
-        team2 = find_team2!( line )
-
         puts "  line: >#{line}<"
 
 
         ### todo: cache team lookups in hash?
 
-        team1_id = Team.find_by_key!( team1 ).id
-        team2_id = Team.find_by_key!( team2 ).id
+        team1 = Team.find_by_key!( team1_key )
+        team2 = Team.find_by_key!( team2_key )
 
         ### check if games exists
         ##  with this teams in this round if yes only update
-        @game = Game.find_by_round_id_and_team1_id_and_team2_id(
-                         @round.id, team1_id, team2_id
+        game = Game.find_by_round_id_and_team1_id_and_team2_id(
+                         @round.id, team1.id, team2.id
         )
 
         game_attribs = {
@@ -268,27 +284,27 @@ class Reader
           play_at:  date
         }
 
-        if @game.present?
-          puts "*** update game #{@game.id}:"
+        if game.present?
+          puts "*** update game #{game.id}:"
         else
           puts "*** create game:"
-          @game = Game.new
+          game = Game.new
 
           more_game_attribs = {
           ## NB: use round.games.count for pos
           ##  lets us add games out of order if later needed
             pos:  @round.games.count+1,
             round_id:  @round.id,
-            team1_id: team1_id,
-            team2_id: team2_id
+            team1_id: team1.id,
+            team2_id: team2.id
           }          
           game_attribs = game_attribs.merge( more_game_attribs )
         end
 
         puts game_attribs.to_json
 
-        @game.update_attributes!( game_attribs )
-      end             
+        game.update_attributes!( game_attribs )
+      end
     end # oldlines.each
     
     @patch_rounds ||= {}

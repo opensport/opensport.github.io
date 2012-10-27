@@ -54,7 +54,8 @@ class Templater
 
  
     args.each do |arg|
-      name = File.basename( arg, '.*' )
+      ## name = File.basename( arg, '.*' )
+      name = arg
       gen_fixtures( name )
     end
     
@@ -69,6 +70,9 @@ class Templater
     ## todo: honor -o/--output option ??
 
     dest = "#{name}.rb"
+    
+    ## todo: check if path (parent dirs) exits?
+    
     source = "#{SportDB.root}/templates/fixtures.rb.erb"
 
     puts " Merging template #{source} to #{dest}..."
