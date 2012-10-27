@@ -159,6 +159,37 @@ let's use the Champions League 2012/13 and the World Cup 2012/13 Quali events an
 That's it.
 
 
+## Plain Text Fixtures
+
+The `sportdb` lets you import fixtures in plain text. Example:
+
+```
+Spieltag 5
+
+23.09. 13:30   Liverpool FC - Manchester United  1:2
+23.09. 15:00   Newcastle United - Norwich City  1:0
+23.09. 16:00   Manchester City - Arsenal FC  1:1
+23.09. 16:00   Tottenham Hotspur - Queens Park Rangers  2:1
+```
+
+The plain text format skips comments (starting with `#`) and blank lines. Example:
+
+```
+###
+#  Premier League
+#  - more info -> http://premierleague.com (official site)
+#                 http://en.wikipedia.org/wiki/Premier_League
+```
+
+### Format for Rounds
+
+TBD
+
+### Format for Fixtures
+
+TBD
+
+
 ## Real World Usage
 
 [sport.db Web Admin](https://github.com/geraldb/sport.db.admin) - `sport.db` Web Admin Tool in Ruby on Rails (version 3.2 and up).

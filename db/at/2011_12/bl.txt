@@ -1,0 +1,79 @@
+######################################
+## Oesterreichische Bundesliga 2011/12
+##
+## more info => http://bundesliga.at
+
+# note: timezone for games (play_at) is *always* CET (central european time)
+
+
+29. Runde  /  Sa+So 7.+8. April 2012
+
+salzburg     2:0   wacker      2012-04-07 16:00
+ried         0:1   austria     2012-04-07 18:30
+ksv          2:3   admira      2012-04-07 18:30
+rapid        2:1   neustadt    2012-04-07 18:30
+mattersburg  0:2   sturm       2012-04-08 16:00
+
+
+30. Runde  /  Sa+So 14.+15. April 2012
+
+neustadt     0:0   ksv          2012-04-14 16:00
+admira       1:1   wacker       2012-04-14 18:30
+sturm        2:2   salzburg     2012-04-14 18:30
+ried         2:0   mattersburg  2012-04-14 18:30
+austria      0:0   rapid        2012-04-15 16:00
+
+
+31. Runde  /  Sa+So 21.+22. April 2012
+
+wacker       2:0   neustadt     2012-04-21 16:00
+ksv          1:0   austria      2012-04-21 18:30
+mattersburg  1:2   admira       2012-04-21 18:30
+salzburg     2:0   ried         2012-04-21 18:30
+rapid        1:1   sturm        2012-04-22 16:00
+
+
+32. Runde  /  Sa+So 28.+29. April 2012
+
+austria      3:0   wacker       2012-04-28 16:00
+neustadt     1:4   admira       2012-04-28 18:30
+mattersburg  0:1   salzburg     2012-04-28 18:30
+sturm        2:1   ksv          2012-04-28 18:30
+ried         2:3   rapid        2012-04-29 16:00
+
+
+33. Runde  /  Sa 5. Mai 2012
+
+neustadt      0:0   sturm       2012-05-05 16:00
+admira        3:2   austria     2012-05-05 18:30
+ksv           0:0   ried        2012-05-05 18:30
+wacker        3:6   mattersburg 2012-05-05 18:30
+rapid         0:1   salzburg    2012-05-06 16:00
+
+
+34. Runde  /  Do 10. Mai 2012
+
+salzburg      2:0   ksv         2012-05-10 18:30
+austria       3:1   neustadt    2012-05-10 20:30
+ried          1:1   wacker      2012-05-10 20:30
+mattersburg   0:1   rapid       2012-05-10 20:30
+sturm         0:3   admira      2012-05-10 20:30
+
+
+35. Runde  /  So 13. Mai 2012
+
+ksv           0:2   rapid       2012-05-13 16:00
+wacker        1:1   sturm       2012-05-13 16:00
+neustadt      1:5   salzburg    2012-05-13 16:00
+admira        1:1   ried        2012-05-13 16:00
+austria       1:0   mattersburg 2012-05-13 16:00
+
+
+36. Runde  /  Do 17. Mai 2012
+
+rapid         2:0   wacker      2012-05-17 16:00
+ried          2:2   neustadt    2012-05-17 16:00
+mattersburg   2:0   ksv         2012-05-17 16:00
+sturm         3:1   austria     2012-05-17 16:00
+salzburg      2:0   admira      2012-05-17 16:00
+
