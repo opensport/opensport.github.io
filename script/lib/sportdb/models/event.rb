@@ -1,6 +1,4 @@
-module SportDB
-  module Models
-
+module SportDB::Models
 
 class Event < ActiveRecord::Base
   
@@ -11,9 +9,13 @@ class Event < ActiveRecord::Base
   has_many :event_teams, :class_name => 'EventTeam'
   has_many :teams, :through => :event_teams
 
+  def add_teams_from_ary!( team_keys )
+    team_keys.each do |team_key|
+      team = Team.find_by_key!( team_key )
+      self.teams << team
+    end
+  end
+
 end # class Event
 
-
-  
- end # module Models
-end # module SportDB
+end # module SportDB::Models

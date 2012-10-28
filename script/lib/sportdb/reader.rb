@@ -72,10 +72,22 @@ class Reader
 
 
   def is_round?( line )
-    line =~ /Spieltag|Runde/
+    line =~ /Spieltag|Runde|Achtelfinale|Viertelfinale|Halbfinale|Finale/
+  end
+  
+  def find_knockout_flag( line )
+    if line =~ /Achtelfinale|Viertelfinale|Halbfinale|Finale|K\.O\.|Knockout/
+      puts "   setting knockout flag to true"
+      true
+    else
+      false
+    end
   end
   
   def find_round_pos!( line )
+    ## fix/todo:
+    ##  if no round found assume last_pos+1 ??? why? why not?
+
     regex = /\b(\d+)\b/
     
     if line =~ regex
@@ -126,7 +138,26 @@ class Reader
     end
   end
 
-  def find_score!( line )
+
+  def find_game_pos!( line )
+    # extract optional game pos from line
+    # and return it
+    # NB: side effect - removes pos from line string
+
+    # e.g.  (1)   - must start line 
+    regex = /^[ \t]*\((\d{1,3})\)[ \t]+/
+    if line =~ regex
+      puts "   pos: >#{$1}<"
+      
+      line.sub!( regex, '[POS] ' )
+      return $1.to_i
+    else
+      return nil
+    end
+
+  end
+
+  def find_scores!( line )
     # extract score from line
     # and return it
     # NB: side effect - removes date from line string
@@ -134,17 +165,42 @@ class Reader
     # e.g. 1:2 or 0:2 or 3:3
     regex = /\b(\d):(\d)\b/
     
+    # e.g. 1:2nV  => overtime
+    regex_ot = /\b(\d):(\d)[ \t]?[nN][vV]\b/
+    
+    # e.g. 5:4iE  => penalty
+    regex_p = /\b(\d):(\d)[ \t]?[iI][eE]\b/
+    
+    scores = []
+    
     if line =~ regex
-      value = "#{$1}-#{$2}"
-      puts "   score: >#{value}<"
+      puts "   score: >#{$1}-#{$2}<"
       
       line.sub!( regex, '[SCORE]' )
 
-      return [$1.to_i,$2.to_i]
-    else
-      return []
+      scores << $1.to_i
+      scores << $2.to_i
+      
+      if line =~ regex_ot
+        puts "   score.ot: >#{$1}-#{$2}<"
+      
+        line.sub!( regex_ot, '[SCORE.OT]' )
+
+        scores << $1.to_i
+        scores << $2.to_i
+      
+        if line =~ regex_p
+          puts "   score.p: >#{$1}-#{$2}<"
+      
+          line.sub!( regex_p, '[SCORE.P]' )
+
+          scores << $1.to_i
+          scores << $2.to_i
+        end
+      end
     end
-  end
+    scores
+  end # methdod find_scores!
   
 
   def find_team_worker!( line, index )
@@ -221,6 +277,8 @@ class Reader
       if is_round?( line )
         puts "parsing round line: >#{line}<"
         pos = find_round_pos!( line )
+        
+        @knockout_flag = find_knockout_flag( line )
         puts "  line: >#{line}<"
         
         ## NB: dummy/placeholder start_at, end_at date
@@ -257,12 +315,14 @@ class Reader
       else
         puts "parsing game (fixture) line: >#{line}<"
 
+        pos = find_game_pos!( line )
+
         match_teams!( line )
         team1_key = find_team1!( line )
         team2_key = find_team2!( line )
 
         date  = find_date!( line )
-        score = find_score!( line )
+        scores = find_scores!( line )
         
         puts "  line: >#{line}<"
 
@@ -279,10 +339,17 @@ class Reader
         )
 
         game_attribs = {
-          score1:    score[0],
-          score2:    score[1],
-          play_at:  date
+          score1:    scores[0],
+          score2:    scores[1],
+          score3:    scores[2],
+          score4:    scores[3],
+          score5:    scores[4],
+          score6:    scores[5],
+          play_at:   date,
+          knockout:  @knockout_flag
         }
+        
+        game_attribs[ :pos ] = pos   if pos.present?
 
         if game.present?
           puts "*** update game #{game.id}:"
@@ -291,13 +358,15 @@ class Reader
           game = Game.new
 
           more_game_attribs = {
-          ## NB: use round.games.count for pos
-          ##  lets us add games out of order if later needed
-            pos:  @round.games.count+1,
             round_id:  @round.id,
             team1_id: team1.id,
             team2_id: team2.id
-          }          
+          }
+          
+          ## NB: use round.games.count for pos
+          ##  lets us add games out of order if later needed
+          more_game_attribs[ :pos ] = @round.games.count+1  if pos.nil? 
+
           game_attribs = game_attribs.merge( more_game_attribs )
         end
 
@@ -313,6 +382,11 @@ class Reader
       round = Round.find( k )
       games = round.games.order( 'play_at asc' ).all
       
+      ## skip rouns w/ no games
+      
+      ## todo/fix: what's the best way for checking assoc w/ 0 recs?
+      next if games.size == 0
+    
       round_attribs = {}
       
       ## todo: check for no records

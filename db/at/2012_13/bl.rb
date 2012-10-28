@@ -14,7 +14,7 @@ bl = Event.create!( key:     'at_bl_2012_13',
 
 ## 10 Bundeliga Teams
 
-bl_team_keys = [
+team_keys_bl = [
    'salzburg',
    'rapid',
    'admira',
@@ -26,6 +26,6 @@ bl_team_keys = [
    'neustadt',
    'wac' ]
 
-bl.add_teams_from_ary!( bl_team_keys )
+bl.add_teams_from_ary!( team_keys_bl )
 
 Prop.create!( key: 'db.at.2012/13.version', value: '1' )

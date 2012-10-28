@@ -53,7 +53,7 @@ class Runner
       cmd.on_tail( "-h", "--help", "Show this message" ) do
         puts <<EOS
 
-sportdb - sport.db command line tool
+sportdb - sport.db command line tool, version #{VERSION}
 
 #{cmd.help}
 

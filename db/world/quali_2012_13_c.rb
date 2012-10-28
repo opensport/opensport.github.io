@@ -7,21 +7,20 @@
 
 world = Event.find_by_key!( 'wmq' )
 
-worldc_team_keys = [ 'ger',
-                     'fro',
-                     'irl',
-                     'kaz',
-                     'aut',
-                     'swe' ]
+team_keys_worldc = [
+  'ger',
+  'fro',
+  'irl',
+  'kaz',
+  'aut',
+  'swe' ]
 
-world.add_teams_from_ary( worldc_team_keys )
+world.add_teams_from_ary!( team_keys_worldc )
 
-#################################3
-# Gruppe C
 
 worldc = Group.create!( event: world, pos: 3, title: 'Gruppe C' )
 
-worldc.add_teams_from_ary( worldc_team_keys )
+worldc.add_teams_from_ary!( team_keys_worldc )
 
 
 Prop.create!( key: 'db.world.quali.2012/13.c.version', value: '1' )

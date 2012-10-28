@@ -12,7 +12,7 @@ bl = Event.create!( key:      'de.2012/13',
                     title:    'Deutsche Bundesliga 2012/13',
                     start_at: Time.cet('2012-07-21 00:00') )
 
-bl_team_keys = [
+team_keys_bl = [
   'bayern',
   'frankfurt',
   'schalke',
@@ -32,7 +32,7 @@ bl_team_keys = [
   'wolfsburg',
   'fuerth' ]
 
-bl.add_teams_from_ary( bl_team_keys )
+bl.add_teams_from_ary!( team_keys_bl )
 
 
 Prop.create!( key: 'db.de.2012/13.version', value: '1' )

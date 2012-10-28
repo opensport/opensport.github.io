@@ -10,7 +10,7 @@ cup = Event.create!( key:      'at_cup_2012_13',
 
 ## 10 Bundeliga Teams
 
-cup_bl_team_keys = [
+team_keys_bl = [
    'salzburg',
    'rapid',
    'admira',
@@ -24,7 +24,7 @@ cup_bl_team_keys = [
 
 ## 10 Erste Liga Teams
 
-cup_erste_team_keys = [
+team_keys_erste = [
    'ksv',
    'altach',
    'austrial',
@@ -37,65 +37,74 @@ cup_erste_team_keys = [
    'horn']
 
 
-cup.add_teams_from_ary!( cup_bl_team_keys + cup_erste_team_keys )
-
-
 ## regionalliga west teams
 
-hard          = Team.find_by_key!( 'hard' )
-bregenz       = Team.find_by_key!( 'bregenz' )
-dornbirn      = Team.find_by_key!( 'dornbirn' )
-kufstein      = Team.find_by_key!( 'kufstein' )
-wattens       = Team.find_by_key!( 'wattens' )
-austrias      = Team.find_by_key!( 'austrias')
-pinzgau       = Team.find_by_key!( 'pinzgau' )
-stjohann      = Team.find_by_key!( 'stjohann' )
+team_keys_rlw = [
+  'hard',
+  'bregenz',
+  'dornbirn',
+  'kufstein',
+  'wattens',
+  'austrias',
+  'pinzgau',
+  'stjohann']
 
 ## regionalliga mitte teams
 
-vsv           = Team.find_by_key!( 'vsv' )
-klagenfurt    = Team.find_by_key!( 'klagenfurt' )
-austriak      = Team.find_by_key!( 'austriak' )
-kalsdorf      = Team.find_by_key!( 'kalsdorf' )
-gratkorn      = Team.find_by_key!( 'gratkorn' )
-allerheiligen = Team.find_by_key!( 'allerheiligen' )
-leoben        = Team.find_by_key!( 'leoben' )
-gak           = Team.find_by_key!( 'gak' )
-pasching      = Team.find_by_key!( 'pasching' )
-voecklamarkt  = Team.find_by_key!( 'voecklamarkt' )
-stflorian     = Team.find_by_key!( 'stflorian' )
-wallern       = Team.find_by_key!( 'wallern' )
-lask          = Team.find_by_key!( 'lask' )
+team_keys_rlm = [
+  'vsv',
+  'klagenfurt',
+  'austriak',
+  'kalsdorf',
+  'gratkorn',
+  'allerheiligen',
+  'leoben',
+  'gak',
+  'pasching',
+  'voecklamarkt',
+  'stflorian',
+  'wallern',
+  'lask']
 
 ## regionalliga ost teams
 
-sollenau      = Team.find_by_key!( 'sollenau' )
-amstetten     = Team.find_by_key!( 'amstetten' )
-retz          = Team.find_by_key!( 'retz' )
-fac           = Team.find_by_key!( 'fac' )
-schwechat     = Team.find_by_key!( 'schwechat' )
-wienersk      = Team.find_by_key!( 'wienersk' )
-ostbahn       = Team.find_by_key!( 'ostbahn' )
-oberwart      = Team.find_by_key!( 'oberwart' )
-parndorf      = Team.find_by_key!( 'parndorf' )
-stegersbach   = Team.find_by_key!( 'stegersbach' )
+team_keys_rlo = [
+  'sollenau',
+  'amstetten',
+  'retz',
+  'fac',
+  'schwechat',
+  'wienersk',
+  'ostbahn',
+  'oberwart',
+  'parndorf',
+  'stegersbach']
 
 ## noch einige teams
 
-wolfurt       = Team.find_by_key!( 'wolfurt' )
-schwaz        = Team.find_by_key!( 'schwaz' )
-reutte        = Team.find_by_key!( 'reutte' )
-spittal       = Team.find_by_key!( 'spittal' )
-sak           = Team.find_by_key!( 'sak' )
-dsc           = Team.find_by_key!( 'dsc' )
-micheldorf    = Team.find_by_key!( 'micheldorf' )
-badvoeslau    = Team.find_by_key!( 'badvoeslau' )
-gaflenz       = Team.find_by_key!( 'gaflenz' )
-ardagger      = Team.find_by_key!( 'ardagger' )
-rohrendorf    = Team.find_by_key!( 'rohrendorf' )
-heiligenkreuz = Team.find_by_key!( 'heiligenkreuz' )
-viktoria      = Team.find_by_key!( 'viktoria' )
+team_keys_misc = [
+  'wolfurt',
+  'schwaz',
+  'reutte',
+  'spittal',
+  'sak',
+  'dsc',
+  'micheldorf',
+  'badvoeslau',
+  'gaflenz',
+  'ardagger',
+  'rohrendorf',
+  'heiligenkreuz',
+  'viktoria']
 
+
+cup.add_teams_from_ary!(
+  team_keys_bl +
+  team_keys_erste +
+  team_keys_rlw +
+  team_keys_rlm +
+  team_keys_rlo +
+  team_keys_misc )
 
 
 Prop.create!( key: 'db.at.cup.2012/13.version', value: '1' )

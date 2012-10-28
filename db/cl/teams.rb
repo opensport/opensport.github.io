@@ -84,8 +84,7 @@ teams = [
   [ 'athletic',  'Athletic Bilbao',          es ],
   [ 'sporting',  'Sporting Lisboa',          pt ],
   [ 'metalist',  'FC Metalist Kharkiv',      ua ],
-  [ 'atletico',  'Atlético Madrid',          es ],
-  [ 'hannover',  'Hannover 96',              de ]
+  [ 'atletico',  'Atlético Madrid',          es ]
 ]
 
 
