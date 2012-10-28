@@ -1,6 +1,7 @@
 ###########################################
 ##  WM 2014 - Qualification Europe Group C
 
+
 # note: timezone for games (play_at) is *always* CET (central european time)
 
 

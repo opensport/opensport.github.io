@@ -16,13 +16,14 @@ task :import => [:setup] do
   
   sh "sportdb --include #{DB_ROOT} -e at.2011/12 at/2011_12/bl"
   sh "sportdb --include #{DB_ROOT} -e at_bl_2012_13 at/2012_13/bl"
+  sh "sportdb --include #{DB_ROOT} -e at_cup_2012_13 at/2012_13/cup"
   
   sh "sportdb --include #{DB_ROOT} -e de.2012/13 de/2012_13/bl"
   
   sh "sportdb --include #{DB_ROOT} -e en.2012/13 en/2012_13/pl"
 
   sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_c"
-  sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_i"
+  ### sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_i"
 end
 
 ## export from db/generate fixtures
@@ -34,6 +35,10 @@ end
 
 file "#{DB_ROOT}/at/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/at/2012_13/bl.txt" do
   sh "sportdb --generate -e at_bl_2012_13 #{DB_ROOT}/at/2012_13/bl_fixtures"
+end
+
+file "#{DB_ROOT}/at/2012_13/cup_fixtures.rb" => "#{DB_ROOT}/at/2012_13/cup.txt" do
+  sh "sportdb --generate -e at_cup_2012_13 #{DB_ROOT}/at/2012_13/cup_fixtures"
 end
 
 file "#{DB_ROOT}/de/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/de/2012_13/bl.txt" do
@@ -54,6 +59,7 @@ end
 task :export => [:import,
                  "#{DB_ROOT}/at/2012_13/bl_fixtures.rb",
                  "#{DB_ROOT}/at/2011_12/bl_fixtures.rb",
+                 "#{DB_ROOT}/at/2012_13/cup_fixtures.rb",
                  "#{DB_ROOT}/de/2012_13/bl_fixtures.rb",
                  "#{DB_ROOT}/en/2012_13/pl_fixtures.rb",
                  "#{DB_ROOT}/world/quali_2012_13_fixtures.rb"
@@ -93,7 +99,7 @@ task :setup => :clean do
    'euro/2012',
    'world/quali_2012_13',
    'world/quali_2012_13_c',
-   'world/quali_2012_13_i'
+##  'world/quali_2012_13_i'
    ].each do |seed|
     sh "sportdb --include #{DB_ROOT} #{seed}"
   end
