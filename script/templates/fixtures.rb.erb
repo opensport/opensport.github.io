@@ -27,7 +27,15 @@ ev = Event.find_by_key!( '<%= event.key %>' )
 <% event.rounds.each do |round| %>
 <%= 'games%02d' % round.pos %> = [
 <% round.games.each_with_index do |game| %>
- [ <%= '%-18s' % "#{game.team1.key}," %> [<%= "#{game.score1},#{game.score2}" if game.score1.present? && game.score2.present? %>], <%= '%-18s' % "#{game.team2.key}," %> Time.utc('<%= game.play_at.strftime('%Y-%m-%d %H:%M') %>') ], 
+ [ <%= '%3d' % game.pos %>, <%= '%-18s' % "#{game.team1.key}," %>
+   [
+     <%= "#{game.score1},#{game.score2}" if game.score1.present? && game.score2.present? %>
+     <%= ",#{game.score3},#{game.score4}" if game.score3.present? && game.score4.present? %>
+     <%= ",#{game.score5},#{game.score6}" if game.score5.present? && game.score6.present? %>   
+   ],
+   <%= '%-18s' % "#{game.team2.key}," %> Time.utc('<%= game.play_at.strftime('%Y-%m-%d %H:%M') %>')
+   , <%= game.knockout %>
+ ], 
 <%# does comma for last entry matter? ruby ignores it for sure? check %>
 <% end %>
 ]

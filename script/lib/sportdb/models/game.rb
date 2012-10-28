@@ -18,33 +18,55 @@ class Game < ActiveRecord::Base
   end
 
   def self.create_from_ary!( games, round, knockout=false )
+
+### fix:
+#  replace knockout=false with more attribs
+#    see create teams and than merge attribs
+
     games.each_with_index do |values,index|
       
-      ## check if first value (that is, values[0]) is a numeric/number
-      ##  if NOT add pos automatic (counting from 1 to n)
+      value_pos      = index+1
+      value_scores   = []
+      value_teams    = []
+      value_knockout = knockout
+      value_play_at  = round.start_at  # if no date present use it from round
+      value_group    = nil
       
-      if values[0].kind_of? Numeric
-        pos    = values[0]
-        offset = 1
-      else
-        pos    = index
-        offset = 0
+      ### lets you use arguments in any order
+      ##   makes pos optional (if not present counting from 1 to n)
+      
+      values.each do |value|
+        if value.kind_of? Numeric
+          value_pos = value
+        elsif value.kind_of?( TrueClass ) || value.kind_of?( FalseClass )
+          value_knockout = value
+        elsif value.kind_of? Array
+          value_scores = value
+        elsif value.kind_of? Team
+          value_teams << value
+        elsif value.kind_of? Group
+          value_group = value
+        elsif value.kind_of?( Date ) || value.kind_of?( Time ) || value.kind_of?( DateTime )
+          value_play_at = value
+        else
+          # issue an error/warning here
+        end
       end
-      
+
       Game.create!(
         :round     => round,
-        :pos       => pos,
-        :team1     => values[offset],
-        :score1    => values[offset+1][0],
-        :score2    => values[offset+1][1],
-        :score3    => values[offset+1][2],
-        :score4    => values[offset+1][3],
-        :score5    => values[offset+1][4],
-        :score6    => values[offset+1][5],
-        :team2     => values[offset+2],
-        :play_at   => values[offset+3],
-        :group     => values[offset+4],    # Note: group is optional (may be null/nil)
-        :knockout  => knockout )
+        :pos       => value_pos,
+        :team1     => value_teams[0],
+        :score1    => value_scores[0],
+        :score2    => value_scores[1],
+        :score3    => value_scores[2],
+        :score4    => value_scores[3],
+        :score5    => value_scores[4],
+        :score6    => value_scores[5],
+        :team2     => value_teams[1],
+        :play_at   => value_play_at,
+        :group     => value_group,     # Note: group is optional (may be null/nil)
+        :knockout  => value_knockout )
     end # each games
   end
 
