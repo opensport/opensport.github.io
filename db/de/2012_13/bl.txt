@@ -96,27 +96,27 @@
 
 8. Spieltag
 
-19.10. 20:30  1899 Hoffenheim      -     Greuther Fürth
-20.10. 15:30  E. Frankfurt      -     Hannover 96
-20.10. 15:30  F. Düsseldorf      -     Bayern München
-20.10. 15:30  Bor. Dortmund      -     FC Schalke 04
-20.10. 15:30  Bay. Leverkusen      -     1. FSV Mainz 05
-20.10. 15:30  VfL Wolfsburg      -     SC Freiburg
-20.10. 18:30  Werder Bremen      -     Bor. M'gladbach
-21.10. 15:30  1. FC Nürnberg      -     FC Augsburg
-21.10. 17:30  Hamburger SV      -     VfB Stuttgart
+19.10. 20:30  1899 Hoffenheim      3:3     Greuther Fürth
+20.10. 15:30  E. Frankfurt      3:1    Hannover 96
+20.10. 15:30  F. Düsseldorf      0:5     Bayern München
+20.10. 15:30  Bor. Dortmund      1:2     FC Schalke 04
+20.10. 15:30  Bay. Leverkusen      2:2     1. FSV Mainz 05
+20.10. 15:30  VfL Wolfsburg      0:2     SC Freiburg
+20.10. 18:30  Werder Bremen      4:0     Bor. M'gladbach
+21.10. 15:30  1. FC Nürnberg      0:0     FC Augsburg
+21.10. 17:30  Hamburger SV      0:1    VfB Stuttgart
 
 9. Spieltag
 
-26.10. 20:30  FC Augsburg      -     Hamburger SV
-27.10. 15:30  Greuther Fürth      -     Werder Bremen
-27.10. 15:30  SC Freiburg      -     Bor. Dortmund
-27.10. 15:30  FC Schalke 04      -     1. FC Nürnberg
-27.10. 15:30  1. FSV Mainz 05      -     1899 Hoffenheim
-27.10. 15:30  F. Düsseldorf      -     VfL Wolfsburg
-28.10. 15:30  VfB Stuttgart      -     E. Frankfurt
-28.10. 17:30  Hannover 96      -     Bor. M'gladbach
-28.10. 17:30  Bayern München      -     Bay. Leverkusen
+26.10. 20:30  FC Augsburg      0:2     Hamburger SV
+27.10. 15:30  Greuther Fürth      1:1     Werder Bremen
+27.10. 15:30  SC Freiburg      0:2     Bor. Dortmund
+27.10. 15:30  FC Schalke 04      1:0     1. FC Nürnberg
+27.10. 15:30  1. FSV Mainz 05      3:0     1899 Hoffenheim
+27.10. 15:30  F. Düsseldorf      1:4     VfL Wolfsburg
+28.10. 15:30  VfB Stuttgart      2:1     E. Frankfurt
+28.10. 17:30  Hannover 96      2:3     Bor. M'gladbach
+28.10. 17:30  Bayern München      1:2     Bay. Leverkusen
 
 10. Spieltag
 

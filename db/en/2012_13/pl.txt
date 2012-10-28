@@ -105,28 +105,187 @@ Spieltag 7
 
 Spieltag 8
 
-20.10. 12:45   Tottenham Hotspur - Chelsea FC
-20.10. 15:00   Fulham FC - Aston Villa
-20.10. 15:00   Liverpool FC - Reading FC
-20.10. 15:00   Manchester United - Stoke City
-20.10. 15:00   Swansea City - Wigan Athletic
-20.10. 15:00   West Bromwich Albion - Manchester City
-20.10. 15:00   West Ham United - Southampton FC
-20.10. 17:30   Norwich City - Arsenal FC
+20.10. 12:45   Tottenham Hotspur - Chelsea FC  2:4
+20.10. 15:00   Fulham FC - Aston Villa   1:0
+20.10. 15:00   Liverpool FC - Reading FC   1:0
+20.10. 15:00   Manchester United - Stoke City   4:2
+20.10. 15:00   Swansea City - Wigan Athletic   2:1
+20.10. 15:00   West Bromwich Albion - Manchester City   1:2
+20.10. 15:00   West Ham United - Southampton FC   4:1
+20.10. 17:30   Norwich City - Arsenal FC     1:0
 
-21.10. 13:30   Sunderland AFC - Newcastle United
-21.10. 16:00   Queens Park Rangers - Everton FC
+21.10. 13:30   Sunderland AFC - Newcastle United   1:1
+21.10. 16:00   Queens Park Rangers - Everton FC   1:1
 
 Spieltag 9
 
-27.10. 12:45   Everton FC - Liverpool FC
-27.10. 15:00   Arsenal FC - Queens Park Rangers
-27.10. 15:00   Reading FC - Fulham FC
-27.10. 15:00   Stoke City - Sunderland AFC
-27.10. 15:00   Wigan Athletic - West Ham United
-27.10. 17:30   Manchester City - Swansea City
+27.10. 12:45   Everton FC - Liverpool FC  2:2
+27.10. 15:00   Arsenal FC - Queens Park Rangers  1:0
+27.10. 15:00   Reading FC - Fulham FC  3:3
+27.10. 15:00   Stoke City - Sunderland AFC  0:0
+27.10. 15:00   Wigan Athletic - West Ham United  2:1
+27.10. 17:30   Manchester City - Swansea City  1:0
 
-28.10. 13:30   Aston Villa - Norwich City
-28.10. 15:00   Newcastle United - West Bromwich Albion
-28.10. 15:00   Southampton FC - Tottenham Hotspur
-28.10. 16:00   Chelsea FC - Manchester United
+28.10. 13:30   Aston Villa - Norwich City  1:1
+28.10. 15:00   Newcastle United - West Bromwich Albion  2:1
+28.10. 15:00   Southampton FC - Tottenham Hotspur  1:2
+28.10. 16:00   Chelsea FC - Manchester United    2:3
+
+Spieltag 10
+
+03.11. 13:45 (Sa) Manchester United - Arsenal FC
+03.11. 16:00 (Sa) Fulham FC - Everton FC
+03.11. 16:00 (Sa) Norwich City - Stoke City
+03.11. 16:00 (Sa) Sunderland AFC - Aston Villa
+03.11. 16:00 (Sa) Swansea City - Chelsea FC
+03.11. 16:00 (Sa) Tottenham Hotspur - Wigan Athletic
+03.11. 18:30 (Sa) West Ham United - Manchester City
+
+04.11. 14:30 (So) Queens Park Rangers - Reading FC
+04.11. 17:00 (So) Liverpool FC - Newcastle United
+
+05.11. 21:00 (Mo) West Bromwich Albion - Southampton FC
+
+
+Spieltag 11
+
+10.11. 16:00 (Sa) Arsenal FC - Fulham FC
+10.11. 16:00 (Sa) Everton FC - Sunderland AFC
+10.11. 16:00 (Sa) Reading FC - Norwich City
+10.11. 16:00 (Sa) Southampton FC - Swansea City
+10.11. 16:00 (Sa) Stoke City - Queens Park Rangers
+10.11. 16:00 (Sa) Wigan Athletic  - West Bromwich Albion
+10.11. 18:30 (Sa) Aston Villa - Manchester United
+
+11.11. 14:30 (So) Manchester City - Tottenham Hotspur
+11.11. 16:00 (So) Newcastle United - West Ham United
+11.11. 17:00 (So) Chelsea FC - Liverpool FC
+
+
+Spieltag 12
+
+17.11. 13:45 (Sa) Arsenal FC - Tottenham Hotspur
+17.11. 16:00 (Sa) Liverpool FC - Wigan Athletic
+17.11. 16:00 (Sa) Manchester City - Aston Villa
+17.11. 16:00 (Sa) Newcastle United - Swansea City
+17.11. 16:00 (Sa) Queens Park Rangers - Southampton FC
+17.11. 16:00 (Sa) Reading FC - Everton FC
+17.11. 16:00 (Sa) West Bromwich Albion - Chelsea FC
+17.11. 18:30 (Sa) Norwich City  - Manchester United
+
+18.11. 17:00 (So) Fulham FC - Sunderland AFC
+19.11. 21:00 (Mo) West Ham United - Stoke City
+
+
+Spieltag 13
+
+24.11. 13:45 (Sa) Swansea City - Liverpool FC
+24.11. 16:00 (Sa) Everton FC - Norwich City
+24.11. 16:00 (Sa) Manchester United - Queens Park Rangers
+24.11. 16:00 (Sa) Southampton FC - Newcastle United
+24.11. 16:00 (Sa) Stoke City - Fulham FC
+24.11. 16:00 (Sa) Wigan Athletic - Reading FC
+24.11. 18:30 (Sa) Aston Villa - Arsenal FC
+
+25.11. 14:30 (So) Sunderland AFC - West Bromwich Albion
+25.11. 17:00 (So) Chelsea FC - Manchester City
+25.11. 17:00 (So) Tottenham Hotspur - West Ham United
+
+
+Spieltag 14
+
+27.11. 20:45 (Di) Southampton FC - Norwich City
+27.11. 20:45 (Di) Stoke City - Newcastle United
+27.11. 20:45 (Di) Sunderland AFC - Queens Park Rangers
+27.11. 20:45 (Di) Swansea City - West Bromwich Albion
+27.11. 21:00 (Di) Aston Villa - Reading FC
+
+28.11. 20:45 (Mi) Tottenham Hotspur - Liverpool FC
+28.11. 20:45 (Mi) Chelsea FC - Fulham FC
+28.11. 20:45 (Mi) Everton FC - Arsenal FC
+28.11. 21:00 (Mi) Manchester United - West Ham United
+28.11. 21:00 (Mi) Wigan Athletic - Manchester City
+
+
+Spieltag 15
+
+01.12. 00:00 (Sa) Arsenal FC - Swansea City
+01.12. 00:00 (Sa) Fulham FC - Tottenham Hotspur
+01.12. 00:00 (Sa) Liverpool FC - Southampton FC
+01.12. 00:00 (Sa) Manchester City - Everton FC
+01.12. 00:00 (Sa) Newcastle United - Wigan Athletic
+01.12. 00:00 (Sa) Norwich City - Sunderland AFC
+01.12. 00:00 (Sa) Queens Park Rangers - Aston Villa
+01.12. 00:00 (Sa) Reading FC - Manchester United
+01.12. 00:00 (Sa) West Bromwich Albion - Stoke City
+01.12. 00:00 (Sa) West Ham United - Chelsea FC
+
+
+Spieltag 16
+
+08.12. 00:00 (Sa) Arsenal FC  - West Bromwich Albion
+08.12. 00:00 (Sa) Aston Villa - Stoke City
+08.12. 00:00 (Sa) Fulham FC - Newcastle United
+08.12. 00:00 (Sa) Manchester City - Manchester United
+08.12. 00:00 (Sa) Southampton FC - Reading FC
+08.12. 00:00 (Sa) Sunderland AFC - Chelsea FC
+08.12. 00:00 (Sa) Swansea City - Norwich City
+08.12. 00:00 (Sa) West Ham United - Liverpool FC
+08.12. 00:00 (Sa) Wigan Athletic - Queens Park Rangers
+
+09.12. 00:00 (So) Everton FC - Tottenham Hotspur
+
+
+Spieltag 17
+
+15.12. 00:00 (Sa) Chelsea FC  - Southampton FC
+15.12. 00:00 (Sa) Liverpool FC - Aston Villa
+15.12. 00:00 (Sa) Manchester United - Sunderland AFC
+15.12. 00:00 (Sa) Newcastle United  - Manchester City
+15.12. 00:00 (Sa) Norwich City - Wigan Athletic
+15.12. 00:00 (Sa) Queens Park Rangers - Fulham FC
+15.12. 00:00 (Sa) Reading FC - Arsenal FC
+15.12. 00:00 (Sa) Stoke City - Everton FC
+15.12. 00:00 (Sa) Tottenham Hotspur - Swansea City
+15.12. 00:00 (Sa) West Bromwich Albion  - West Ham United
+
+
+Spieltag 18
+
+22.12. 00:00 (Sa) Chelsea FC - Aston Villa
+22.12. 00:00 (Sa) Liverpool FC - Fulham FC
+22.12. 00:00 (Sa) Manchester City - Reading FC
+22.12. 00:00 (Sa) Newcastle United - Queens Park Rangers
+22.12. 00:00 (Sa) Southampton FC - Sunderland AFC
+22.12. 00:00 (Sa) Swansea City - Manchester United
+22.12. 00:00 (Sa) Tottenham Hotspur - Stoke City
+22.12. 00:00 (Sa) West Bromwich Albion - Norwich City
+22.12. 00:00 (Sa) West Ham United - Everton FC
+22.12. 00:00 (Sa) Wigan Athletic - Arsenal FC
+
+
+Spieltag 19
+
+26.12. 00:00 (Mi) Arsenal FC - West Ham United
+26.12. 00:00 (Mi) Aston Villa - Tottenham Hotspur
+26.12. 00:00 (Mi) Everton FC - Wigan Athletic
+26.12. 00:00 (Mi) Fulham FC - Southampton FC
+26.12. 00:00 (Mi) Manchester United - Newcastle United
+26.12. 00:00 (Mi) Norwich City - Chelsea FC
+26.12. 00:00 (Mi) Queens Park Rangers - West Bromwich Albion
+26.12. 00:00 (Mi) Reading FC - Swansea City
+26.12. 00:00 (Mi) Stoke City - Liverpool FC
+26.12. 00:00 (Mi) Sunderland AFC - Manchester City
+
+Spieltag 20
+
+29.12. 00:00 (Sa) Arsenal FC - Newcastle United
+29.12. 00:00 (Sa) Aston Villa - Wigan Athletic
+29.12. 00:00 (Sa) Everton FC - Chelsea FC
+29.12. 00:00 (Sa) Fulham FC - Swansea City
+29.12. 00:00 (Sa) Manchester United - West Bromwich Albion
+29.12. 00:00 (Sa) Norwich City - Manchester City
+29.12. 00:00 (Sa) Queens Park Rangers - Liverpool FC
+29.12. 00:00 (Sa) Reading FC - West Ham United
+29.12. 00:00 (Sa) Stoke City - Southampton FC
+29.12. 00:00 (Sa) Sunderland AFC - Tottenham Hotspur
