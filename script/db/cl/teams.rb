@@ -73,19 +73,18 @@ teams = [
 ###################
 # more teams from cl/el 2011-12
 #
-  [ 'inter',     'FC Internazionale Milano', it ],
-  [ 'marseille', 'Olympique Marseille',      fr ],
-  [ 'basel',     'FC Basel 1893',            ch ],
-  [ 'napoli',    'SSC Napoli',               it ],
-  [ 'moskva',    'PFC CSKA Moskva',          ru ],
-  [ 'apoel',     'APOEL Nikosia',            mt ],
-
-  [ 'az',        'AZ Alkmaar',               nl ],
+  [ 'atletico',  'Atlético Madrid',          es ],
   [ 'athletic',  'Athletic Bilbao',          es ],
   [ 'sporting',  'Sporting Lisboa',          pt ],
+  [ 'inter',     'FC Internazionale Milano', it ],
+  [ 'napoli',    'SSC Napoli',               it ],
+  [ 'marseille', 'Olympique Marseille',      fr ],
+  [ 'basel',     'FC Basel 1893',            ch ],
+  [ 'az',        'AZ Alkmaar',               nl ],
   [ 'metalist',  'FC Metalist Kharkiv',      ua ],
-  [ 'atletico',  'Atlético Madrid',          es ],
-  [ 'hannover',  'Hannover 96',              de ]
+  [ 'moskva',    'PFC CSKA Moskva',          ru ],
+  [ 'apoel',     'APOEL Nikosia',            cy ]
+
 ]
 
 

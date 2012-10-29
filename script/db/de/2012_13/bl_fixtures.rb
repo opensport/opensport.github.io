@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 ####################################################################
-# generiert am  2012-10-16 22:35:21 +0200
-#   using sportdb 0.4.0 on Ruby 1.9.3 (2012-02-16) [i686-linux]
+# generiert am  2012-10-27 17:39:53 +0200
+#   using sportdb 0.4.2 on Ruby 1.9.3 (2012-02-16) [i686-linux]
 ####################################################################
 
 
@@ -14,9 +14,9 @@
 ev = Event.find_by_key!( 'de.2012/13' )
 
 bayern             = Team.find_by_key!( 'bayern' )
-frankfurt          = Team.find_by_key!( 'frankfurt' )
 schalke            = Team.find_by_key!( 'schalke' )
 dortmund           = Team.find_by_key!( 'dortmund' )
+frankfurt          = Team.find_by_key!( 'frankfurt' )
 hannover           = Team.find_by_key!( 'hannover' )
 leverkusen         = Team.find_by_key!( 'leverkusen' )
 duesseldorf        = Team.find_by_key!( 'duesseldorf' )

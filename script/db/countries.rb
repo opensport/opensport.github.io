@@ -26,7 +26,7 @@ countries = [
   ## [ 'bg', 'Bulgarien',  'BUL' ],  # NB: ISO (BGR) <> FIFA (BUL)
   [ 'by', 'Weißrussland', 'BLR' ],
   [ 'ch', 'Schweiz',      'SUI' ],  # NB: ISO (CHE) <> FIFA (SUI)
-  ## [ 'cy', 'Zypern',    'CYP' ],
+  [ 'cy', 'Zypern',       'CYP' ],
   [ 'cz', 'Tschechien',   'CZE' ],
   [ 'de', 'Deutschland',  'GER' ],  # NB: ISO (DEU) <> FIFA (GER)
   [ 'dk', 'Dänemark',     'DEN' ],  # NB: ISO (DNK) <> FIFA (DEN)
