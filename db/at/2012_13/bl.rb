@@ -8,7 +8,7 @@
 ## more info => http://bundesliga.at
 
 
-bl = Event.create!( key:     'at_bl_2012_13',
+bl = Event.create!( key:     'at.2012/13',
                     title:   'Österr. Bundesliga 2012/13',
                     start_at: Time.cet('2012-07-21 00:00') )
 
@@ -21,9 +21,9 @@ team_keys_bl = [
    'austria',
    'sturm',
    'ried',
-   'wacker',
+   'innsbruck',
    'mattersburg',
-   'neustadt',
+   'wrneustadt',
    'wac' ]
 
 bl.add_teams_from_ary!( team_keys_bl )

@@ -3,7 +3,7 @@
 ##################################
 ### ÖFB Cup 2012/13
 
-cup = Event.create!( key:      'at_cup_2012_13',
+cup = Event.create!( key:      'at.cup.2012/13',
                      title:    'ÖFB Cup 2012/13',
                      start_at: Time.cet( '2012-07-13 00:00' ) )
 
@@ -17,9 +17,9 @@ team_keys_bl = [
    'austria',
    'sturm',
    'ried',
-   'wacker',
+   'innsbruck',
    'mattersburg',
-   'neustadt',
+   'wrneustadt',
    'wac' ]
 
 ## 10 Erste Liga Teams

@@ -12,7 +12,7 @@
 ## todo: check key dinamo or rapid may be already taken!!
 
 
-l1 = Event.create!( key:      'ro_l1_2012_13',
+l1 = Event.create!( key:      'ro.2012/13',
                     title:    'Romania Liga 1 2012/13',
                     start_at: Time.eet('2012-07-01 00:00') )
 
@@ -55,6 +55,8 @@ l1.teams << steaua
 l1.teams << u_cluj
 l1.teams << viitorul_constanta
 
+
+### fix/todo: move to plain text fixtures - start here
 
 l101 = Round.create!( event: l1, pos: 1, title: '1. Runda', start_at: Time.eet('2012-07-20') )
 l102 = Round.create!( event: l1, pos: 2, title: '2. Runda', start_at: Time.eet('2012-07-28') )
@@ -131,4 +133,4 @@ Game.create_from_ary!( games_l104, l104 )
 Game.create_from_ary!( games_l105, l105 )
 
 
-Prop.create!( key: 'db.ro.l1.2012/13.version', value: '1' )
+Prop.create!( key: 'db.ro.2012/13.version', value: '1' )

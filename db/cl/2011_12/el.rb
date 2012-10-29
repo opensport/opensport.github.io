@@ -5,7 +5,7 @@
 #################################
 ##  Europa League 2012
 
-el = Event.create!( key: 'el',
+el = Event.create!( key: 'el.2011/12',
                     title: 'Europa League 2011/12',
                     start_at: Time.cet( '2011-10-10 17:00' ))
 

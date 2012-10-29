@@ -56,6 +56,8 @@ create_table :rounds do |t|
   t.string     :title,    :null => false
   t.string     :title2
   t.integer    :pos,      :null => false
+  ## todo/fix: rename to knockout???
+  ## add new table stage/stages for grouping rounds in group rounds and playoff rounds, for example???
   t.boolean    :playoff,  :null => false, :default => false  # "regular" season (group) games or post-season (playoff) knockouts (k.o's)
   t.datetime   :start_at, :null => false
   t.datetime   :end_at    # todo: make it required e.g. :null => false 
@@ -125,6 +127,33 @@ end
 add_index :groups_teams, [:group_id,:team_id], :unique => true 
 add_index :groups_teams, :group_id
     
+    
+### todo: add models and some seed data
+
+create_table :seasons do |t|
+  t.string :key,   :null => false
+  t.string :title, :null => false   # e.g. 2011/12, 2012/13 ### what to do w/ 2012? for world cup etc?
+  t.timestamps
+end
+
+create_table :leagues do |t|
+  t.string :key,   :null => false
+  t.string :title, :null => false     # e.g. Premier League, Deutsche Bundesliga, World Cup, Champions League, etc.
+  t.references :country,   :null => false   ### todo: create "virtual" country for international leagues e.g. use int? or world (ww?)/europe (eu)/etc. similar? already taken??
+  t.boolean  :club,          :null => false, :default => false  # club teams or national teams?
+  ## todo: add t.boolean  :national flag? for national teams?
+  t.boolean  :international, :null => false, :default => false  # national league or international?
+  ## t.boolean  :cup     ## or regular season league??
+  t.timestamps
+end
+
+create_table :badges do |t|
+  t.references  :team,  :null => false
+  t.references  :event, :null => false   # event => league+season
+  t.string      :title, :null => false   # Meister, Weltmeister, Europameister, Cupsieger, Vize-Meister, Aufsteiger, Absteiger, etc.
+  t.timestamps
+end
+       
   end # block Schema.define
 
 
