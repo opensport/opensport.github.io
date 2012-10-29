@@ -97,69 +97,25 @@ EOS
       SportDB.delete!
     end
 
-    loader = nil
-    if opts.load?
-      loader = Loader.new
-    end
-    
     if opts.event.present?
       if opts.generate?
-        Templater.new( opts ).run( args )
+        Templater.new( logger ).run( opts, args ) # export/generate ruby fixtures
       else
-        Reader.new( opts ).run( args )
+        Reader.new( logger ).run( opts, args )  # load/read plain text fixtures
       end
     else
-
-      args.each do |arg|
-        name = arg     # File.basename( arg, '.*' )
-      
-        if opts.load?
-          loader.load_fixtures( name )  # load from gem (built-in)
-        else
-          load_fixtures( name )  # load from file system
-        end
-      end
-    
-      dump_stats
-      dump_props    
-    
+      Loader.new( logger ).run( opts, args ) # load ruby fixtures
     end
-    
 
+    
+    dump_stats
+    dump_props
     
     puts 'Done.'
     
   end   # method run
 
 
-  def load_fixtures( name )
-      path = "#{opts.data_path}/#{name}.rb"
- 
-      puts "*** loading data '#{name}' (#{path})..."
-
-      text = File.read( path )
-
-      # SportDB.module_eval( text )
-      
-      ## evaluate in class context of SportDB::Runner
-      ## change to loader class later
-      self.class_eval( text )
-
-      # NB: same as
-      #
-      # module SportDB
-      #  <code here>
-      # end
-
-      # require path
-      # require "#{Dir.pwd}/db/#{seed}.rb"
-
-      # Prop.create!( :key => "db.#{name}.version", :value => SportDB::VERSION )
-  end
-
-
-
-  ##### fix/todo: reuse between runner/loader - include w/ helper module?
   def dump_stats
     # todo: use %5d or similar to format string
     puts "Stats:"

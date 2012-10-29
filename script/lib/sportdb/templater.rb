@@ -27,45 +27,39 @@ class Templater
   include SportDB::Models
 
 
-  def initialize( opts )
-    @logger = Logger.new(STDOUT)
-    @logger.level = Logger::INFO
-    
-    @opts = opts
+  def initialize( logger )
+    if logger.nil?
+      @logger = Logger.new(STDOUT)
+      @logger.level = Logger::INFO
+    else
+      @logger = logger
+    end
   end
 
-  attr_reader :logger, :opts
+  attr_reader :logger
 
-  # make props available for template
-  attr_reader :event   
-  
-  def run( args )
-  
-    puts SportDB.banner
-
-    puts "working directory: #{Dir.pwd}"
- 
+  def run( opts, args )
+   
     ## assume active activerecord connection
     ##
-    
-    @event = Event.find_by_key!( opts.event )
-    
-    puts "Event #{@event.key} >#{@event.title}<"
-
- 
+     
     args.each do |arg|
       ## name = File.basename( arg, '.*' )
       name = arg
-      gen_fixtures( name )
+      gen_fixtures( opts.event, name )
     end
-    
-    
-    puts 'Done.'
-    
+
   end   # method run
 
+
+  # make props available for template
+  attr_reader :event
   
-  def gen_fixtures( name )
+  def gen_fixtures( event_key, name )
+
+    @event = Event.find_by_key!( event_key )
+    
+    puts "Event #{@event.key} >#{@event.title}<"
 
     ## todo: honor -o/--output option ??
 

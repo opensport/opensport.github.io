@@ -1,4 +1,3 @@
-
 module SportDB
 
 class Loader
@@ -8,70 +7,72 @@ class Loader
   include SportDB::Models
 
 
-  def initialize
-    @logger = Logger.new(STDOUT)
-    @logger.level = Logger::INFO
-
+  def initialize( logger=nil )
+    if logger.nil?
+      @logger = Logger.new(STDOUT)
+      @logger.level = Logger::INFO
+    else
+      @logger = logger
+    end
   end
 
   attr_reader :logger
 
 
-  def run( args )
-  
-    puts SportDB.banner
+  def run( opts, args )
 
-    puts "working directory: #{Dir.pwd}"
- 
-    ## assume active activerecord connection
-    ## 
- 
     args.each do |arg|
       name = arg     # File.basename( arg, '.*' )
-      load_fixtures( name )
+      
+      if opts.load?
+        load_fixtures_builtin( name )
+      else
+        load_fixtures_with_include_path( name, opts.data_path )
+      end
     end
     
-    dump_stats
-    dump_props
-    
-    puts 'Done.'
-    
-  end   # method run
+  end # method run
 
 
+  def load_fixtures_with_include_path( name, include_path )  # load from file system
+    path = "#{include_path}/#{name}.rb"
+ 
+    puts "*** loading data '#{name}' (#{path})..."
 
-  def load_fixtures( name )
+    code = File.read( path )
     
+    load_fixtures_worker( code )
+  end
+  
+  def load_fixtures_builtin( name ) # load from gem (built-in)
     path = "#{SportDB.root}/db/#{name}.rb"
  
     puts "*** loading data '#{name}' (#{path})..."
 
-    text = File.read( path )
+    code = File.read( path )
+    
+    load_fixtures_worker( code )
+  end
+  
 
-    self.class_eval( text )
+private
+  def load_fixtures_worker( code )
+    
+    self.class_eval( code )
 
     # NB: same as
     #
     # module SportDB
+    #   include SportDB::Models
     #  <code here>
     # end
-  end
+    
+    
+    # require path
+    # require "#{Dir.pwd}/db/#{seed}.rb"
 
-  ##### fix/todo: reuse between runner/loader - include w/ helper module?
-  def dump_stats
-    # todo: use %5d or similar to format string
-    puts "Stats:"
-    puts "  #{Event.count} events"
-    puts "  #{Team.count} teams"
-    puts "  #{Game.count} games"
-  end
-
-  def dump_props
-    # todo: use %5 or similar to format string
-    puts "Props:"
-    Prop.order( 'created_at asc' ).all.each do |prop|
-      puts "  #{prop.key} / #{prop.value} || #{prop.created_at}"
-    end
+    # Prop.create!( :key => "db.#{name}.version", :value => SportDB::VERSION )
+    
   end
   
 end # class Loader

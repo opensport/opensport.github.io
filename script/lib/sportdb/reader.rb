@@ -7,25 +7,60 @@ class Reader
   include SportDB::Models
 
 
-  def initialize( opts )
-    @logger = Logger.new(STDOUT)
-    @logger.level = Logger::INFO
-    
-    @opts = opts
+  def initialize( logger=nil )
+    if logger.nil?
+      @logger = Logger.new(STDOUT)
+      @logger.level = Logger::INFO
+    else
+      @logger = logger
+    end
   end
 
-  attr_reader :logger, :opts
+  attr_reader :logger
 
-  def run( args )
-  
-    puts SportDB.banner
-
-    puts "working directory: #{Dir.pwd}"
+  def run( opts, args )
  
+    args.each do |arg|
+      name = arg     # File.basename( arg, '.*' )
+
+      if opts.load?
+        load_fixtures_builtin( opts.event, name )
+      else
+        load_fixtures_with_include_path( opts.event, name, opts.data_path )
+      end
+    end
+
+  end
+
+
+  def load_fixtures_with_include_path( event_key, name, include_path )  # load from file system
+    path = "#{include_path}/#{name}.txt"
+
+    puts "*** parsing data '#{name}' (#{path})..."
+
+    code = File.read( path )
+    
+    load_fixtures_worker( event_key, code )
+  end
+
+  def load_fixtures_builtin( event_key, name ) # load from gem (built-in)
+    path = "#{SportDB.root}/db/#{name}.txt"
+
+    puts "*** parsing data '#{name}' (#{path})..."
+
+    code = File.read( path )
+    
+    load_fixtures_worker( event_key, code )
+  end
+
+
+private
+  def load_fixtures_worker( event_key, data )
+   
     ## assume active activerecord connection
     ##
     
-    @event = Event.find_by_key!( opts.event )
+    @event = Event.find_by_key!( event_key )
     
     puts "Event #{@event.key} >#{@event.title}<"
 
@@ -58,17 +93,10 @@ class Reader
       
       puts "  Team[#{index+1}] #{team.key} >#{titles.join('|')}<"
     end
- 
- 
-    args.each do |arg|
-      name = arg     # File.basename( arg, '.*' )
-      parse_fixtures( name )
-    end
+  
+    parse_fixtures( data )
     
-    
-    puts 'Done.'
-    
-  end   # method run
+  end   # method load_fixtures
 
 
   def is_round?( line )
@@ -249,15 +277,9 @@ class Reader
   end # method translate_teams!
   
 
-  def parse_fixtures( name )
-  
-    path = "#{opts.data_path}/#{name}.txt"
- 
-    puts "*** parsing data '#{name}' (#{path})..."
-
-    old_lines = File.read( path )
-    
-    old_lines.each_line do |line|
+  def parse_fixtures( data )
+      
+    data.each_line do |line|
   
       if line =~ /^\s*#/
         # skip komments and do NOT copy to result (keep comments secret!)
