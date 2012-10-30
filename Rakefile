@@ -15,12 +15,14 @@ task :import => [:setup] do
   puts "working directory: #{Dir.pwd}"
   
   sh "sportdb --include #{DB_ROOT} -e at.2011/12 at/2011_12/bl"
-  sh "sportdb --include #{DB_ROOT} -e at_bl_2012_13 at/2012_13/bl"
-  sh "sportdb --include #{DB_ROOT} -e at_cup_2012_13 at/2012_13/cup"
+  sh "sportdb --include #{DB_ROOT} -e at.2012/13 at/2012_13/bl"
+  sh "sportdb --include #{DB_ROOT} -e at.cup.2012/13 at/2012_13/cup"
   
   sh "sportdb --include #{DB_ROOT} -e de.2012/13 de/2012_13/bl"
   
   sh "sportdb --include #{DB_ROOT} -e en.2012/13 en/2012_13/pl"
+  
+  sh "sportdb --include #{DB_ROOT} -e mx.apertura.2012 mx/apertura_2012"
 
   sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_c"
   ### sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_i"
@@ -34,11 +36,11 @@ file "#{DB_ROOT}/at/2011_12/bl_fixtures.rb" => "#{DB_ROOT}/at/2011_12/bl.txt" do
 end
 
 file "#{DB_ROOT}/at/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/at/2012_13/bl.txt" do
-  sh "sportdb --generate -e at_bl_2012_13 #{DB_ROOT}/at/2012_13/bl_fixtures"
+  sh "sportdb --generate -e at.2012/13 #{DB_ROOT}/at/2012_13/bl_fixtures"
 end
 
 file "#{DB_ROOT}/at/2012_13/cup_fixtures.rb" => "#{DB_ROOT}/at/2012_13/cup.txt" do
-  sh "sportdb --generate -e at_cup_2012_13 #{DB_ROOT}/at/2012_13/cup_fixtures"
+  sh "sportdb --generate -e at.cup.2012/13 #{DB_ROOT}/at/2012_13/cup_fixtures"
 end
 
 file "#{DB_ROOT}/de/2012_13/bl_fixtures.rb" => "#{DB_ROOT}/de/2012_13/bl.txt" do
@@ -95,11 +97,14 @@ task :setup => :clean do
    'cl/2011_12/cl',
    'cl/2011_12/el',
    'cl/2012_13/cl',
+   'mx/teams',
+   'mx/apertura_2012',
    'euro/teams',
    'euro/2012',
    'world/quali_2012_13',
    'world/quali_2012_13_c',
-##  'world/quali_2012_13_i'
+##  'world/quali_2012_13_i',
+   'nhl/teams'
    ].each do |seed|
     sh "sportdb --include #{DB_ROOT} #{seed}"
   end
