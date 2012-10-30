@@ -30,6 +30,7 @@ db/en/teams.rb
 db/euro/2012.rb
 db/euro/teams.rb
 db/mx/apertura_2012.rb
+db/mx/apertura_2012.txt
 db/mx/teams.rb
 db/nfl/teams.rb
 db/nhl/teams.rb

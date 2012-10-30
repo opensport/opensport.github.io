@@ -19,12 +19,12 @@ team_keys_bl = [
  'austria',
  'sturm',
  'ried',
- 'wacker',
+ 'innsbruck',
  'mattersburg',
- 'neustadt',
+ 'wrneustadt',
  'ksv' ]
 
 bl.add_teams_from_ary!( team_keys_bl )
 
 
-Prop.create!( key: 'db.at.bl.2011/12.version', value: '1' )
+Prop.create!( key: 'db.at.2011/12.version', value: '1' )

@@ -9,7 +9,7 @@
 # or  http://de.wikipedia.org/wiki/Fu%C3%9Fball-Europameisterschaft_2012
 
 
-euro = Event.create!( key:     'euro',
+euro = Event.create!( key:     'euro.2012',
                       title:   'Euro 2012',
                       start_at: Time.cet( '2012-06-07 17:00' ))
 

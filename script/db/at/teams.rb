@@ -1,8 +1,5 @@
 # encoding: utf-8
 
-### fix:
-# rename wacker to innsbruck
-#         neustadt to wrneustadt
 
 bl = [
   [ 'salzburg',    'FC RB Salzburg|RB Salzburg|Red Bull Salzburg',     'RBS' ],
@@ -11,9 +8,9 @@ bl = [
   [ 'austria',     'FK Austria Wien|Austria Wien',       'FAK' ],
   [ 'sturm',       'SK Sturm Graz|Sturm Graz',           'STU' ],
   [ 'ried',        'SV Ried|SV Josko Ried|SV Josko Fenster Ried',      'RIE' ],
-  [ 'wacker',      'FC Wacker Innsbruck|FC Wacker|Wacker Innsbruck',    'IBK' ],
+  [ 'innsbruck',   'FC Wacker Innsbruck|FC Wacker|Wacker Innsbruck',    'IBK' ],
   [ 'mattersburg', 'SV Mattersburg',                     'SVM' ],
-  [ 'neustadt',    'SC Wiener Neustadt|Wiener Neustadt', 'WRN' ],
+  [ 'wrneustadt',  'SC Wiener Neustadt|Wiener Neustadt|Wr. Neustadt', 'WRN' ],
   [ 'wac',         'Wolfsberger AC',                     'WAC' ]
 ]
 
