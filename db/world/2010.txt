@@ -1,6 +1,12 @@
 ############################
 ##  World Cup 2010
+ 
 
+####
+## todo: check why we get with umlauts:
+# sportdb/reader.rb:261:in `=~': incompatible encoding regexp match (UTF-8 regexp with
+#   CP850 string) (Encoding::CompatibilityError)
+ 
 
 ################
 ## Gruppe A

@@ -44,11 +44,11 @@ za = Country.find_by_key!( 'za' )
 
 teams_africa = [
   [ 'alg', 'Algerien',       'ALG', dz ],
-  [ 'civ', 'Elfenbeinküste', 'CIV', ci ],
+  [ 'civ', 'Elfenbeinküste|Elfenbeinkueste', 'CIV', ci ],
   [ 'gha', 'Ghana',          'GHA', gh ],
   [ 'cmr', 'Kamerun',        'CMR', cm ],
   [ 'nga', 'Nigeria',        'NGA', ng ],
-  [ 'rsa', 'Südafrika',      'RSA', za ]
+  [ 'rsa', 'Südafrika|Suedafrika',      'RSA', za ]
 ]
 
 
@@ -64,7 +64,7 @@ teams_asia = [
   [ 'aus', 'Australien', 'AUS', au ],
   [ 'jpn', 'Japan',      'JPN', jp ],
   [ 'prk', 'Nordkorea',  'PRK', kp ],
-  [ 'kor', 'Südkorea',   'KOR', kr ]
+  [ 'kor', 'Südkorea|Suedkorea', 'KOR', kr ]
 ]
 
 ###############################

@@ -111,7 +111,7 @@ wmh = Group.create!( event: wm, pos: 8, title: 'Gruppe H' )
 #   Uruguay
 #   Frankreich
 
-wma.add_teams_from_ary!( ['rsa', 'mex', 'url', 'fra' ] )
+wma.add_teams_from_ary!( ['rsa', 'mex', 'uru', 'fra' ] )
 
 ###############
 # Gruppe B
