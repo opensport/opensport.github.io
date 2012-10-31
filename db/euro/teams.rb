@@ -24,6 +24,11 @@ by = Country.find_by_key!( 'by' )
 fi = Country.find_by_key!( 'fi' )
 ge = Country.find_by_key!( 'ge' )
 
+ch = Country.find_by_key!( 'ch' )
+rs = Country.find_by_key!( 'rs' )
+si = Country.find_by_key!( 'si' )
+sk = Country.find_by_key!( 'sk' )
+
 
 teams = [
   [ 'pol', 'Polen',        'POL', pl ],
@@ -45,12 +50,19 @@ teams = [
 
 ## some more teams for wm quali
 
-  [ 'fro', 'Färöer|Färöer Inseln',       'FRO', fo ],
+  [ 'fro', 'Färöer|Färöer Inseln',  'FRO', fo ],
   [ 'kaz', 'Kasachstan',   'KAZ', kz ],
   [ 'aut', 'Österreich',   'AUT', at ],
   [ 'blr', 'Weißrussland', 'BLR', by ],
   [ 'fin', 'Finnland',     'FIN', fi ],
-  [ 'geo', 'Georgien',     'GEO', ge ]
+  [ 'geo', 'Georgien',     'GEO', ge ],
+  
+## some more teams for wm 2010
+
+ [ 'sui', 'Schweiz',      'SUI', ch ], 
+ [ 'srb', 'Serbien',      'SRB', rs ],
+ [ 'svn', 'Slowenien',    'SVN', si ],
+ [ 'svk', 'Slowakei',     'SVK', sk ]
 ]
 
 
