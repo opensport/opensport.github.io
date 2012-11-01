@@ -10,7 +10,9 @@
 
 bl = Event.create!( key:      'at.2011/12',
                     title:    'Österr. Bundesliga 2011/12',
-                    start_at: Time.cet('2012-04-07 00:00')  )
+                    start_at: Time.cet('2012-04-07 00:00'),
+                    league:   League.find_by_key!('at'),
+                    season:   Season.find_by_key!('2011/12'))
 
 team_keys_bl = [
  'salzburg',

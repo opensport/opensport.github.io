@@ -5,7 +5,9 @@
 
 cup = Event.create!( key:      'at.cup.2012/13',
                      title:    'ÖFB Cup 2012/13',
-                     start_at: Time.cet( '2012-07-13 00:00' ) )
+                     start_at: Time.cet( '2012-07-13 00:00' ),
+                     league:   League.find_by_key!('at.cup'),
+                     season:   Season.find_by_key!('2012/13'))
 
 
 ## 10 Bundeliga Teams

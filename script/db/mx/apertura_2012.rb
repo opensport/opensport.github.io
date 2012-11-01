@@ -5,7 +5,9 @@
 
 mx = Event.create!( key: 'mx.apertura.2012',
                     title: 'México Primera División Apertura 2012',
-                    start_at: Time.cst('2012-07-20 00:00')  )
+                    start_at: Time.cst('2012-07-20 00:00'),
+                    league: League.find_by_key!( 'mx.apertura'),
+                    season: Season.find_by_key!( '2012'))
 
 team_keys_mx = [
   'america',

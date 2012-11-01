@@ -24,33 +24,50 @@ by = Country.find_by_key!( 'by' )
 fi = Country.find_by_key!( 'fi' )
 ge = Country.find_by_key!( 'ge' )
 
+ch = Country.find_by_key!( 'ch' )
+rs = Country.find_by_key!( 'rs' )
+si = Country.find_by_key!( 'si' )
+sk = Country.find_by_key!( 'sk' )
+
+tr = Country.find_by_key!( 'tr' )
+ro = Country.find_by_key!( 'ro' )
+
 
 teams = [
-  [ 'pol', 'Polen',        'POL', pl ],
-  [ 'gre', 'Griechenland', 'GRE', gr ],
-  [ 'rus', 'Russland',     'RUS', ru ],
-  [ 'cze', 'Tschechien',   'CZE', cz ],
-  [ 'ned', 'Niederlande',  'NED', nl ],
-  [ 'den', 'Dänemark',     'DEN', dk ],
-  [ 'ger', 'Deutschland',  'GER', de ],
+  [ 'pol', 'Polen|Poland',        'POL', pl ],
+  [ 'gre', 'Griechenland|Greece', 'GRE', gr ],
+  [ 'rus', 'Russland|Russia',     'RUS', ru ],
+  [ 'cze', 'Tschechien|Czech Republic',   'CZE', cz ],
+  [ 'ned', 'Niederlande|Netherlands',  'NED', nl ],
+  [ 'den', 'Dänemark|Daenemark',     'DEN', dk ],
+  [ 'ger', 'Deutschland|Germany',  'GER', de ],
   [ 'por', 'Portugal',     'POR', pt ],
-  [ 'esp', 'Spanien',      'ESP', es ],
-  [ 'ita', 'Italien',      'ITA', it ],
+  [ 'esp', 'Spanien|Spain',      'ESP', es ],
+  [ 'ita', 'Italien|Italy',      'ITA', it ],
   [ 'irl', 'Irland',       'IRL', ie ],
-  [ 'cro', 'Kroatien',     'CRO', hr ],
+  [ 'cro', 'Kroatien|Croatia',     'CRO', hr ],
   [ 'ukr', 'Ukraine',      'UKR', ua ],
-  [ 'swe', 'Schweden',     'SWE', se ],
-  [ 'fra', 'Frankreich',   'FRA', fr ],
+  [ 'swe', 'Schweden|Sweden',     'SWE', se ],
+  [ 'fra', 'Frankreich|France',   'FRA', fr ],
   [ 'eng', 'England',      'ENG', en ],
 
 ## some more teams for wm quali
 
-  [ 'fro', 'Färöer|Färöer Inseln',       'FRO', fo ],
+  [ 'fro', 'Färöer|Färöer Inseln',  'FRO', fo ],
   [ 'kaz', 'Kasachstan',   'KAZ', kz ],
-  [ 'aut', 'Österreich',   'AUT', at ],
+  [ 'aut', 'Österreich|Oesterreich|Austria',   'AUT', at ],
   [ 'blr', 'Weißrussland', 'BLR', by ],
   [ 'fin', 'Finnland',     'FIN', fi ],
-  [ 'geo', 'Georgien',     'GEO', ge ]
+  [ 'geo', 'Georgien',     'GEO', ge ],
+  
+## some more teams for wm 2010
+
+ [ 'sui', 'Schweiz|Switzerland',      'SUI', ch ], 
+ [ 'srb', 'Serbien',      'SRB', rs ],
+ [ 'svn', 'Slowenien',    'SVN', si ],
+ [ 'svk', 'Slowakei',     'SVK', sk ],
+ [ 'tur', 'Türkei|Turkey',  'TUR', tr ],
+ [ 'rou', 'Rumänien|Romania',   'ROU', ro ],
 ]
 
 

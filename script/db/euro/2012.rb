@@ -11,7 +11,9 @@
 
 euro = Event.create!( key:     'euro.2012',
                       title:   'Euro 2012',
-                      start_at: Time.cet( '2012-06-07 17:00' ))
+                      start_at: Time.cet( '2012-06-07 17:00' ),
+                      league:  League.find_by_key!('euro'),
+                      season:  Season.find_by_key!('2012'))
 
 pol = Team.find_by_key!( 'pol' )
 gre = Team.find_by_key!( 'gre' )

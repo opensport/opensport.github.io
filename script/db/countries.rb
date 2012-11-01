@@ -42,25 +42,59 @@ countries = [
   [ 'ie', 'Irland',       'IRL' ],
   [ 'it', 'Italien',      'ITA' ],
   [ 'kz', 'Kasachstan',   'KAZ' ],
-  [ 'mt', 'Malta',        'MLT' ],
+  ## [ 'mt', 'Malta',        'MLT' ],
   [ 'nl', 'Niederlande',  'NED' ],  # NB: ISO (NLD) <> FIFA (NED)
   [ 'pl', 'Polen',        'POL' ],
   [ 'pt', 'Portugal',     'POR' ],  # NB: ISO (PRT) <> FIFA (POR)
   [ 'ro', 'Rumänien',     'ROU' ],
+  [ 'rs', 'Serbien',      'SRB' ],
   [ 'ru', 'Russland',     'RUS' ],
   [ 'sc', 'Schottland',   'SCO' ],  # NB: FIFA (SCO); not a valid iso country/internet domain - it's uk - what to use - anything better?
   [ 'se', 'Schweden',     'SWE' ],
+  [ 'si', 'Slowenien',    'SVN' ],
+  [ 'sk', 'Slowakei',     'SVK' ],
   [ 'tr', 'Türkei',       'TUR' ],
   [ 'ua', 'Ukraine',      'UKR' ],
+
+  ##############
+  ## south america
   
+  [ 'ar', 'Argentinien',   'ARG' ],
+  [ 'br', 'Brasilien',     'BRA' ],
+  [ 'cl', 'Chile',         'CHI' ],
+  [ 'py', 'Paraguay',      'PAR' ],
+  [ 'uy', 'Uruguay',       'URU' ],
+
   #####################
-  #### north/central/south america & caribbean islands
+  #### north/central america & caribbean islands
   
-  ## [ 'ar', 'Argentinien',   'ARG' ],
-  ## [ 'br', 'Brasilien',     'BRA' ],
   [ 'ca', 'Kanada',        'CAN' ],
   [ 'mx', 'Mexiko',        'MEX' ],
-  [ 'us', 'United States', 'USA' ]
+  [ 'us', 'United States', 'USA' ],
+  [ 'hn', 'Honduras',      'HON' ],
+  
+  ########################
+  ## africa
+  
+  [ 'dz', 'Algerien',       'ALG' ],
+  [ 'ci', 'Elfenbeinküste', 'CIV' ],
+  [ 'gh', 'Ghana',          'GHA' ],
+  [ 'cm', 'Kamerun',        'CMR' ],
+  [ 'ng', 'Nigeria',        'NGA' ],
+  [ 'za', 'Südafrika',      'RSA' ],
+
+  #############################
+  ## asia w/ australia
+
+  [ 'au', 'Australien', 'AUS' ],
+  [ 'jp', 'Japan',      'JPN' ],
+  [ 'kp', 'Nordkorea',  'PRK' ],
+  [ 'kr', 'Südkorea',   'KOR' ],
+
+  ###############################
+  ## oceania
+  
+  [ 'nz', 'Neuseeland', 'NZL' ]
 ]
 
 

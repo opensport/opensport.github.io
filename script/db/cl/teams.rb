@@ -21,7 +21,6 @@ sc = Country.find_by_key!( 'sc' )
 ro = Country.find_by_key!( 'ro' )
 tr = Country.find_by_key!( 'tr' )
 ch = Country.find_by_key!( 'ch' )
-mt = Country.find_by_key!( 'mt' )
 cy = Country.find_by_key!( 'cy' )
 
 
