@@ -15,8 +15,8 @@ Get a copy of the `sport.db` file. That's it.
 
 International w/ national teams (e.g. Austria, England, etc.)
 
-* [World Cup Quali 2012/13](https://github.com/geraldb/sport.db/tree/master/db/world)
-* [UEFA European Football Championship (Euro) 2012](https://github.com/geraldb/sport.db/tree/master/db/euro)
+* [World Cup Quali 2012/13, World Cup 2010](https://github.com/geraldb/sport.db/tree/master/db/world)
+* [UEFA European Football Championship (Euro) 2012, 2008](https://github.com/geraldb/sport.db/tree/master/db/euro)
 
 International w/ football club teams (e.g. FC Barcelona, Manchester Utd, etc.)
 

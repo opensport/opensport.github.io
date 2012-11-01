@@ -88,7 +88,10 @@ task :setup => :clean do
   sh "sportdb --create"
   
   ['countries',
+   'leagues',
+   'seasons',
    'at/teams',
+   'at/badges',
    'at/2011_12/bl',
    'at/2011_12/cup',
    'at/2012_13/bl',
@@ -98,6 +101,7 @@ task :setup => :clean do
    'en/teams',
    'en/2012_13/pl',
    'cl/teams',
+   'cl/badges',
    'cl/2011_12/cl',
    'cl/2011_12/el',
    'cl/2012_13/cl',
