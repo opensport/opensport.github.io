@@ -44,7 +44,10 @@ add_index :teams, :key, :unique => true
 create_table :events do |t|
   t.string      :title,    :null => false
   t.string      :key,      :null => false   # import/export key
+  t.references  :league,   :null => false
+  t.references  :season,   :null => false
   t.datetime    :start_at, :null => false
+  t.datetime    :end_at   # make it required???
   t.timestamps  
 end
 
@@ -130,26 +133,29 @@ add_index :groups_teams, :group_id
     
 ### todo: add models and some seed data
 
-create_table :seasons do |t|
+create_table :seasons do |t|  ## also used for years
   t.string :key,   :null => false
   t.string :title, :null => false   # e.g. 2011/12, 2012/13 ### what to do w/ 2012? for world cup etc?
   t.timestamps
 end
 
-create_table :leagues do |t|
+create_table :leagues do |t|  ## also for cups/conferences/tournaments/world series/etc.
   t.string :key,   :null => false
   t.string :title, :null => false     # e.g. Premier League, Deutsche Bundesliga, World Cup, Champions League, etc.
-  t.references :country,   :null => false   ### todo: create "virtual" country for international leagues e.g. use int? or world (ww?)/europe (eu)/etc. similar? already taken??
+  ## t.references :country,   :null => false   ### todo: create "virtual" country for international leagues e.g. use int? or world (ww?)/europe (eu)/etc. similar? already taken??
   t.boolean  :club,          :null => false, :default => false  # club teams or national teams?
   ## todo: add t.boolean  :national flag? for national teams?
-  t.boolean  :international, :null => false, :default => false  # national league or international?
+  ## t.boolean  :international, :null => false, :default => false  # national league or international?
   ## t.boolean  :cup     ## or regular season league??
   t.timestamps
 end
 
 create_table :badges do |t|
   t.references  :team,  :null => false
-  t.references  :event, :null => false   # event => league+season
+  ## todo/fix: use event insead of league+season ??
+  ## t.references  :event, :null => false   # event => league+season
+  t.references  :league, :null => false
+  t.references  :season, :null => false
   t.string      :title, :null => false   # Meister, Weltmeister, Europameister, Cupsieger, Vize-Meister, Aufsteiger, Absteiger, etc.
   t.timestamps
 end

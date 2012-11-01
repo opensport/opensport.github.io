@@ -1,7 +1,6 @@
-module SportDB
-  module Models
+module SportDB::Models
 
- 
+
 class Game < ActiveRecord::Base
 
   belongs_to :team1, :class_name => 'Team', :foreign_key => 'team1_id'
@@ -158,6 +157,4 @@ class Game < ActiveRecord::Base
 end # class Game
 
 
-
- end # module Models
-end # module SportDB
+end # module SportDB::Models

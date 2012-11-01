@@ -1,13 +1,14 @@
-module SportDB
-  module Models
+module SportDB::Models
 
 
 class Team < ActiveRecord::Base
 
   has_many :home_games, :class_name => 'Game', :foreign_key => 'team1_id'
   has_many :away_games, :class_name => 'Game', :foreign_key => 'team2_id'
+  
+  has_many :badges   # Winner, 2nd, Cupsieger, Aufsteiger, Absteiger, etc.
 
-  belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'  
+  belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
   
 
   def self.create_from_ary!( teams, more_values={} )
@@ -52,6 +53,5 @@ class Team < ActiveRecord::Base
   
 end  # class Team
   
-  
- end # module Models
-end # module SportDB
+
+end # module SportDB::Models

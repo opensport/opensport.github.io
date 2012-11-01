@@ -24,6 +24,10 @@ task :import => [:setup] do
   
   sh "sportdb --include #{DB_ROOT} -e mx.apertura.2012 mx/apertura_2012"
 
+  sh "sportdb --include #{DB_ROOT} -e euro.2008 euro/2008"
+
+  sh "sportdb --include #{DB_ROOT} -e wm.2010 world/2010"
+
   sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_c"
   ### sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_i"
 end
@@ -100,7 +104,10 @@ task :setup => :clean do
    'mx/teams',
    'mx/apertura_2012',
    'euro/teams',
+   'euro/2008',
    'euro/2012',
+   'world/teams',
+   'world/2010',
    'world/quali_2012_13',
    'world/quali_2012_13_c',
 ##  'world/quali_2012_13_i',

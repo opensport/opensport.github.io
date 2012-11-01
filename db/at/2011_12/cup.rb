@@ -8,7 +8,9 @@
 
 ofb = Event.create!( key:   'at.cup.2011/12',
                      title: 'ÖFB Cup 2011/12',
-                     start_at: Time.cet( '2011-10-10 17:00' ) )
+                     start_at: Time.cet( '2011-10-10 17:00' ),
+                     league:   League.find_by_key!('at.cup'),
+                     season:   Season.find_by_key!('2011/12'))
 
 
 sturm       = Team.find_by_key!( 'sturm' )

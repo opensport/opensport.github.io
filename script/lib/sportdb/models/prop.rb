@@ -1,5 +1,4 @@
-module SportDB
-  module Models
+module SportDB::Models
 
 
 class Prop < ActiveRecord::Base
@@ -7,6 +6,5 @@ class Prop < ActiveRecord::Base
 end  # class Prop
   
   
-  
- end # module Models
-end # module SportDB
+
+end # module SportDB::Models

@@ -27,7 +27,7 @@ hn = Country.find_by_key!( 'hn' )
 
 teams_america2 = [
   [ 'mex', 'Mexiko',        'MEX', mx ],
-  [ 'usa', 'United States', 'USA', us ],
+  [ 'usa', 'Vereinigte Staaten|United States', 'USA', us ],
   [ 'hon', 'Honduras',      'HON', hn ]
 ]
 

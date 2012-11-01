@@ -1,7 +1,6 @@
-module SportDB
-  module Models
+module SportDB::Models
 
-  
+
 class Country < ActiveRecord::Base
   self.table_name = 'countries'
 
@@ -22,5 +21,4 @@ class Country < ActiveRecord::Base
 end # class Country
 
 
- end # module Models
-end # module SportDB
+end # module Models::SportDB

@@ -119,10 +119,12 @@ EOS
   def dump_stats
     # todo: use %5d or similar to format string
     puts "Stats:"
-    puts "  #{Event.count} events"
-    puts "  #{Team.count} teams"
+    puts "  #{Event.count} events  /  #{Round.count} rounds  /  #{Group.count} groups"
+    puts "  #{League.count} leagues  /  #{Season.count} seasons"
     puts "  #{Country.count} countries"
+    puts "  #{Team.count} teams"
     puts "  #{Game.count} games"
+    puts "  #{Badge.count} badges"
   end
 
   def dump_props

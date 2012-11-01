@@ -15,7 +15,9 @@
 
 euro = Event.create!( key:     'euro.2008',
                       title:   'Euro 2008',
-                      start_at: Time.cet( '2008-06-07 18:00' ))
+                      start_at: Time.cet( '2008-06-07 18:00' ),
+                      league:  League.find_by_key!('euro'),
+                      season:  Season.find_by_key!('2008'))
 
 
 euro.add_teams_from_ary!([

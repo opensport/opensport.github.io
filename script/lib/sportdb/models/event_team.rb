@@ -1,5 +1,4 @@
-module SportDB
-  module Models
+module SportDB::Models
 
 
 class EventTeam < ActiveRecord::Base
@@ -9,6 +8,5 @@ class EventTeam < ActiveRecord::Base
   belongs_to :team
 end # class EventTeam
 
-  
- end # module Models
-end # module SportDB
+
+end # module SportDB::Models

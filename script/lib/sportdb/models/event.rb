@@ -2,6 +2,9 @@ module SportDB::Models
 
 class Event < ActiveRecord::Base
   
+  belongs_to :league
+  belongs_to :season
+  
   has_many :rounds, :order => 'pos'  # all (fix and flex) rounds
   
   has_many :groups, :order => 'pos'

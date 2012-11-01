@@ -9,7 +9,9 @@
 
 pl = Event.create!( key:      'en.2012/13',
                     title:    'Premier League 2012/13',
-                    start_at: Time.utc('2012-08-18 12:00') )
+                    start_at: Time.utc('2012-08-18 12:00'),
+                    league:   League.find_by_key!('en'),
+                    season:   Season.find_by_key!('2012/13'))
 
 team_keys_pl = [
   'chelsea',
