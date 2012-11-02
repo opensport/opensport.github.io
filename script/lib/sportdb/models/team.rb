@@ -17,7 +17,7 @@ class Team < ActiveRecord::Base
       
       ## key & title required
       attr = {
-        :key   => values[0]
+        key: values[0]
       }
 
       ## title (split of optional synonyms)
@@ -39,6 +39,10 @@ class Team < ActiveRecord::Base
           attr[ :city_id ] = value.id 
         elsif value.length == 3   ## assume its a tag (three letters e.g. ITA)
           attr[ :tag ] = value
+        elsif value =~ /^city:/   ## city:
+          value_city_key = value[5..-1]  ## cut off city: prefix
+          value_city = City.find_by_key!( value_city_key )
+          attr[ :city_id ] = value_city.id
         else
           attr[ :title2 ] = value
         end

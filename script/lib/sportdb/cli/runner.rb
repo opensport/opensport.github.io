@@ -121,7 +121,7 @@ EOS
     puts "Stats:"
     puts "  #{Event.count} events  /  #{Round.count} rounds  /  #{Group.count} groups"
     puts "  #{League.count} leagues  /  #{Season.count} seasons"
-    puts "  #{Country.count} countries"
+    puts "  #{Country.count} countries / #{City.count} cities"
     puts "  #{Team.count} teams"
     puts "  #{Game.count} games"
     puts "  #{Badge.count} badges"

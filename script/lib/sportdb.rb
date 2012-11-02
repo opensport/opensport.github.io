@@ -100,7 +100,11 @@ module SportDB
       GroupTeam.delete_all
       Round.delete_all
       Prop.delete_all
-      Country.delete_all    
+      Country.delete_all
+      City.delete_all
+      Badge.delete_all
+      League.delete_all
+      Season.delete_all
     end
     
   end

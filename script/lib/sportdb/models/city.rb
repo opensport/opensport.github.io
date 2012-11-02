@@ -5,17 +5,34 @@ class City < ActiveRecord::Base
 
   belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
   
-  def self.create_from_ary!( cities )
+  def self.create_from_ary!( cities, more_values={} )
     cities.each do |values|
       
       ## todo/fix: split optional synonyms from title (see team for example)      
       
       ## key & title & country required
       attr = {
-        :key       => values[0],
-        :title     => values[1],
-        :country   => values[2]
+        key: values[0]
       }
+      
+      ## title (split of optional synonyms)
+      # e.g. FC Bayern Muenchen|Bayern Muenchen|Bayern
+      titles = values[1].split('|')
+      
+      attr[ :title ]    =  titles[0]
+      ## add optional synonyms
+      attr[ :synonyms ] =  titles[1..-1].join('|')  if titles.size > 1
+      
+      attr = attr.merge( more_values )
+      
+      ## check for optional values
+      values[2..-1].each do |value|
+        if value.is_a? Country
+          attr[ :country_id ] = value.id
+        else
+          # issue warning: unknown type for value
+        end
+      end
       
       City.create!( attr )
     end # each city
