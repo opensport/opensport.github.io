@@ -25,6 +25,7 @@ module SportDB   # forward reference; more to come later
 end
 
 require 'sportdb/models/badge'
+require 'sportdb/models/city'
 require 'sportdb/models/country'
 require 'sportdb/models/event'
 require 'sportdb/models/event_team'

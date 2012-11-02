@@ -9,6 +9,7 @@ class Team < ActiveRecord::Base
   has_many :badges   # Winner, 2nd, Cupsieger, Aufsteiger, Absteiger, etc.
 
   belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
+  belongs_to :city,    :class_name => 'City',    :foreign_key => 'city_id'
   
 
   def self.create_from_ary!( teams, more_values={} )
@@ -34,7 +35,9 @@ class Team < ActiveRecord::Base
       values[2..-1].each do |value|
         if value.is_a? Country
           attr[ :country_id ] = value.id
-        elsif value.length == 3   ## assume its a tag (three latters)
+        elsif value.is_a? City
+          attr[ :city_id ] = value.id 
+        elsif value.length == 3   ## assume its a tag (three letters e.g. ITA)
           attr[ :tag ] = value
         else
           attr[ :title2 ] = value

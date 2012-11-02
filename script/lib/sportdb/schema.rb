@@ -15,8 +15,16 @@ def self.up
 
 create_table :countries do |t|
   t.string :title, :null => false
-  t.string :tag,   :null => false  # short three letter tag
+  t.string :tag,   :null => false  # short three letter tag (FIFA country code)
   t.string :key,   :null => false
+  t.timestamps
+end
+
+create_table :cities do |t|
+  t.string :title, :null => false
+  t.string :key,   :null => false
+  t.string :synonyms  # comma separated list of synonyms
+  t.references :country,  :null => false
   t.timestamps
 end
 
@@ -33,6 +41,7 @@ create_table :teams do |t|
   t.string  :tag     # make it not null?  - three letter tag (short title)
   t.string  :synonyms  # comma separated list of synonyms
   t.references :country,   :null => false
+  t.references :city     # NB: city is optional (should be required for clubs e.g. non-national teams)
   t.boolean  :club,     :null => false, :default => false  # is it a club (not a national team)?
   t.boolean  :national, :null => false, :default => false  # is it a national selection team (not a club)?
   t.timestamps
