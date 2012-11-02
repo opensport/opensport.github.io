@@ -1,16 +1,5 @@
 # encoding: utf-8
 
-de = Country.find_by_key!( 'de' )
-at = Country.find_by_key!( 'at' )
-es = Country.find_by_key!( 'es' )
-fr = Country.find_by_key!( 'fr' )
-en = Country.find_by_key!( 'en' )
-ru = Country.find_by_key!( 'ru' )
-pt = Country.find_by_key!( 'pt' )
-it = Country.find_by_key!( 'it' )
-ua = Country.find_by_key!( 'ua' )
-be = Country.find_by_key!( 'be' )
-mx = Country.find_by_key!( 'mx' )
 
 
 ### todo/fix: add regions (Stmk., NOE, OOE, etc,)
@@ -28,6 +17,7 @@ cities_at = [
   ['wolfsberg',   'Wolfsberg']
 ]
 
+at = Country.find_by_key!( 'at' )
 City.create_from_ary!( cities_at, country: at )
 
 
@@ -48,6 +38,7 @@ cities_en = [
   ['swansea',     'Swansea']
 ]
 
+en = Country.find_by_key!( 'en' )
 City.create_from_ary!( cities_en, country: en )
 
 
@@ -72,6 +63,7 @@ cities_de = [
   ['bremen',        'Bremen']
 ]
 
+de = Country.find_by_key!( 'de' )
 City.create_from_ary!( cities_de, country: de )
 
 
@@ -83,6 +75,7 @@ cities_es = [
   ['malaga',    'Málaga']
 ]
 
+es = Country.find_by_key!( 'es' )
 City.create_from_ary!( cities_es, country: es )
 
 
@@ -93,7 +86,8 @@ cities_fr = [
   ['montpellier', 'Montpellier']
 ]
 
-City.create_from_ary!( cities_es, country: fr )
+fr = Country.find_by_key!( 'fr' )
+City.create_from_ary!( cities_fr, country: fr )
 
 
 cities_it = [
@@ -102,7 +96,8 @@ cities_it = [
   ['napoli',  'Neapel|Napoli']
 ]
 
-City.create_from_ary!( cities_es, country: it )
+it = Country.find_by_key!( 'it' )
+City.create_from_ary!( cities_it, country: it )
 
 
 cities_pt = [
@@ -111,7 +106,8 @@ cities_pt = [
   ['lisboa', 'Lissabon|Lisboa']
 ]
 
-City.create_from_ary!( cities_es, country: pt )
+pt = Country.find_by_key!( 'pt' )
+City.create_from_ary!( cities_pt, country: pt )
 
 
 cities_ru = [
@@ -119,14 +115,16 @@ cities_ru = [
   ['stpetersburg','St. Petersburg']
 ]
 
-City.create_from_ary!( cities_es, country: ru )
+ru = Country.find_by_key!( 'ru' )
+City.create_from_ary!( cities_ru, country: ru )
 
 
 cities_be = [
   ['brussel',   'Brüssel|Brussel|Bruxelles|Brussels']  # de|nl|fr|en   - RCA Anderlecht
 ]
 
-City.create_from_ary!( cities_es, country: be )
+be = Country.find_by_key!( 'be' )
+City.create_from_ary!( cities_be, country: be )
 
 
 cities_ua = [
@@ -135,7 +133,8 @@ cities_ua = [
   ['kharkov',  'Kharkiv|Kharkov']
 ]
 
-City.create_from_ary!( cities_es, country: ua )
+ua = Country.find_by_key!( 'ua' )
+City.create_from_ary!( cities_ua, country: ua )
 
 
 cities_mx = [
@@ -156,7 +155,8 @@ cities_mx = [
   ['sannicolas',    'San Nicolás de los Garza' ]
 ]
 
-City.create_from_ary!( cities_es, country: mx )
+mx = Country.find_by_key!( 'mx' )
+City.create_from_ary!( cities_mx, country: mx )
 
 
 Prop.create!( key: 'db.cities.version', value: '1' )

@@ -10,26 +10,26 @@
 ## nb: three letter codes (tags) taken from official premierleague.com site 
 
 teams = [
-  [ 'chelsea',     'Chelsea|Chelsea FC|FC Chelsea|FC Chelsea ENG',    'CHE' ],
-  [ 'manunited',   'Manchester United|Man Utd|Manchester U. ENG',                 'MUN' ],
-  [ 'mancity',     'Manchester City|Man City|Man. City ENG',                  'MCI' ],
-  [ 'arsenal',     'Arsenal|Arsenal FC|FC Arsenal|FC Arsenal ENG',             'ARS' ],
-  [ 'everton',     'Everton|Everton FC|FC Everton',             'EVE' ],
-  [ 'tottenham',   'Tottenham Hotspur|Tottenham',               'TOT' ],
-  [ 'westbrom',    'West Bromwich Albion|West Brom',            'WBA' ],
-  [ 'westham',     'West Ham United|West Ham',                  'WHU' ],
-  [ 'fulham',      'Fulham|Fulham FC|FC Fulham',                'FUL' ],
-  [ 'newcastle',   'Newcastle United|Newcastle',                'NEW' ],
-  [ 'swansea',     'Swansea City|Swansea',                      'SWA' ],
-  [ 'stoke',       'Stoke City|Stoke',                          'STK' ],
-  [ 'sunderland',  'Sunderland|Sunderland AFC|AFC Sunderland',  'SUN' ],
-  [ 'liverpool',   'Liverpool|Liverpool FC|FC Liverpool',       'LIV' ],
-  [ 'wigan',       'Wigan Athletic|Wigan',                      'WIG' ],
-  [ 'astonvilla',  'Aston Villa',                               'AVL' ],
-  [ 'southampton', 'Southampton|Southampton FC|FC Southampton', 'SOU' ],
-  [ 'reading',     'Reading|Reading FC|FC Reading',             'RDG' ],
-  [ 'norwich',     'Norwich City|Norwich',                      'NOR' ],
-  [ 'qpr',         'Queens Park Rangers',                       'QPR' ]]
+  [ 'chelsea',     'Chelsea|Chelsea FC|FC Chelsea|FC Chelsea ENG',    'CHE', 'city:london' ],
+  [ 'manunited',   'Manchester United|Man Utd|Manchester U. ENG',                 'MUN', 'city:manchester' ],
+  [ 'mancity',     'Manchester City|Man City|Man. City ENG',                  'MCI', 'city:manchester' ],
+  [ 'arsenal',     'Arsenal|Arsenal FC|FC Arsenal|FC Arsenal ENG',             'ARS', 'city:london' ],
+  [ 'everton',     'Everton|Everton FC|FC Everton',             'EVE', 'city:liverpool' ],
+  [ 'tottenham',   'Tottenham Hotspur|Tottenham',               'TOT', 'city:london' ],
+  [ 'westbrom',    'West Bromwich Albion|West Brom',            'WBA', 'city:westbrom' ],
+  [ 'westham',     'West Ham United|West Ham',                  'WHU', 'city:london' ],
+  [ 'fulham',      'Fulham|Fulham FC|FC Fulham',                'FUL', 'city:london' ],
+  [ 'newcastle',   'Newcastle United|Newcastle',                'NEW', 'city:newcastle' ],
+  [ 'swansea',     'Swansea City|Swansea',                      'SWA', 'city:swansea' ],
+  [ 'stoke',       'Stoke City|Stoke',                          'STK', 'city:stoke' ],
+  [ 'sunderland',  'Sunderland|Sunderland AFC|AFC Sunderland',  'SUN', 'city:sunderland' ],
+  [ 'liverpool',   'Liverpool|Liverpool FC|FC Liverpool',       'LIV', 'city:liverpool' ],
+  [ 'wigan',       'Wigan Athletic|Wigan',                      'WIG', 'city:wigan' ],
+  [ 'astonvilla',  'Aston Villa',                               'AVL', 'city:birmingham' ],
+  [ 'southampton', 'Southampton|Southampton FC|FC Southampton', 'SOU', 'city:southampton' ],
+  [ 'reading',     'Reading|Reading FC|FC Reading',             'RDG', 'city:reading' ],
+  [ 'norwich',     'Norwich City|Norwich',                      'NOR', 'city:norwich' ],
+  [ 'qpr',         'Queens Park Rangers',                       'QPR', 'city:london' ]]
 
 
 en = Country.find_by_key!( 'en' )

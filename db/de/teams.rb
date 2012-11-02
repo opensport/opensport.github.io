@@ -8,24 +8,24 @@
 ## nb: three letter codes (tags) taken from official bundesliga.de site
 
 teams = [
-  [ 'bayern',      'FC Bayern München|Bayern München|Bayern München GER',   'FCB' ],
-  [ 'schalke',     'FC Schalke 04|FC Schalke 04 GER',                       'S04' ],
-  [ 'dortmund',    'Borussia Dortmund|Bor. Dortmund|Bor. Dortmund GER',     'BVB' ],
-  [ 'frankfurt',   'Eintracht Frankfurt|E. Frankfurt',    'FFM' ],
-  [ 'hannover',    'Hannover 96',                         'H96' ],
-  [ 'leverkusen',  'Bayer 04 Leverkusen|Bay. Leverkusen', 'B04' ],
-  [ 'duesseldorf', 'Fortuna Düsseldorf|F. Düsseldorf',    'F95' ],
-  [ 'hsv',         'Hamburger SV',                        'HSV' ],
-  [ 'mainz',       '1. FSV Mainz 05',                     'M05' ],
-  [ 'mgladbach',   "Borussia M'gladbach|Bor. M'gladbach", 'BMG' ],
-  [ 'freiburg',    'SC Freiburg',                         'SCF' ],
-  [ 'bremen',      'Werder Bremen',                       'BRE' ],
-  [ 'hoffenheim',  '1899 Hoffenheim',                     'HOF' ],
-  [ 'nuernberg',   '1. FC Nürnberg',                      'FCN' ],
-  [ 'stuttgart',   'VfB Stuttgart',                       'VFB' ],
-  [ 'augsburg',    'FC Augsburg',                         'FCA' ],
-  [ 'wolfsburg',   'VfL Wolfsburg',                       'WOB' ],
-  [ 'fuerth',      'Greuther Fürth',                      'SGF' ]
+  [ 'bayern',      'FC Bayern München|Bayern München|Bayern München GER',   'FCB', 'city:muenchen' ],
+  [ 'schalke',     'FC Schalke 04|FC Schalke 04 GER',                       'S04', 'city:gelsenkirchen' ],
+  [ 'dortmund',    'Borussia Dortmund|Bor. Dortmund|Bor. Dortmund GER',     'BVB', 'city:dortmund' ],
+  [ 'frankfurt',   'Eintracht Frankfurt|E. Frankfurt',    'FFM', 'city:frankfurt' ],
+  [ 'hannover',    'Hannover 96',                         'H96', 'city:hannover' ],
+  [ 'leverkusen',  'Bayer 04 Leverkusen|Bay. Leverkusen', 'B04', 'city:leverkusen' ],
+  [ 'duesseldorf', 'Fortuna Düsseldorf|F. Düsseldorf',    'F95', 'city:duesseldorf' ],
+  [ 'hsv',         'Hamburger SV',                        'HSV', 'city:hamburg' ],
+  [ 'mainz',       '1. FSV Mainz 05',                     'M05', 'city:mainz' ],
+  [ 'mgladbach',   "Borussia M'gladbach|Bor. M'gladbach", 'BMG', 'city:mgladbach' ],
+  [ 'freiburg',    'SC Freiburg',                         'SCF', 'city:freiburg' ],
+  [ 'bremen',      'Werder Bremen',                       'BRE', 'city:bremen' ],
+  [ 'hoffenheim',  '1899 Hoffenheim',                     'HOF', 'city:hoffenheim' ],
+  [ 'nuernberg',   '1. FC Nürnberg',                      'FCN', 'city:nuernberg' ],
+  [ 'stuttgart',   'VfB Stuttgart',                       'VFB', 'city:stuttgart' ],
+  [ 'augsburg',    'FC Augsburg',                         'FCA', 'city:augsburg' ],
+  [ 'wolfsburg',   'VfL Wolfsburg',                       'WOB', 'city:wolfsburg' ],
+  [ 'fuerth',      'Greuther Fürth',                      'SGF', 'city:fuerth' ]
 ]
 
 de = Country.find_by_key!( 'de' )

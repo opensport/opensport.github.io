@@ -1,24 +1,24 @@
 # encoding: utf-8
 
 teams = [
- [ 'america',   'Club América',        'México' ],
- [ 'atlante',   'Atlante',             'Cancún' ],
- [ 'atlas',     'Atlas',               'Guadalajara' ],
- [ 'chivas',    'Guadalajara Chivas',  'Guadalajara' ],
- [ 'cruzazul',  'Cruz Azul',           'México' ],
- [ 'jaguares',  'Jaguares de Chiapas', 'Tuxtla Gutiérrez' ],
- [ 'leon',      'Club León',           'León' ],
- [ 'monarcas',  'Monarcas Morelia',    'Morelia' ],
- [ 'monterrey', 'Monterrey',           'Monterrey' ],
- [ 'pachuca',   'Pachuca',             'Pachuca' ],
- [ 'puebla',    'Puebla F.C. ',        'Puebla' ],
- [ 'queretaro', 'Querétaro F.C.',      'Querétaro' ],
- [ 'sanluis',   'Club  San Luis',      'San Luis Potosì' ],
- [ 'slaguna',   'Santos Laguna',       'Torreón' ],
- [ 'tijuana',   'Club Tijuana',        'Tijuana' ],
- [ 'toluca',    'Toluca',              'Toluca' ],
- [ 'tigres',    'Tigres UANL',         'San Nicolás de los Garza' ],
- [ 'pumas',     'Pumas UNAM',          'México'  ]
+ [ 'america',   'Club América',        'city:mexico' ],
+ [ 'atlante',   'Atlante',             'city:cancun' ],
+ [ 'atlas',     'Atlas',               'city:guadalajara' ],
+ [ 'chivas',    'Guadalajara Chivas',  'city:guadalajara' ],
+ [ 'cruzazul',  'Cruz Azul',           'city:mexico' ],
+ [ 'jaguares',  'Jaguares de Chiapas', 'city:tuxtla' ],
+ [ 'leon',      'Club León',           'city:leon' ],
+ [ 'monarcas',  'Monarcas Morelia',    'city:morelia' ],
+ [ 'monterrey', 'Monterrey',           'city:monterrey' ],
+ [ 'pachuca',   'Pachuca',             'city:pachuca' ],
+ [ 'puebla',    'Puebla F.C. ',        'city:puebla' ],
+ [ 'queretaro', 'Querétaro F.C.',      'city:queretaro' ],
+ [ 'sanluis',   'Club  San Luis',      'city:sanluispotosi' ],
+ [ 'slaguna',   'Santos Laguna',       'city:torreon' ],
+ [ 'tijuana',   'Club Tijuana',        'city:tijuana' ],
+ [ 'toluca',    'Toluca',              'city:toluca' ],
+ [ 'tigres',    'Tigres UANL',         'city:sannicolas' ],
+ [ 'pumas',     'Pumas UNAM',          'city:mexico' ]
 ]
 
 mx = Country.find_by_key!( 'mx' )
