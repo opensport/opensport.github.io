@@ -117,7 +117,7 @@ City.create_from_ary!( cities_gr, country: gr )
 
 
 cities_dk = [
-  ['farum','farum']  ## region: North Zealand ??
+  ['farum','Farum']  ## region: North Zealand ??
 ]
 
 dk = Country.find_by_key!( 'dk' )
@@ -195,40 +195,68 @@ mx = Country.find_by_key!( 'mx' )
 City.create_from_ary!( cities_mx, country: mx )
 
 
+regions_ca = [
+  ['on', 'Ontario'],
+  ['qc', 'Quebec'],
+  ['ns', 'Nova Scotia'],
+  ['nb', 'New Brunswick'],
+  ['mb', 'Manitoba'],
+  ['bc', 'British Columbia'],
+  ['pe', 'Prince Edward Island'],
+  ['sk', 'Saskatchewan'],
+  ['ab', 'Alberta'],
+  ['nl', 'Newfoundland and Labrador']
+]
+
 cities_ca = [
-  ['montreal','Montreal'],
-  ['ottawa','Ottawa'],
-  ['toronto','Toronto'],
-  ['winnipeg','Winnipeg'],
-  ['calgary','Calgary'],
-  ['edmonton','Edmonton'],
-  ['vancouver','Vancouver']
+  ['montreal',  'Montreal',  'region:qc'],
+  ['ottawa',    'Ottawa',    'region:on'],
+  ['toronto',   'Toronto',   'region:on'],
+  ['winnipeg',  'Winnipeg',  'region:mb'],
+  ['calgary',   'Calgary',   'region:ab'],
+  ['edmonton',  'Edmonton',  'region:ab'],
+  ['vancouver', 'Vancouver', 'region:bc']
 ]
 
 ca = Country.find_by_key!( 'ca' )
+Region.create_from_ary!( regions_ca, country: ca )
 City.create_from_ary!( cities_ca, country: ca )
 
 
+regions_us = [
+  ['ca', 'California'],
+  ['ny', 'New York'],
+  ['ma', 'Massachusetts'],
+  ['pa', 'Pennsylvania'],
+  ['il', 'Illinois'],
+  ['oh', 'Ohio'],
+  ['mi', 'Michigan'],
+  ['tn', 'Tennessee'],
+  ['tx', 'Texas'],
+  ['az', 'Arizona']
+]
+
 cities_us = [
-  ['newyork','New York'],
-  ['philadelphia','Philadelphia'],
-  ['pittsburgh','Pittsburgh'],
-  ['boston','Boston'],
-  ['buffalo','Buffalo'],
-  ['washington','Washington'],
-  ['chicago','Chicago'],
-  ['columbus','Columbus'],
-  ['detroit','Detroit'],
-  ['nashville','Nashville'],
-  ['stlouis','St. Louis'],
-  ['dallas','Dallas'],
-  ['losangeles','Los Angeles'],
-  ['phoenix','phoenix'],
-  ['sanjose','San Jose'],
-  ['anaheim','Anaheim']
+  ['newyork',      'New York',     'region:ny'],
+  ['buffalo',      'Buffalo',      'region:ny'],
+  ['philadelphia', 'Philadelphia', 'region:pa'],
+  ['boston',       'Boston',       'region:ma'],
+  ['chicago',      'Chicago',      'region:il'],
+  ['columbus',     'Columbus',     'region:oh'],
+  ['detroit',      'Detroit',      'region:mi'],
+  ['nashville',    'Nashville',    'region:tn'],
+  ['dallas',       'Dallas',       'region:tx'],
+  ['phoenix',      'Phoenix',      'region:az'],
+  ['losangeles',   'Los Angeles',  'region:ca'],
+  ['sanjose',      'San Jose',     'region:ca'],
+  ['anaheim',      'Anaheim',      'region:ca'],
+  ['stlouis',      'St. Louis'],
+  ['pittsburgh',   'Pittsburgh'],
+  ['washington',   'Washington']
 ]
 
 us = Country.find_by_key!( 'us' )
+Region.create_from_ary!( regions_us, country: us )
 City.create_from_ary!( cities_us, country: us )
 
 

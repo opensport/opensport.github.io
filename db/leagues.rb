@@ -6,8 +6,15 @@
 at = Country.find_by_key!( 'at' )
 de = Country.find_by_key!( 'de' )
 en = Country.find_by_key!( 'en' )
+es = Country.find_by_key!( 'es' )
+it = Country.find_by_key!( 'it' )
+fr = Country.find_by_key!( 'fr' )
+nl = Country.find_by_key!( 'nl' )
+pt = Country.find_by_key!( 'pt' )
+ru = Country.find_by_key!( 'ru' )
 ro = Country.find_by_key!( 'ro' )
 mx = Country.find_by_key!( 'mx' )
+br = Country.find_by_key!( 'br' )
 
 
 leagues_club = [
@@ -15,8 +22,15 @@ leagues_club = [
  [ 'at.cup',      'ÖFB Cup',                at ],
  [ 'de',          'Deutsche Bundesliga',    de ],
  [ 'en',          'English Premier League', en ],
+ [ 'es',          'Primera División',       es ],
+ [ 'it',          'Serie A',                it ],
+ [ 'fr',          'Ligue 1',                fr ],
+ [ 'nl',          'Eredivisie',             nl ],
+ [ 'pt',          'SuperLiga',              pt ],
+ [ 'ru',          'Premier Liga',           ru ],
  [ 'ro',          'Romania Liga 1',         ro ],
- [ 'mx.apertura', 'México Primera División Apertura', mx ]
+ [ 'mx.apertura', 'México Primera División Apertura', mx ],
+ [ 'br',          'Campeonato Brasileiro Série A', br ]
 ]
 
 League.create_from_ary!( leagues_club, club: true )
