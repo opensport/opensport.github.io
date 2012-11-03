@@ -34,6 +34,7 @@ require 'sportdb/models/group'
 require 'sportdb/models/group_team'
 require 'sportdb/models/league'
 require 'sportdb/models/prop'
+require 'sportdb/models/region'
 require 'sportdb/models/round'
 require 'sportdb/models/season'
 require 'sportdb/models/team'
@@ -101,6 +102,7 @@ module SportDB
       Round.delete_all
       Prop.delete_all
       Country.delete_all
+      Region.delete_all
       City.delete_all
       Badge.delete_all
       League.delete_all

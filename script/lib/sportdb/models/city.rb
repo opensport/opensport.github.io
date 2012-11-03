@@ -4,14 +4,13 @@ class City < ActiveRecord::Base
   self.table_name = 'cities'
 
   belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
+  belongs_to :region,  :class_name => 'Region',  :foreign_key => 'country_id'
 
   has_many :teams, :class_name => 'Team', :foreign_key => 'city_id'
 
   
   def self.create_from_ary!( cities, more_values={} )
     cities.each do |values|
-      
-      ## todo/fix: split optional synonyms from title (see team for example)      
       
       ## key & title & country required
       attr = {
@@ -32,6 +31,10 @@ class City < ActiveRecord::Base
       values[2..-1].each do |value|
         if value.is_a? Country
           attr[ :country_id ] = value.id
+        elsif value =~ /^region:/   ## region:
+          value_region_key = value[7..-1]  ## cut off region: prefix
+          value_region = Region.find_by_key!( value_region_key )
+          attr[ :region_id ] = value_region.id
         else
           # issue warning: unknown type for value
         end

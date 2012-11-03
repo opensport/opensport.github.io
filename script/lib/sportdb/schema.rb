@@ -20,11 +20,19 @@ create_table :countries do |t|
   t.timestamps
 end
 
+create_table :regions do |t|
+  t.string :title,  :null => false
+  t.string :key,    :null => false
+  t.references :country, :null => false
+  t.timestamps
+end
+
 create_table :cities do |t|
   t.string :title, :null => false
   t.string :key,   :null => false
   t.string :synonyms  # comma separated list of synonyms
   t.references :country,  :null => false
+  t.references :region    # optional for now
   t.timestamps
 end
 

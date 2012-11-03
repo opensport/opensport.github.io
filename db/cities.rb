@@ -1,26 +1,6 @@
 # encoding: utf-8
 
 
-
-### todo/fix: add regions (Stmk., NOE, OOE, etc,)
-
-cities_at = [
-  ['wien',        'Wien|Vienna'],
-  ['innsbruck',   'Innsbruck'],
-  ['moedling',    'Mödling|Moedling'],
-  ['salzburg',    'Salzburg'],
-  ['graz',        'Graz'],
-  ['linz',        'Linz'],
-  ['mattersburg', 'Mattersburg'],
-  ['ried',        'Ried'],
-  ['wrneustadt',  'Wiener Neustadt|Wr. Neustadt'],
-  ['wolfsberg',   'Wolfsberg']
-]
-
-at = Country.find_by_key!( 'at' )
-City.create_from_ary!( cities_at, country: at )
-
-
 cities_en = [
   ['manchester',  'Manchester'],
   ['london',      'London'],
@@ -39,31 +19,6 @@ cities_en = [
 
 en = Country.find_by_key!( 'en' )
 City.create_from_ary!( cities_en, country: en )
-
-
-cities_de = [
-  ['hoffenheim',    'Hoffenheim'],
-  ['nuernberg',     'Nürnberg'],
-  ['stuttgart',     'Stuttgart'],
-  ['augsburg',      'Augsburg'],
-  ['wolfsburg',     'Wolfsburg'],
-  ['fuerth',        'Fürth'],
-  ['muenchen',      'München'],
-  ['gelsenkirchen', 'Gelsenkirchen'],
-  ['dortmund',      'Dortmund'],
-  ['frankfurt',     'Frankfurt'],
-  ['hannover',      'Hannover'],
-  ['leverkusen',    'Leverkusen'],
-  ['duesseldorf',   'Düsseldorf'],
-  ['hamburg',       'Hamburg'],
-  ['mainz',         'Mainz'],
-  ['mgladbach',     "Mönchengladbach|M'gladbach" ],
-  ['freiburg',      'Freiburg'],
-  ['bremen',        'Bremen']
-]
-
-de = Country.find_by_key!( 'de' )
-City.create_from_ary!( cities_de, country: de )
 
 
 cities_es = [
