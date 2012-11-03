@@ -69,19 +69,18 @@ teams = [
 
   [ 'anderlecht',   'RSC Anderlecht|RSC Anderlecht BEL',       be, 'city:brussel' ],
 
-  [ 'ajax',         'Ajax Amsterdam|Ajax Amsterdam NED',       nl ],
-  [ 'az',        'AZ Alkmaar',               nl ],
+  [ 'ajax',         'Ajax Amsterdam|Ajax Amsterdam NED',       nl, 'city:amsterdam' ],
+  [ 'az',        'AZ Alkmaar',               nl, 'city:alkmaar' ],
 
-  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO|NK Dinamo Zagreb',        hr ],
-  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE|Olympiakos Piraeus',    gr ],
-  [ 'nordsjalland', 'FC Nordsjælland|Nordsjaelland DEN|FC Nordsjaelland',      dk ],
-  [ 'borissow',  'BATE Borissow|Bate Borisov BLR|Bate Borisov',           by ],
-  [ 'celtic',    'Celtic Glasgow|Celtic Glasgow SCO',          sc ],
-  [ 'galatasaray', 'Galatasaray|Galatasaray TUR',           tr ],
-  [ 'cluj',        'CFR Cluj|CFR Cluj ROU',              ro ],
-  [ 'basel',     'FC Basel 1893',            ch ],
-  [ 'apoel',     'APOEL Nikosia',            cy ]
-
+  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO|NK Dinamo Zagreb',        hr, 'city:zagreb' ],
+  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE|Olympiakos Piraeus',    gr, 'city:piraeus' ],
+  [ 'nordsjalland', 'FC Nordsjælland|Nordsjaelland DEN|FC Nordsjaelland',      dk, 'city:farum' ],
+  [ 'borissow',  'BATE Borissow|Bate Borisov BLR|Bate Borisov',           by, 'city:borisov' ],
+  [ 'celtic',    'Celtic Glasgow|Celtic Glasgow SCO',          sc, 'city:glasgow' ],
+  [ 'galatasaray', 'Galatasaray|Galatasaray TUR',           tr, 'city:istanbul' ],
+  [ 'cluj',        'CFR Cluj|CFR Cluj ROU',              ro, 'city:cluj' ],
+  [ 'basel',     'FC Basel 1893',            ch, 'city:basel' ],
+  [ 'apoel',     'APOEL Nikosia',            cy, 'city:nikosia' ]
 ]
 
 

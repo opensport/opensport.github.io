@@ -4,6 +4,9 @@ class City < ActiveRecord::Base
   self.table_name = 'cities'
 
   belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
+
+  has_many :teams, :class_name => 'Team', :foreign_key => 'city_id'
+
   
   def self.create_from_ary!( cities, more_values={} )
     cities.each do |values|

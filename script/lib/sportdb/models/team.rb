@@ -5,6 +5,11 @@ class Team < ActiveRecord::Base
 
   has_many :home_games, :class_name => 'Game', :foreign_key => 'team1_id'
   has_many :away_games, :class_name => 'Game', :foreign_key => 'team2_id'
+
+  ### fix - how to do it with has_many macro? possible??
+  def games
+    Game.where( 'team1_id = ? or team2_id = ?', id, id ).order( 'play_at' ).all
+  end
   
   has_many :badges   # Winner, 2nd, Cupsieger, Aufsteiger, Absteiger, etc.
 

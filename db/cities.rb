@@ -26,7 +26,6 @@ cities_en = [
   ['london',      'London'],
   ['liverpool',   'Liverpool'],
   ['birmingham',  'Birmingham'],  # e.g.Aston Villa
-  ['blackburn',   'Blackburn'],
   ['westbrom',    'West Bromwich'],
   ['newcastle',   'Newcastle upon Tyne'],
   ['stoke',       'Stoke-on-Trent'],
@@ -137,6 +136,88 @@ ua = Country.find_by_key!( 'ua' )
 City.create_from_ary!( cities_ua, country: ua )
 
 
+cities_nl = [
+  ['amsterdam','Amsterdam'],
+  ['alkmaar','Alkmaar']  ## region: North Holland
+]
+
+nl = Country.find_by_key!( 'nl' )
+City.create_from_ary!( cities_nl, country: nl )
+
+
+cities_hr = [
+  ['zagreb','Zagreb']
+]
+
+hr = Country.find_by_key!( 'hr' )
+City.create_from_ary!( cities_hr, country: hr )
+
+
+cities_gr = [
+  ['piraeus','Piräus|Piraeus']
+]
+
+gr = Country.find_by_key!( 'gr' )
+City.create_from_ary!( cities_gr, country: gr )
+
+
+cities_dk = [
+  ['farum','farum']  ## region: North Zealand ??
+]
+
+dk = Country.find_by_key!( 'dk' )
+City.create_from_ary!( cities_dk, country: dk )
+
+
+cities_by = [
+  ['borisov','Borissow|Borisov|Barysaw']
+]
+
+by = Country.find_by_key!( 'by' )
+City.create_from_ary!( cities_by, country: by )
+
+
+cities_sc = [
+  ['glasgow','Glasgow']
+]
+
+sc = Country.find_by_key!( 'sc' )
+City.create_from_ary!( cities_sc, country: sc )
+
+
+cities_tr = [
+  ['istanbul','Istanbul']
+]
+
+tr = Country.find_by_key!( 'tr' )
+City.create_from_ary!( cities_tr, country: tr )
+
+
+cities_ro = [
+  ['cluj','Cluj']
+]
+
+ro = Country.find_by_key!( 'ro' )
+City.create_from_ary!( cities_ro, country: ro )
+ 
+ 
+cities_ch = [
+  ['basel','Basel']
+]
+
+ch = Country.find_by_key!( 'ch' )
+City.create_from_ary!( cities_ch, country: ch )
+
+
+cities_cy = [
+  ['nikosia','Nikosia|Nicosia']
+]
+
+cy = Country.find_by_key!( 'cy' )
+City.create_from_ary!( cities_cy, country: cy )
+
+
+
 cities_mx = [
   ['mexico',        'México' ],
   ['cancun',        'Cancún' ],
@@ -157,6 +238,43 @@ cities_mx = [
 
 mx = Country.find_by_key!( 'mx' )
 City.create_from_ary!( cities_mx, country: mx )
+
+
+cities_ca = [
+  ['montreal','Montreal'],
+  ['ottawa','Ottawa'],
+  ['toronto','Toronto'],
+  ['winnipeg','Winnipeg'],
+  ['calgary','Calgary'],
+  ['edmonton','Edmonton'],
+  ['vancouver','Vancouver']
+]
+
+ca = Country.find_by_key!( 'ca' )
+City.create_from_ary!( cities_ca, country: ca )
+
+
+cities_us = [
+  ['newyork','New York'],
+  ['philadelphia','Philadelphia'],
+  ['pittsburgh','Pittsburgh'],
+  ['boston','Boston'],
+  ['buffalo','Buffalo'],
+  ['washington','Washington'],
+  ['chicago','Chicago'],
+  ['columbus','Columbus'],
+  ['detroit','Detroit'],
+  ['nashville','Nashville'],
+  ['stlouis','St. Louis'],
+  ['dallas','Dallas'],
+  ['losangeles','Los Angeles'],
+  ['phoenix','phoenix'],
+  ['sanjose','San Jose'],
+  ['anaheim','Anaheim']
+]
+
+us = Country.find_by_key!( 'us' )
+City.create_from_ary!( cities_us, country: us )
 
 
 Prop.create!( key: 'db.cities.version', value: '1' )
