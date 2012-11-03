@@ -15,6 +15,7 @@ db/at/2012_13/cup.txt
 db/at/2012_13/cup_fixtures.rb
 db/at/badges.rb
 db/at/teams.rb
+db/cities.rb
 db/cl/2011_12/cl.rb
 db/cl/2011_12/el.rb
 db/cl/2012_13/cl.rb
@@ -56,6 +57,7 @@ lib/sportdb/cli/opts.rb
 lib/sportdb/cli/runner.rb
 lib/sportdb/loader.rb
 lib/sportdb/models/badge.rb
+lib/sportdb/models/city.rb
 lib/sportdb/models/country.rb
 lib/sportdb/models/event.rb
 lib/sportdb/models/event_team.rb

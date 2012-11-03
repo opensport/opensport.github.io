@@ -37,52 +37,49 @@ cy = Country.find_by_key!( 'cy' )
 
 
 teams = [
-  [ 'porto',        'FC Porto|FC Porto POR',             pt ],
-  [ 'kiew',         'Dynamo Kiew|FC Dynamo Kiew UKR|Dynamo Kiev',          ua ],
-  [ 'paris',        'Paris St. Germain|Paris S.Germai FRA|Paris Saint Germain',    fr ],
-  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO|NK Dinamo Zagreb',        hr ],
+  [ 'malaga',       'FC Málaga|Malaga CF ESP|CF Malaga',            es, 'city:malaga' ],
+  [ 'madrid',       'Real Madrid|Real Madrid ESP',          es, 'city:madrid' ],
+  [ 'valencia',  'FC Valencia|FC Valencia ESP|CF Valencia',             es, 'city:valencia' ],
+  [ 'barcelona', 'FC Barcelona|FC Barcelona ESP',            es, 'city:barcelona' ],
+  [ 'atletico',  'Atlético Madrid',          es, 'city:madrid' ],
+  [ 'athletic',  'Athletic Bilbao',          es, 'city:bilbao' ],
 
-  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE|Olympiakos Piraeus',    gr ],
-  [ 'montpellier',  'HSC Montpellier|Montpellier FRA',      fr ],
+  [ 'porto',        'FC Porto|FC Porto POR',             pt, 'city:porto' ],
+  [ 'benfica',   'Benfica Lissabon|Benfica Lis. POR',      pt, 'city:lisboa' ],
+  [ 'braga',       'Sporting Braga|Sporting Braga POR',        pt, 'city:braga' ],
+  [ 'sporting',  'Sporting Lisboa',          pt, 'city:lisboa' ],
 
-  [ 'milan',        'AC Mailand|AC Milan ITA|AC Milan',           it ],
-  [ 'zenit',        'Zenit St. Petersburg|Zenit Petersb. RUS|FC Zenit St Petersburg', ru ],
-  [ 'anderlecht',   'RSC Anderlecht|RSC Anderlecht BEL',       be ],
-  [ 'malaga',       'FC Málaga|Malaga CF ESP|CF Malaga',            es ],
+  [ 'milan',        'AC Mailand|AC Milan ITA|AC Milan',           it, 'city:milano' ],
+  [ 'inter',     'FC Internazionale Milano', it, 'city:milano' ],
+  [ 'napoli',    'SSC Napoli',               it, 'city:napoli' ],
+  [ 'juventus',     'Juventus Turin|Juventus Turin ITA',       it, 'city:turin' ],
 
-  [ 'madrid',       'Real Madrid|Real Madrid ESP',          es ],
+  [ 'paris',        'Paris St. Germain|Paris S.Germai FRA|Paris Saint Germain',    fr, 'city:paris' ],
+  [ 'montpellier',  'HSC Montpellier|Montpellier FRA',      fr, 'city:montpellier' ],
+  [ 'lille',     'OSC Lille|Lille OSC FRA',               fr, 'city:lille' ],
+  [ 'marseille', 'Olympique Marseille',      fr, 'city:marseille' ],
+
+  [ 'kiew',         'Dynamo Kiew|FC Dynamo Kiew UKR|Dynamo Kiev',          ua, 'city:kiev' ],
+  [ 'donezk',       'Schachtjor Donezk|Shakhtar Don. UKR|Shakhtar Donetsk',    ua, 'city:donetsk' ],
+  [ 'metalist',  'FC Metalist Kharkiv',      ua, 'city:kharkov' ],
+
+  [ 'zenit',        'Zenit St. Petersburg|Zenit Petersb. RUS|FC Zenit St Petersburg', ru, 'city:stpetersburg' ],
+  [ 'spartak',   'Spartak Moskau|Spartak Moskau RUS|Spartak Moscow',     ru, 'city:moskva' ],
+  [ 'moskva',    'PFC CSKA Moskva',          ru, 'city:moskva' ],
+
+  [ 'anderlecht',   'RSC Anderlecht|RSC Anderlecht BEL',       be, 'city:brussel' ],
+
   [ 'ajax',         'Ajax Amsterdam|Ajax Amsterdam NED',       nl ],
+  [ 'az',        'AZ Alkmaar',               nl ],
 
-  [ 'donezk',       'Schachtjor Donezk|Shakhtar Don. UKR|Shakhtar Donetsk',    ua ],
-  [ 'juventus',     'Juventus Turin|Juventus Turin ITA',       it ],
+  [ 'zagreb',       'Dinamo Zagreb|Dinamo Zagreb CRO|NK Dinamo Zagreb',        hr ],
+  [ 'olympiacos',   'Olympiakos Piräus|Olympiakos P. GRE|Olympiakos Piraeus',    gr ],
   [ 'nordsjalland', 'FC Nordsjælland|Nordsjaelland DEN|FC Nordsjaelland',      dk ],
-
-  [ 'valencia',  'FC Valencia|FC Valencia ESP|CF Valencia',             es ],
-  [ 'lille',     'OSC Lille|Lille OSC FRA',               fr ],
   [ 'borissow',  'BATE Borissow|Bate Borisov BLR|Bate Borisov',           by ],
-
-  [ 'barcelona', 'FC Barcelona|FC Barcelona ESP',            es ],
-  [ 'benfica',   'Benfica Lissabon|Benfica Lis. POR',      pt ],
-  [ 'spartak',   'Spartak Moskau|Spartak Moskau RUS|Spartak Moscow',     ru ],
   [ 'celtic',    'Celtic Glasgow|Celtic Glasgow SCO',          sc ],
-
-  [ 'braga',       'Sporting Braga|Sporting Braga POR',        pt ],
   [ 'galatasaray', 'Galatasaray|Galatasaray TUR',           tr ],
   [ 'cluj',        'CFR Cluj|CFR Cluj ROU',              ro ],
-
-###################
-# more teams from cl/el 2011-12
-#
-  [ 'atletico',  'Atlético Madrid',          es ],
-  [ 'athletic',  'Athletic Bilbao',          es ],
-  [ 'sporting',  'Sporting Lisboa',          pt ],
-  [ 'inter',     'FC Internazionale Milano', it ],
-  [ 'napoli',    'SSC Napoli',               it ],
-  [ 'marseille', 'Olympique Marseille',      fr ],
   [ 'basel',     'FC Basel 1893',            ch ],
-  [ 'az',        'AZ Alkmaar',               nl ],
-  [ 'metalist',  'FC Metalist Kharkiv',      ua ],
-  [ 'moskva',    'PFC CSKA Moskva',          ru ],
   [ 'apoel',     'APOEL Nikosia',            cy ]
 
 ]
