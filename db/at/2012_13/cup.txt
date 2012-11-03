@@ -63,14 +63,14 @@ gak            0:6               wac            2012-09-26 20:20
 
 3. Runde / Achtelfinale   -  Di+Mi 30.+31. Okt 2012
 
-lask      7:6  mattersburg   2012-10-30 15:00
-rapid     -  altach        2012-10-30 15:00
-viktoria  0:1  ried          2012-10-30 15:00
-sturm     1:2  innsbruck     2012-10-30 15:00
-pasching  2:1  austriak      2012-10-30 15:00
-lustenau  1:2  wac           2012-10-30 15:00
-kalsdorf  -  salzburg      2012-10-30 15:00
-vsv       -  austria       2012-10-30 15:00
+sturm     1:2              innsbruck     2012-10-30 18:00
+lustenau  1:2              wac           2012-10-30 18:30
+pasching  2:1              austriak      2012-10-30 19:00
+lask      2:2 2:2nV 9:8iE  mattersburg   2012-10-30 19:00
+viktoria  0:1              ried          2012-10-30 20:30
+kalsdorf  1:3              salzburg      2012-10-31 19:00
+vsv       0:4              austria       2012-10-31 19:00
+rapid     2:2 4:2nV        altach        2012-10-31 19:30
 
 
 4. Runde / Viertelfinale  -  Di+Mi 16.+17. April 2013

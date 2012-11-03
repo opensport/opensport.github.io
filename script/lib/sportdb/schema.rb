@@ -76,9 +76,9 @@ create_table :rounds do |t|
   t.string     :title,    :null => false
   t.string     :title2
   t.integer    :pos,      :null => false
-  ## todo/fix: rename to knockout???
   ## add new table stage/stages for grouping rounds in group rounds and playoff rounds, for example???
-  t.boolean    :playoff,  :null => false, :default => false  # "regular" season (group) games or post-season (playoff) knockouts (k.o's)
+  ## # "regular" season (group) games or post-season (playoff) knockouts (k.o's)
+  t.boolean    :knockout, :null => false, :default => false
   t.datetime   :start_at, :null => false
   t.datetime   :end_at    # todo: make it required e.g. :null => false 
   t.timestamps

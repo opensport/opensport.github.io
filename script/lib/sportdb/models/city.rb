@@ -4,7 +4,7 @@ class City < ActiveRecord::Base
   self.table_name = 'cities'
 
   belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
-  belongs_to :region,  :class_name => 'Region',  :foreign_key => 'country_id'
+  belongs_to :region,  :class_name => 'Region',  :foreign_key => 'region_id'
 
   has_many :teams, :class_name => 'Team', :foreign_key => 'city_id'
 

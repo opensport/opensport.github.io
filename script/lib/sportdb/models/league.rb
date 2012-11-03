@@ -5,10 +5,12 @@ class League < ActiveRecord::Base
   
   ## leagues also used for conferences, world series, cups, etc.
   #
-  ## league (cup/conference/series/etc.) + season (year) = event
+  ## league (or cup/conference/series/etc.) + season (or year) = event
   
   has_many :events
   has_many :seasons, :through => :events
+  
+  belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
 
 
   def self.create_from_ary!( leagues, more_values={} )
