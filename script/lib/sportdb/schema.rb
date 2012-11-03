@@ -157,10 +157,10 @@ create_table :seasons do |t|  ## also used for years
 end
 
 create_table :leagues do |t|  ## also for cups/conferences/tournaments/world series/etc.
-  t.string :key,   :null => false
-  t.string :title, :null => false     # e.g. Premier League, Deutsche Bundesliga, World Cup, Champions League, etc.
-  ## t.references :country,   :null => false   ### todo: create "virtual" country for international leagues e.g. use int? or world (ww?)/europe (eu)/etc. similar? already taken??
-  t.boolean  :club,          :null => false, :default => false  # club teams or national teams?
+  t.string     :key,   :null => false
+  t.string     :title, :null => false     # e.g. Premier League, Deutsche Bundesliga, World Cup, Champions League, etc.
+  t.references :country   ##  optional for now ,   :null => false   ### todo: create "virtual" country for international leagues e.g. use int? or world (ww?)/europe (eu)/etc. similar? already taken??
+  t.boolean    :club,          :null => false, :default => false  # club teams or national teams?
   ## todo: add t.boolean  :national flag? for national teams?
   ## t.boolean  :international, :null => false, :default => false  # national league or international?
   ## t.boolean  :cup     ## or regular season league??

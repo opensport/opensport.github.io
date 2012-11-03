@@ -1,24 +1,48 @@
 # encoding: utf-8
 
-League.create!( key: 'at',     title: 'Österr. Bundesliga', club: true )
-League.create!( key: 'at.cup', title: 'ÖFB Cup',            club: true )
+#############################
+## national leagues & cups
 
-League.create!( key: 'cl', title: 'Champions League', club: true )
-League.create!( key: 'el', title: 'Europa League',    club: true )
-
-League.create!( key: 'de', title: 'Deutsche Bundesliga', club: true )
-League.create!( key: 'en', title: 'English Premier League', club: true )
-League.create!( key: 'ro', title: 'Romania Liga 1', club: true )
-
-League.create!( key: 'mx.apertura', title: 'México Primera División Apertura', club: true )
+at = Country.find_by_key!( 'at' )
+de = Country.find_by_key!( 'de' )
+en = Country.find_by_key!( 'en' )
+ro = Country.find_by_key!( 'ro' )
+mx = Country.find_by_key!( 'mx' )
 
 
+leagues_club = [
+ [ 'at',          'Österr. Bundesliga',     at ],
+ [ 'at.cup',      'ÖFB Cup',                at ],
+ [ 'de',          'Deutsche Bundesliga',    de ],
+ [ 'en',          'English Premier League', en ],
+ [ 'ro',          'Romania Liga 1',         ro ],
+ [ 'mx.apertura', 'México Primera División Apertura', mx ]
+]
 
-League.create!( key: 'euro', title: 'Euro',            club: false )
+League.create_from_ary!( leagues_club, club: true )
 
-League.create!( key: 'wm',   title: 'World Cup',       club: false )   ## change key to world??
-League.create!( key: 'wmq',  title: 'World Cup Quali', club: false )
 
+########################################
+## international leagues w/ football clubs teams
+
+leagues_club_intl = [
+  [ 'cl', 'Champions League' ],
+  [ 'el', 'Europa League' ]
+]
+
+League.create_from_ary!( leagues_club_intl, club: true )
+
+
+#######################################
+## internationl tournaments & cups w/ national teams
+
+leagues_intl = [
+  [ 'euro', 'Euro'      ],
+  [ 'wm',   'World Cup' ],   ## change key to world??
+  [ 'wmq',  'World Cup Quali' ]
+]
+
+League.create_from_ary!( leagues_intl, club: false )
 
 
 

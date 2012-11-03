@@ -5,9 +5,7 @@ class Region < ActiveRecord::Base
   belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
 
   has_many :cities, :class_name => 'City', :foreign_key => 'region_id'
-
-  ## todo: add has_many :teams throuh :cities
-  ## has_many :teams, :class_name => 'Team', :foreign_key => 'city_id'
+  has_many :teams, :through => :cities
 
 
   def self.create_from_ary!( regions, more_values={} )

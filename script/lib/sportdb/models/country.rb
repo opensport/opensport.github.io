@@ -7,6 +7,7 @@ class Country < ActiveRecord::Base
   has_many :regions, :class_name => 'Region', :foreign_key => 'country_id'
   has_many :cities,  :class_name => 'City',   :foreign_key => 'country_id'
   has_many :teams,   :class_name => 'Team',   :foreign_key => 'country_id'
+  has_many :leagues, :class_name => 'League', :foreign_key => 'country_id'
 
   def self.create_from_ary!( countries )
     countries.each do |values|

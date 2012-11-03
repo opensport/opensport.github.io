@@ -6,6 +6,7 @@ class Event < ActiveRecord::Base
   belongs_to :season
   
   has_many :rounds, :order => 'pos'  # all (fix and flex) rounds
+  has_many :games, :through => :rounds
   
   has_many :groups, :order => 'pos'
   
