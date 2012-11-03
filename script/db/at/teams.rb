@@ -15,16 +15,16 @@ bl = [
 ]
 
 ersteliga = [
-  [ 'ksv',       'Kapfenberger SV 1919', 'Erste Liga/Stmk.', 'KSV' ],
-  [ 'altach',    'SCR Altach',           'Erste Liga/Vbg.',  'ALT' ],
-  [ 'austrial',  'SC Austria Lustenau',  'Erste Liga/Vbg.',  'LUS' ],
-  [ 'stpoelten', 'SKN St. Pölten',       'Erste Liga/NÖ',    'POE' ],
-  [ 'linz',      'FC Blau-Weiß Linz',    'Erste Liga/OÖ',    'BWL' ],
-  [ 'groedig',   'SV Grödig',            'Erste Liga/Sbg.',  'GRO' ],
-  [ 'lustenau',  'FC Lustenau 1907|FC Lustenau',     'Erste Liga/Vbg.',  'LUS' ],
-  [ 'vienna',    'Vienna FC 1894',       'Erste Liga/Wien',  'VIE' ],
-  [ 'hartberg',  'TSV Hartberg',         'Erste Liga/Stmk.', 'HAR' ],
-  [ 'horn',      'SV Horn',              'Erste Liga/NÖ',    'HOR' ]
+  [ 'ksv',       'Kapfenberger SV 1919', 'Erste Liga/Stmk.', 'KSV', 'city:kapfenberg'],
+  [ 'altach',    'SCR Altach',           'Erste Liga/Vbg.',  'ALT', 'city:altach' ],
+  [ 'austrial',  'SC Austria Lustenau',  'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
+  [ 'stpoelten', 'SKN St. Pölten',       'Erste Liga/NÖ',    'POE', 'city:stpoelten' ],
+  [ 'linz',      'FC Blau-Weiß Linz',    'Erste Liga/OÖ',    'BWL', 'city:linz' ],
+  [ 'groedig',   'SV Grödig',            'Erste Liga/Sbg.',  'GRO', 'city:groedig' ],
+  [ 'lustenau',  'FC Lustenau 1907|FC Lustenau',     'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
+  [ 'vienna',    'Vienna FC 1894',       'Erste Liga/Wien',  'VIE', 'city:wien' ],
+  [ 'hartberg',  'TSV Hartberg',         'Erste Liga/Stmk.', 'HAR', 'city:hartberg' ],
+  [ 'horn',      'SV Horn',              'Erste Liga/NÖ',    'HOR', 'city:horn' ]
 ]
 
 rlwest = [

@@ -14,6 +14,7 @@ db/at/2012_13/cup.rb
 db/at/2012_13/cup.txt
 db/at/2012_13/cup_fixtures.rb
 db/at/badges.rb
+db/at/cities.rb
 db/at/teams.rb
 db/cities.rb
 db/cl/2011_12/cl.rb
@@ -25,6 +26,7 @@ db/countries.rb
 db/de/2012_13/bl.rb
 db/de/2012_13/bl.txt
 db/de/2012_13/bl_fixtures.rb
+db/de/cities.rb
 db/de/teams.rb
 db/en/2012_13/pl.rb
 db/en/2012_13/pl.txt
@@ -66,6 +68,7 @@ lib/sportdb/models/group.rb
 lib/sportdb/models/group_team.rb
 lib/sportdb/models/league.rb
 lib/sportdb/models/prop.rb
+lib/sportdb/models/region.rb
 lib/sportdb/models/round.rb
 lib/sportdb/models/season.rb
 lib/sportdb/models/team.rb
