@@ -40,8 +40,10 @@ League.create_from_ary!( leagues_club, club: true )
 ## international leagues w/ football clubs teams
 
 leagues_club_intl = [
-  [ 'cl', 'Champions League' ],
-  [ 'el', 'Europa League' ]
+  [ 'cl',       'Champions League' ],
+  [ 'el',       'Europa League' ],
+  [ 'copa',     'Copa Libertadores' ],
+  [ 'copa.sud', 'Copa Sudamericana' ]
 ]
 
 League.create_from_ary!( leagues_club_intl, club: true )

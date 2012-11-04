@@ -64,6 +64,8 @@ countries = [
   [ 'cl', 'Chile',         'CHI' ],
   [ 'py', 'Paraguay',      'PAR' ],
   [ 'uy', 'Uruguay',       'URU' ],
+  [ 'ec', 'Ecuador',       'ECU' ],
+  [ 'co', 'Colombia',      'COL' ],
 
   #####################
   #### north/central america & caribbean islands
