@@ -64,6 +64,8 @@ countries = [
   [ 'cl', 'Chile',         'CHI' ],
   [ 'py', 'Paraguay',      'PAR' ],
   [ 'uy', 'Uruguay',       'URU' ],
+  [ 'ec', 'Ecuador',       'ECU' ],
+  [ 'co', 'Colombia',      'COL' ],
 
   #####################
   #### north/central america & caribbean islands
@@ -72,6 +74,9 @@ countries = [
   [ 'mx', 'Mexiko',        'MEX' ],
   [ 'us', 'United States', 'USA' ],
   [ 'hn', 'Honduras',      'HON' ],
+  [ 'cr', 'Costa Rica',    'CRC' ],
+  [ 'sv', 'El Salvador',   'SLV' ],
+  [ 'gy', 'Guyana',        'GUY' ],
   
   ########################
   ## africa
