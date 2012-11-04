@@ -24,12 +24,16 @@ task :import => [:setup] do
   
   sh "sportdb --include #{DB_ROOT} -e mx.apertura.2012 mx/apertura_2012"
 
+  sh "sportdb --include #{DB_ROOT} -e copa.sud.2012/13 copa/sud_2012_13"
+
   sh "sportdb --include #{DB_ROOT} -e euro.2008 euro/2008"
 
   sh "sportdb --include #{DB_ROOT} -e wm.2010 world/2010"
 
-  sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_c"
-  ### sh "sportdb --include #{DB_ROOT} -e wmq world/quali_2012_13_i"
+  sh "sportdb --include #{DB_ROOT} -e wmq.euro world/quali_2012_13_europe_c"
+  ### sh "sportdb --include #{DB_ROOT} -e wmq.euro world/quali_2012_13_europe_i"
+  
+  sh "sportdb --include #{DB_ROOT} -e wmq.america world/quali_2012_13_america"
 end
 
 ## export from db/generate fixtures
@@ -55,11 +59,6 @@ file "#{DB_ROOT}/en/2012_13/pl_fixtures.rb" => "#{DB_ROOT}/en/2012_13/pl.txt" do
   sh "sportdb --generate -e en.2012/13 #{DB_ROOT}/en/2012_13/pl_fixtures"
 end
 
-file "#{DB_ROOT}/world/quali_2012_13_fixtures.rb" => ["#{DB_ROOT}/world/quali_2012_13_c.txt",
-                                                      "#{DB_ROOT}/world/quali_2012_13_i.txt"
-                                                      ] do
-  sh "sportdb --generate -e wmq #{DB_ROOT}/world/quali_2012_13_fixtures"
-end
 
 
 task :export => [:import,
@@ -67,8 +66,7 @@ task :export => [:import,
                  "#{DB_ROOT}/at/2011_12/bl_fixtures.rb",
                  "#{DB_ROOT}/at/2012_13/cup_fixtures.rb",
                  "#{DB_ROOT}/de/2012_13/bl_fixtures.rb",
-                 "#{DB_ROOT}/en/2012_13/pl_fixtures.rb",
-                 "#{DB_ROOT}/world/quali_2012_13_fixtures.rb"
+                 "#{DB_ROOT}/en/2012_13/pl_fixtures.rb"
                  ] do
   # nothing here
 end
@@ -88,14 +86,17 @@ task :setup => :clean do
   sh "sportdb --create"
   
   ['countries',
+   'cities',
    'leagues',
    'seasons',
+   'at/cities',
    'at/teams',
    'at/badges',
    'at/2011_12/bl',
    'at/2011_12/cup',
    'at/2012_13/bl',
    'at/2012_13/cup',
+   'de/cities',
    'de/teams',
    'de/2012_13/bl',
    'en/teams',
@@ -107,14 +108,17 @@ task :setup => :clean do
    'cl/2012_13/cl',
    'mx/teams',
    'mx/apertura_2012',
+   'copa/teams',
+   'copa/sud_2012_13',
    'euro/teams',
    'euro/2008',
    'euro/2012',
    'world/teams',
    'world/2010',
-   'world/quali_2012_13',
-   'world/quali_2012_13_c',
-##  'world/quali_2012_13_i',
+   'world/quali_2012_13_europe',
+   'world/quali_2012_13_europe_c',
+##  'world/quali_2012_13_europe_i',
+   'world/quali_2012_13_america',
    'nhl/teams'
    ].each do |seed|
     sh "sportdb --include #{DB_ROOT} #{seed}"
