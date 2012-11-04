@@ -51,9 +51,10 @@ League.create_from_ary!( leagues_club_intl, club: true )
 ## internationl tournaments & cups w/ national teams
 
 leagues_intl = [
-  [ 'euro', 'Euro'      ],
-  [ 'wm',   'World Cup' ],   ## change key to world??
-  [ 'wmq',  'World Cup Quali' ]
+  [ 'euro',        'Euro'      ],
+  [ 'wm',          'World Cup' ],   ## change key to world??
+  [ 'wmq.euro',    'World Cup Quali Europe' ],
+  [ 'wmq.america', 'World Cup Quali North/Central America and Caribbean' ]
 ]
 
 League.create_from_ary!( leagues_intl, club: false )

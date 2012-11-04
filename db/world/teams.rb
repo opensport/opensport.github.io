@@ -24,11 +24,17 @@ teams_america1 = [
 mx = Country.find_by_key!( 'mx' )
 us = Country.find_by_key!( 'us' )
 hn = Country.find_by_key!( 'hn' )
+cr = Country.find_by_key!( 'cr' )
+sv = Country.find_by_key!( 'sv' )
+gy = Country.find_by_key!( 'gy' )
 
 teams_america2 = [
   [ 'mex', 'Mexiko',        'MEX', mx ],
   [ 'usa', 'Vereinigte Staaten|United States', 'USA', us ],
-  [ 'hon', 'Honduras',      'HON', hn ]
+  [ 'hon', 'Honduras',      'HON', hn ],
+  [ 'crc', 'Costa Rica',    'CRC', cr ],
+  [ 'slv', 'El Salvador',   'SLV', sv ],
+  [ 'guy', 'Guyana',        'GUY', gy ],
 ]
 
 

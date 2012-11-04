@@ -72,6 +72,9 @@ countries = [
   [ 'mx', 'Mexiko',        'MEX' ],
   [ 'us', 'United States', 'USA' ],
   [ 'hn', 'Honduras',      'HON' ],
+  [ 'cr', 'Costa Rica',    'CRC' ],
+  [ 'sv', 'El Salvador',   'SLV' ],
+  [ 'gy', 'Guyana',        'GUY' ],
   
   ########################
   ## africa

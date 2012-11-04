@@ -11,7 +11,7 @@
 
 
 
-ev = Event.find_by_key!( 'wmq' )
+ev = Event.find_by_key!( 'wmq.euro' )
 
 ger                = Team.find_by_key!( 'ger' )
 irl                = Team.find_by_key!( 'irl' )
@@ -116,4 +116,4 @@ Game.create_from_ary!( games10, r10 )
 Game.create_from_ary!( games11, r11 )
 Game.create_from_ary!( games12, r12 )
 
-Prop.create!( key: 'db.wmq.fixtures.version', value: '1' )
+Prop.create!( key: 'db.wmq.euro.fixtures.version', value: '1' )
