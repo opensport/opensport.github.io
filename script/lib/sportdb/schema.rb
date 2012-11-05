@@ -13,35 +13,17 @@ def self.up
   
   ActiveRecord::Schema.define do
 
-create_table :countries do |t|
-  t.string :title, :null => false
-  t.string :tag,   :null => false  # short three letter tag (FIFA country code)
-  t.string :key,   :null => false
-  t.timestamps
-end
-
-create_table :regions do |t|
-  t.string :title,  :null => false
-  t.string :key,    :null => false
-  t.references :country, :null => false
-  t.timestamps
-end
-
-create_table :cities do |t|
-  t.string :title, :null => false
-  t.string :key,   :null => false
-  t.string :synonyms  # comma separated list of synonyms
-  t.references :country,  :null => false
-  t.references :region    # optional for now
-  t.timestamps
-end
+=begin
+## todo:fix - use if table.exists? why? why not?
 
 create_table :props do |t|
   t.string :key,   :null => false
   t.string :value, :null => false
   t.timestamps
 end
-    
+=end
+
+
 create_table :teams do |t|
   t.string  :title, :null => false
   t.string  :title2
@@ -180,7 +162,7 @@ end
   end # block Schema.define
 
 
-  Prop.create!( key: 'db.schema.version', value: SportDB::VERSION )
+  Prop.create!( key: 'db.schema.sport.version', value: SportDB::VERSION )
 
 end # method up
 

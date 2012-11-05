@@ -1,10 +1,7 @@
+# encoding: utf-8
+
 module SportDB::Models
 
-
-class Prop < ActiveRecord::Base
-    
-end  # class Prop
-  
-  
+  Prop = WorldDB::Models::Prop
 
 end # module SportDB::Models

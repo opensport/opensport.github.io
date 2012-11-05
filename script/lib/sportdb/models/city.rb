@@ -1,50 +1,19 @@
-module SportDB::Models
 
-class City < ActiveRecord::Base
-  self.table_name = 'cities'
+## todo: how to best extends city model?
 
-  belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
-  belongs_to :region,  :class_name => 'Region',  :foreign_key => 'region_id'
+module WorldDB::Models
 
-  has_many :teams, :class_name => 'Team', :foreign_key => 'city_id'
+  # add alias? why? why not? # is there a better way?
+  #  - just include SportDB::Models  - why? why not?
+  #  - just include once in loader??
+  Team = SportDB::Models::Team
 
-  
-  def self.create_from_ary!( cities, more_values={} )
-    cities.each do |values|
-      
-      ## key & title & country required
-      attr = {
-        key: values[0]
-      }
-      
-      ## title (split of optional synonyms)
-      # e.g. FC Bayern Muenchen|Bayern Muenchen|Bayern
-      titles = values[1].split('|')
-      
-      attr[ :title ]    =  titles[0]
-      ## add optional synonyms
-      attr[ :synonyms ] =  titles[1..-1].join('|')  if titles.size > 1
-      
-      attr = attr.merge( more_values )
-      
-      ## check for optional values
-      values[2..-1].each do |value|
-        if value.is_a? Country
-          attr[ :country_id ] = value.id
-        elsif value =~ /^region:/   ## region:
-          value_region_key = value[7..-1]  ## cut off region: prefix
-          value_region = Region.find_by_key!( value_region_key )
-          attr[ :region_id ] = value_region.id
-        else
-          # issue warning: unknown type for value
-        end
-      end
-      
-      City.create!( attr )
-    end # each city
+  class City
+    has_many :teams, :class_name => 'Team', :foreign_key => 'city_id'
   end
+end # module WorldDB::Models
 
-end # class Cities
 
-
-end # module Models::SportDB
+module SportDB::Models
+  City = WorldDB::Models::City
+end # module SportDB::Models
