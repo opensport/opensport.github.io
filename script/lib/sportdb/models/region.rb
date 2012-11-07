@@ -5,7 +5,7 @@
 module WorldDB::Models
 
   class Region
-    has_many :teams, :through => :cities
+    has_many :teams, :class_name => 'SportDB::Models::Team', :through => :cities
   end # class Region
 
 end # module WorldDB::Models
