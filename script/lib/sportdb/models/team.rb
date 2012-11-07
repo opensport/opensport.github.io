@@ -13,9 +13,9 @@ class Team < ActiveRecord::Base
   
   has_many :badges   # Winner, 2nd, Cupsieger, Aufsteiger, Absteiger, etc.
 
-  belongs_to :country, :class_name => 'Country', :foreign_key => 'country_id'
-  belongs_to :city,    :class_name => 'City',    :foreign_key => 'city_id'
-  
+  belongs_to :country, :class_name => 'WorldDB::Models::Country', :foreign_key => 'country_id'
+  belongs_to :city,    :class_name => 'WorldDB::Models::City',    :foreign_key => 'city_id'
+
 
   def self.create_from_ary!( teams, more_values={} )
     teams.each do |values|

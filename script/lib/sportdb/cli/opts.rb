@@ -11,6 +11,15 @@ class Opts
     @create == true
   end
   
+  def world=(boolean)
+    @world = boolean
+  end
+
+  def world?
+    return false if @world.nil?   # default populate world tables flag is false
+    @world == true
+  end
+
 
   def generate=(boolean)
     @generate = boolean

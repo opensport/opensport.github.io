@@ -1,7 +1,6 @@
 ###
 # NB: for local testing run like:
 #
-# 1.8.x: ruby -Ilib -rrubygems lib/sportdb.rb
 # 1.9.x: ruby -Ilib lib/sportdb.rb
 
 # core and stlibs
@@ -16,14 +15,12 @@ require 'erb'
 # rubygems
 
 require 'active_record'   ## todo: add sqlite3? etc.
+require 'worlddb'
 
 
 # our own code
 
-
-module SportDB   # forward reference; more to come later
-end
-
+require 'sportdb/models/forward'
 require 'sportdb/models/badge'
 require 'sportdb/models/city'
 require 'sportdb/models/country'
@@ -100,10 +97,6 @@ module SportDB
       Group.delete_all
       GroupTeam.delete_all
       Round.delete_all
-      Prop.delete_all
-      Country.delete_all
-      Region.delete_all
-      City.delete_all
       Badge.delete_all
       League.delete_all
       Season.delete_all

@@ -8,8 +8,10 @@ class CreateDB
 #  e.g. lets you use Team instead of Models::Team 
   include SportDB::Models
 
-  
+
 def self.up
+
+  WorldDB::CreateDB.up   # tables countries,regions,cities,props
   
   ActiveRecord::Schema.define do
 

@@ -23,20 +23,22 @@ class Runner
     
       cmd.banner = "Usage: sportdb [options]"
 
-      cmd.on( '-e', '--event KEY', 'Event to Load or Generate' ) { |key| opts.event = key; }
-      cmd.on( '-g', '--generate', 'Generate Fixtures from Template' ) { opts.generate = true }
+      cmd.on( '-e', '--event KEY', 'Event to load or generate' ) { |key| opts.event = key; }
+      cmd.on( '-g', '--generate', 'Generate fixtures from template' ) { opts.generate = true }
 
       ## todo: change to different flag??   use -c/--config ???
-      cmd.on( '-c', '--create', 'Create DB Schema' ) { opts.create = true }
+      cmd.on( '-c', '--create', 'Create DB schema' ) { opts.create = true }
+
+      cmd.on( '--world', "Populate world tables with builtin data (version #{WorldDB::VERSION})" ) { opts.world = true }
 
       cmd.on( '--delete', 'Delete all records' ) { opts.delete = true }
       
-      cmd.on( '--load', 'Use Loader for Builtin Sports Data' ) { opts.load = true }
+      cmd.on( '--load', 'Use loader for builtin sports data' ) { opts.load = true }
       
-      cmd.on( '-o', '--output PATH', "Output Path (default is #{opts.output_path})" ) { |path| opts.output_path = path }
+      cmd.on( '-o', '--output PATH', "Output path (default is #{opts.output_path})" ) { |path| opts.output_path = path }
 
       ### todo: in future allow multiple search path??
-      cmd.on( '-i', '--include PATH', "Data Path (default is #{opts.data_path})" ) { |path| opts.data_path = path }
+      cmd.on( '-i', '--include PATH', "Data path (default is #{opts.data_path})" ) { |path| opts.data_path = path }
 
       cmd.on( '-v', '--version', "Show version" ) do
         puts SportDB.banner
@@ -90,11 +92,21 @@ EOS
     ActiveRecord::Base.establish_connection( db_config )
     
     if opts.create?
-      CreateDB.up
+      CreateDB.up  # nb: includes WorldDB:CreateDB.up for tables -> countries,regions,cities,props 
     end
     
     if opts.delete?
       SportDB.delete!
+      WorldDB.delete!  # countries,regions,cities,props
+    end
+    
+    if opts.world?
+      WorldDB.load([
+        'countries',
+        'cities',
+        'at/cities',
+        'de/cities'
+      ])
     end
 
     if opts.event.present?

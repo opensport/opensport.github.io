@@ -4,15 +4,13 @@
 
 module WorldDB::Models
 
-  Team = SportDB::Models::Team
-
   class Region
     has_many :teams, :through => :cities
   end # class Region
 
 end # module WorldDB::Models
 
-
-module SportDB::Models
-  Region = WorldDB::Models::Region
-end # module SportDB::Models
+## moved to models/forward
+# module SportDB::Models
+#  Region = WorldDB::Models::Region
+# end # module SportDB::Models
