@@ -17,7 +17,6 @@ class Runner
 
   attr_reader :logger, :opts
 
-
   def run( args )
     opt=OptionParser.new do |cmd|
     
