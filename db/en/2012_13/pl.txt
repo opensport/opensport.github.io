@@ -133,33 +133,33 @@ Spieltag 9
 
 Spieltag 10
 
-03.11. 13:45 (Sa) Manchester United - Arsenal FC
-03.11. 16:00 (Sa) Fulham FC - Everton FC
-03.11. 16:00 (Sa) Norwich City - Stoke City
-03.11. 16:00 (Sa) Sunderland AFC - Aston Villa
-03.11. 16:00 (Sa) Swansea City - Chelsea FC
-03.11. 16:00 (Sa) Tottenham Hotspur - Wigan Athletic
-03.11. 18:30 (Sa) West Ham United - Manchester City
+03.11. 13:45 (Sa) Manchester United - Arsenal FC  2:1
+03.11. 16:00 (Sa) Fulham FC - Everton FC          2:2
+03.11. 16:00 (Sa) Norwich City - Stoke City       1:0
+03.11. 16:00 (Sa) Sunderland AFC - Aston Villa    0:1
+03.11. 16:00 (Sa) Swansea City - Chelsea FC       1:1
+03.11. 16:00 (Sa) Tottenham Hotspur - Wigan Athletic   0:1
+03.11. 18:30 (Sa) West Ham United - Manchester City    0:0
 
-04.11. 14:30 (So) Queens Park Rangers - Reading FC
-04.11. 17:00 (So) Liverpool FC - Newcastle United
+04.11. 14:30 (So) Queens Park Rangers - Reading FC   1:1
+04.11. 17:00 (So) Liverpool FC - Newcastle United    1:1
 
-05.11. 21:00 (Mo) West Bromwich Albion - Southampton FC
+05.11. 21:00 (Mo) West Bromwich Albion - Southampton FC   2:0
 
 
 Spieltag 11
 
-10.11. 16:00 (Sa) Arsenal FC - Fulham FC
-10.11. 16:00 (Sa) Everton FC - Sunderland AFC
-10.11. 16:00 (Sa) Reading FC - Norwich City
-10.11. 16:00 (Sa) Southampton FC - Swansea City
-10.11. 16:00 (Sa) Stoke City - Queens Park Rangers
-10.11. 16:00 (Sa) Wigan Athletic  - West Bromwich Albion
-10.11. 18:30 (Sa) Aston Villa - Manchester United
+10.11. 16:00 (Sa) Arsenal FC - Fulham FC         3:3
+10.11. 16:00 (Sa) Everton FC - Sunderland AFC    2:1
+10.11. 16:00 (Sa) Reading FC - Norwich City      0:0
+10.11. 16:00 (Sa) Southampton FC - Swansea City  1:1
+10.11. 16:00 (Sa) Stoke City - Queens Park Rangers   1:0
+10.11. 16:00 (Sa) Wigan Athletic  - West Bromwich Albion   1:2
+10.11. 18:30 (Sa) Aston Villa - Manchester United    2:3
 
-11.11. 14:30 (So) Manchester City - Tottenham Hotspur
-11.11. 16:00 (So) Newcastle United - West Ham United
-11.11. 17:00 (So) Chelsea FC - Liverpool FC
+11.11. 14:30 (So) Manchester City - Tottenham Hotspur   2:1
+11.11. 16:00 (So) Newcastle United - West Ham United    0:1
+11.11. 17:00 (So) Chelsea FC - Liverpool FC             1:1
 
 
 Spieltag 12
