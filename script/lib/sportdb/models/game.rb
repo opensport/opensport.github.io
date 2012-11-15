@@ -141,6 +141,8 @@ class Game < ActiveRecord::Base
       game2.save!
     end # each pair
   end
+
+
       
   def calc_toto12x
     if score1.nil? || score2.nil?
@@ -153,6 +155,41 @@ class Game < ActiveRecord::Base
       self.toto12x = '2'
     end
   end
+  
+
+  def over?   # game over?
+    play_at <= Time.now
+  end
+
+  ## fix/todo: already added by ar magic ??? remove code
+  def knockout?
+    knockout == true
+  end
+  
+  def complete?
+    score1.present? && score2.present?
+  end
+
+############# convenience helpers for styling
+##
+
+  def team1_style_class
+    buf = ''
+    ## NB: remove if calc?
+    buf << 'game-team-winner '  if complete? && (score1 >  score2)
+    buf << 'game-team-draw '    if complete? && (score1 == score2)
+    buf
+  end
+  
+  def team2_style_class
+    buf = ''
+    ## NB: remove if calc?
+    buf << 'game-team-winner '  if complete? && (score2 >  score1)
+    buf << 'game-team-draw '    if complete? && (score2 == score1)
+    buf
+  end
+
+
 
 end # class Game
 
