@@ -13,22 +13,22 @@ teams = [
  ['colon',         'CA Colón|Club Atlético Colón (Santa Fe)', ar],
  ['independiente', 'Independiente|CA Independiente de Avellaneda', ar],
 
- ['saopaulo',   'São Paulo FC|São Paulo|Sao Paulo|FC Sao Paulo', br ],
- ['gremio',     'Grêmio Porto Alegre|Grêmio|Gremio Porto Alegre', br ],
- ['palmeiras',  'SE Palmeiras São Paulo|SE Palmeiras|Palmeiras', br],
- ['atleticogo', 'Atlético Goianiense|Atlético GO', br],
+ ['saopaulo',   'São Paulo FC|São Paulo|Sao Paulo|FC Sao Paulo|Sao Paulo SP', br ],
+ ['gremio',     'Grêmio Porto Alegre|Grêmio|Gremio Porto Alegre|Gremio RS', br ],
+ ['palmeiras',  'SE Palmeiras São Paulo|SE Palmeiras|Palmeiras|Palmeiras SP', br],
+ ['atleticogo', 'Atlético Goianiense|Atlético GO|Atletico GO', br],
 
  ['udechile', 'Universidad de Chile|U. de Chile|Club Universidad de Chile', cl ],
  ['cduc',     'Universidad Católica|CDUC|CD Universidad Católica', cl],
 
- ['millonarios', 'Millonarios Bogotá|Millonarios', co ],
+ ['millonarios', 'Millonarios Bogotá|Millonarios|Millonarios FC', co ],
 
  ['quito',       'Deportivo Quito|Club Deportivo Quito', ec],
- ['emelec',      'CS Emelec|Emelec', ec],
- ['loja',        'LDU Loja|LDU de Loja', ec],
- ['barcelonasc', 'Barcelona SC Guayaquil|Barcelona SC', ec],
+ ['emelec',      'CS Emelec|Emelec|Club Sport Emelec', ec],
+ ['loja',        'LDU Loja|LDU de Loja|Liga de Loja', ec],
+ ['barcelonasc', 'Barcelona SC Guayaquil|Barcelona SC|Barcelona Guayaquil', ec],
 
- ['liverpoolfc', 'Liverpool FC Montevideo|Liverpool FC|Liverpool Fútbol Club', uy],
+ ['liverpoolfc', 'Liverpool FC Montevideo|Liverpool FC|Liverpool Fútbol Club|Liverpool Montevideo', uy],
 
  ['porteno',  'Cerro Porteño|Club Cerro Porteño', py ],
 ]

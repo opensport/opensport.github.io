@@ -16,16 +16,16 @@ teams = [
   [ 'leverkusen',  'Bayer 04 Leverkusen|Bay. Leverkusen', 'B04', 'city:leverkusen' ],
   [ 'duesseldorf', 'Fortuna Düsseldorf|F. Düsseldorf',    'F95', 'city:duesseldorf' ],
   [ 'hsv',         'Hamburger SV',                        'HSV', 'city:hamburg' ],
-  [ 'mainz',       '1. FSV Mainz 05',                     'M05', 'city:mainz' ],
-  [ 'mgladbach',   "Borussia M'gladbach|Bor. M'gladbach", 'BMG', 'city:mgladbach' ],
+  [ 'mainz',       '1. FSV Mainz 05|FSV Mainz 05',                     'M05', 'city:mainz' ],
+  [ 'mgladbach',   "Borussia M'gladbach|Bor. M'gladbach|Borussia Mönchengladbach", 'BMG', 'city:mgladbach' ],
   [ 'freiburg',    'SC Freiburg',                         'SCF', 'city:freiburg' ],
   [ 'bremen',      'Werder Bremen',                       'BRE', 'city:bremen' ],
-  [ 'hoffenheim',  '1899 Hoffenheim',                     'HOF', 'city:hoffenheim' ],
+  [ 'hoffenheim',  '1899 Hoffenheim|TSG 1899 Hoffenheim',                     'HOF', 'city:hoffenheim' ],
   [ 'nuernberg',   '1. FC Nürnberg',                      'FCN', 'city:nuernberg' ],
   [ 'stuttgart',   'VfB Stuttgart',                       'VFB', 'city:stuttgart' ],
   [ 'augsburg',    'FC Augsburg',                         'FCA', 'city:augsburg' ],
   [ 'wolfsburg',   'VfL Wolfsburg',                       'WOB', 'city:wolfsburg' ],
-  [ 'fuerth',      'Greuther Fürth',                      'SGF', 'city:fuerth' ]
+  [ 'fuerth',      'Greuther Fürth|SPVGG Greuther Fürth', 'SGF', 'city:fuerth' ]
 ]
 
 de = Country.find_by_key!( 'de' )

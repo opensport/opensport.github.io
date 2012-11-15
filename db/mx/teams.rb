@@ -1,22 +1,22 @@
 # encoding: utf-8
 
 teams = [
- [ 'america',   'Club América',        'city:mexico' ],
+ [ 'america',   'Club América|America de Mexico',        'city:mexico' ],
  [ 'atlante',   'Atlante',             'city:cancun' ],
  [ 'atlas',     'Atlas',               'city:guadalajara' ],
  [ 'chivas',    'Guadalajara Chivas',  'city:guadalajara' ],
  [ 'cruzazul',  'Cruz Azul',           'city:mexico' ],
  [ 'jaguares',  'Jaguares de Chiapas', 'city:tuxtla' ],
- [ 'leon',      'Club León',           'city:leon' ],
- [ 'monarcas',  'Monarcas Morelia',    'city:morelia' ],
- [ 'monterrey', 'Monterrey',           'city:monterrey' ],
+ [ 'leon',      'Club León|Club Leon',           'city:leon' ],
+ [ 'monarcas',  'Monarcas Morelia|Atletico Monarcas Morelia',    'city:morelia' ],
+ [ 'monterrey', 'Monterrey|CF Monterrey ',           'city:monterrey' ],
  [ 'pachuca',   'Pachuca',             'city:pachuca' ],
  [ 'puebla',    'Puebla F.C. ',        'city:puebla' ],
  [ 'queretaro', 'Querétaro F.C.',      'city:queretaro' ],
  [ 'sanluis',   'Club  San Luis',      'city:sanluispotosi' ],
  [ 'slaguna',   'Santos Laguna',       'city:torreon' ],
  [ 'tijuana',   'Club Tijuana',        'city:tijuana' ],
- [ 'toluca',    'Toluca',              'city:toluca' ],
+ [ 'toluca',    'Toluca|Deportivo Toluca',              'city:toluca' ],
  [ 'tigres',    'Tigres UANL',         'city:sannicolas' ],
  [ 'pumas',     'Pumas UNAM',          'city:mexico' ]
 ]
