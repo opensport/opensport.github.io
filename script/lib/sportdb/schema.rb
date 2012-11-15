@@ -1,7 +1,7 @@
 
 module SportDB
 
-class CreateDB
+class CreateDB   ## fix/todo: change to ActiveRecord::Migration why? why not?
 
 
 ## make models available in sportdb module by default with namespace
@@ -11,26 +11,14 @@ class CreateDB
 
 def self.up
 
-  WorldDB::CreateDB.up   # tables countries,regions,cities,props
-  
   ActiveRecord::Schema.define do
-
-=begin
-## todo:fix - use if table.exists? why? why not?
-
-create_table :props do |t|
-  t.string :key,   :null => false
-  t.string :value, :null => false
-  t.timestamps
-end
-=end
 
 
 create_table :teams do |t|
   t.string  :title, :null => false
   t.string  :title2
   t.string  :key,   :null => false   # import/export key
-  t.string  :tag     # make it not null?  - three letter tag (short title)
+  t.string  :code     # make it not null?  - three letter code (short title)
   t.string  :synonyms  # comma separated list of synonyms
   t.references :country,   :null => false
   t.references :city     # NB: city is optional (should be required for clubs e.g. non-national teams)
@@ -49,7 +37,8 @@ create_table :events do |t|
   t.references  :season,   :null => false
   t.datetime    :start_at, :null => false
   t.datetime    :end_at   # make it required???
-  t.timestamps  
+  t.boolean     :team3,    :null => false, :default => true   ## e.g. Champions League has no 3rd place (only 1st and 2nd/final)
+  t.timestamps
 end
 
 add_index :events, :key, :unique => true 

@@ -91,7 +91,8 @@ EOS
     ActiveRecord::Base.establish_connection( db_config )
     
     if opts.create?
-      CreateDB.up  # nb: includes WorldDB:CreateDB.up for tables -> countries,regions,cities,props 
+      WorldDB::CreateDB.up
+      CreateDB.up
     end
     
     if opts.delete?
@@ -100,13 +101,63 @@ EOS
     end
     
     if opts.world?
-      WorldDB.load([
-        'countries',
-        'cities',
-        'at/cities',
-        'de/cities'
-      ])
+      ## todo/fix: make it into a load_all helper
+ 
+    reader = WorldDB::Reader.new
+ 
+  ['africa/countries',
+   'america/countries',
+   'america/br/regions',
+   'america/br/cities',
+   'america/ca/regions',
+   'america/ca/cities',
+   'america/mx/cities',
+   'america/us/regions',
+   'america/us/cities',
+   'america/ve/regions',
+   'america/ve/cities',
+   'asia/countries',
+   'asia/jp/cities',
+   'europe/countries',
+   'europe/at/regions',
+   'europe/at/cities',
+   'europe/be/cities',
+   'europe/by/cities',
+   'europe/ch/cities',
+   'europe/cy/cities',
+   'europe/de/regions',
+   'europe/de/cities',
+   'europe/dk/cities',
+   'europe/en/cities',
+   'europe/es/cities',
+   'europe/fr/cities',
+   'europe/gr/cities',
+   'europe/hr/cities',
+   'europe/it/cities',
+   'europe/nl/cities',
+   'europe/pt/cities',
+   'europe/ro/cities',
+   'europe/ru/cities',
+   'europe/sc/cities',
+   'europe/tr/cities',
+   'europe/ua/cities',
+   'oceania/countries',
+   'oceania/au/cities'
+   ].each do |seed|
+    
+    if seed =~ /countries/
+      reader.load_countries_builtin( seed )
+    elsif seed =~ /\/([a-z]{2})\/cities/
+      reader.load_cities_builtin( $1, seed )
+    elsif seed =~ /\/([a-z]{2})\/regions/
+      reader.load_regions_builtin( $1, seed )
+    else
+      puts "**** unknown fixture type >#{seed}<"
+      # todo/fix: exit w/ error
     end
+      
+    end # each seed
+    end # if opts.world?
 
     if opts.event.present?
       if opts.generate?

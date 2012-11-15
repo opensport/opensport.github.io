@@ -6,7 +6,11 @@ class Team < ActiveRecord::Base
   has_many :home_games, :class_name => 'Game', :foreign_key => 'team1_id'
   has_many :away_games, :class_name => 'Game', :foreign_key => 'team2_id'
 
-  ### fix - how to do it with has_many macro? possible??
+  validates :key,  :format => { :with => /^[a-z]{2,}$/, :message => 'expected two or more lowercase letters a-z' }
+  validates :code, :format => { :with => /^[A-Z_]{3}$/, :message => 'expected three uppercase letters A-Z (and _)' }, :allow_nil => true
+
+
+  ### fix - how to do it with has_many macro? use finder_sql?
   def games
     Game.where( 'team1_id = ? or team2_id = ?', id, id ).order( 'play_at' ).all
   end
@@ -42,8 +46,8 @@ class Team < ActiveRecord::Base
           attr[ :country_id ] = value.id
         elsif value.is_a? City
           attr[ :city_id ] = value.id 
-        elsif value.length == 3   ## assume its a tag (three letters e.g. ITA)
-          attr[ :tag ] = value
+        elsif value =~ /^[A-Z_]{3}$/    ## assume its three letter code (e.g. ITA)
+          attr[ :code ] = value
         elsif value =~ /^city:/   ## city:
           value_city_key = value[5..-1]  ## cut off city: prefix
           value_city = City.find_by_key!( value_city_key )

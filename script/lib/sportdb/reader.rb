@@ -83,10 +83,10 @@ private
       titles += team.synonyms.split('|')  if team.synonyms.present?
 
       ## NB: sort here by length (largest goes first - best match)
-      #  exclude tag and key (key should always go last)
+      #  exclude code and key (key should always go last)
       titles = titles.sort { |left,right| right.length <=> left.length }
       
-      titles << team.tag                  if team.tag.present?
+      titles << team.code                  if team.code.present?
       titles << team.key
             
       @known_teams << [ team.key, titles ]

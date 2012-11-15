@@ -1,10 +1,6 @@
 # encoding: utf-8
 
-de = Country.find_by_key!( 'de' )
-at = Country.find_by_key!( 'at' )
-es = Country.find_by_key!( 'es' )
 fr = Country.find_by_key!( 'fr' )
-en = Country.find_by_key!( 'en' )
 pl = Country.find_by_key!( 'pl' )
 gr = Country.find_by_key!( 'gr' )
 ru = Country.find_by_key!( 'ru' )
@@ -24,26 +20,14 @@ ch = Country.find_by_key!( 'ch' )
 cy = Country.find_by_key!( 'cy' )
 
 
-  ## use en/teams.rb
-  ### [ 'chelsea',      'FC Chelsea',           en ],
-  ### [ 'manunited',   'Manchester United',     en ],
-  ### [ 'arsenal',      'FC Arsenal',           en ],
-  ### [ 'mancity',      'Manchester City',      en ],
-
-  ## use de/teams.rb
-  ## [ 'bayern',    'Bayern München',          de ],
-  ## [ 'schalke',      'FC Schalke 04',        de ],
-  ## [ 'dortmund',     'Borussia Dortmund',    de ],
-
+  #### NB:
+  ## use en/teams.rb for English Teams
+  ## use es/teams.rb for Spanish Teams
+  ## use de/teams.rb for German Teams
+  ## use at/teams.rb for Austrian Teams
+  
 
 teams = [
-  [ 'malaga',       'FC Málaga|Malaga CF|CF Malaga',            es, 'city:malaga' ],
-  [ 'madrid',       'Real Madrid',          es, 'city:madrid' ],
-  [ 'valencia',  'FC Valencia|CF Valencia',             es, 'city:valencia' ],
-  [ 'barcelona', 'FC Barcelona',            es, 'city:barcelona' ],
-  [ 'atletico',  'Atlético Madrid',          es, 'city:madrid' ],
-  [ 'athletic',  'Athletic Bilbao',          es, 'city:bilbao' ],
-
   [ 'porto',        'FC Porto',             pt, 'city:porto' ],
   [ 'benfica',   'Benfica Lissabon|Benfica Lis.',      pt, 'city:lisboa' ],
   [ 'braga',       'Sporting Braga',        pt, 'city:braga' ],
@@ -88,4 +72,3 @@ Team.create_from_ary!( teams, club: true )
 
 
 Prop.create!( key: 'db.cl.teams.version', value: '1' )
-Prop.create!( key: 'db.el.teams.version', value: '1' )
