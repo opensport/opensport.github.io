@@ -10,10 +10,10 @@
 ## nb: three letter codes (tags) taken from official premierleague.com site 
 
 teams = [
-  [ 'chelsea',     'Chelsea|Chelsea FC|FC Chelsea|FC Chelsea ENG',    'CHE', 'city:london' ],
-  [ 'manunited',   'Manchester United|Man Utd|Manchester U. ENG',                 'MUN', 'city:manchester' ],
-  [ 'mancity',     'Manchester City|Man City|Man. City ENG',                  'MCI', 'city:manchester' ],
-  [ 'arsenal',     'Arsenal|Arsenal FC|FC Arsenal|FC Arsenal ENG',             'ARS', 'city:london' ],
+  [ 'chelsea',     'Chelsea|Chelsea FC|FC Chelsea',    'CHE', 'city:london' ],
+  [ 'manunited',   'Manchester United|Man Utd|Manchester U.',                 'MUN', 'city:manchester' ],
+  [ 'mancity',     'Manchester City|Man City|Man. City',                  'MCI', 'city:manchester' ],
+  [ 'arsenal',     'Arsenal|Arsenal FC|FC Arsenal',             'ARS', 'city:london' ],
   [ 'everton',     'Everton|Everton FC|FC Everton',             'EVE', 'city:liverpool' ],
   [ 'tottenham',   'Tottenham Hotspur|Tottenham',               'TOT', 'city:london' ],
   [ 'westbrom',    'West Bromwich Albion|West Brom',            'WBA', 'city:westbrom' ],
