@@ -30,7 +30,7 @@ ersteliga = [
 rlwest = [
   [ 'hard',     'FC Hard',               'Regionalliga West/Vbg.',  'HAR' ],
   [ 'bregenz',  'SC Bregenz',            'Regionalliga West/Vbg.',  'BRE' ],
-  [ 'dornbirn', 'FC Dornbirn 1913',      'Regionalliga West/Vbg.',  'DOR' ],
+  [ 'dornbirn', 'FC Dornbirn 1913|FC Dornbirn',      'Regionalliga West/Vbg.',  'DOR' ],
   [ 'kufstein', 'FC Kufstein',           'Regionalliga West/Tirol', 'KUF' ],
   [ 'wattens',  'WSG Wattens',           'Regionalliga West/Tirol', 'WAT' ],
   [ 'austrias', 'SV Austria Salzburg',   'Regionalliga West/Sbg.',  'AUS' ],
@@ -45,18 +45,18 @@ rlmitte = [
   [ 'austriak',      'SK Austria Klagenfurt|SG Austria Klagenfurt',  'Regionalliga Mitte/Ktn.', 'KLA' ],
   [ 'kalsdorf',      'SC Kalsdorf',            'Regionalliga Mitte/Stmk.', 'KAL' ],
   [ 'gratkorn',      'FC Gratkorn',            'Regionalliga Mitte/Stmk.', 'GRA' ],
-  [ 'allerheiligen', 'SV Allerheiligen',       'Regionalliga Mitte/Stmk.', 'ALL' ],
+  [ 'allerheiligen', 'SV Allerheiligen|USV Allerheiligen',       'Regionalliga Mitte/Stmk.', 'ALL' ],
   [ 'leoben',        'DSV Leoben',             'Regionalliga Mitte/Stmk.', 'LEO' ],
   [ 'gak',           'Grazer AK',              'Regionalliga Mitte/Stmk.', 'GAK' ],
   [ 'pasching',      'FC Pasching',            'Regionalliga Mitte/OÖ',   'PAS' ],
   [ 'voecklamarkt',  'Vöcklamarkt',            'Regionalliga Mitte/OÖ',  'VOE'  ],
-  [ 'stflorian',     'St. Florian',            'Regionalliga Mitte/OÖ',  'STF'  ],
+  [ 'stflorian',     'St. Florian|Union St. Florian',            'Regionalliga Mitte/OÖ',  'STF'  ],
   [ 'wallern',       'Wallern',                'Regionalliga Mitte/OÖ',  'WAL'  ],
   [ 'lask',          'LASK Linz',              'Regionalliga Mitte/OÖ',  'LAS'  ]
 ]
 
 rlost = [
-  [ 'sollenau',    '1. SC Sollenau',       'Regionalliga Ost/OÖ',    'SOL' ],
+  [ 'sollenau',    '1. SC Sollenau|SC Sollenau',       'Regionalliga Ost/OÖ',    'SOL' ],
   [ 'amstetten',   'SKU Amstetten',        'Regionalliga Ost/NÖ',    'AMS' ],
   [ 'retz',        'SV Retz',              'Regionalliga Ost/NÖ',    'RET' ],
   [ 'fac' ,        'FAC Team für Wien',    'Regionalliga Ost/Wien',  'FAC' ],
