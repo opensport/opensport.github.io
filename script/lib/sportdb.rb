@@ -57,7 +57,59 @@ module SportDB
   def self.main
     Runner.new.run(ARGV)
   end
-  
+
+  def self.create
+    CreateDB.up
+  end
+
+  def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
+   ['leagues',
+    'seasons',
+    'at/teams',
+    'at/badges',
+    'at/2011_12/bl',
+    'at/2011_12/cup',
+    'at/2012_13/bl',
+    'at/2012_13/cup',
+    'de/teams',
+    'en/teams',
+    'es/teams',
+    'cl/teams',
+    'cl/badges',
+    'cl/2011_12/cl',
+    'cl/2011_12/el',
+    'cl/2012_13/cl',
+    'de/2012_13/bl',
+    'en/2012_13/pl',
+    'euro/teams',
+    'euro/2008',
+    'euro/2012',
+    'amercia/teams',
+    'america/2011',
+    'copa/teams',
+    'copa/sud_2012_13',
+    'mx/teams',
+    'mx/apertura_2012',
+    'world/teams',
+    'world/2010',
+    'world/quali_2012_13_europe',
+    'world/quali_2012_13_europe_c',
+    'world/quali_2012_13_europe_i',
+    'world/quali_2012_13_america',
+    'nhl/teams']
+  end
+
+  def self.load_all
+    load( fixtures_rb )
+  end
+
+  def self.fixtures_txt
+    []
+  end
+
+  def self.read_all
+    read( fixtures_txt )
+  end
 
   # load built-in (that is, bundled within the gem) named seeds
   # - pass in an array of seed names e.g. [ 'cl/teams', 'cl/2012_13/cl' ] etc.
@@ -109,6 +161,46 @@ module SportDB
     Deleter.new.run
   end # method delete!
 
+
+
+  class Stats
+    include SportDB::Models
+
+    def tables
+      puts "Stats:"
+      puts "  #{Event.count} events  /  #{Round.count} rounds  /  #{Group.count} groups"
+      puts "  #{League.count} leagues  /  #{Season.count} seasons"
+      puts "  #{Country.count} countries / #{Region.count} regions / #{City.count} cities"
+      puts "  #{Team.count} teams"
+      puts "  #{Game.count} games"
+      puts "  #{Badge.count} badges"
+    end
+    
+    def props
+      puts "Props:"
+      Prop.order( 'created_at asc' ).all.each do |prop|
+        puts "  #{prop.key} / #{prop.value} || #{prop.created_at}"
+      end
+    end
+  end
+
+  def self.stats
+    stats = Stats.new
+    stats.tables
+    stats.props
+  end
+
+  def self.tables
+    Stats.new.tables
+  end
+
+  def self.props
+    Stats.new.props
+  end
+
+
+
+
   def self.load_plugins
 
     @found  ||= []
@@ -145,6 +237,6 @@ module SportDB
 end  # module SportDB
 
 
-SportDB::load_plugins
+## SportDB::load_plugins
 
 SportDB.main if __FILE__ == $0

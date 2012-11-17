@@ -11,6 +11,25 @@ class Opts
     @create == true
   end
   
+  def setup=(boolean)
+    @setup = boolean
+  end
+
+  def setup?
+    return false if @setup.nil?   # default setup flag is false
+    @setup == true
+  end
+
+  def sport=(boolean)
+    @sport = boolean
+  end
+
+  def sport?
+    return false if @sport.nil?   # default sport flag is false
+    @sport == true
+  end
+  
+  
   def world=(boolean)
     @world = boolean
   end

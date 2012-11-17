@@ -22,22 +22,27 @@ class Runner
     
       cmd.banner = "Usage: sportdb [options]"
 
-      cmd.on( '-e', '--event KEY', 'Event to load or generate' ) { |key| opts.event = key; }
-      cmd.on( '-g', '--generate', 'Generate fixtures from template' ) { opts.generate = true }
 
-      ## todo: change to different flag??   use -c/--config ???
-      cmd.on( '-c', '--create', 'Create DB schema' ) { opts.create = true }
+      ## NB: reserve -c for use with -c/--config
+      cmd.on( '--create', 'Create DB schema' ) { opts.create = true }
+      cmd.on( '--setup', "Create DB schema 'n' load all builtin data" ) { opts.setup = true }
 
       cmd.on( '--world', "Populate world tables with builtin data (version #{WorldDB::VERSION})" ) { opts.world = true }
+      cmd.on( '--sport', "Populate sport tables with builtin data" ) { opts.sport = true }
+
 
       cmd.on( '--delete', 'Delete all records' ) { opts.delete = true }
       
-      cmd.on( '--load', 'Use loader for builtin sports data' ) { opts.load = true }
-      
-      cmd.on( '-o', '--output PATH', "Output path (default is #{opts.output_path})" ) { |path| opts.output_path = path }
-
       ### todo: in future allow multiple search path??
       cmd.on( '-i', '--include PATH', "Data path (default is #{opts.data_path})" ) { |path| opts.data_path = path }
+
+      cmd.on( '--load', 'Use loader for builtin sports data' ) { opts.load = true }
+
+      cmd.on( '-e', '--event KEY', 'Event to load or generate' ) { |key| opts.event = key; }
+      
+      cmd.on( '-o', '--output PATH', "Output path (default is #{opts.output_path})" ) { |path| opts.output_path = path }
+      cmd.on( '-g', '--generate', 'Generate fixtures from template' ) { opts.generate = true }
+
 
       cmd.on( '-v', '--version', "Show version" ) do
         puts SportDB.banner
@@ -90,112 +95,53 @@ EOS
 
     ActiveRecord::Base.establish_connection( db_config )
     
-    if opts.create?
-      WorldDB::CreateDB.up
-      CreateDB.up
-    end
-    
-    if opts.delete?
-      SportDB.delete!
-      WorldDB.delete!  # countries,regions,cities,props
-    end
-    
-    if opts.world?
-      ## todo/fix: make it into a load_all helper
- 
-    reader = WorldDB::Reader.new
- 
-  ['africa/countries',
-   'america/countries',
-   'america/br/regions',
-   'america/br/cities',
-   'america/ca/regions',
-   'america/ca/cities',
-   'america/mx/cities',
-   'america/us/regions',
-   'america/us/cities',
-   'america/ve/regions',
-   'america/ve/cities',
-   'asia/countries',
-   'asia/jp/cities',
-   'europe/countries',
-   'europe/at/regions',
-   'europe/at/cities',
-   'europe/be/cities',
-   'europe/by/cities',
-   'europe/ch/cities',
-   'europe/cy/cities',
-   'europe/de/regions',
-   'europe/de/cities',
-   'europe/dk/cities',
-   'europe/en/cities',
-   'europe/es/cities',
-   'europe/fr/cities',
-   'europe/gr/cities',
-   'europe/hr/cities',
-   'europe/it/cities',
-   'europe/nl/cities',
-   'europe/pt/cities',
-   'europe/ro/cities',
-   'europe/ru/cities',
-   'europe/sc/cities',
-   'europe/tr/cities',
-   'europe/ua/cities',
-   'oceania/countries',
-   'oceania/au/cities'
-   ].each do |seed|
-    
-    if seed =~ /countries/
-      reader.load_countries_builtin( seed )
-    elsif seed =~ /\/([a-z]{2})\/cities/
-      reader.load_cities_builtin( $1, seed )
-    elsif seed =~ /\/([a-z]{2})\/regions/
-      reader.load_regions_builtin( $1, seed )
+    if opts.setup?
+      WorldDB.create
+      SportDB.create
+      WorldDB.read_all
+      SportDB.load_all  # ruby (.rb) fixtures
+      SportDB.read_all  # plain text (.txt) fixtures
     else
-      puts "**** unknown fixture type >#{seed}<"
-      # todo/fix: exit w/ error
-    end
-      
-    end # each seed
-    end # if opts.world?
 
-    if opts.event.present?
-      if opts.generate?
-        Templater.new( logger ).run( opts, args ) # export/generate ruby fixtures
-      else
-        Reader.new( logger ).run( opts, args )  # load/read plain text fixtures
+      if opts.create?
+        WorldDB.create
+        SportDB.create
       end
-    else
-      Loader.new( logger ).run( opts, args ) # load ruby fixtures
+
+      if opts.world? || opts.sport?
+        if opts.world?
+          WorldDB.delete! if opts.delete?
+          WorldDB.read_all
+        end
+
+        if opts.sport?
+          SportDb.delete! if opts.delete?
+          SportDB.load_all
+          SportDB.read_all
+        end
+      else # no sport or world flag
+        if opts.delete?
+          SportDB.delete!
+          WorldDB.delete!  # countries,regions,cities,tags,taggings,props
+        end
+      end
+
+      if opts.event.present?
+        if opts.generate?
+          Templater.new( logger ).run( opts, args ) # export/generate ruby fixtures
+        else
+          Reader.new( logger ).run( opts, args )  # load/read plain text fixtures
+        end
+      else
+        Loader.new( logger ).run( opts, args ) # load ruby fixtures
+      end
     end
 
-    
-    dump_stats
-    dump_props
+    SportDB.stats
     
     puts 'Done.'
     
   end   # method run
 
-
-  def dump_stats
-    # todo: use %5d or similar to format string
-    puts "Stats:"
-    puts "  #{Event.count} events  /  #{Round.count} rounds  /  #{Group.count} groups"
-    puts "  #{League.count} leagues  /  #{Season.count} seasons"
-    puts "  #{Country.count} countries / #{Region.count} regions / #{City.count} cities"
-    puts "  #{Team.count} teams"
-    puts "  #{Game.count} games"
-    puts "  #{Badge.count} badges"
-  end
-
-  def dump_props
-    # todo: use %5 or similar to format string
-    puts "Props:"
-    Prop.order( 'created_at asc' ).all.each do |prop|
-      puts "  #{prop.key} / #{prop.value} || #{prop.created_at}"
-    end
-  end
-  
 end # class Runner
 end # module SportDB
