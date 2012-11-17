@@ -15,9 +15,9 @@ bl = [
 ]
 
 ersteliga = [
-  [ 'ksv',       'Kapfenberger SV 1919|KSV 1919', 'Erste Liga/Stmk.', 'KSV', 'city:kapfenberg'],
+  [ 'ksv',       'Kapfenberger SV|Kapfenberger SV 1919|KSV 1919', 'Erste Liga/Stmk.', 'KSV', 'city:kapfenberg'],
   [ 'altach',    'SCR Altach',           'Erste Liga/Vbg.',  'ALT', 'city:altach' ],
-  [ 'austrial',  'SC Austria Lustenau',  'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
+  [ 'austrial',  'SC Austria Lustenau|Austria Lustenau',  'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
   [ 'stpoelten', 'SKN St. Pölten',       'Erste Liga/NÖ',    'POE', 'city:stpoelten' ],
   [ 'linz',      'FC Blau-Weiß Linz|FC Blau Weiss Linz',    'Erste Liga/OÖ',    'BWL', 'city:linz' ],
   [ 'groedig',   'SV Grödig',            'Erste Liga/Sbg.',  'GRO', 'city:groedig' ],

@@ -84,7 +84,7 @@ module SportDB
     'euro/teams',
     'euro/2008',
     'euro/2012',
-    'amercia/teams',
+    'america/teams',
     'america/2011',
     'copa/teams',
     'copa/sud_2012_13',
@@ -104,7 +104,18 @@ module SportDB
   end
 
   def self.fixtures_txt
-    []
+    [['at.2011/12',       'at/2011_12/bl'],
+     ['at.2012/13',       'at/2012_13/bl'],
+     ['at.cup.2012/13',   'at/2012_13/cup'],
+     ['de.2012/13',       'de/2012_13/bl'],
+     ['en.2012/13',       'en/2012_13/pl'],
+     ['america.2011',     'america/2011'],
+     ['mx.apertura.2012', 'mx/apertura_2012'],
+     ['copa.sud.2012/13', 'copa/sud_2012_13'],
+     ['euro.2008',        'euro/2008'],
+     ['wm.2010',          'world/2010'],
+     ['wmq.euro',         'world/quali_2012_13_europe_c'],
+     ['wmq.america',      'world/quali_2012_13_america']]
   end
 
   def self.read_all
@@ -158,9 +169,9 @@ module SportDB
   
   # delete ALL records (use with care!)
   def self.delete!
+    puts '*** deleting sport table records/data...'
     Deleter.new.run
   end # method delete!
-
 
 
   class Stats
@@ -174,6 +185,8 @@ module SportDB
       puts "  #{Team.count} teams"
       puts "  #{Game.count} games"
       puts "  #{Badge.count} badges"
+      
+      ## todo: add tags / taggings from worlddb
     end
     
     def props

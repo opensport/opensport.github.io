@@ -120,27 +120,27 @@
 
 10. Spieltag
 
-02.11. 20:30  E. Frankfurt      -     Greuther Fürth
-03.11. 15:30  Hannover 96      -     FC Augsburg
-03.11. 15:30  1. FC Nürnberg      -     VfL Wolfsburg
-03.11. 15:30  1899 Hoffenheim      -     FC Schalke 04
-03.11. 15:30  Bor. M'gladbach      -     SC Freiburg
-03.11. 15:30  Bor. Dortmund      -     VfB Stuttgart
-03.11. 18:30  Hamburger SV      -     Bayern München
-04.11. 15:30  Bay. Leverkusen      -     F. Düsseldorf
-04.11. 17:30  Werder Bremen      -     1. FSV Mainz 05
+02.11. 20:30  E. Frankfurt      1:1     Greuther Fürth
+03.11. 15:30  Hannover 96       2:0    FC Augsburg
+03.11. 15:30  1. FC Nürnberg      1:0     VfL Wolfsburg
+03.11. 15:30  1899 Hoffenheim      3:2     FC Schalke 04
+03.11. 15:30  Bor. M'gladbach      1:1     SC Freiburg
+03.11. 15:30  Bor. Dortmund      0:0     VfB Stuttgart
+03.11. 18:30  Hamburger SV       0:3     Bayern München
+04.11. 15:30  Bay. Leverkusen      3:2     F. Düsseldorf
+04.11. 17:30  Werder Bremen      2:1     1. FSV Mainz 05
 
 11. Spieltag
 
-09.11. 20:30  1. FSV Mainz 05      -     1. FC Nürnberg
-10.11. 15:30  FC Schalke 04      -     Werder Bremen
-10.11. 15:30  VfL Wolfsburg      -     Bay. Leverkusen
-10.11. 15:30  FC Augsburg      -     Bor. Dortmund
-10.11. 15:30  SC Freiburg      -     Hamburger SV
-10.11. 15:30  Bayern München      -     E. Frankfurt
-10.11. 15:30  F. Düsseldorf      -     1899 Hoffenheim
-11.11. 17:30  VfB Stuttgart      -     Hannover 96
-11.11. 17:30  Greuther Fürth      -     Bor. M'gladbach
+09.11. 20:30  1. FSV Mainz 05      2:1     1. FC Nürnberg
+10.11. 15:30  FC Schalke 04      2:1     Werder Bremen
+10.11. 15:30  VfL Wolfsburg      3:1     Bay. Leverkusen
+10.11. 15:30  FC Augsburg       1:3     Bor. Dortmund
+10.11. 15:30  SC Freiburg      0:0     Hamburger SV
+10.11. 15:30  Bayern München      2:0     E. Frankfurt
+10.11. 15:30  F. Düsseldorf      1:1     1899 Hoffenheim
+11.11. 17:30  VfB Stuttgart      2:4     Hannover 96
+11.11. 17:30  Greuther Fürth      2:4     Bor. M'gladbach
 
 12. Spieltag
 

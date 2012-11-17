@@ -4,103 +4,103 @@
 
 1 Runde / Jornada 1  // 20, 21 y 22 de julio
 
-jaguares  - tigres    2012-07-20 19:30
-tijuana   - puebla    2012-07-20 21:30
-cruzazul  - monarcas  2012-07-21 17:00
-queretaro - leon      2012-07-21 17:00
-slaguna   - sanluis   2012-07-21 19:00
-monterrey - america   2012-07-21 19:00
-atlas     - pumas     2012-07-21 21:00
-toluca    - chivas    2012-07-22 12:00
-atlante   - pachuca   2012-07-22 18:00
+jaguares  0:4 tigres    2012-07-20 19:30
+tijuana   2:0 puebla    2012-07-20 21:30
+cruzazul  0:0 monarcas  2012-07-21 17:00
+queretaro 0:2 leon      2012-07-21 17:00
+slaguna   2:1 sanluis   2012-07-21 19:00
+monterrey 0:0 america   2012-07-21 19:00
+atlas     1:1 pumas     2012-07-21 21:00
+toluca    2:1 chivas    2012-07-22 12:00
+atlante   0:0 pachuca   2012-07-22 18:00
 
 
 2 Runde / Jornada 2   // 27, 28 y 29 de julio
 
-monarcas  - monterrey   2012-07-27 19:30
-leon      - tijuana     2012-07-27 21:30
-america   - jaguares    2012-07-28 17:00
-pachuca   - atlas       2012-07-28 19:00
-tigres    - atlante     2012-07-28 19:00
-sanluis   - cruzazul    2012-07-28 21:00
-puebla    - toluca      2012-07-29 12:00
-pumas     - queretaro   2012-07-29 12:00
-chivas    - slaguna     2012-07-29 17:00
+monarcas  1:0 monterrey   2012-07-27 19:30
+leon      4:0 tijuana     2012-07-27 21:30
+america   4:2 jaguares    2012-07-28 17:00
+pachuca   0:3 atlas       2012-07-28 19:00
+tigres    2:1 atlante     2012-07-28 19:00
+sanluis   1:2 cruzazul    2012-07-28 21:00
+puebla    1:3 toluca      2012-07-29 12:00
+pumas     3:0 queretaro   2012-07-29 12:00
+chivas    0:1 slaguna     2012-07-29 17:00
 
 
 3 Runde / Jornada 3   // 3, 4, y 5 de agosto
 
-slaguna    -  puebla    2012-08-03 19:00
-tijuana    -  pumas     2012-08-03 19:30
-monarcas   -  sanluis   2012-08-03 21:30
-cruzazul   -  chivas    2012-08-04 17:00
-queretaro  -  pachuca   2012-08-04 17:00
-monterrey  -  jaguares  2012-08-04 19:00
-atlas      -  tigres    2012-08-04 21:00
-toluca     -  leon      2012-08-05 12:00
-atlante    -  america   2012-08-05 18:00
+slaguna    2:2  puebla    2012-08-03 19:00
+tijuana    1:0  pumas     2012-08-03 19:30
+monarcas   3:3  sanluis   2012-08-03 21:30
+cruzazul   0:0  chivas    2012-08-04 17:00
+queretaro  0:1  pachuca   2012-08-04 17:00
+monterrey  2:1  jaguares  2012-08-04 19:00
+atlas      0:0  tigres    2012-08-04 21:00
+toluca     2:1  leon      2012-08-05 12:00
+atlante    2:2  america   2012-08-05 18:00
 
 
 4 Runde / Jornada 4   // 10, 11 y 12 de agosto
 
-jaguares   - atlante    2012-08-10 19:30
-leon       - slaguna    2012-08-10 21:30
-america    - atlas      2012-08-11 17:00
-pachuca    - tijuana    2012-08-11 19:00
-tigres     - queretaro  2012-08-11 19:00
-sanluis    - monterrey  2012-08-11 21:00
-puebla     - cruzazul   2012-08-12 12:00
-pumas      - toluca     2012-08-12 12:00
-chivas     - monarcas   2012-08-12 17:00
+jaguares   1:2 atlante    2012-08-10 19:30
+leon       3:0 slaguna    2012-08-10 21:30
+america    1:1 atlas      2012-08-11 17:00
+pachuca    2:2 tijuana    2012-08-11 19:00
+tigres     2:2 queretaro  2012-08-11 19:00
+sanluis    1:1 monterrey  2012-08-11 21:00
+puebla     0:1 cruzazul   2012-08-12 12:00
+pumas      1:2 toluca     2012-08-12 12:00
+chivas     1:1 monarcas   2012-08-12 17:00
 
 
 5 Runde / Jornada 5   // 17, 18 y 19 de agosto
 
-tijuana    - tigres    2012-08-17 19:30
-monarcas   - puebla    2012-08-17 21:30
-cruzazul   - leon      2012-08-17 21:30
-queretaro  - america   2012-08-18 17:00
-slaguna    - pumas     2012-08-18 19:00
-monterrey  - atlante   2012-08-18 19:00
-sanluis    - chivas    2012-08-18 21:00
-atlas      - jaguares  2012-08-18 21:00
-toluca     - pachuca   2012-08-19 12:00
+tijuana    2:1 tigres    2012-08-17 19:30
+monarcas   3:0 puebla    2012-08-17 21:30
+cruzazul   1:1 leon      2012-08-17 21:30
+queretaro  0:4 america   2012-08-18 17:00
+slaguna    1:2 pumas     2012-08-18 19:00
+monterrey  1:1 atlante   2012-08-18 19:00
+sanluis    0:1 chivas    2012-08-18 21:00
+atlas      1:1 jaguares  2012-08-18 21:00
+toluca     1:0 pachuca   2012-08-19 12:00
 
 
 6 Runde / Jornada 6   // 24, 25 y 26 de agosto
 
-jaguares   - queretaro  2012-08-24 19:30
-leon       - monarcas   2012-08-24 21:30
-america    - tijuana    2012-08-25 17:00
-pachuca    - slaguna    2012-08-25 19:00
-tigres     - toluca     2012-08-25 19:00
-puebla     - sanluis    2012-08-26 12:00
-pumas      - cruzazul   2012-08-26 12:00
-chivas     - monterrey  2012-08-26 17:00
-atlante    - atlas      2012-08-26 18:00
+jaguares   2:1 queretaro  2012-08-24 19:30
+leon       1:3 monarcas   2012-08-24 21:30
+america    0:1 tijuana    2012-08-25 17:00
+pachuca    0:0 slaguna    2012-08-25 19:00
+tigres     1:1 toluca     2012-08-25 19:00
+puebla     1:0 sanluis    2012-08-26 12:00
+pumas      0:1 cruzazul   2012-08-26 12:00
+chivas     1:2 monterrey  2012-08-26 17:00
+atlante    1:0 atlas      2012-08-26 18:00
 
 
 7 Runde / Jornada 7   // 31 de agosto, 1 y 2 de septiembre
 
-tijuana   - jaguares  2012-08-31 19:30
-monarcas  - pumas     2012-08-31 21:30
-cruzazul  - pachuca   2012-09-01 17:00
-queretaro - atlante   2012-09-01 17:00
-slaguna   - tigres    2012-09-01 19:00
-monterrey - atlas     2012-09-01 19:00
-sanluis   - leon      2012-09-01 21:00
-toluca    - america   2012-09-02 12:00
-chivas    - puebla    2012-09-02 17:00
+tijuana   2:0 jaguares  2012-08-31 19:30
+monarcas  0:1 pumas     2012-08-31 21:30
+cruzazul  1:1 pachuca   2012-09-01 17:00
+queretaro 0:1 atlante   2012-09-01 17:00
+slaguna   3:1 tigres    2012-09-01 19:00
+monterrey 1:1 atlas     2012-09-01 19:00
+sanluis   0:2 leon      2012-09-01 21:00
+toluca    1:1 america   2012-09-02 12:00
+chivas    1:1 puebla    2012-09-02 17:00
 
 
 8 Runde / Jornada 8   // 14, 15 y 16 de septiembre
 
-jaguares  - toluca     2012-09-14 19:30
-pachuca   - monarcas   2012-09-14 19:30
-leon      - chivas     2012-09-14 21:30
-america   - slaguna    2012-09-15 17:00
-tigres    - cruzazul   2012-09-15 19:00
-atlas     - queretaro  2012-09-15 21:00
-puebla    - monterrey  2012-09-16 12:00
-pumas     - sanluis    2012-09-16 12:00
-atlante   - tijuana    2012-09-16 18:00
+jaguares  2:0 toluca     2012-09-14 19:30
+pachuca   3:2 monarcas   2012-09-14 19:30
+leon      1:2 chivas     2012-09-14 21:30
+america   2:0 slaguna    2012-09-15 17:00
+tigres    2:0 cruzazul   2012-09-15 19:00
+atlas     0:0 queretaro  2012-09-15 21:00
+puebla    2:3 monterrey  2012-09-16 12:00
+pumas     0:1 sanluis    2012-09-16 12:00
+atlante   1:2 tijuana    2012-09-16 18:00

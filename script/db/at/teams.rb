@@ -15,14 +15,14 @@ bl = [
 ]
 
 ersteliga = [
-  [ 'ksv',       'Kapfenberger SV 1919', 'Erste Liga/Stmk.', 'KSV', 'city:kapfenberg'],
+  [ 'ksv',       'Kapfenberger SV|Kapfenberger SV 1919|KSV 1919', 'Erste Liga/Stmk.', 'KSV', 'city:kapfenberg'],
   [ 'altach',    'SCR Altach',           'Erste Liga/Vbg.',  'ALT', 'city:altach' ],
-  [ 'austrial',  'SC Austria Lustenau',  'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
+  [ 'austrial',  'SC Austria Lustenau|Austria Lustenau',  'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
   [ 'stpoelten', 'SKN St. Pölten',       'Erste Liga/NÖ',    'POE', 'city:stpoelten' ],
-  [ 'linz',      'FC Blau-Weiß Linz',    'Erste Liga/OÖ',    'BWL', 'city:linz' ],
+  [ 'linz',      'FC Blau-Weiß Linz|FC Blau Weiss Linz',    'Erste Liga/OÖ',    'BWL', 'city:linz' ],
   [ 'groedig',   'SV Grödig',            'Erste Liga/Sbg.',  'GRO', 'city:groedig' ],
   [ 'lustenau',  'FC Lustenau 1907|FC Lustenau',     'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
-  [ 'vienna',    'Vienna FC 1894',       'Erste Liga/Wien',  'VIE', 'city:wien' ],
+  [ 'vienna',    'Vienna FC 1894|First Vienna FC 1894',       'Erste Liga/Wien',  'VIE', 'city:wien' ],
   [ 'hartberg',  'TSV Hartberg',         'Erste Liga/Stmk.', 'HAR', 'city:hartberg' ],
   [ 'horn',      'SV Horn',              'Erste Liga/NÖ',    'HOR', 'city:horn' ]
 ]
@@ -30,7 +30,7 @@ ersteliga = [
 rlwest = [
   [ 'hard',     'FC Hard',               'Regionalliga West/Vbg.',  'HAR' ],
   [ 'bregenz',  'SC Bregenz',            'Regionalliga West/Vbg.',  'BRE' ],
-  [ 'dornbirn', 'FC Dornbirn 1913',      'Regionalliga West/Vbg.',  'DOR' ],
+  [ 'dornbirn', 'FC Dornbirn 1913|FC Dornbirn',      'Regionalliga West/Vbg.',  'DOR' ],
   [ 'kufstein', 'FC Kufstein',           'Regionalliga West/Tirol', 'KUF' ],
   [ 'wattens',  'WSG Wattens',           'Regionalliga West/Tirol', 'WAT' ],
   [ 'austrias', 'SV Austria Salzburg',   'Regionalliga West/Sbg.',  'AUS' ],
@@ -42,21 +42,21 @@ rlwest = [
 rlmitte = [
   [ 'vsv' ,          'Villacher SV',           'Regionalliga Mitte/Ktn.', 'VSV' ],
   [ 'klagenfurt',    'SAK Celovec/Klagenfurt', 'Regionalliga Mitte/Ktn.', 'CEL' ],
-  [ 'austriak',      'SK Austria Klagenfurt',  'Regionalliga Mitte/Ktn.', 'KLA' ],
+  [ 'austriak',      'SK Austria Klagenfurt|SG Austria Klagenfurt',  'Regionalliga Mitte/Ktn.', 'KLA' ],
   [ 'kalsdorf',      'SC Kalsdorf',            'Regionalliga Mitte/Stmk.', 'KAL' ],
   [ 'gratkorn',      'FC Gratkorn',            'Regionalliga Mitte/Stmk.', 'GRA' ],
-  [ 'allerheiligen', 'SV Allerheiligen',       'Regionalliga Mitte/Stmk.', 'ALL' ],
+  [ 'allerheiligen', 'SV Allerheiligen|USV Allerheiligen',       'Regionalliga Mitte/Stmk.', 'ALL' ],
   [ 'leoben',        'DSV Leoben',             'Regionalliga Mitte/Stmk.', 'LEO' ],
   [ 'gak',           'Grazer AK',              'Regionalliga Mitte/Stmk.', 'GAK' ],
   [ 'pasching',      'FC Pasching',            'Regionalliga Mitte/OÖ',   'PAS' ],
   [ 'voecklamarkt',  'Vöcklamarkt',            'Regionalliga Mitte/OÖ',  'VOE'  ],
-  [ 'stflorian',     'St. Florian',            'Regionalliga Mitte/OÖ',  'STF'  ],
+  [ 'stflorian',     'St. Florian|Union St. Florian',            'Regionalliga Mitte/OÖ',  'STF'  ],
   [ 'wallern',       'Wallern',                'Regionalliga Mitte/OÖ',  'WAL'  ],
   [ 'lask',          'LASK Linz',              'Regionalliga Mitte/OÖ',  'LAS'  ]
 ]
 
 rlost = [
-  [ 'sollenau',    '1. SC Sollenau',       'Regionalliga Ost/OÖ',    'SOL' ],
+  [ 'sollenau',    '1. SC Sollenau|SC Sollenau',       'Regionalliga Ost/OÖ',    'SOL' ],
   [ 'amstetten',   'SKU Amstetten',        'Regionalliga Ost/NÖ',    'AMS' ],
   [ 'retz',        'SV Retz',              'Regionalliga Ost/NÖ',    'RET' ],
   [ 'fac' ,        'FAC Team für Wien',    'Regionalliga Ost/Wien',  'FAC' ],
@@ -81,7 +81,7 @@ misc = [
   [ 'ardagger',      'Ardagger SCU',          'Landesliga/NÖ',    'ARD' ],
   [ 'rohrendorf',    'SC Rohrendorf',         '2. Landesliga West/NÖ', 'ROH' ],
   [ 'heiligenkreuz', 'SV Heiligenkreuz',      '2. Liga Süd/NÖ',   'HEI' ],
-  [ 'viktoria',      'Wiener Viktoria',       'Wiener Stadtliga', 'VIK' ],
+  [ 'viktoria',      'Wiener Viktoria|SC Wiener Viktoria',       'Wiener Stadtliga', 'VIK' ],
   [ 'juniors',       'FC RB Juniors Salzburg' ]
 ]
 

@@ -115,7 +115,7 @@ EOS
         end
 
         if opts.sport?
-          SportDb.delete! if opts.delete?
+          SportDB.delete! if opts.delete?
           SportDB.load_all
           SportDB.read_all
         end
