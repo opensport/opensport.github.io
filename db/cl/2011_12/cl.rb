@@ -9,7 +9,8 @@ cl = Event.create!( key:      'cl.2011/12',
                     title:    'Champions League 2011/12',
                     start_at: Time.cet( '2011-10-10 17:00' ),
                     league:   League.find_by_key!('cl'),
-                    season:   Season.find_by_key!('2011/12'))
+                    season:   Season.find_by_key!('2011/12'),
+                    team3: false )
 
 
 inter     = Team.find_by_key!( 'inter' )

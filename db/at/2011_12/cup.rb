@@ -10,7 +10,8 @@ ofb = Event.create!( key:   'at.cup.2011/12',
                      title: 'ÖFB Cup 2011/12',
                      start_at: Time.cet( '2011-10-10 17:00' ),
                      league:   League.find_by_key!('at.cup'),
-                     season:   Season.find_by_key!('2011/12'))
+                     season:   Season.find_by_key!('2011/12'),
+                     team3: false )  # no game for 3rd/4th place
 
 
 sturm       = Team.find_by_key!( 'sturm' )

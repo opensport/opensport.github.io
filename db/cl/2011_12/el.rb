@@ -9,7 +9,8 @@ el = Event.create!( key: 'el.2011/12',
                     title: 'Europa League 2011/12',
                     start_at: Time.cet( '2011-10-10 17:00' ),
                     league:  League.find_by_key!('el'),
-                    season:  Season.find_by_key!('2011/12'))
+                    season:  Season.find_by_key!('2011/12'),
+                    team3: false )
 
 az       = Team.find_by_key!( 'az' )
 valencia = Team.find_by_key!( 'valencia' )

@@ -19,6 +19,27 @@ class Event < ActiveRecord::Base
       self.teams << team
     end
   end
+  
+  ###########################
+  ## convenience helpers
+
+  def self.find_at_2012_13!
+    self.find_by_key!( 'at.2012/13' )
+  end
+  
+  def self.find_at_cup_2012_13!
+    self.find_by_key!( 'at.cup.2012/13' )
+  end
+  
+  def self.find_cl_2012_13!
+    self.find_by_key!( 'cl.2012/13' )
+  end
+  
+  def self.find_euro_2012!
+    self.find_by_key!( 'euro.2012')
+  end
+  
+
 
 end # class Event
 

@@ -6,8 +6,10 @@ class Team < ActiveRecord::Base
   has_many :home_games, :class_name => 'Game', :foreign_key => 'team1_id'
   has_many :away_games, :class_name => 'Game', :foreign_key => 'team2_id'
 
+  REGEX_CODE = /^[A-Z][A-Z0-9_]{2}$/  # must start w/ letter a-z (2 n 3 can be number or underscore _)
+
   validates :key,  :format => { :with => /^[a-z]{2,}$/, :message => 'expected two or more lowercase letters a-z' }
-  validates :code, :format => { :with => /^[A-Z_]{3}$/, :message => 'expected three uppercase letters A-Z (and _)' }, :allow_nil => true
+  validates :code, :format => { :with => REGEX_CODE, :message => 'expected three uppercase letters A-Z (and _)' }, :allow_nil => true
 
 
   ### fix - how to do it with has_many macro? use finder_sql?
@@ -46,7 +48,7 @@ class Team < ActiveRecord::Base
           attr[ :country_id ] = value.id
         elsif value.is_a? City
           attr[ :city_id ] = value.id 
-        elsif value =~ /^[A-Z_]{3}$/    ## assume its three letter code (e.g. ITA)
+        elsif value =~ REGEX_CODE   ## assume its three letter code (e.g. ITA or S04 etc.)
           attr[ :code ] = value
         elsif value =~ /^city:/   ## city:
           value_city_key = value[5..-1]  ## cut off city: prefix
