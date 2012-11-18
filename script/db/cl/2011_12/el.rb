@@ -5,11 +5,9 @@
 #################################
 ##  Europa League 2012
 
-el = Event.create!( key: 'el.2011/12',
-                    title: 'Europa League 2011/12',
-                    start_at: Time.cet( '2011-10-10 17:00' ),
-                    league:  League.find_by_key!('el'),
+el = Event.create!( league:  League.find_by_key!('el'),
                     season:  Season.find_by_key!('2011/12'),
+                    start_at: Time.cet( '2011-10-10 17:00' ),
                     team3: false )
 
 az       = Team.find_by_key!( 'az' )
@@ -63,5 +61,5 @@ Game.create_knockout_pairs_from_ary!( games_el8, el8, el8_2 )
 Game.create_knockout_pairs_from_ary!( games_el4, el4, el4_2 )
 Game.create_knockouts_from_ary!( games_el1,  el1 )
 
-
-Prop.create!( key: 'db.el.2011/12.version', value: '1' )
+## The End
+#################

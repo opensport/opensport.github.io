@@ -162,5 +162,5 @@ Game.create_knockouts_from_ary!( games_euro8, euro8 )
 Game.create_knockouts_from_ary!( games_euro4, euro4 )
 Game.create_knockouts_from_ary!( games_euro1, euro1 )
 
-
-Prop.create!( key: 'db.euro.2012.version', value: '1' )
+## The End
+#################

@@ -42,6 +42,11 @@ class Loader
     code = File.read( path )
     
     load_fixtures_worker( code )
+    
+    ### fix: 
+    ## for loaded from fs use filestat? for version - why? why not?
+
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "1" )
   end
   
   def load_fixtures_builtin( name ) # load from gem (built-in)
@@ -52,10 +57,32 @@ class Loader
     code = File.read( path )
     
     load_fixtures_worker( code )
+
+    ## for builtin fixtures use VERSION of gem
+
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "sport.#{SportDB::VERSION}" )
   end
   
 
 private
+
+  ##
+  # fix/todo: share helper w/ other readers
+  
+  # helper
+  #   change at/2012_13/bl           to at.2012/13.bl
+  #    or    quali_2012_13_europe_c  to quali.2012/13.europe.c
+  
+  def fixture_name_to_prop_key( name )
+    prop_key = name.gsub( '/', '.' )
+    prop_key = prop_key.gsub( /(\d{4})_(\d{2})/, '\1/\2' )  # 2012_13 => 2012/13
+    prop_key = prop_key.gsub( '_', '.' )
+    prop_key
+  end
+
+
+
+
   def load_fixtures_worker( code )
     
     self.class_eval( code )
@@ -66,13 +93,6 @@ private
     #   include SportDB::Models
     #  <code here>
     # end
-    
-    
-    # require path
-    # require "#{Dir.pwd}/db/#{seed}.rb"
-
-    # Prop.create!( :key => "db.#{name}.version", :value => SportDB::VERSION )
-    
   end
   
 end # class Loader

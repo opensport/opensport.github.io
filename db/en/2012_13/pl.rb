@@ -35,5 +35,5 @@ team_keys_pl = [
 
 pl.add_teams_from_ary!( team_keys_pl )
 
-
-Prop.create!( key: 'db.en.2012/13.version', value: '1' )
+## The End
+#################

@@ -89,4 +89,5 @@ at = Country.find_by_key!( 'at' )
 
 Team.create_from_ary!( bl+ersteliga+rlwest+rlmitte+rlost+misc, club: true, country: at )
 
-Prop.create!( key: 'db.at.teams.version', value: '1' )
+## The End
+#################

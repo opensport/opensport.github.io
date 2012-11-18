@@ -48,5 +48,5 @@ teams = teams_africa + teams_asia + teams_oceania
 
 Team.create_from_ary!( teams, national: true )
 
-
-Prop.create!( key: 'db.world.teams.version', value: '1' )
+## The End
+#################

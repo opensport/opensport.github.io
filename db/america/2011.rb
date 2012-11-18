@@ -45,4 +45,5 @@ copab.add_teams_from_ary!( ['bra', 'par', 'ven', 'ecu' ] )
 copac.add_teams_from_ary!( ['uru', 'chi', 'per', 'mex' ] )
 
 
-Prop.create!( key: 'db.america.2011.version', value: '1' )
+## The End
+#################

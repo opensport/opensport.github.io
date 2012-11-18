@@ -107,5 +107,5 @@ cup.add_teams_from_ary!(
   team_keys_rlo +
   team_keys_misc )
 
-
-Prop.create!( key: 'db.at.cup.2012/13.version', value: '1' )
+## The End
+#################

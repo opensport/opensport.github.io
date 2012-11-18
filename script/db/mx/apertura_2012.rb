@@ -3,11 +3,9 @@
 # note: timezone for games (play_at) is *always* CST (central standard time / -6 hours ??)
 
 
-mx = Event.create!( key: 'mx.apertura.2012',
-                    title: 'México Primera División Apertura 2012',
-                    start_at: Time.cst('2012-07-20 00:00'),
-                    league: League.find_by_key!( 'mx.apertura'),
-                    season: Season.find_by_key!( '2012'))
+mx = Event.create!( league: League.find_by_key!( 'mx.apertura' ),
+                    season: Season.find_by_key!( '2012'),
+                    start_at: Time.cst('2012-07-20 00:00') )
 
 team_keys_mx = [
   'america',
@@ -32,4 +30,6 @@ team_keys_mx = [
 
 mx.add_teams_from_ary!( team_keys_mx )
 
-Prop.create!( key: 'db.mx.apertura.2012.version', value: '1' )
+
+## The End
+#################

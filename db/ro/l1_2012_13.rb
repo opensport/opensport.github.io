@@ -133,4 +133,5 @@ Game.create_from_ary!( games_l104, l104 )
 Game.create_from_ary!( games_l105, l105 )
 
 
-Prop.create!( key: 'db.ro.2012/13.version', value: '1' )
+## The End
+#################

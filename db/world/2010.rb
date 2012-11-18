@@ -13,7 +13,7 @@
 ##  64 games
 ##  31 days (11 June - 11 July)
 
-wm = Event.create!( league:  League.find_by_key!('wm'),
+wm = Event.create!( league:  League.find_by_key!('world'),
                     season:  Season.find_by_key!('2010'),
                     start_at: Time.cet( '2010-06-11 12:00' ) )
 
@@ -184,4 +184,5 @@ wmg.add_teams_from_ary!( ['bra', 'prk', 'civ', 'por'] )
 wmh.add_teams_from_ary!( ['esp', 'sui', 'hon', 'chi'] )
 
 
-Prop.create!( key: 'db.world.2010.version', value: '1' )
+## The End
+#################

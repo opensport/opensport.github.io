@@ -28,4 +28,5 @@ ro = Country.find_by_key!( 'ro' )
 Team.create_from_ary!( l1, club: true, country: ro )
 
 
-Prop.create!( key: 'db.ro.teams.version', value: '1' )
+## The End
+#################

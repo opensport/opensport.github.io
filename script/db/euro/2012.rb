@@ -9,11 +9,10 @@
 # or  http://de.wikipedia.org/wiki/Fu%C3%9Fball-Europameisterschaft_2012
 
 
-euro = Event.create!( key:     'euro.2012',
-                      title:   'Euro 2012',
+euro = Event.create!( league:  League.find_by_key!('euro'),
+                      season:  Season.find_by_key!('2012'),
                       start_at: Time.cet( '2012-06-07 17:00' ),
-                      league:  League.find_by_key!('euro'),
-                      season:  Season.find_by_key!('2012'))
+                      team3: false )
 
 pol = Team.find_by_key!( 'pol' )
 gre = Team.find_by_key!( 'gre' )
@@ -163,5 +162,5 @@ Game.create_knockouts_from_ary!( games_euro8, euro8 )
 Game.create_knockouts_from_ary!( games_euro4, euro4 )
 Game.create_knockouts_from_ary!( games_euro1, euro1 )
 
-
-Prop.create!( key: 'db.euro.2012.version', value: '1' )
+## The End
+#################

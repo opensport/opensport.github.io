@@ -7,11 +7,9 @@
 ## fix: time zone and times??
 
 
-sud = Event.create!( key:      'copa.sud.2012/13',
-                    title:    'Copa Sudamericana',
-                    start_at: Time.cet( '2012-08-03 12:00' ),
-                    league:   League.find_by_key!('copa.sud'),
-                    season:   Season.find_by_key!('2012/13'))
+sud = Event.create!( league:   League.find_by_key!('copa.sud'),
+                     season:   Season.find_by_key!('2012/13'),
+                     start_at: Time.cet( '2012-08-03 12:00' ))
 
 
 team_keys_sud = [
@@ -36,4 +34,5 @@ team_keys_sud = [
 
 sud.add_teams_from_ary!( team_keys_sud )
 
-Prop.create!( key: 'db.copa.sud.2012/13.version', value: '1' )
+## The End
+#################

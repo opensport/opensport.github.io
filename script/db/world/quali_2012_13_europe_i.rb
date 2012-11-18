@@ -5,7 +5,7 @@
 
 # note: for teams see seeds/euro/teams.rb
 
-world = Event.find_by_key!( 'wmq.euro' )
+world = Event.find_world_quali_euro_2012_13!
 
 team_keys_worldi = [
   'fra',
@@ -22,5 +22,5 @@ worldi = Group.create!( event: world, pos: 9, title: 'Gruppe I' )
 worldi.add_teams_from_ary!( team_keys_worldi )
 
 
-
-Prop.create!( key: 'db.world.quali.euro.2012/13.i.version', value: '1' )
+## The End
+#################

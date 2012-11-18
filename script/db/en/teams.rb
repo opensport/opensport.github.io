@@ -36,5 +36,5 @@ en = Country.find_by_key!( 'en' )
 
 Team.create_from_ary!( teams, club: true, country: en )
 
-
-Prop.create!( key: 'db.en.teams.version', value: '1' )
+## The End
+#################

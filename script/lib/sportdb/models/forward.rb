@@ -2,8 +2,6 @@
 ### forward references
 ##   require first to resolve circular references
 
-module SportDB ; end
-
 module SportDB::Models
 
   ## todo: why? why not use include WorldDB::Models here???
@@ -18,6 +16,9 @@ module SportDB::Models
 
   class Team < ActiveRecord::Base ; end
   class League < ActiveRecord::Base ; end
+  
+  #### make constanst such as AT_2012_13, WORLD_2010, etc. available
+  include SportDB::Keys
 
 end
 

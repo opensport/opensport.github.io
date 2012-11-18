@@ -5,11 +5,9 @@
 #################################
 ## Champions League 2012/13
 
-cl = Event.create!( key:      'cl.2012/13',
-                    title:    'Champions League 2012/13',
-                    start_at: Time.cet( '2012-09-18 18:30' ),
-                    league:   League.find_by_key!('cl'),
+cl = Event.create!( league:   League.find_by_key!('cl'),
                     season:   Season.find_by_key!('2012/13'),
+                    start_at: Time.cet( '2012-09-18 18:30' ),
                     team3: false )
 
 porto         = Team.find_by_key!( 'porto' )
@@ -322,4 +320,5 @@ Game.create_pairs_from_ary_for_group!( games_clg, clg )
 Game.create_pairs_from_ary_for_group!( games_clh, clh )
 
 
-Prop.create!( key: 'db.cl.2012/13.version', value: '1' )
+## The End
+#################

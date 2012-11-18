@@ -29,6 +29,7 @@ leagues_club = [
  [ 'pt',          'SuperLiga',              pt ],
  [ 'ru',          'Premier Liga',           ru ],
  [ 'ro',          'Romania Liga 1',         ro ],
+ ## todo: make apertura into season?? remove from league? why? why not?
  [ 'mx.apertura', 'México Primera División Apertura', mx ],
  [ 'br',          'Campeonato Brasileiro Série A', br ]
 ]
@@ -55,13 +56,13 @@ League.create_from_ary!( leagues_club_intl, club: true )
 leagues_intl = [
   [ 'euro',        'Euro'      ],
   [ 'america',     'Copa América' ],
-  [ 'wm',          'World Cup' ],   ## change key to world??
-  [ 'wmq.euro',    'World Cup Quali Europe' ],
-  [ 'wmq.america', 'World Cup Quali North/Central America and Caribbean' ]
+  [ 'world',          'World Cup' ],   ## change key to world??
+  [ 'world.quali.euro',    'World Cup Quali Europe' ],
+  [ 'world.quali.america', 'World Cup Quali North/Central America and Caribbean' ]
 ]
 
 League.create_from_ary!( leagues_intl, club: false )
 
 
-
-Prop.create!( key: 'db.leagues.version', value: '1' )
+## The End
+#################

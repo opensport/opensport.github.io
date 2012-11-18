@@ -30,4 +30,6 @@ team_keys_mx = [
 
 mx.add_teams_from_ary!( team_keys_mx )
 
-Prop.create!( key: 'db.mx.apertura.2012.version', value: '1' )
+
+## The End
+#################

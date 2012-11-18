@@ -61,5 +61,5 @@ Game.create_knockout_pairs_from_ary!( games_el8, el8, el8_2 )
 Game.create_knockout_pairs_from_ary!( games_el4, el4, el4_2 )
 Game.create_knockouts_from_ary!( games_el1,  el1 )
 
-
-Prop.create!( key: 'db.el.2011/12.version', value: '1' )
+## The End
+#################

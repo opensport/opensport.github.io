@@ -6,11 +6,9 @@
 ##################################
 ### ÖFB Cup 2011/12
 
-ofb = Event.create!( key:   'at.cup.2011/12',
-                     title: 'ÖFB Cup 2011/12',
-                     start_at: Time.cet( '2011-10-10 17:00' ),
-                     league:   League.find_by_key!('at.cup'),
+ofb = Event.create!( league:   League.find_by_key!('at.cup'),
                      season:   Season.find_by_key!('2011/12'),
+                     start_at: Time.cet( '2011-10-10 17:00' ),
                      team3: false )  # no game for 3rd/4th place
 
 
@@ -64,5 +62,5 @@ Game.create_knockouts_from_ary!( games_ofb8, ofb8 )
 Game.create_knockouts_from_ary!( games_ofb4, ofb4 )
 Game.create_knockouts_from_ary!( games_ofb1, ofb1 )
 
-
-Prop.create!( key: 'db.at.cup.2011/12.version', value: '1' )
+## The End
+#################

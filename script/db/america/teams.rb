@@ -52,4 +52,6 @@ teams = teams_america1 + teams_america2
 
 Team.create_from_ary!( teams, national: true )
 
-Prop.create!( key: 'db.america.teams.version', value: '1' )
+
+## The End
+#################

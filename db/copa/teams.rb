@@ -47,4 +47,5 @@ teams = [
 
 Team.create_from_ary!( teams, club: true )
 
-Prop.create!( key: 'db.copa.teams.version', value: '1' )
+## The End
+#################

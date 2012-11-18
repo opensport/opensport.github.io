@@ -28,4 +28,6 @@ team_keys_bl = [
 
 bl.add_teams_from_ary!( team_keys_bl )
 
-Prop.create!( key: 'db.at.2012/13.version', value: '1' )
+
+## The End
+#################

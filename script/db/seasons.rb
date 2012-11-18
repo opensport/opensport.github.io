@@ -18,4 +18,5 @@ Season.create!( key: '2009', title: '2009' )
 Season.create!( key: '2008', title: '2008' )
 
 
-Prop.create!( key: 'db.seasons.version', value: '1' )
+## The End
+#################

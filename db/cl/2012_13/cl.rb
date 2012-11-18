@@ -320,4 +320,5 @@ Game.create_pairs_from_ary_for_group!( games_clg, clg )
 Game.create_pairs_from_ary_for_group!( games_clh, clh )
 
 
-Prop.create!( key: 'db.cl.2012/13.version', value: '1' )
+## The End
+#################

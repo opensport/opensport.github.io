@@ -64,5 +64,5 @@ Badge.create!( team: zenit,
 
 
 
-Prop.create!( key: 'db.cl.badges.version', value: '1' )
-Prop.create!( key: 'db.el.badges.version', value: '1' )
+## The End
+#################

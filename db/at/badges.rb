@@ -18,5 +18,5 @@ Badge.create!( team: wac,
                league: League.find_by_key!('at'),
                season: Season.find_by_key!('2011/12') )
 
-
-Prop.create!( key: 'db.at.badges.version', value: '1' )
+## The End
+#################

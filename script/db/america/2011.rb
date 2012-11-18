@@ -9,11 +9,9 @@
 #   more info -> http://en.wikipedia.org/wiki/2011_Copa_América
 #             -> http://de.wikipedia.org/wiki/Copa_América_2011
 
-copa = Event.create!( key:     'america.2011',
-                    title:   'Copa América 2011',
-                    start_at: Time.cet( '2011-07-01 12:00' ),
-                    league:  League.find_by_key!('america'),
-                    season:  Season.find_by_key!('2011'))
+copa = Event.create!( league:  League.find_by_key!('america'),
+                      season:  Season.find_by_key!('2011'),
+                      start_at: Time.cet( '2011-07-01 12:00' ) )
 
 
 ##############
@@ -47,4 +45,5 @@ copab.add_teams_from_ary!( ['bra', 'par', 'ven', 'ecu' ] )
 copac.add_teams_from_ary!( ['uru', 'chi', 'per', 'mex' ] )
 
 
-Prop.create!( key: 'db.america.2011.version', value: '1' )
+## The End
+#################

@@ -8,11 +8,9 @@
 ## more info => http://bundesliga.at
 
 
-bl = Event.create!( key:     'at.2012/13',
-                    title:   'Österr. Bundesliga 2012/13',
-                    start_at: Time.cet('2012-07-21 00:00'),
-                    league:   League.find_by_key!('at'),
-                    season:   Season.find_by_key!('2012/13'))
+bl = Event.create!( league:   League.find_by_key!('at'),
+                    season:   Season.find_by_key!('2012/13'),
+                    start_at: Time.cet('2012-07-21 00:00'))
 
 ## 10 Bundeliga Teams
 
@@ -30,4 +28,6 @@ team_keys_bl = [
 
 bl.add_teams_from_ary!( team_keys_bl )
 
-Prop.create!( key: 'db.at.2012/13.version', value: '1' )
+
+## The End
+#################

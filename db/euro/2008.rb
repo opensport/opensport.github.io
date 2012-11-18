@@ -51,9 +51,5 @@ euroc.add_teams_from_ary!(['ned', 'ita', 'rou', 'fra'])
 
 eurod.add_teams_from_ary!(['gre', 'swe', 'esp', 'rus'])
 
-
-Prop.create!( key: 'db.euro.2008.version', value: '1' )
-
-
-
-
+## The End
+#################

@@ -20,6 +20,7 @@ require 'worlddb'
 
 # our own code
 
+require 'sportdb/keys'    # let keys go first; just string constants (get included in models)
 require 'sportdb/models/forward'
 require 'sportdb/models/badge'
 require 'sportdb/models/city'
@@ -44,6 +45,7 @@ require 'sportdb/version'
 require 'sportdb/cli/opts'
 require 'sportdb/cli/runner'
 
+
 module SportDB
 
   def self.banner
@@ -62,61 +64,79 @@ module SportDB
     CreateDB.up
   end
 
+  class Fixtures
+    ## todo: move into its own file???    
+    
+    ## make constants in Keys availabe (get include in Models) - do NOT pollute/include in SportDB
+    ## make models available in sportdb module by default with namespace
+    #  e.g. lets you use Team instead of Models::Team 
+    include SportDB::Models
+
+    def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
+     ['leagues',
+      'seasons',
+      'at/teams',
+      'at/badges',
+      'at/2011_12/bl',
+      'at/2011_12/cup',
+      'at/2012_13/bl',
+      'at/2012_13/cup',
+      'de/teams',
+      'en/teams',
+      'es/teams',
+      'cl/teams',
+      'cl/badges',
+      'cl/2011_12/cl',
+      'cl/2011_12/el',
+      'cl/2012_13/cl',
+      'de/2012_13/bl',
+      'en/2012_13/pl',
+      'euro/teams',
+      'euro/2008',
+      'euro/2012',
+      'america/teams',
+      'america/2011',
+      'copa/teams',
+      'copa/sud_2012_13',
+      'mx/teams',
+      'mx/apertura_2012',
+      'world/teams',
+      'world/2010',
+      'world/quali_2012_13_europe',
+      'world/quali_2012_13_europe_c',
+      'world/quali_2012_13_europe_i',
+      'world/quali_2012_13_america',
+      'nhl/teams']
+    end
+
+    def self.fixtures_txt
+      [[ AT_2011_12,        'at/2011_12/bl'],
+       [ AT_2012_13,        'at/2012_13/bl'],
+       [ AT_CUP_2012_13,    'at/2012_13/cup'],
+       ['de.2012/13',       'de/2012_13/bl'],
+       ['en.2012/13',       'en/2012_13/pl'],
+       ['america.2011',     'america/2011'],
+       ['mx.apertura.2012', 'mx/apertura_2012'],
+       ['copa.sud.2012/13', 'copa/sud_2012_13'],
+       [ EURO_2008,                   'euro/2008'],
+       [ WORLD_2010,                  'world/2010'],
+       [ WORLD_QUALI_EURO_2012_13,    'world/quali_2012_13_europe_c'],
+       [ WORLD_QUALI_AMERICA_2012_13, 'world/quali_2012_13_america']]
+    end
+  end # class Fixtures
+
   def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
-   ['leagues',
-    'seasons',
-    'at/teams',
-    'at/badges',
-    'at/2011_12/bl',
-    'at/2011_12/cup',
-    'at/2012_13/bl',
-    'at/2012_13/cup',
-    'de/teams',
-    'en/teams',
-    'es/teams',
-    'cl/teams',
-    'cl/badges',
-    'cl/2011_12/cl',
-    'cl/2011_12/el',
-    'cl/2012_13/cl',
-    'de/2012_13/bl',
-    'en/2012_13/pl',
-    'euro/teams',
-    'euro/2008',
-    'euro/2012',
-    'america/teams',
-    'america/2011',
-    'copa/teams',
-    'copa/sud_2012_13',
-    'mx/teams',
-    'mx/apertura_2012',
-    'world/teams',
-    'world/2010',
-    'world/quali_2012_13_europe',
-    'world/quali_2012_13_europe_c',
-    'world/quali_2012_13_europe_i',
-    'world/quali_2012_13_america',
-    'nhl/teams']
+    Fixtures.fixtures_rb
+  end
+  
+  def self.fixtures_txt
+    Fixtures.fixtures_txt
   end
 
   def self.load_all
     load( fixtures_rb )
   end
 
-  def self.fixtures_txt
-    [['at.2011/12',       'at/2011_12/bl'],
-     ['at.2012/13',       'at/2012_13/bl'],
-     ['at.cup.2012/13',   'at/2012_13/cup'],
-     ['de.2012/13',       'de/2012_13/bl'],
-     ['en.2012/13',       'en/2012_13/pl'],
-     ['america.2011',     'america/2011'],
-     ['mx.apertura.2012', 'mx/apertura_2012'],
-     ['copa.sud.2012/13', 'copa/sud_2012_13'],
-     ['euro.2008',        'euro/2008'],
-     ['wm.2010',          'world/2010'],
-     ['wmq.euro',         'world/quali_2012_13_europe_c'],
-     ['wmq.america',      'world/quali_2012_13_america']]
-  end
 
   def self.read_all
     read( fixtures_txt )

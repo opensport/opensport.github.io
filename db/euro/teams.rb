@@ -74,4 +74,5 @@ teams = [
 Team.create_from_ary!( teams, national: true )
 
 
-Prop.create!( key: 'db.euro.teams.version', value: '1' )
+## The End
+#################
