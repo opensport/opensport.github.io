@@ -72,6 +72,29 @@ module SportDB
     #  e.g. lets you use Team instead of Models::Team 
     include SportDB::Models
 
+    def self.fixtures_rb_test
+     ['leagues',
+      'seasons',
+      'at/teams',
+#      'at/2011_12/bl',
+#      'at/2011_12/cup',
+      'at/2012_13/bl',
+#      'at/2012_13/cup',
+      'copa/teams',
+      'copa/sud_2012_13'
+     ]
+    end
+
+    def self.fixtures_txt_test
+      [
+#       [ AT_2011_12,        'at/2011_12/bl'],
+       [ AT_2012_13,        'at/2012_13/bl'],
+#       [ AT_CUP_2012_13,    'at/2012_13/cup'],
+       ['copa.sud.2012/13', 'copa/sud_2012_13']
+      ]
+    end
+
+
     def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
      ['leagues',
       'seasons',

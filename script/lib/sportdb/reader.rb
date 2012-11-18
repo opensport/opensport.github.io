@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module SportDB
 
 class Reader
@@ -41,6 +43,11 @@ class Reader
     code = File.read( path )
     
     load_fixtures_worker( event_key, code )
+
+    ### fix: 
+    ## for loaded from fs use filestat? for version - why? why not?
+
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "txt.1" )
   end
 
   def load_fixtures_builtin( event_key, name ) # load from gem (built-in)
@@ -51,10 +58,27 @@ class Reader
     code = File.read( path )
     
     load_fixtures_worker( event_key, code )
+    
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "sport.txt.#{SportDB::VERSION}" )
   end
 
 
 private
+
+ ##
+  # fix/todo: share helper w/ other readers
+  
+  # helper
+  #   change at/2012_13/bl           to at.2012/13.bl
+  #    or    quali_2012_13_europe_c  to quali.2012/13.europe.c
+  
+  def fixture_name_to_prop_key( name )
+    prop_key = name.gsub( '/', '.' )
+    prop_key = prop_key.gsub( /(\d{4})_(\d{2})/, '\1/\2' )  # 2012_13 => 2012/13
+    prop_key = prop_key.gsub( '_', '.' )
+    prop_key
+  end
+
   def load_fixtures_worker( event_key, data )
    
     ## assume active activerecord connection
@@ -63,37 +87,9 @@ private
     @event = Event.find_by_key!( event_key )
     
     puts "Event #{@event.key} >#{@event.title}<"
-
-
-    ## build known teams table w/ synonyms e.g.
-    #
-    #   nb: synonyms can be a regex not just a literal string
-    # [[ 'wolfsbrug', [ 'VfL Wolfsburg' ]],
-    #  [ 'augsburg',  [ 'FC Augsburg', 'Augi2', 'Augi3' ]],
-    #  [ 'stuttgart', [ 'VfB Stuttgart' ]] ]
     
-    @known_teams = []
+    @known_teams = @event.known_teams_table
     
-    ## todo/fix: move calc known_teams to model!!! (for reuse)
- 
-    @event.teams.each_with_index do |team,index|
-
-      titles = []
-      titles << team.title
-      titles += team.synonyms.split('|')  if team.synonyms.present?
-
-      ## NB: sort here by length (largest goes first - best match)
-      #  exclude code and key (key should always go last)
-      titles = titles.sort { |left,right| right.length <=> left.length }
-      
-      titles << team.code                  if team.code.present?
-      titles << team.key
-            
-      @known_teams << [ team.key, titles ]
-      
-      puts "  Team[#{index+1}] #{team.key} >#{titles.join('|')}<"
-    end
-  
     parse_fixtures( data )
     
   end   # method load_fixtures
@@ -253,15 +249,19 @@ private
   def find_team2!( line )
     find_team_worker!( line, 2 )
   end
-  
-  
+
+
   def match_team_worker!( line, key, values )
     values.each do |value|
-      regex = Regexp.new( "\\b#{value}\\b" )   # wrap with world boundry (e.g. match only whole words e.g. not wac in wacker) 
+      ## nb: \b does NOT include space or newline for word boundry (only alphanums e.g. a-z0-9)
+      ## (thus add it, allows match for Benfica Lis.  for example - note . at the end)
+
+      ## check add $ e.g. (\b| |\t|$) does this work? - check w/ Benfica Lis.$
+      regex = /\b#{value}(\b| |\t)/   # wrap with world boundry (e.g. match only whole words e.g. not wac in wacker) 
       if line =~ regex
         puts "     match for team >#{key}< >#{value}<"
         # make sure @@oo{key}oo@@ doesn't match itself with other key e.g. wacker, wac, etc.
-        line.sub!( regex, "@@oo#{key}oo@@" )
+        line.sub!( regex, "@@oo#{key}oo@@ " )    # NB: add one space char at end
         return true    # break out after first match (do NOT continue)
       end
     end

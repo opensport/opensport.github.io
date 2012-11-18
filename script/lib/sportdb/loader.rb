@@ -46,7 +46,7 @@ class Loader
     ### fix: 
     ## for loaded from fs use filestat? for version - why? why not?
 
-    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "1" )
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "rb.1" )
   end
   
   def load_fixtures_builtin( name ) # load from gem (built-in)
@@ -60,7 +60,7 @@ class Loader
 
     ## for builtin fixtures use VERSION of gem
 
-    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "sport.#{SportDB::VERSION}" )
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "sport.rb.#{SportDB::VERSION}" )
   end
   
 
