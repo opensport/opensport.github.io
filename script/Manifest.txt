@@ -56,6 +56,7 @@ db/world/teams.rb
 lib/sportdb.rb
 lib/sportdb/cli/opts.rb
 lib/sportdb/cli/runner.rb
+lib/sportdb/keys.rb
 lib/sportdb/loader.rb
 lib/sportdb/models/badge.rb
 lib/sportdb/models/city.rb
