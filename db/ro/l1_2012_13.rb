@@ -12,11 +12,9 @@
 ## todo: check key dinamo or rapid may be already taken!!
 
 
-l1 = Event.create!( key:      'ro.2012/13',
-                    title:    'Romania Liga 1 2012/13',
-                    start_at: Time.eet('2012-07-01 00:00'),
-                    league:   League.find_by_key!('ro'),
-                    season:   Season.find_by_key!('2012/13') )
+l1 = Event.create!( league:   League.find_by_key!('ro'),
+                    season:   Season.find_by_key!('2012/13'),
+                    start_at: Time.eet('2012-07-01 00:00') )
 
 astra                      = Team.find_by_key!( 'astra' )
 ceahlau                    = Team.find_by_key!( 'ceahlau' )

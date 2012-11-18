@@ -8,11 +8,9 @@
 ## more info => http://bundesliga.de
 
 
-bl = Event.create!( key:      'de.2012/13',
-                    title:    'Deutsche Bundesliga 2012/13',
-                    start_at: Time.cet('2012-07-21 00:00'),
-                    league:   League.find_by_key!('de'),
-                    season:   Season.find_by_key!('2012/13') )
+bl = Event.create!( league:   League.find_by_key!('de'),
+                    season:   Season.find_by_key!('2012/13'),
+                    start_at: Time.cet('2012-07-21 00:00'))
 
 team_keys_bl = [
   'bayern',

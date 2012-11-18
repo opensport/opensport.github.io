@@ -252,4 +252,10 @@ end  # module SportDB
 
 ## SportDB::load_plugins
 
-SportDB.main if __FILE__ == $0
+
+if __FILE__ == $0
+  SportDB.main
+else
+   ## say hello
+  puts SportDB.banner
+end

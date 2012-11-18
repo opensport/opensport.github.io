@@ -3,11 +3,9 @@
 ##################################
 ### ÖFB Cup 2012/13
 
-cup = Event.create!( key:      'at.cup.2012/13',
-                     title:    'ÖFB Cup 2012/13',
-                     start_at: Time.cet( '2012-07-13 00:00' ),
-                     league:   League.find_by_key!('at.cup'),
+cup = Event.create!( league:   League.find_by_key!('at.cup'),
                      season:   Season.find_by_key!('2012/13'),
+                     start_at: Time.cet( '2012-07-13 00:00' ),
                      team3: false )  # no game for 3rd/4th place)
 
 

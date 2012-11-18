@@ -31,7 +31,6 @@ add_index :teams, :key, :unique => true
 
 
 create_table :events do |t|
-  t.string      :title,    :null => false
   t.string      :key,      :null => false   # import/export key
   t.references  :league,   :null => false
   t.references  :season,   :null => false

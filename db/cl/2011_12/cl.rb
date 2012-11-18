@@ -5,11 +5,9 @@
 #################################
 ## Champions League 2011/12
 
-cl = Event.create!( key:      'cl.2011/12',
-                    title:    'Champions League 2011/12',
-                    start_at: Time.cet( '2011-10-10 17:00' ),
-                    league:   League.find_by_key!('cl'),
+cl = Event.create!( league:   League.find_by_key!('cl'),
                     season:   Season.find_by_key!('2011/12'),
+                    start_at: Time.cet( '2011-10-10 17:00' ),
                     team3: false )
 
 

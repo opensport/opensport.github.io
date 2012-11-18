@@ -13,11 +13,26 @@ class Event < ActiveRecord::Base
   has_many :event_teams, :class_name => 'EventTeam'
   has_many :teams, :through => :event_teams
 
+  before_save :on_before_save
+
   def add_teams_from_ary!( team_keys )
     team_keys.each do |team_key|
       team = Team.find_by_key!( team_key )
       self.teams << team
     end
+  end
+
+  def on_before_save
+    # event key is composite of league + season (e.g. at.2012/13) etc.
+    self.key = "#{league.key}.#{season.key}"
+  end
+  
+  def title
+    league.title
+  end
+  
+  def full_title   # includes season (e.g. year)
+    "#{league.title} #{season.title}"
   end
   
   ###########################
