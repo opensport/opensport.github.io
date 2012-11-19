@@ -84,6 +84,12 @@ private
     ## assume active activerecord connection
     ##
     
+    ## reset cached values
+    @patch_rounds  = {}
+    @knockout_flag = false
+    @round         = nil
+    
+    
     @event = Event.find_by_key!( event_key )
     
     puts "Event #{@event.key} >#{@event.title}<"
@@ -99,12 +105,61 @@ private
     line =~ /Spieltag|Runde|Achtelfinale|Viertelfinale|Halbfinale|Finale/
   end
   
+  def is_group?( line )
+    # NB: check after is_round? (round may contain group reference!)
+    line =~ /Gruppe|Group/
+  end
+  
   def find_knockout_flag( line )
     if line =~ /Achtelfinale|Viertelfinale|Halbfinale|Finale|K\.O\.|Knockout/
       puts "   setting knockout flag to true"
       true
     else
       false
+    end
+  end
+  
+  def find_group_title_and_pos!( line )
+    ## group pos - for now support single digit e.g 1,2,3 or letter e.g. A,B,C
+    ## nb:  (?:)  = is for non-capturing group(ing)
+    regex = /(?:Group|Gruppe)\s+((?:\d{1}|[A-Z]{1}))\b/
+    
+    m = regex.match( line )
+    unless m.nil?
+      if m[1] == 'A'
+        pos = 1
+      elsif m[1] == 'B'
+        pos = 2
+      elsif m[1] == 'C'
+        pos = 3
+      elsif m[1] == 'D'
+        pos = 4
+      elsif m[1]== 'E'
+        pos = 5
+      elsif m[1] == 'F'
+        pos = 6
+      elsif m[1] == 'G'
+        pos = 7
+      elsif m[1] == 'H'
+        pos = 8
+      elsif m[1] == 'I'
+        pos = 9
+      elsif m[1] == 'J'
+        pos = 10
+      else
+        pos = m[1].to_i
+      end
+
+      title = m[0]
+
+      puts "   title: >#{title}<"
+      puts "   pos: >#{pos}<"
+      
+      line.sub!( regex, '[GROUP|TITLE+POS]' )
+
+      return [title,pos]
+    else
+      return [nil,nil]
     end
   end
   
@@ -241,6 +296,20 @@ private
       return nil
     end
   end
+  
+  def find_teams!( line )
+    counter = 1
+    teams = []
+    
+    team = find_team_worker!( line, counter )
+    while team.present?
+      teams << team
+      counter += 1
+      team = find_team_worker!( line, counter )
+    end
+    
+    teams
+  end
 
   def find_team1!( line )
     find_team_worker!( line, 1 )
@@ -276,6 +345,149 @@ private
     end # each known_teams    
   end # method translate_teams!
   
+  
+  def parse_group( line )
+    puts "parsing group line: >#{line}<"
+    
+    match_teams!( line )
+    team_keys = find_teams!( line )
+      
+    title, pos = find_group_title_and_pos!( line )
+
+    puts "  line: >#{line}<"
+
+    ## world2 = Group.create!( event: world, pos: 2, title: 'Gruppe 2' )
+    ## world2.add_teams_from_ary!( team_keys_world2 )
+
+    group_attribs = {
+      title: title
+    }
+        
+    @group = Group.find_by_event_id_and_pos( @event.id, pos )
+    if @group.present?
+      puts "*** update group #{@group.id}:"
+    else
+      puts "*** create group:"
+      @group = Group.new
+      group_attribs = round_attribs.merge( {
+        event_id: @event.id,
+        pos:   pos
+      })
+    end
+      
+    puts  group_attribs.to_json
+   
+    @group.update_attributes!( group_attribs )
+
+    @group.teams.clear  # remove old teams
+    ## add new teams
+    team_keys.each do |team_key|
+      team = Team.find_by_key!( team_key )
+      puts "  adding team #{team.title} (#{team.code})"
+      @group.teams << team
+    end
+  end
+  
+  def parse_round( line )
+    puts "parsing round line: >#{line}<"
+    pos = find_round_pos!( line )
+        
+    @knockout_flag = find_knockout_flag( line )
+    puts "  line: >#{line}<"
+        
+    ## NB: dummy/placeholder start_at, end_at date
+    ##  replace/patch after adding all games for round
+        
+    round_attribs = {
+      title: "#{pos}. Runde"
+    }
+        
+    @round = Round.find_by_event_id_and_pos( @event.id, pos )
+    if @round.present?
+      puts "*** update round #{@round.id}:"
+    else
+      puts "*** create round:"
+      @round = Round.new
+          
+      round_attribs = round_attribs.merge( {
+        event_id: @event.id,
+        pos:   pos,
+        start_at: Time.utc('1912-12-12'),
+        end_at:   Time.utc('1912-12-12')
+      })
+    end
+        
+    puts round_attribs.to_json
+   
+    @round.update_attributes!( round_attribs )
+
+    ### store list of round is for patching start_at/end_at at the end
+    @patch_rounds[ @round.id ] = @round.id
+  end
+
+  def parse_game( line )
+    puts "parsing game (fixture) line: >#{line}<"
+
+    pos = find_game_pos!( line )
+
+    match_teams!( line )
+    team1_key = find_team1!( line )
+    team2_key = find_team2!( line )
+
+    date  = find_date!( line )
+    scores = find_scores!( line )
+        
+    puts "  line: >#{line}<"
+
+
+    ### todo: cache team lookups in hash?
+
+    team1 = Team.find_by_key!( team1_key )
+    team2 = Team.find_by_key!( team2_key )
+
+    ### check if games exists
+    ##  with this teams in this round if yes only update
+    game = Game.find_by_round_id_and_team1_id_and_team2_id(
+                         @round.id, team1.id, team2.id
+    )
+
+    game_attribs = {
+      score1:    scores[0],
+      score2:    scores[1],
+      score3:    scores[2],
+      score4:    scores[3],
+      score5:    scores[4],
+      score6:    scores[5],
+      play_at:   date,
+      knockout:  @knockout_flag
+    }
+        
+    game_attribs[ :pos ] = pos   if pos.present?
+
+    if game.present?
+      puts "*** update game #{game.id}:"
+    else
+      puts "*** create game:"
+      game = Game.new
+
+      more_game_attribs = {
+        round_id:  @round.id,
+        team1_id: team1.id,
+        team2_id: team2.id
+      }
+          
+      ## NB: use round.games.count for pos
+      ##  lets us add games out of order if later needed
+      more_game_attribs[ :pos ] = @round.games.count+1  if pos.nil? 
+
+      game_attribs = game_attribs.merge( more_game_attribs )
+    end
+
+    puts game_attribs.to_json
+
+    game.update_attributes!( game_attribs )
+  end
+
 
   def parse_fixtures( data )
       
@@ -297,114 +509,20 @@ private
       line = line.strip
 
       if is_round?( line )
-        puts "parsing round line: >#{line}<"
-        pos = find_round_pos!( line )
-        
-        @knockout_flag = find_knockout_flag( line )
-        puts "  line: >#{line}<"
-        
-        ## NB: dummy/placeholder start_at, end_at date
-        ##  replace/patch after adding all games for round
-        
-        round_attribs = {
-          title: "#{pos}. Runde"
-        }
-        
-        @round = Round.find_by_event_id_and_pos( @event.id, pos )
-        if @round.present?
-          puts "*** update round #{@round.id}:"
-        else
-          puts "*** create round:"
-          @round = Round.new
-          
-          round_attribs = round_attribs.merge( {
-            event_id: @event.id,
-            pos:   pos,
-            start_at: Time.utc('1999-12-12'),
-            end_at:   Time.utc('1999-12-12')
-                                 })
-        end
-        
-        puts round_attribs.to_json
-   
-        @round.update_attributes!( round_attribs )
-
-        ### store list of round is for patching start_at/end_at at the end
-        @patch_rounds ||= {}
-        @patch_rounds[ @round.id ] = @round.id
-        
-        
+        parse_round( line )
+      elsif is_group?( line ) ## NB: group goes after round (round may contain group marker too)
+        parse_group( line )
       else
-        puts "parsing game (fixture) line: >#{line}<"
-
-        pos = find_game_pos!( line )
-
-        match_teams!( line )
-        team1_key = find_team1!( line )
-        team2_key = find_team2!( line )
-
-        date  = find_date!( line )
-        scores = find_scores!( line )
-        
-        puts "  line: >#{line}<"
-
-
-        ### todo: cache team lookups in hash?
-
-        team1 = Team.find_by_key!( team1_key )
-        team2 = Team.find_by_key!( team2_key )
-
-        ### check if games exists
-        ##  with this teams in this round if yes only update
-        game = Game.find_by_round_id_and_team1_id_and_team2_id(
-                         @round.id, team1.id, team2.id
-        )
-
-        game_attribs = {
-          score1:    scores[0],
-          score2:    scores[1],
-          score3:    scores[2],
-          score4:    scores[3],
-          score5:    scores[4],
-          score6:    scores[5],
-          play_at:   date,
-          knockout:  @knockout_flag
-        }
-        
-        game_attribs[ :pos ] = pos   if pos.present?
-
-        if game.present?
-          puts "*** update game #{game.id}:"
-        else
-          puts "*** create game:"
-          game = Game.new
-
-          more_game_attribs = {
-            round_id:  @round.id,
-            team1_id: team1.id,
-            team2_id: team2.id
-          }
-          
-          ## NB: use round.games.count for pos
-          ##  lets us add games out of order if later needed
-          more_game_attribs[ :pos ] = @round.games.count+1  if pos.nil? 
-
-          game_attribs = game_attribs.merge( more_game_attribs )
-        end
-
-        puts game_attribs.to_json
-
-        game.update_attributes!( game_attribs )
+        parse_game( line )
       end
-    end # oldlines.each
+    end # lines.each
     
-    @patch_rounds ||= {}
     @patch_rounds.each do |k,v|
       puts "*** patch start_at/end_at date for round #{k}:"
       round = Round.find( k )
       games = round.games.order( 'play_at asc' ).all
       
-      ## skip rouns w/ no games
+      ## skip rounds w/ no games
       
       ## todo/fix: what's the best way for checking assoc w/ 0 recs?
       next if games.size == 0

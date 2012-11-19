@@ -39,7 +39,7 @@ sv = Country.find_by_key!( 'sv' )
 gy = Country.find_by_key!( 'gy' )
 
 teams_america2 = [
-  [ 'mex', 'Mexiko',        'MEX', mx ],
+  [ 'mex', 'Mexiko|México',        'MEX', mx ],
   [ 'usa', 'Vereinigte Staaten|United States', 'USA', us ],
   [ 'hon', 'Honduras',      'HON', hn ],
   [ 'crc', 'Costa Rica',    'CRC', cr ],

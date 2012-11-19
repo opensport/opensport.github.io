@@ -65,7 +65,7 @@ sportdb - sport.db command line tool, version #{VERSION}
 
 Examples:
     sportdb cl/teams cl/2012_13/cl                     # import champions league (cl)
-    sportdb -c                                         # create database schema
+    sportdb --create                                   # create database schema
 
 More Examples:
     sportdb                                            # show stats (table counts, table props)

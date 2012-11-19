@@ -72,30 +72,34 @@ module SportDB
     #  e.g. lets you use Team instead of Models::Team 
     include SportDB::Models
 
-    def self.fixtures_rb_test
+    def self.fixtures_rb
      ['leagues',
       'seasons',
       'at/teams',
-#      'at/2011_12/bl',
+      'at/2011_12/bl',
 #      'at/2011_12/cup',
-      'at/2012_13/bl',
+#      'at/2012_13/bl',
 #      'at/2012_13/cup',
-      'copa/teams',
-      'copa/sud_2012_13'
+#      'copa/teams',
+#      'copa/sud_2012_13',
+      'america/teams',
+      'world/teams',
+      'world/quali_2012_13_america'
      ]
     end
 
-    def self.fixtures_txt_test
+    def self.fixtures_txt
       [
-#       [ AT_2011_12,        'at/2011_12/bl'],
-       [ AT_2012_13,        'at/2012_13/bl'],
+       [ AT_2011_12,        'at/2011_12/bl'],
+#       [ AT_2012_13,        'at/2012_13/bl'],
 #       [ AT_CUP_2012_13,    'at/2012_13/cup'],
-       ['copa.sud.2012/13', 'copa/sud_2012_13']
+#       ['copa.sud.2012/13', 'copa/sud_2012_13'],
+       [ WORLD_QUALI_AMERICA_2012_13, 'world/quali_2012_13_america']
       ]
     end
 
 
-    def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
+    def self.fixtures_rb__  # all builtin ruby fixtures; helper for covenience
      ['leagues',
       'seasons',
       'at/teams',
@@ -132,7 +136,7 @@ module SportDB
       'nhl/teams']
     end
 
-    def self.fixtures_txt
+    def self.fixtures_txt__
       [[ AT_2011_12,        'at/2011_12/bl'],
        [ AT_2012_13,        'at/2012_13/bl'],
        [ AT_CUP_2012_13,    'at/2012_13/cup'],
