@@ -60,9 +60,59 @@ class Reader
   end
 
 
+  def load_teams_builtin( name, more_values={} )
+    path = "#{SportDB.root}/db/#{name}.txt"
+
+    puts "*** parsing data '#{name}' (#{path})..."
+
+    reader = ValuesReader.new( logger, path, more_values )
+
+    load_teams_worker( reader )
+    
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "sport.txt.#{SportDB::VERSION}" )    
+  end
+
+
 private
 
   include SportDB::FixtureHelpers
+
+  def load_teams_worker( reader )
+ 
+    reader.each_line do |attribs, values|
+
+      ## check optional values
+      values.each_with_index do |value, index|
+        if value =~ /^city:/   ## city:
+          value_city_key = value[5..-1]  ## cut off city: prefix
+          value_city = City.find_by_key!( value_city_key )
+          attribs[ :city_id ] = value_city.id
+        elsif value =~ /^[A-Z]{3}$/  ## assume three-letter code e.g. FCB, RBS, etc.
+          attribs[ :code ] = value
+        elsif value =~ /^[a-z]{2}$/  ## assume two-letter country key e.g. at,de,mx,etc.
+          value_country = Country.find_by_key!( value )
+          attribs[ :country_id ] = value_country.id
+        else
+          ## todo: assume title2 ??
+          # issue warning: unknown type for value
+          puts "*** warning: unknown type for value >#{value}<"
+        end
+      end
+
+      rec = Team.find_by_key( attribs[ :key ] )
+      if rec.present?
+        puts "*** update Team #{rec.id}-#{rec.key}:"
+      else
+        puts "*** create Team:"
+        rec = Team.new
+      end
+      
+      puts attribs.to_json
+   
+      rec.update_attributes!( attribs )
+
+    end # each lines
+  end # method load_teams_worker
 
   def load_fixtures_worker( event_key, reader )
    

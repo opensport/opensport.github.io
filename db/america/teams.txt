@@ -1,0 +1,35 @@
+# encoding: utf-8
+
+##############
+## south america
+
+arg, Argentinien, ARG, ar
+bra, Brasilien,   BRA, br
+chi, Chile,       CHI, cl
+par, Paraguay,    PAR, py
+uru, Uruguay,     URU, uy
+col, Kolumbien,   COL, co
+ecu, Ecuador,     ECU, ec
+per, Peru,        PER, pe
+ven, Venezuela,   VEN, ve
+bol, Bolivien,    BOL, bo
+
+
+#####################
+#### north/central america & caribbean islands
+
+mex, Mexiko|México,        MEX, mx
+usa, Vereinigte Staaten|United States, USA, us
+hon, Honduras,      HON, hn
+crc, Costa Rica,    CRC, cr
+slv, El Salvador,   SLV, sv
+guy, Guyana,        GUY, gy
+
+
+
+## teams = teams_america1 + teams_america2
+##
+## Team.create_from_ary!( teams, national: true )
+#
+## The End
+#################
