@@ -40,14 +40,13 @@ class Reader
 
     puts "*** parsing data '#{name}' (#{path})..."
 
-    code = File.read( path )
+    ## nb: assume/enfore utf-8 encoding (with or without BOM - byte order mark)
+    ## - see sportdb/utils.rb
+    code = File.read_utf8( path )
     
     load_fixtures_worker( event_key, code )
 
-    ### fix: 
-    ## for loaded from fs use filestat? for version - why? why not?
-
-    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "txt.1" )
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "file.txt.#{File.mtime(path).strftime('%Y.%m.%d')}" )
   end
 
   def load_fixtures_builtin( event_key, name ) # load from gem (built-in)
@@ -55,7 +54,7 @@ class Reader
 
     puts "*** parsing data '#{name}' (#{path})..."
 
-    code = File.read( path )
+    code = File.read_utf8( path )
     
     load_fixtures_worker( event_key, code )
     
@@ -110,8 +109,10 @@ private
     line =~ /Gruppe|Group/
   end
   
+  ### todo: rename to is_knockout_round?
+  ##
   def find_knockout_flag( line )
-    if line =~ /Achtelfinale|Viertelfinale|Halbfinale|Finale|K\.O\.|Knockout/
+    if line =~ /Achtelfinale|Viertelfinale|Halbfinale|Spiel um Platz 3|Finale|K\.O\.|Knockout/
       puts "   setting knockout flag to true"
       true
     else
@@ -124,33 +125,33 @@ private
     ## nb:  (?:)  = is for non-capturing group(ing)
     regex = /(?:Group|Gruppe)\s+((?:\d{1}|[A-Z]{1}))\b/
     
-    m = regex.match( line )
-    unless m.nil?
-      if m[1] == 'A'
+    match = regex.match( line )
+    unless match.nil?
+      if match[1] == 'A'
         pos = 1
-      elsif m[1] == 'B'
+      elsif match[1] == 'B'
         pos = 2
-      elsif m[1] == 'C'
+      elsif match[1] == 'C'
         pos = 3
-      elsif m[1] == 'D'
+      elsif match[1] == 'D'
         pos = 4
-      elsif m[1]== 'E'
+      elsif match[1] == 'E'
         pos = 5
-      elsif m[1] == 'F'
+      elsif match[1] == 'F'
         pos = 6
-      elsif m[1] == 'G'
+      elsif match[1] == 'G'
         pos = 7
-      elsif m[1] == 'H'
+      elsif match[1] == 'H'
         pos = 8
-      elsif m[1] == 'I'
+      elsif match[1] == 'I'
         pos = 9
-      elsif m[1] == 'J'
+      elsif match[1] == 'J'
         pos = 10
       else
-        pos = m[1].to_i
+        pos = match[1].to_i
       end
 
-      title = m[0]
+      title = match[0]
 
       puts "   title: >#{title}<"
       puts "   pos: >#{pos}<"
@@ -173,7 +174,7 @@ private
       value = $1.to_i
       puts "   pos: >#{value}<"
       
-      line.sub!( regex, '[POS]' )
+      line.sub!( regex, '[ROUND|POS]' )
 
       return value
     else
@@ -326,7 +327,7 @@ private
       ## (thus add it, allows match for Benfica Lis.  for example - note . at the end)
 
       ## check add $ e.g. (\b| |\t|$) does this work? - check w/ Benfica Lis.$
-      regex = /\b#{value}(\b| |\t)/   # wrap with world boundry (e.g. match only whole words e.g. not wac in wacker) 
+      regex = /\b#{value}(\b| |\t|$)/   # wrap with world boundry (e.g. match only whole words e.g. not wac in wacker) 
       if line =~ regex
         puts "     match for team >#{key}< >#{value}<"
         # make sure @@oo{key}oo@@ doesn't match itself with other key e.g. wacker, wac, etc.
@@ -369,7 +370,7 @@ private
     else
       puts "*** create group:"
       @group = Group.new
-      group_attribs = round_attribs.merge( {
+      group_attribs = group_attribs.merge( {
         event_id: @event.id,
         pos:   pos
       })
@@ -393,6 +394,15 @@ private
     pos = find_round_pos!( line )
         
     @knockout_flag = find_knockout_flag( line )
+
+    group_title, group_pos = find_group_title_and_pos!( line )
+
+    if group_pos.present?
+      @group = Group.find_by_event_id_and_pos!( @event.id, group_pos )
+    else
+      @group = nil   # reset group to no group
+    end
+
     puts "  line: >#{line}<"
         
     ## NB: dummy/placeholder start_at, end_at date
@@ -401,6 +411,7 @@ private
     round_attribs = {
       title: "#{pos}. Runde"
     }
+
         
     @round = Round.find_by_event_id_and_pos( @event.id, pos )
     if @round.present?
@@ -459,10 +470,11 @@ private
       score5:    scores[4],
       score6:    scores[5],
       play_at:   date,
-      knockout:  @knockout_flag
+      knockout:  @knockout_flag,
+      group_id:  @group.present? ? @group.id : nil
     }
-        
-    game_attribs[ :pos ] = pos   if pos.present?
+
+    game_attribs[ :pos ]      = pos        if pos.present?
 
     if game.present?
       puts "*** update game #{game.id}:"

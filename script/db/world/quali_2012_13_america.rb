@@ -21,11 +21,5 @@ team_keys_world2 = [
 
 world.add_teams_from_ary!( team_keys_world2 )
 
-
-world2 = Group.create!( event: world, pos: 2, title: 'Gruppe 2' )
-
-world2.add_teams_from_ary!( team_keys_world2 )
-
-
 ## The End
 #################

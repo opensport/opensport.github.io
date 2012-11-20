@@ -1,6 +1,5 @@
 
-module SportDB
-  module Keys
+module SportDB::Keys
 
     module EventKeys
   # use constants for known keys; lets us define aliases (if things change)
@@ -25,5 +24,4 @@ module SportDB
     
     include SportDB::Keys::EventKeys
 
-  end # module Keys
-end # module SportDB
+end # module SportDB::Keys

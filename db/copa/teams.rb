@@ -15,11 +15,11 @@ teams = [
  ['bocajuniors',   'Club Atlético Boca Juniors|Boca Juniors', ar],
  ['velez',         'Club Atlético Vélez Sarsfield|CA Vélez', ar],
 
- ['saopaulo',   'São Paulo FC|São Paulo|Sao Paulo|FC Sao Paulo|Sao Paulo SP', br],
- ['gremio',     'Grêmio Porto Alegre|Grêmio|Gremio Porto Alegre|Gremio RS', br],
+ ['saopaulo',   'São Paulo FC|São Paulo|FC São Paulo|São Paulo SP', br],
+ ['gremio',     'Grêmio Porto Alegre|Grêmio|Grêmio RS', br],
  ['palmeiras',  'SE Palmeiras São Paulo|SE Palmeiras|Palmeiras|Palmeiras SP', br],
- ['atleticogo',  'Atlético Goianiense|Atlético GO|Atletico GO', br],
- ['corinthians', 'Corinthians Sao Paulo|Corinthians|Corinthians SP', br],
+ ['atleticogo',  'Atlético Goianiense|Atlético GO', br],
+ ['corinthians', 'Corinthians São Paulo|Corinthians|Corinthians SP', br],
  ['santos',        'FC Santos|Santos|Santos SP', br],
  ['internacional', 'Internacional Porto Alegre|Internacional|Internacional RS', br],
  ['fluminense',    'Fluminense Rio de Janeiro|Fluminense|Fluminense RJ', br],
@@ -40,7 +40,7 @@ teams = [
  ['liverpoolfc', 'Liverpool FC Montevideo|Liverpool FC|Liverpool Fútbol Club|Liverpool Montevideo', uy],
 
  ['porteno',  'Cerro Porteño|Club Cerro Porteño', py],
- ['libertad', 'Club Libertad Asunción|Libertad|Libertad Ascuncion', py],
+ ['libertad', 'Club Libertad Asunción|Libertad|Libertad Ascunción', py],
 ]
 
 

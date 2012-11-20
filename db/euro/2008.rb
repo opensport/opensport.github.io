@@ -11,7 +11,7 @@
 
 ##  16 teams
 ##  31 games
-##  22 days    
+##  22 days
 
 euro = Event.create!( league:  League.find_by_key!('euro'),
                       season:  Season.find_by_key!('2008'),
@@ -37,19 +37,6 @@ euro.add_teams_from_ary!([
   'tur',
   'rus'
 ])
-
-euroa = Group.create!( event: euro, pos: 1, title: 'Gruppe A' )
-eurob = Group.create!( event: euro, pos: 2, title: 'Gruppe B' )
-euroc = Group.create!( event: euro, pos: 3, title: 'Gruppe C' )
-eurod = Group.create!( event: euro, pos: 4, title: 'Gruppe D' )
-
-euroa.add_teams_from_ary!(['sui', 'cze', 'por', 'tur'])
-
-eurob.add_teams_from_ary!(['aut', 'cro', 'ger', 'pol'])
-
-euroc.add_teams_from_ary!(['ned', 'ita', 'rou', 'fra'])
-
-eurod.add_teams_from_ary!(['gre', 'swe', 'esp', 'rus'])
 
 ## The End
 #################

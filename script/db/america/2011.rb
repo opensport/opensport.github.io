@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-
 ## fix: change time zone to ??
 
 ##################################
@@ -31,18 +30,6 @@ copa.add_teams_from_ary!([
  'bol',   # Bolvien
  'crc'    # Costa Rica
  ])
-
-
-##################
-#### Groups
-
-copaa = Group.create!( event: copa, pos: 1, title: 'Gruppe A' )
-copab = Group.create!( event: copa, pos: 2, title: 'Gruppe B' )
-copac = Group.create!( event: copa, pos: 3, title: 'Gruppe C' )
-
-copaa.add_teams_from_ary!( ['arg', 'col', 'bol', 'crc' ] )
-copab.add_teams_from_ary!( ['bra', 'par', 'ven', 'ecu' ] )
-copac.add_teams_from_ary!( ['uru', 'chi', 'per', 'mex' ] )
 
 
 ## The End

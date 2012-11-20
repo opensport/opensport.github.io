@@ -20,7 +20,9 @@ require 'worlddb'
 
 # our own code
 
-require 'sportdb/keys'    # let keys go first; just string constants (get included in models)
+require 'sportdb/version'
+
+require 'sportdb/keys'
 require 'sportdb/models/forward'
 require 'sportdb/models/badge'
 require 'sportdb/models/city'
@@ -41,7 +43,6 @@ require 'sportdb/utils'
 require 'sportdb/loader'
 require 'sportdb/reader'
 require 'sportdb/templater'
-require 'sportdb/version'
 require 'sportdb/cli/opts'
 require 'sportdb/cli/runner'
 
@@ -72,7 +73,7 @@ module SportDB
     #  e.g. lets you use Team instead of Models::Team 
     include SportDB::Models
 
-    def self.fixtures_rb
+    def self.fixtures_rb_test
      ['leagues',
       'seasons',
       'at/teams',
@@ -88,7 +89,7 @@ module SportDB
      ]
     end
 
-    def self.fixtures_txt
+    def self.fixtures_txt_test
       [
        [ AT_2011_12,        'at/2011_12/bl'],
 #       [ AT_2012_13,        'at/2012_13/bl'],
@@ -99,7 +100,7 @@ module SportDB
     end
 
 
-    def self.fixtures_rb__  # all builtin ruby fixtures; helper for covenience
+    def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
      ['leagues',
       'seasons',
       'at/teams',
@@ -130,13 +131,11 @@ module SportDB
       'world/teams',
       'world/2010',
       'world/quali_2012_13_europe',
-      'world/quali_2012_13_europe_c',
-      'world/quali_2012_13_europe_i',
       'world/quali_2012_13_america',
       'nhl/teams']
     end
 
-    def self.fixtures_txt__
+    def self.fixtures_txt
       [[ AT_2011_12,        'at/2011_12/bl'],
        [ AT_2012_13,        'at/2012_13/bl'],
        [ AT_CUP_2012_13,    'at/2012_13/cup'],

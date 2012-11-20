@@ -39,7 +39,7 @@ teams = [
   [ 'rus', 'Russland|Russia',     'RUS', ru ],
   [ 'cze', 'Tschechien|Czech Republic',   'CZE', cz ],
   [ 'ned', 'Niederlande|Netherlands',  'NED', nl ],
-  [ 'den', 'Dänemark|Daenemark',     'DEN', dk ],
+  [ 'den', 'Dänemark',     'DEN', dk ],
   [ 'ger', 'Deutschland|Germany',  'GER', de ],
   [ 'por', 'Portugal',     'POR', pt ],
   [ 'esp', 'Spanien|Spain',      'ESP', es ],
@@ -55,7 +55,7 @@ teams = [
 
   [ 'fro', 'Färöer|Färöer Inseln',  'FRO', fo ],
   [ 'kaz', 'Kasachstan',   'KAZ', kz ],
-  [ 'aut', 'Österreich|Oesterreich|Austria',   'AUT', at ],
+  [ 'aut', 'Österreich|Austria',   'AUT', at ],
   [ 'blr', 'Weißrussland', 'BLR', by ],
   [ 'fin', 'Finnland',     'FIN', fi ],
   [ 'geo', 'Georgien',     'GEO', ge ],

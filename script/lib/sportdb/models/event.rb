@@ -44,37 +44,50 @@ class Event < ActiveRecord::Base
   ### fix/todo: share helper for all text readers/parsers- where to put it?  
   ###
   
-  def title_esc_regex( title )
-      ## todo: how to mark value as regex?
-      ##  for now escape regex special chars e.g. . to \.
-      title_for_regex = title.gsub( '.', '\.' ) # e.g. Benfica Lis.
-      title_for_regex = title_for_regex.gsub( '(', '\(' ) # e.g. Club Atlético Colón (Santa Fe)
-      title_for_regex = title_for_regex.gsub( ')', '\)' )
+  def title_esc_regex( title_unescaped )
       
-      ## fix: todo: match accented char with or without accents
+      ##  escape regex special chars e.g. . to \. and ( to \( etc.
+      # e.g. Benfica Lis.
+      # e.g. Club Atlético Colón (Santa Fe)
+
+      ## NB: cannot use Regexp.escape! will escape space '' to '\ '
+      ## title = Regexp.escape( title_unescaped )
+      title = title_unescaped.gsub( '.', '\.' )
+      title = title.gsub( '(', '\(' )
+      title = title.gsub( ')', '\)' )
+
+      ##  match accented char with or without accents
       ##  add (ü|ue) etc.
       ## also make - optional change to (-| ) e.g. Blau-Weiss == Blau Weiss
-      ##  reuse for all readers!
-      title_for_regex = title_for_regex.gsub( '-', '(-| )' )
-      title_for_regex = title_for_regex.gsub( 'ß', '(ß|ss)' )
-      title_for_regex = title_for_regex.gsub( 'æ', '(æ|ae)' )
-      title_for_regex = title_for_regex.gsub( 'á', '(á|a)' )  ## e.g. Bogotá
-      title_for_regex = title_for_regex.gsub( 'ã', '(ã|a)' )   ## e.g  São Paulo
-      title_for_regex = title_for_regex.gsub( 'ä', '(ä|ae)' )  ## add a ?
-      title_for_regex = title_for_regex.gsub( 'ö', '(ö|oe)' )  ## add o ?
-      title_for_regex = title_for_regex.gsub( 'ó', '(ó|o)' )  ## e.g. Colón
-      title_for_regex = title_for_regex.gsub( 'ü', '(ü|ue)' )  ## add u ?
-      title_for_regex = title_for_regex.gsub( 'é', '(é|e)' )  ## e.g. Vélez
-      title_for_regex = title_for_regex.gsub( 'ê', '(ê|e)' )  ## e.g. Grêmio
-      title_for_regex = title_for_regex.gsub( 'ñ', '(ñ|n)' )  ## e.g. Porteño
-      title_for_regex = title_for_regex.gsub( 'ú', '(ú|u)' )  ## e.g. Fútbol
 
-      ## todo: add some more; use array for config?
+      ## todo: add some more
       ## see http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references  for more
+      ##
+      ##  reuse for all readers!
+      
+      alternatives = [
+        ['-', '(-| )'],
+        ['ß', '(ß|ss)'],
+        ['æ', '(æ|ae)'],
+        ['á', '(á|a)'],  ## e.g. Bogotá
+        ['ã', '(ã|a)'],  ## e.g  São Paulo
+        ['ä', '(ä|ae)'],  ## add a ?
+        ['Ö', '(Ö|Oe)'], ## e.g. Österreich
+        ['ö', '(ö|oe)'],  ## add o ?
+        ['ó', '(ó|o)'],  ## e.g. Colón
+        ['ü', '(ü|ue)'],  ## add u ?
+        ['é', '(é|e)'],  ## e.g. Vélez
+        ['ê', '(ê|e)'],  ## e.g. Grêmio
+        ['ñ', '(ñ|n)'],  ## e.g. Porteño
+        ['ú', '(ú|u)']  ## e.g. Fútbol
+      ]
+      
+      alternatives.each do |alt|
+        title = title.gsub( alt[0], alt[1] )
+      end
 
-      title_for_regex
+      title
   end
-
 
 
   def known_teams_table

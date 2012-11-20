@@ -17,3 +17,15 @@ class Time
   
 end # class Time
 
+
+class File
+  def self.read_utf8( path )
+    open( path, 'r:bom|utf-8' ) do |file|
+      file.read
+    end
+  end
+end # class File
+
+
+
+

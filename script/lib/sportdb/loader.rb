@@ -39,14 +39,13 @@ class Loader
  
     puts "*** loading data '#{name}' (#{path})..."
 
-    code = File.read( path )
+    ## nb: assume/enfore utf-8 encoding (with or without BOM - byte order mark)
+    ## - see sportdb/utils.rb
+    code = File.read_utf8( path )
     
     load_fixtures_worker( code )
     
-    ### fix: 
-    ## for loaded from fs use filestat? for version - why? why not?
-
-    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "rb.1" )
+    Prop.create!( key: "db.#{fixture_name_to_prop_key(name)}.version", value: "file.rb.#{File.mtime(path).strftime('%Y.%m.%d')}" )
   end
   
   def load_fixtures_builtin( name ) # load from gem (built-in)
@@ -54,7 +53,7 @@ class Loader
  
     puts "*** loading data '#{name}' (#{path})..."
 
-    code = File.read( path )
+    code = File.read_utf8( path )
     
     load_fixtures_worker( code )
 
