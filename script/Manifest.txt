@@ -48,14 +48,13 @@ db/world/2010.txt
 db/world/quali_2012_13_america.rb
 db/world/quali_2012_13_america.txt
 db/world/quali_2012_13_europe.rb
-db/world/quali_2012_13_europe_c.rb
 db/world/quali_2012_13_europe_c.txt
-db/world/quali_2012_13_europe_i.rb
 db/world/quali_2012_13_europe_i.txt
 db/world/teams.rb
 lib/sportdb.rb
 lib/sportdb/cli/opts.rb
 lib/sportdb/cli/runner.rb
+lib/sportdb/console.rb
 lib/sportdb/keys.rb
 lib/sportdb/loader.rb
 lib/sportdb/models/badge.rb
