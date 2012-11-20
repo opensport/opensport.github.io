@@ -40,56 +40,6 @@ class Event < ActiveRecord::Base
   #####################
   ## convenience helper for text parser/reader
 
-  ############
-  ### fix/todo: share helper for all text readers/parsers- where to put it?  
-  ###
-  
-  def title_esc_regex( title_unescaped )
-      
-      ##  escape regex special chars e.g. . to \. and ( to \( etc.
-      # e.g. Benfica Lis.
-      # e.g. Club Atlético Colón (Santa Fe)
-
-      ## NB: cannot use Regexp.escape! will escape space '' to '\ '
-      ## title = Regexp.escape( title_unescaped )
-      title = title_unescaped.gsub( '.', '\.' )
-      title = title.gsub( '(', '\(' )
-      title = title.gsub( ')', '\)' )
-
-      ##  match accented char with or without accents
-      ##  add (ü|ue) etc.
-      ## also make - optional change to (-| ) e.g. Blau-Weiss == Blau Weiss
-
-      ## todo: add some more
-      ## see http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references  for more
-      ##
-      ##  reuse for all readers!
-      
-      alternatives = [
-        ['-', '(-| )'],
-        ['ß', '(ß|ss)'],
-        ['æ', '(æ|ae)'],
-        ['á', '(á|a)'],  ## e.g. Bogotá
-        ['ã', '(ã|a)'],  ## e.g  São Paulo
-        ['ä', '(ä|ae)'],  ## add a ?
-        ['Ö', '(Ö|Oe)'], ## e.g. Österreich
-        ['ö', '(ö|oe)'],  ## add o ?
-        ['ó', '(ó|o)'],  ## e.g. Colón
-        ['ü', '(ü|ue)'],  ## add u ?
-        ['é', '(é|e)'],  ## e.g. Vélez
-        ['ê', '(ê|e)'],  ## e.g. Grêmio
-        ['ñ', '(ñ|n)'],  ## e.g. Porteño
-        ['ú', '(ú|u)']  ## e.g. Fútbol
-      ]
-      
-      alternatives.each do |alt|
-        title = title.gsub( alt[0], alt[1] )
-      end
-
-      title
-  end
-
-
   def known_teams_table
     
     ## build known teams table w/ synonyms e.g.
