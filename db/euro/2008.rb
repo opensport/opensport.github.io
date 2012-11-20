@@ -20,22 +20,10 @@ euro = Event.create!( league:  League.find_by_key!('euro'),
 
 
 euro.add_teams_from_ary!([
-  'sui',
-  'aut',
-  'gre',
-  'ned',
-  'cro',
-  'ita',
-  'cze',
-  'swe',
-  'rou',
-  'ger',
-  'por',
-  'esp',
-  'pol',
-  'fra',
-  'tur',
-  'rus'
+  'sui', 'cze', 'por', 'tur',
+  'aut', 'cro', 'ger', 'pol',
+  'ned', 'ita', 'rou', 'fra',
+  'gre', 'swe', 'esp', 'rus'
 ])
 
 ## The End
