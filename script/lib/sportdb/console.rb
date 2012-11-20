@@ -49,6 +49,44 @@ puts "  #{'%5d' % Game.count} games"
 puts "  #{'%5d' % City.count} cities"
 puts "Ready."
 
+## add some predefined shortcuts
+
+##### some countries
+
+at = Country.find_by_key( 'at' )
+de = Country.find_by_key( 'de' )
+en = Country.find_by_key( 'en' )
+
+us = Country.find_by_key( 'us' )
+ca = Country.find_by_key( 'ca' )
+mx = Country.find_by_key( 'mx' )
+
+#### some events
+
+euro2008 = Event.find_by_key( 'euro.2008' )
+euro2012 = Event.find_by_key( 'euro.2012' )
+euro = euro2012  # add alias
+
+bl = Event.find_by_key( 'de.2012/13' )
+pl = Event.find_by_key( 'en.2012/13' )
+
+### some club teams
+
+barca   = Team.find_by_key( 'barcelona' )
+manu = Team.find_by_key( 'manunited' )
+mun = manunited = manu    # add alias
+bayern  = Team.find_by_key( 'bayern' )
+austria = Team.find_by_key( 'austria' )
+
+### some national teams (three letter fifa codes)
+
+esp = Team.find_by_key( 'esp' )
+ger = Team.find_by_key( 'ger' )
+aut = Team.find_by_key( 'aut' )
+
+mex = Team.find_by_key( 'mex' )
+arg = Team.find_by_key( 'arg' )
+
 ## turn on activerecord logging to console
 
 ActiveRecord::Base.logger = Logger.new( STDOUT )

@@ -29,42 +29,31 @@ module SportDB::FixtureHelpers
     regex = /(?:Group|Gruppe)\s+((?:\d{1}|[A-Z]{1}))\b/
     
     match = regex.match( line )
-    unless match.nil?
-      if match[1] == 'A'
-        pos = 1
-      elsif match[1] == 'B'
-        pos = 2
-      elsif match[1] == 'C'
-        pos = 3
-      elsif match[1] == 'D'
-        pos = 4
-      elsif match[1] == 'E'
-        pos = 5
-      elsif match[1] == 'F'
-        pos = 6
-      elsif match[1] == 'G'
-        pos = 7
-      elsif match[1] == 'H'
-        pos = 8
-      elsif match[1] == 'I'
-        pos = 9
-      elsif match[1] == 'J'
-        pos = 10
-      else
-        pos = match[1].to_i
-      end
+    
+    return [nil,nil] if match.nil?
 
-      title = match[0]
+    pos = case match[1]      
+          when 'A' then 1
+          when 'B' then 2
+          when 'C' then 3
+          when 'D' then 4
+          when 'E' then 5
+          when 'F' then 6
+          when 'G' then 7
+          when 'H' then 8
+          when 'I' then 9
+          when 'J' then 10
+          else  match[1].to_i
+          end
 
-      puts "   title: >#{title}<"
-      puts "   pos: >#{pos}<"
+    title = match[0]
+
+    puts "   title: >#{title}<"
+    puts "   pos: >#{pos}<"
       
-      line.sub!( regex, '[GROUP|TITLE+POS]' )
+    line.sub!( regex, '[GROUP|TITLE+POS]' )
 
-      return [title,pos]
-    else
-      return [nil,nil]
-    end
+    return [title,pos]
   end
   
   def find_round_pos!( line )

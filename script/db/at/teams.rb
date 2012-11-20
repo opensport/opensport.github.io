@@ -4,13 +4,13 @@
 bl = [
   [ 'salzburg',    'FC RB Salzburg|RB Salzburg|Red Bull Salzburg',     'RBS',  'city:salzburg' ],
   [ 'rapid',       'SK Rapid Wien|Rapid Wien',            'RAP',  'city:wien'  ],
-  [ 'admira',      'FC Admira Wacker|Admira Wacker|FC Admira Wacker Mödling',   'ADM', 'city:moedling' ],
+  [ 'admira',      'FC Admira Wacker|Admira Wacker|FC Admira Wacker Mödling|FC Admira',   'ADM', 'city:moedling' ],
   [ 'austria',     'FK Austria Wien|Austria Wien',       'FAK',  'city:wien' ],
   [ 'sturm',       'SK Sturm Graz|Sturm Graz',           'STU',  'city:graz' ],
   [ 'ried',        'SV Ried|SV Josko Ried|SV Josko Fenster Ried',      'RIE', 'city:ried' ],
   [ 'innsbruck',   'FC Wacker Innsbruck|FC Wacker|Wacker Innsbruck',    'IBK', 'city:innsbruck' ],
   [ 'mattersburg', 'SV Mattersburg',                     'SVM',  'city:mattersburg' ],
-  [ 'wrneustadt',  'SC Wiener Neustadt|Wiener Neustadt|Wr. Neustadt', 'WRN',  'city:wrneustadt' ],
+  [ 'wrneustadt',  'SC Wiener Neustadt|Wiener Neustadt|Wr. Neustadt|SC Wr. Neustadt', 'WRN',  'city:wrneustadt' ],
   [ 'wac',         'Wolfsberger AC',                     'WAC',  'city:wolfsberg' ]
 ]
 
@@ -19,7 +19,7 @@ ersteliga = [
   [ 'altach',    'SCR Altach',           'Erste Liga/Vbg.',  'ALT', 'city:altach' ],
   [ 'austrial',  'SC Austria Lustenau|Austria Lustenau',  'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
   [ 'stpoelten', 'SKN St. Pölten',       'Erste Liga/NÖ',    'POE', 'city:stpoelten' ],
-  [ 'linz',      'FC Blau-Weiß Linz|FC Blau Weiss Linz',    'Erste Liga/OÖ',    'BWL', 'city:linz' ],
+  [ 'linz',      'FC Blau-Weiß Linz|Blau-Weiß Linz',    'Erste Liga/OÖ',    'BWL', 'city:linz' ],
   [ 'groedig',   'SV Grödig',            'Erste Liga/Sbg.',  'GRO', 'city:groedig' ],
   [ 'lustenau',  'FC Lustenau 1907|FC Lustenau',     'Erste Liga/Vbg.',  'LUS', 'city:lustenau' ],
   [ 'vienna',    'Vienna FC 1894|First Vienna FC 1894',       'Erste Liga/Wien',  'VIE', 'city:wien' ],
