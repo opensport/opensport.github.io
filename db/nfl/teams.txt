@@ -1,0 +1,46 @@
+# encoding: utf-8
+
+######################################
+## NFL Teams 2012
+
+
+nyjets,       New York Jets|Jets,                    AFC East,  NYJ, city:newyork
+newengland,   New England Patriots|New England|Patriots, AFC East,  NE_, city:boston
+bufbills,      Buffalo Bills|Buffalo|Bills,            AFC East,  BUF, city:buffalo
+miami,        Miami Dolphins|Miami|Dolphins,             AFC East,  MIA, city:miami
+
+baltimore,    Baltimore Ravens|Ravens,    AFC North,  BAL,  city:baltimore
+cincinnati,   Cincinnati Bengals|Bengals,  AFC North,  CIN,  city:cincinnati
+steelers,     Pittsburgh Steelers|Steelers, AFC North,  PIT,  city:pittsburgh
+cleveland,    Cleveland Browns|Browns,    AFC North,  CLE,  city:cleveland
+
+houston,      Houston Texans|Texans,       AFC South,  HOU,  city:houston
+indianapolis, Indianapolis Colts|Colts,   AFC South,  IND,  city:indianapolis
+tennessee,    Tennessee Titans|Titans,     AFC South,  TEN,  city:nashville
+jacksonville, Jacksonville Jaguars|Jaguars, AFC South,  JAC,  city:jacksonville
+
+sandiego,     San Diego Chargers|San Diego|Chargers,       AFC West, SD_,  city:sandiego
+denver,       Denver Broncos|Denver|Broncos,              AFC West, DEN,  city:denver
+oakland,      Oakland Raiders|Oakland|Raiders,           AFC West, OAK,   city:oakland
+kansascity,   Kansas City Chiefs|Kansas City|Chiefs, AFC West,  KC_, city:kansascity
+
+nygiants,     New York Giants|Giants,      NFC East, NYG, city:newyork
+phieagles, Philadelphia Eagles|Eagles,  NFC East, PHI, city:philadelphia
+dalcowboys,       Dallas Cowboys|Cowboys,       NFC East, DAL, city:dallas
+washington,   Washington Redskins|Redskins,  NFC East, WAS, city:washington
+
+chibears,      Chicago Bears|Bears,     NFC North,  CHI, city:chicago
+greenbay,     Green Bay Packers|Packers, NFC North,  GB_, city:greenbay
+minnesota,    Minnesota Vikings|Vikings, NFC North,  MIN, city:minneapolis
+detlions,      Detroit Lions|Lions,     NFC North,  DET, city:detroit
+
+
+atlanta,      Atlanta Falcons|Falcons,       NFC South, ATL, city:atlanta
+tbbuccaneers,     Tampa Bay Buccaneers|Buccaneers,  NFC South, TB_, city:tampa
+neworleans,   New Orleans Saints|Saints,    NFC South, NO_, city:neworleans
+carpnathers,     Carolina Panthers|Panthers,     NFC South, CAR, city:charlotte
+
+sf49ers, San Francisco 49ers|49ers,  NFC West,  SF_,  city:sanfrancisco
+seattle,      Seattle Seahawks|Seahawks,     NFC West,  SEA,  city:seattle
+arizona,      Arizona Cardinals|Cardinals,    NFC West,  ARI,  city:phoenix
+stlrams,      St. Louis Rams|Rams,       NFC West,  STL,  city:stlouis

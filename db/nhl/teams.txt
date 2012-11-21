@@ -3,38 +3,38 @@
 ######################################
 ## NHL  Teams 2012
 
-newjersey,    New Jersey Devils,   East/Atlantic, us
-nyislanders,  New York Islanders,  East/Atlantic, us, city:newyork
-nyrangers,    New York Rangers,    East/Atlantic, us, city:newyork
-philadelphia, Philadelphia Flyers, East/Atlantic, us, city:philadelphia
-pittsburgh,   Pittsburgh Penguins, East/Atlantic, us, city:pittsburgh
+njdevils,     New Jersey Devils,   East/Atlantic, NJD, us, city:newark
+nyislanders,  New York Islanders,  East/Atlantic, NYI, us, city:newyork
+nyrangers,    New York Rangers,    East/Atlantic, NYR, us, city:newyork
+phiflyers,    Philadelphia Flyers, East/Atlantic, PHI, us, city:philadelphia
+pitpenguins,  Pittsburgh Penguins, East/Atlantic, PIT, us, city:pittsburgh
 
-boston,   Boston Bruis,        East/Northeast, us, city:boston
-buffalo,  Buffalo Sabres,      East/Northeast, us, city:buffalo
-montreal, Montreal Canadiens,  East/Northeast, ca, city:montreal
-ottawa,   Ottawa Senators,     East/Northeast, ca, city:ottawa
-toronto,  Toronto Maple Leafs, East/Northeast, ca, city:toronto
+bosbruis,   Boston Bruis,        East/Northeast, BOS, us, city:boston
+bufabres,  Buffalo Sabres,      East/Northeast, BUF, us, city:buffalo
+montreal, Montreal Canadiens,  East/Northeast, MTL, ca, city:montreal
+ottawa,   Ottawa Senators,     East/Northeast, OTT, ca, city:ottawa
+toronto,  Toronto Maple Leafs, East/Northeast, TOR, ca, city:toronto
 
-carolina, Carolina Hurricanes,   East/Southeast, us
-florida,   Florida Panthers,     East/Southeast, us
-tampabay,  Tampa Bay Lightning,  East/Southeast, us
-washington, Washington Capitals, East/Southeast, us, city:washington
-winnipeg,   Winnipeg Jets,       East/Southeast, ca, city:winnipeg
+carhurricanes, Carolina Hurricanes,   East/Southeast, CAR, us, city:raleigh
+florida,   Florida Panthers,     East/Southeast, FLA, us, city:miami
+tblightning,  Tampa Bay Lightning,  East/Southeast, TBL, us, city:tampa
+wshcapitals, Washington Capitals, East/Southeast, WSH, us, city:washington
+winnipeg,   Winnipeg Jets,       East/Southeast, WPG, ca, city:winnipeg
 
-chicago,   Chicago Blackhawks,    West/Central, us, city:chicago
-columbus,  Columbus Blue Jackets, West/Central, us, city:columbus
-detroit,   Detroit Red Wings,     West/Central, us, city:detroit
-nashville,  Nashville Predators,  West/Central, us, city:nashville
-stlouis,    St. Louis Blues,      West/Central, us, city:stlouis
+chiblackhawks,   Chicago Blackhawks,    West/Central, CHI, us, city:chicago
+columbus,  Columbus Blue Jackets, West/Central, CLB, us, city:columbus
+detredwings,   Detroit Red Wings,     West/Central, DET, us, city:detroit
+nshpredators,  Nashville Predators,  West/Central, NSH, us, city:nashville
+stlblues,    St. Louis Blues,      West/Central, STL, us, city:stlouis
 
-calgary,     Calgary Flames,     West/Northwest, ca, city:calgary
-colorado,    Colorado Avalanche, West/Northwest, us
-edmonton,    Edmonton Oilers,    West/Northwest, ca, city:edmonton
-minnesota,   Minnesota Wild,     West/Northwest, us
-vancouver,    Vancouver Canucks, West/Northwest, ca, city:vancouver
+calgary,     Calgary Flames,     West/Northwest, CGY, ca, city:calgary
+colavalanche,    Colorado Avalanche, West/Northwest, COL, us, city:denver
+edmonton,    Edmonton Oilers,    West/Northwest, EDM, ca, city:edmonton
+minwild,   Minnesota Wild,     West/Northwest, MIN, us, city:stpaul
+vancouver,    Vancouver Canucks, West/Northwest, VAN, ca, city:vancouver
 
-anaheim,      Anaheim Ducks,     West/Pacific, us, city:anaheim
-dallas,       Dallas Stars,      West/Pacific, us, city:dallas
-losangeles,   Los Angeles Kings, West/Pacific, us, city:losangeles
-phoenix,      Phoenix Coyotes,   West/Pacific, us, city:phoenix
-sanjose,      San Jose Sharks,   West/Pacific, us, city:sanjose
+anaheim,        Anaheim Ducks,     West/Pacific, ANA,  us,  city:anaheim
+dalstars,       Dallas Stars,      West/Pacific, DAL,  us, city:dallas
+loskings,       Los Angeles Kings, West/Pacific, LOS,  us, city:losangeles
+phxcoyotes,      Phoenix Coyotes,   West/Pacific, PHX,  us, city:phoenix
+sjsharks,      San Jose Sharks,   West/Pacific, SHS,  us, city:sanjose
