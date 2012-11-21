@@ -86,9 +86,3 @@ rohrendorf,    SC Rohrendorf,         2. Landesliga West/NÖ, ROH
 heiligenkreuz, SV Heiligenkreuz,      2. Liga Süd/NÖ,   HEI
 viktoria,      Wiener Viktoria|SC Wiener Viktoria,       Wiener Stadtliga, VIK
 juniors,       FC RB Juniors Salzburg
-
-
-
-## at = Country.find_by_key!( at )
-##
-## Team.create_from_ary!( bl+ersteliga+rlwest+rlmitte+rlost+misc, club: true, country: at )
