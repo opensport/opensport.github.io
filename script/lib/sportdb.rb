@@ -73,39 +73,21 @@ module SportDB
     #  e.g. lets you use Team instead of Models::Team 
     include SportDB::Models
 
-    def self.fixtures_rb
+
+    def self.fixtures_rb_test
      ['leagues',
       'seasons',
-#      'at/teams',
 #      'at/2011_12/bl',
 #      'at/2011_12/cup',
 #      'at/2012_13/bl',
 #      'at/2012_13/cup',
-#      'copa/teams',
 #      'copa/sud_2012_13',
-#      'america/teams',
-#      'world/teams',
 #      'world/quali_2012_13_america'
      ]
     end
 
-    def self.fixtures_txt
-      
-      at = Country.find_by_key!( 'at' )
-      de = Country.find_by_key!( 'de' )
-      en = Country.find_by_key!( 'en' )
-      es = Country.find_by_key!( 'es' )
-
-      
+    def self.fixtures_txt_test
       [
-        [ 'america/teams', { national: true } ],
-        [ 'euro/teams', { national: true } ],
-        [ 'at/teams', { club: true, country_id: at.id } ],
-        [ 'de/teams', { club: true, country_id: de.id } ],
-        [ 'en/teams', { club: true, country_id: en.id } ],
-        [ 'es/teams', { club: true, country_id: es.id } ],
-        [ 'cl/teams', { club: true } ],
-        [ 'copa/teams', { club: true } ],
 #       [ AT_2011_12,        'at/2011_12/bl'],
 #       [ AT_2012_13,        'at/2012_13/bl'],
 #       [ AT_CUP_2012_13,    'at/2012_13/cup'],
@@ -115,42 +97,56 @@ module SportDB
     end
 
 
-    def self.fixtures_rb__  # all builtin ruby fixtures; helper for covenience
+    def self.team_fixtures
+      at = Country.find_by_key!( 'at' )
+      de = Country.find_by_key!( 'de' )
+      en = Country.find_by_key!( 'en' )
+      es = Country.find_by_key!( 'es' )
+      ro = Country.find_by_key!( 'ro' )
+      mx = Country.find_by_key!( 'mx' )
+
+      [
+        [ 'america/teams', { national: true } ],
+        [ 'euro/teams',    { national: true } ],
+        [ 'world/teams',   { national: true } ],
+        [ 'at/teams', { club: true, country_id: at.id } ],
+        [ 'de/teams', { club: true, country_id: de.id } ],
+        [ 'en/teams', { club: true, country_id: en.id } ],
+        [ 'es/teams', { club: true, country_id: es.id } ],
+#        [ 'ro/teams', { club: true, country_id: ro.id } ],
+        [ 'mx/teams', { club: true, country_id: mx.id } ],
+        [ 'cl/teams', { club: true } ],
+        [ 'copa/teams', { club: true } ],
+        [ 'nhl/teams', { club: true } ]
+      ]
+    end
+
+    def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
      ['leagues',
       'seasons',
-      'at/teams',
       'at/badges',
       'at/2011_12/bl',
       'at/2011_12/cup',
       'at/2012_13/bl',
       'at/2012_13/cup',
-      'de/teams',
-      'en/teams',
-      'es/teams',
-      'cl/teams',
       'cl/badges',
       'cl/2011_12/cl',
       'cl/2011_12/el',
       'cl/2012_13/cl',
       'de/2012_13/bl',
       'en/2012_13/pl',
-      'euro/teams',
       'euro/2008',
       'euro/2012',
-      'america/teams',
       'america/2011',
-      'copa/teams',
       'copa/sud_2012_13',
-      'mx/teams',
       'mx/apertura_2012',
-      'world/teams',
       'world/2010',
       'world/quali_2012_13_europe',
-      'world/quali_2012_13_america',
-      'nhl/teams']
+      'world/quali_2012_13_america'
+      ]
     end
 
-    def self.fixtures_txt__
+    def self.fixtures_txt
       [[ AT_2011_12,        'at/2011_12/bl'],
        [ AT_2012_13,        'at/2012_13/bl'],
        [ AT_CUP_2012_13,    'at/2012_13/cup'],
@@ -166,6 +162,10 @@ module SportDB
     end
   end # class Fixtures
 
+  def self.team_fixtures
+    Fixtures.team_fixtures
+  end
+
   def self.fixtures_rb  # all builtin ruby fixtures; helper for covenience
     Fixtures.fixtures_rb
   end
@@ -175,11 +175,15 @@ module SportDB
   end
 
   def self.load_all
+    ## load teams first
+    read( team_fixtures )  # converted to plain text fixtures (.rb no longer exist)
+    
     load( fixtures_rb )
   end
 
 
   def self.read_all
+    ## todo/fix: remove!! roll into load_all
     read( fixtures_txt )
   end
 
