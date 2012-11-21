@@ -179,7 +179,7 @@ private
     puts "parsing round line: >#{line}<"
     pos = find_round_pos!( line )
         
-    @knockout_flag = find_knockout_flag( line )
+    @knockout_flag = is_knockout_round?( line )
 
     group_title, group_pos = find_group_title_and_pos!( line )
 

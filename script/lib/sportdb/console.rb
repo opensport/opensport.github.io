@@ -23,8 +23,8 @@ Season  = SportDB::Models::Season
 League  = SportDB::Models::League
 Badge   = SportDB::Models::Badge
 
-# Tag     = WorldDB::Models::Tag
-# Tagging = WorldDB::Models::Tagging
+Tag     = WorldDB::Models::Tag
+Tagging = WorldDB::Models::Tagging
 Country = WorldDB::Models::Country
 Region  = WorldDB::Models::Region
 City    = WorldDB::Models::City
@@ -53,39 +53,39 @@ puts "Ready."
 
 ##### some countries
 
-at = Country.find_by_key( 'at' )
-de = Country.find_by_key( 'de' )
-en = Country.find_by_key( 'en' )
+AT = Country.find_by_key( 'at' )
+DE = Country.find_by_key( 'de' )
+EN = Country.find_by_key( 'en' )
 
-us = Country.find_by_key( 'us' )
-ca = Country.find_by_key( 'ca' )
-mx = Country.find_by_key( 'mx' )
+US = Country.find_by_key( 'us' )
+CA = Country.find_by_key( 'ca' )
+MX = Country.find_by_key( 'mx' )
 
 #### some events
 
-euro2008 = Event.find_by_key( 'euro.2008' )
-euro2012 = Event.find_by_key( 'euro.2012' )
-euro = euro2012  # add alias
+EURO2008 = Event.find_by_key( 'euro.2008' )
+EURO2012 = Event.find_by_key( 'euro.2012' )
+EURO = EURO2012  # add alias
 
-bl = Event.find_by_key( 'de.2012/13' )
-pl = Event.find_by_key( 'en.2012/13' )
+BL = Event.find_by_key( 'de.2012/13' )
+PL = Event.find_by_key( 'en.2012/13' )
 
 ### some club teams
 
-barca   = Team.find_by_key( 'barcelona' )
-manu = Team.find_by_key( 'manunited' )
-mun = manunited = manu    # add alias
-bayern  = Team.find_by_key( 'bayern' )
-austria = Team.find_by_key( 'austria' )
+BARCA   = Team.find_by_key( 'barcelona' )
+MANU    = Team.find_by_key( 'manunited' )
+MUN = MANUNITED = MANU    # add alias
+BAYERN  = Team.find_by_key( 'bayern' )
+AUSTRIA = Team.find_by_key( 'austria' )
 
 ### some national teams (three letter fifa codes)
 
-esp = Team.find_by_key( 'esp' )
-ger = Team.find_by_key( 'ger' )
-aut = Team.find_by_key( 'aut' )
+ESP = Team.find_by_key( 'esp' )
+GER = Team.find_by_key( 'ger' )
+AUT = Team.find_by_key( 'aut' )
 
-mex = Team.find_by_key( 'mex' )
-arg = Team.find_by_key( 'arg' )
+MEX = Team.find_by_key( 'mex' )
+ARG = Team.find_by_key( 'arg' )
 
 ## turn on activerecord logging to console
 

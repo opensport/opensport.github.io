@@ -24,12 +24,3 @@ hon, Honduras,      HON, hn
 crc, Costa Rica,    CRC, cr
 slv, El Salvador,   SLV, sv
 guy, Guyana,        GUY, gy
-
-
-
-## teams = teams_america1 + teams_america2
-##
-## Team.create_from_ary!( teams, national: true )
-#
-## The End
-#################

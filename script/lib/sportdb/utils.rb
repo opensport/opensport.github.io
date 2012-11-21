@@ -1,98 +1,6 @@
 
 ### some utils moved to worldbdb/utils for reuse
 
-module SportDB
-
-
-## fix: add to worlddb/readers/values_reader n
-##             worlddb/readers/fixture_reader or line_reader? use line_reader (pass)
-##     add  yaml_reader too
-
-class ValuesReader
-
-  def initialize( logger, path, more_values={} )
-    ## todo: check - can we make logger=nil a default arg too?
-    if logger.nil?
-      @logger = Logger.new(STDOUT)
-      @logger.level = Logger::INFO
-    else
-      @logger = logger
-    end
-    
-    @path = path
-
-    @more_values = more_values
-
-    @data = File.read_utf8( @path )
-  end
-
-  attr_reader :logger
-  
-  def each_line
-   
-    @data.each_line do |line|
-  
-      if line =~ /^\s*#/
-        # skip komments and do NOT copy to result (keep comments secret!)
-        logger.debug 'skipping comment line'
-        next
-      end
-        
-      if line =~ /^\s*$/ 
-        # kommentar oder leerzeile überspringen 
-        logger.debug 'skipping blank line'
-        next
-      end
-
-      # remove leading and trailing whitespace
-      line = line.strip
-
-      puts "line: >>#{line}<<"
-
-      values = line.split(',')
-      
-      # remove leading and trailing whitespace for values
-      values = values.map { |value| value.strip }
-
-      ## remove comment columns
-      ##  todo: also removecomments from inside columns ?? why? why not??
-      
-      values = values.select do |value|
-        if value =~ /^#/  ## start with # treat it as a comment column; e.g. remove it
-          puts "   removing column with value >>#{value}<<"
-          false
-        else
-          true
-        end
-      end 
-      
-      puts "  values: >>#{values.join('<< >>')}<<"
-            
-      attribs = {
-        key: values[0]
-      }
-      
-      ## title (split of optional synonyms)
-      # e.g. FC Bayern Muenchen|Bayern Muenchen|Bayern
-      titles = values[1].split('|')
-      
-      attribs[ :title ]    =  titles[0]
-      ## add optional synonyms
-      attribs[ :synonyms ] =  titles[1..-1].join('|')  if titles.size > 1
-      
-      attribs = attribs.merge( @more_values )  # e.g. merge country_id and other defaults if present
-                        
-      yield( attribs, values[2..-1] )
-
-    end # lines.each
-
-  end # method each_line
-  
-end # class ValuesReader
-
-end # module SportDB
-
-
 
 module SportDB::FixtureHelpers
 
@@ -105,9 +13,7 @@ module SportDB::FixtureHelpers
     line =~ /Gruppe|Group/
   end
   
-  ### todo: rename to is_knockout_round?
-  ##
-  def find_knockout_flag( line )
+  def is_knockout_round?( line )
     if line =~ /Achtelfinale|Viertelfinale|Halbfinale|Spiel um Platz 3|Finale|K\.O\.|Knockout/
       puts "   setting knockout flag to true"
       true

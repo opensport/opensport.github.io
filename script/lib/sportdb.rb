@@ -92,10 +92,20 @@ module SportDB
     def self.fixtures_txt
       
       at = Country.find_by_key!( 'at' )
+      de = Country.find_by_key!( 'de' )
+      en = Country.find_by_key!( 'en' )
+      es = Country.find_by_key!( 'es' )
+
       
       [
         [ 'america/teams', { national: true } ],
-        [ 'at/teams', { club: true, country_id: at.id } ]
+        [ 'euro/teams', { national: true } ],
+        [ 'at/teams', { club: true, country_id: at.id } ],
+        [ 'de/teams', { club: true, country_id: de.id } ],
+        [ 'en/teams', { club: true, country_id: en.id } ],
+        [ 'es/teams', { club: true, country_id: es.id } ],
+        [ 'cl/teams', { club: true } ],
+        [ 'copa/teams', { club: true } ],
 #       [ AT_2011_12,        'at/2011_12/bl'],
 #       [ AT_2012_13,        'at/2012_13/bl'],
 #       [ AT_CUP_2012_13,    'at/2012_13/cup'],
