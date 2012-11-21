@@ -40,7 +40,7 @@ class Reader
 
     puts "*** parsing data '#{name}' (#{path})..."
 
-    reader = FixtureReader.new( logger, path )
+    reader = LineReader.new( logger, path )
     
     load_fixtures_worker( event_key, reader )
 
@@ -52,7 +52,7 @@ class Reader
 
     puts "*** parsing data '#{name}' (#{path})..."
 
-    reader = FixtureReader.new( logger, path )
+    reader = LineReader.new( logger, path )
 
     load_fixtures_worker( event_key, reader )
     
