@@ -15,27 +15,27 @@ Get a copy of the `sport.db` file. That's it.
 
 International w/ national teams (e.g. Austria, England, etc.)
 
-* [World Cup Quali 2012/13, World Cup 2010](https://github.com/geraldb/sport.db/tree/master/db/world)
-* [UEFA European Football Championship (Euro) 2012, 2008](https://github.com/geraldb/sport.db/tree/master/db/euro)
+* [World Cup Quali 2012/13, World Cup 2010](https://github.com/geraldb/sport.db/tree/master/world)
+* [UEFA European Football Championship (Euro) 2012, 2008](https://github.com/geraldb/sport.db/tree/master/euro)
 
 International w/ football club teams (e.g. FC Barcelona, Manchester Utd, etc.)
 
-* [UEFA Champions League 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/cl)
-* [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/db/cl)
+* [UEFA Champions League 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/cl)
+* [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/cl)
 
 National leagues & cups w/ football club teams 
 
-* [English Permier League 2012/13](https://github.com/geraldb/sport.db/tree/master/db/en)
-* [Deutsche Bundesliga 2012/13](https://github.com/geraldb/sport.db/tree/master/db/de)
-* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at), [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
-* [Romania Liga 1 2012/13](https://github.com/geraldb/sport.db/tree/master/db/ro)
-* [México Primera División Apertura 2012](https://github.com/geraldb/sport.db/tree/master/db/mx)
+* [English Permier League 2012/13](https://github.com/geraldb/sport.db/tree/master/en)
+* [Deutsche Bundesliga 2012/13](https://github.com/geraldb/sport.db/tree/master/de)
+* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/at), [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
+* [Romania Liga 1 2012/13](https://github.com/geraldb/sport.db/tree/master/ro)
+* [México Primera División Apertura 2012](https://github.com/geraldb/sport.db/tree/master/mx)
 
 ### Hockey
 
 Hockey club teams
 
-* [National Hockey League (NHL) 2012](https://github.com/geraldb/sport.db/tree/master/db/nhl)
+* [National Hockey League (NHL) 2012](https://github.com/geraldb/sport.db/tree/master/nhl)
 
 Anything missing? Add your leagues, teams, fixtures and more.
 
@@ -141,7 +141,7 @@ The `sport.db` includes the following tables:
        sportdb -c                                         # create database schema
 
 
-See the [`sportdb` command line tool documentation](https://github.com/geraldb/sport.db/tree/master/script) for more.
+See the [`sportdb` command line tool documentation](https://github.com/geraldb/sport.db.ruby) for more.
 
 
 ## Build Your Own `sport.db` Version

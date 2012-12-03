@@ -6,8 +6,8 @@ require 'pp'
 require 'sportdb'
 
 
-BUILD_DIR = "."
-DATA_DIR  = "./db"
+BUILD_DIR = "./build"
+DATA_DIR  = "."
 
 
 SPORT_DB_PATH = "#{BUILD_DIR}/sport.db"
@@ -20,9 +20,10 @@ DB_CONFIG = {
 
 task :default => 'release'
 
+directory BUILD_DIR
 
 desc "clean db build for release"
-task :release => [:clean,:create,:import] do
+task :release => [BUILD_DIR, :clean,:create,:import] do
   puts "hello from sport.db release build script"
 end
 
