@@ -27,7 +27,7 @@ National leagues & cups w/ football club teams
 
 * [English Permier League 2012/13](https://github.com/geraldb/sport.db/tree/master/en)
 * [Deutsche Bundesliga 2012/13](https://github.com/geraldb/sport.db/tree/master/de)
-* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/at), [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/db/at)
+* [Österreichische Bundesliga 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/at), [ÖFB Cup 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/at)
 * [Romania Liga 1 2012/13](https://github.com/geraldb/sport.db/tree/master/ro)
 * [México Primera División Apertura 2012](https://github.com/geraldb/sport.db/tree/master/mx)
 
