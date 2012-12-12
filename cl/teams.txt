@@ -15,7 +15,7 @@ sporting,     Sporting Lisboa,                 pt, city:lisboa
 milan,        AC Mailand|AC Milan,           it, city:milano
 inter,        FC Internazionale Milano,      it, city:milano
 napoli,       SSC Napoli,                    it, city:napoli
-juventus,     Juventus Turin,                it, city:turin
+juventus,     Juventus Turin,                it, city:torino
 
 paris,        Paris St. Germain|Paris S.Germai|Paris Saint Germain,    fr, city:paris
 montpellier,  HSC Montpellier|Montpellier,      fr, city:montpellier
