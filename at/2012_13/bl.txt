@@ -126,35 +126,35 @@
 
 16. Runde  -  Sa 17. Nov 2012
 
-17.11. 16:00  RB Salzburg      -     FC Wacker
-17.11. 16:00  FK Austria Wien      -     Wiener Neustadt
-17.11. 16:00  SV Mattersburg      -     SK Rapid Wien
-17.11. 16:00  SK Sturm Graz      -     SV Ried
-17.11. 16:00  Wolfsberger AC      -     Admira Wacker
+17.11. 16:00  RB Salzburg      2:0     FC Wacker
+17.11. 16:00  FK Austria Wien      3:0     Wiener Neustadt
+17.11. 16:00  SV Mattersburg      0:3     SK Rapid Wien
+17.11. 16:00  SK Sturm Graz      3:1     SV Ried
+17.11. 16:00  Wolfsberger AC      1:1     Admira Wacker
 
 17. Runde  -  Sa 24. Nov 2012
 
-24.11. 16:00  FC Wacker      -     SK Sturm Graz
-24.11. 16:00  Admira Wacker      -     SK Rapid Wien
-24.11. 16:00  FK Austria Wien      -     SV Mattersburg
-24.11. 16:00  SV Ried      -     RB Salzburg
-24.11. 16:00  Wiener Neustadt      -     Wolfsberger AC
+24.11. 16:00  FC Wacker      0:3     SK Sturm Graz
+24.11. 16:00  Admira Wacker      0:2     SK Rapid Wien
+24.11. 16:00  FK Austria Wien      3:1     SV Mattersburg
+24.11. 16:00  SV Ried      3:1     RB Salzburg
+24.11. 16:00  Wiener Neustadt      2:1     Wolfsberger AC
 
 18. Runde  -  Sa 1. Dez 2012
 
-01.12. 16:00  SK Sturm Graz      -     Wiener Neustadt
-01.12. 16:00  SK Rapid Wien      -     SV Ried
-01.12. 16:00  RB Salzburg      -     FK Austria Wien
-01.12. 16:00  SV Mattersburg      -     Admira Wacker
-01.12. 16:00  Wolfsberger AC      -     FC Wacker
+01.12. 16:00  SK Sturm Graz      3:1     Wiener Neustadt
+01.12. 16:00  SK Rapid Wien      4:3     SV Ried
+01.12. 16:00  RB Salzburg      0:0     FK Austria Wien
+01.12. 16:00  SV Mattersburg      3:0     Admira Wacker
+01.12. 16:00  Wolfsberger AC      2:2     FC Wacker
 
 19. Runde  -  Sa 8. Dez 2012
 
-08.12. 16:00  SV Mattersburg      -     Wiener Neustadt
-08.12. 16:00  Admira Wacker      -     SV Ried
-08.12. 16:00  SK Rapid Wien      -     FC Wacker
-08.12. 16:00  SK Sturm Graz      -     RB Salzburg
-08.12. 16:00  Wolfsberger AC      -     FK Austria Wien
+08.12. 16:00  SV Mattersburg      1:0     Wiener Neustadt
+08.12. 16:00  Admira Wacker      0:3     SV Ried
+08.12. 16:00  SK Rapid Wien      2:1     FC Wacker
+08.12. 16:00  SK Sturm Graz      1:1     RB Salzburg
+08.12. 16:00  Wolfsberger AC      3:6     FK Austria Wien
 
 20. Runde  -  Sa 15. Dez 2012
 
@@ -165,3 +165,34 @@
 15.12. 16:00  SV Ried      -     Wolfsberger AC
 
 
+21. Runde  - Sa 16. Feb 2013
+
+2013-02-16 12:00  SV Ried  -  FC Wacker Innsbruck
+2013-02-16 12:00  Rapid Wien  -  Austria Wien
+2013-02-16 12:00  SV Mattersburg  -  Sturm Graz
+2013-02-16 12:00  Wolfsberger AC  -  RB Salzburg
+2013-02-16 12:00  FC Admira Wacker  -  SC Wiener Neustadt
+
+22. Runde - Sa 23. Feb 2013
+
+2013-02-23 12:00  SC Wiener Neustadt  -  SV Ried
+2013-02-23 12:00  Sturm Graz  -  Wolfsberger AC
+2013-02-23 12:00  RB Salzburg  -  Rapid Wien
+2013-02-23 12:00  Austria Wien  -  FC Admira Wacker
+2013-02-23 12:00  FC Wacker Innsbruck  -  SV Mattersburg
+
+23. Runde - Di 26. Feb 2013
+
+2013-02-26 12:00  SV Ried  -  Austria Wien
+2013-02-26 12:00  Rapid Wien  -  Sturm Graz
+2013-02-26 12:00  FC Wacker Innsbruck  -  SC Wiener Neustadt
+2013-02-26 12:00  Wolfsberger AC  -  SV Mattersburg
+2013-02-26 12:00  FC Admira Wacker  -  RB Salzburg
+
+24. Runde - Sa 02. Mar 2013
+
+2013-03-02 12:00  Sturm Graz  -  FC Admira Wacker
+2013-03-02 12:00  RB Salzburg  -  SC Wiener Neustadt
+2013-03-02 12:00  Austria Wien  -  FC Wacker Innsbruck
+2013-03-02 12:00  SV Mattersburg  -  SV Ried
+2013-03-02 12:00  Wolfsberger AC  -  Rapid Wien
