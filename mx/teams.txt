@@ -1,5 +1,8 @@
 # encoding: utf-8
 
+# see http://es.wikipedia.org/wiki/Primera_División_de_México
+# official site @ www.ligamx.net
+
 america,   Club América|América de Mexico,   city:mexico
 atlante,   Atlante,             city:cancun
 atlas,     Atlas,               city:guadalajara
@@ -7,14 +10,24 @@ chivas,    Guadalajara Chivas,  city:guadalajara
 cruzazul,  Cruz Azul,           city:mexico
 jaguares,  Jaguares de Chiapas, city:tuxtla
 leon,      Club León,           city:leon
+
+
+# fix: change key to morelia???
 monarcas,  Monarcas Morelia|Atletico Monarcas Morelia,    city:morelia
 monterrey, Monterrey|CF Monterrey ,           city:monterrey
 pachuca,   Pachuca,             city:pachuca
 puebla,    Puebla F.C. ,        city:puebla
 queretaro, Querétaro F.C.,      city:queretaro
 sanluis,   Club San Luis,      city:sanluispotosi
+
+
+# fix: use santos for key 
+
 slaguna,   Santos Laguna,       city:torreon
 tijuana,   Club Tijuana,        city:tijuana
 toluca,    Toluca|Deportivo Toluca,              city:toluca
+
+# fix: change city to monterrey
+
 tigres,    Tigres UANL,         city:sannicolas
 pumas,     Pumas UNAM,          city:mexico
