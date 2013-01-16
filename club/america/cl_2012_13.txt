@@ -1,0 +1,54 @@
+# 
+# Champions League CONCACAF
+#  - CONCACAF = North/Central America & Carribean
+#
+# see http://en.wikipedia.org/wiki/2012–13_CONCACAF_Champions_League
+#     http://es.wikipedia.org/wiki/Concacaf_Liga_Campeones_2012-2013
+#
+# Dates   July 31, 2012 – May 1, 2013
+# Teams   24 (from 11 associations)
+
+
+
+
+######
+# Groups
+
+Group 1  |  Santos Laguna       Toronto FC              Águila
+Group 2  |  Herediano           Real Salt Lake          Tauro
+Group 3  |  Houston Dynamo      Olimpia                 FAS
+Group 4  |  Seattle Sounders    Marathón                Caledonia AIA
+Group 5  |  Los Angeles Galaxy  Puerto Rico Islanders   Isidro Metapán
+Group 6  |  Tigres UANL         Alajuelense             Real Estelí
+Group 7  |  Monterrey           Municipal               Chorrillo
+Group 8  |  Xelajú              Guadalajara Chivas      W Connection
+
+
+################
+## Group 1
+
+
+################
+## Group 2
+
+
+################
+## Group 3
+
+
+################
+## Group 4
+
+################
+## Group 5
+
+################
+## Group 6
+
+################
+## Group 7
+
+################
+## Group 8
+
+
