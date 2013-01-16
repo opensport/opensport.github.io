@@ -3,31 +3,31 @@
 # see http://es.wikipedia.org/wiki/Primera_División_de_México
 # official site @ www.ligamx.net
 
-america,   Club América|América de Mexico,   city:mexico
-atlante,   Atlante,             city:cancun
-atlas,     Atlas,               city:guadalajara
-chivas,    Guadalajara Chivas,  city:guadalajara
-cruzazul,  Cruz Azul,           city:mexico
-jaguares,  Jaguares de Chiapas, city:tuxtla
-leon,      Club León,           city:leon
+america,   América|Club América|América de Mexico,  AME, city:mexico
+cruzazul,  Cruz Azul,                       CAZ, city:mexico
+pumas,     UNAM|Pumas UNAM,                      PUM, city:mexico
+
+monterrey, Monterrey|CF Monterrey,          MTY, city:monterrey
+tigres,    Tigres|Tigres UANL,                     TIG, city:monterrey
+
+chivas,    Guadalajara|Guadalajara Chivas,              GUA, city:guadalajara
+atlas,     Atlas,                           ATS, city:guadalajara
 
 
-# fix: change key to morelia???
-monarcas,  Monarcas Morelia|Atletico Monarcas Morelia,    city:morelia
-monterrey, Monterrey|CF Monterrey ,           city:monterrey
-pachuca,   Pachuca,             city:pachuca
-puebla,    Puebla F.C. ,        city:puebla
-queretaro, Querétaro F.C.,      city:queretaro
-sanluis,   Club San Luis,      city:sanluispotosi
+atlante,   Atlante,                         ATL, city:cancun
+jaguares,  Chiapas|Jaguares de Chiapas, JAG, city:tuxtla
+leon,      León|Club León,           LEO, city:leon
 
 
-# fix: use santos for key 
+morelia,   Morelia|Monarcas Morelia|Atletico Monarcas Morelia,  MOR,   city:morelia
+pachuca,   Pachuca,                  PAC,  city:pachuca
+puebla,    Puebla|Puebla F.C. ,             PUE,  city:puebla
+queretaro, Querétaro|Querétaro F.C.,           QRO, city:queretaro
+sanluis,   San Luis|Club San Luis,            SNL,  city:sanluispotosi
 
-slaguna,   Santos Laguna,       city:torreon
-tijuana,   Club Tijuana,        city:tijuana
-toluca,    Toluca|Deportivo Toluca,              city:toluca
+santos,    Santos|Santos Laguna,           SAN, city:torreon
+tijuana,   Tijuana|Club Tijuana,            TIJ, city:tijuana
+toluca,    Toluca|Deportivo Toluca, TOL, city:toluca
 
-# fix: change city to monterrey
 
-tigres,    Tigres UANL,         city:sannicolas
-pumas,     Pumas UNAM,          city:mexico
+
