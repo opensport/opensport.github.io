@@ -1,0 +1,5 @@
+
+paris,        Paris St. Germain|Paris S.Germai|Paris Saint Germain,   city:paris
+montpellier,  HSC Montpellier|Montpellier,       city:montpellier
+lille,        OSC Lille|Lille OSC,             city:lille
+marseille,    Olympique Marseille,     city:marseille

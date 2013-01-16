@@ -1,26 +1,19 @@
 # encoding: utf-8
 
 #### NB:
-## use en/teams.rb for English Teams
-## use es/teams.rb for Spanish Teams
-## use de/teams.rb for German Teams
-## use at/teams.rb for Austrian Teams
-  
+
+## use en/teams.txt for English Teams
+## use es/teams.txt for Spanish Teams
+## use de/teams.txt for German Teams
+## use it/teams.txt for Italian Teams
+## use fr/teams.txt for French Teams
+## use at/teams.txt for Austrian Teams
 
 porto,        FC Porto,                        pt, city:porto
 benfica,      Benfica Lissabon|Benfica Lis.,   pt, city:lisboa
 braga,        Sporting Braga,                  pt, city:braga
 sporting,     Sporting Lisboa,                 pt, city:lisboa
 
-milan,        AC Mailand|AC Milan,           it, city:milano
-inter,        FC Internazionale Milano,      it, city:milano
-napoli,       SSC Napoli,                    it, city:napoli
-juventus,     Juventus Turin,                it, city:torino
-
-paris,        Paris St. Germain|Paris S.Germai|Paris Saint Germain,    fr, city:paris
-montpellier,  HSC Montpellier|Montpellier,      fr, city:montpellier
-lille,        OSC Lille|Lille OSC,               fr, city:lille
-marseille,    Olympique Marseille,      fr, city:marseille
 
 kiew,         Dynamo Kiew|FC Dynamo Kiew|Dynamo Kiev,          ua, city:kiev
 donezk,       Schachtjor Donezk|Shakhtar Don.|Shakhtar Donetsk,    ua, city:donetsk
