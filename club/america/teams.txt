@@ -20,7 +20,7 @@ toronto, Toronto FC, TFC, city:toronto, ca
 
 metapan, Isidro Metapán|Asociación Deportiva Isidro Metapán, city:metapan, sv
 aguila,  Águila|Club Deportivo Águila, city:sansalvador, sv
-fas,     Club Deportivo FAS|Futbolistas Asociados Santanecos, FAS, city:santaana, sv
+fas,     CD FAS|Club Deportivo FAS|Futbolistas Asociados Santanecos, FAS, city:santaana, sv
 
 #########################
 # Costa Rica, cr
