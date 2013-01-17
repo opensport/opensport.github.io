@@ -3,16 +3,27 @@
 ########################
 # United States, us
 
-galaxy, Los Angeles Galaxy|LA Galaxy, city:losangeles, us
-seattle, Seattle Sounders|Seattle Sounders FC, city:seattle, us
-houston, Houston Dynamo, city:houston, us
-saltlake, Real Salt Lake, city:saltlake, us
+# NB: use three/two letter codes from mlssoccer.com
+
+galaxy, Los Angeles Galaxy|LA Galaxy, LA, city:losangeles, us
+seattle, Seattle Sounders|Seattle Sounders FC, SEA, city:seattle, us
+houston, Houston Dynamo, HOU, city:houston, us
+saltlake, Real Salt Lake, RSL, city:saltlake, us
+sanjose, San Jose Earthquakes, SJ, city:sanjose, us
+kansascity, Sporting Kansas City|Sporting KC, city:kansascity, us
+colorado, Colorado Rapids, city:denver, us
+dallas, FC Dallas, city:dallas, us
 
 
 #########################
-#  Canada, us
+#  Canada, ca
+
+# NB: three canadian teams play in mls w/ us teams
 
 toronto, Toronto FC, TFC, city:toronto, ca
+vancouver, Vancouver Whitecaps, city:vancouver, ca
+montreal, Montreal Impact, city:montreal, ca
+
 
 
 ########################
@@ -21,6 +32,7 @@ toronto, Toronto FC, TFC, city:toronto, ca
 metapan, Isidro Metapán|Asociación Deportiva Isidro Metapán, city:metapan, sv
 aguila,  Águila|Club Deportivo Águila, city:sansalvador, sv
 fas,     CD FAS|Club Deportivo FAS|Futbolistas Asociados Santanecos, FAS, city:santaana, sv
+alianza, Alianza|Alianza FC|Alianza Fútbol Club, city:sansalvador, sv
 
 #########################
 # Costa Rica, cr
@@ -33,18 +45,23 @@ herediano, Herediano|CS Herediano, city:heredia, cr   #  10 km al noroeste de Sa
 
 olimpia, Olimpia|CD Olimpia, city:tegucigalpa, hn
 marathon, Marathón|CD Marathón, city:sanpedrosula, hn
+espana, Real España|Real CD España, city:sanpedrosula, hn
+motagua, Motagua|CD Motagua, city:tegucigalpa, hn
 
 ##########################
 # Guatemala, gt
 
 municipal, Municipal|CSD Municipal, city:guatemala, gt
 xelaju, Xelajú|Club Xelajú MC, city:quetzaltenango, gt
+comunicaciones, Comunicaciones|Comunicaciones FC, city:guatemala, gt
 
 ##########################
 # Panama, pa
 
 chorrillo, Chorrillo|Chorrillo FC, city:panama, pa
 tauro, Tauro|Tauro FC, city:panama, pa
+arabeunido, Árabe Unido|Club Deportivo Árabe Unido, DAU, city:colon, pa
+sanfrancisco, San Francisco|San Francisco FC|San Francisco Fútbol Club de La Chorrera, city:lachorrera, pa
 
 ############################
 # Nicaragua, ni
@@ -63,6 +80,18 @@ wconnection, W Connection, city:narabella, tt
 # Puerto Rico, pr
 
 puertorico, Puerto Rico Islanders|Puerto Rico Islanders FC, city:bayamon, pr
+
+
+######################
+# Haiti, ht
+
+tempete, Tempête|Tempête FC|Tempête Football Club, TFC, city:saintmarc, ht
+
+######################
+# Guyana, gy
+
+alphaunited, Alpha United|Alpha United FC, city:providence, gy
+
 
 
 
