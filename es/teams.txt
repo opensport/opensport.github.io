@@ -7,14 +7,14 @@
 #      -> http://en.wikipedia.org/wiki/La_Liga
 
 barcelona, FC Barcelona|Fútbol Club Barcelona,        city:barcelona
-espanyol,  Real CD Espanyol|Real Club Deportivo Espanyol|Real Club Deportivo Español,  city:barcelona
+espanyol,  Espanyol Barcelona|Real CD Espanyol|Real Club Deportivo Espanyol|Real Club Deportivo Español,  city:barcelona
 
 madrid,    Real Madrid|Real Madrid CF|Real Madrid Club de Fútbol,         city:madrid
 atletico,  Atlético Madrid|Club Atlético de Madrid,                 city:madrid
 getafe,    Getafe|Getafe CF|Getafe Club de Fútbol,     city:madrid    # Getafe - city in madrid metro area
 rayo,      Rayo Vallecano|Rayo Vallecano de Madrid, city:madrid
 
-realbetis, Real Betis|Real Betis Balompié, city:sevilla
+realbetis, Real Betis Sevilla|Real Betis|Real Betis Balompié, city:sevilla
 sevilla,   Sevilla|Sevilla FC|Sevilla Fútbol Club, city:sevilla
 
 valencia,  Valencia|FC Valencia|CF Valencia|Valencia CF|Valencia Club de Fútbol,       city:valencia
@@ -25,9 +25,9 @@ malaga,    FC Málaga|Málaga CF|CF Málaga,   city:malaga
 athletic,  Athletic Bilbao,                 city:bilbao
 granada,   Granada|Granada CF|Granada Club de Fútbol,  city:granada
 osasuna,   Osasuna|CA Osasuna|Club Atlético Osasuna,   city:pamplona
-celta,     Real Club Celta Vigo|Real Club Celta de Vigo, city:vigo
+celta,     Celta Vigo|Real Club Celta Vigo|Real Club Celta de Vigo, city:vigo
 deportivo, Deportivo La Coruña|Deportivo de La Coruña|Deportivo da Coruña|Real Club Deportivo La Coruña, city:acoruna
 mallorca,  RCD Mallorca|Real CD Mallorca|Real Club Deportivo Mallorca, city:palma
-realsociedad, Real Sociedad|Real Sociedad de Fútbol, city:sansebastian
+realsociedad, Real Sociedad San Sebastián|Real Sociedad|Real Sociedad de Fútbol, city:sansebastian
 valladolid, Real Valladolid|Real Valladolid CF|Real Valladolid Club de Fútbol, city:valladolid
 zaragoza,   Real Zaragoza,  city:zaragoza

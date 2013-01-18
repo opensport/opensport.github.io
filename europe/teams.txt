@@ -1,10 +1,10 @@
 # encoding: utf-8
 
-pol, Polen|Poland,        POL, pl
-gre, Griechenland|Greece, GRE, gr
-rus, Russland|Russia,     RUS, ru
-cze, Tschechien|Czech Republic,   CZE, cz
-ned, Niederlande|Netherlands,  NED, nl
+pol, Poland,        POL, pl
+gre, Greece, GRE, gr
+rus, Russia,     RUS, ru
+cze, Czech Republic,   CZE, cz
+ned, Netherlands,  NED, nl
 den, Dänemark,     DEN, dk
 ger, Deutschland|Germany,  GER, de
 por, Portugal,     POR, pt

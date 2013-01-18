@@ -3,23 +3,23 @@
 ##############
 ## south america
 
-arg, Argentinien, ARG, ar
-bra, Brasilien,   BRA, br
+arg, Argentina,   ARG, ar
+bra, Brasil,      BRA, br
 chi, Chile,       CHI, cl
 par, Paraguay,    PAR, py
 uru, Uruguay,     URU, uy
-col, Kolumbien,   COL, co
+col, Colombia,    COL, co
 ecu, Ecuador,     ECU, ec
 per, Peru,        PER, pe
 ven, Venezuela,   VEN, ve
-bol, Bolivien,    BOL, bo
+bol, Bolivia,     BOL, bo
 
 
 #####################
 #### north/central america & caribbean islands
 
-mex, Mexiko|México,        MEX, mx
-usa, Vereinigte Staaten|United States, USA, us
+mex, Mexico,        MEX, mx
+usa, United States, USA, us
 hon, Honduras,      HON, hn
 crc, Costa Rica,    CRC, cr
 slv, El Salvador,   SLV, sv
