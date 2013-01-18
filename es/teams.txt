@@ -1,16 +1,16 @@
 # encoding: utf-8
 
 #################################
-# Primera División de España
+# Primera División de España - La Liga
 #  20 teams
 #  see -> http://es.wikipedia.org/wiki/Primera_División_de_España
 #      -> http://en.wikipedia.org/wiki/La_Liga
 
-barcelona, FC Barcelona,                    city:barcelona
+barcelona, FC Barcelona|Fútbol Club Barcelona,        city:barcelona
 espanyol,  Real CD Espanyol|Real Club Deportivo Espanyol|Real Club Deportivo Español,  city:barcelona
 
 madrid,    Real Madrid|Real Madrid CF|Real Madrid Club de Fútbol,         city:madrid
-atletico,  Atlético Madrid,                 city:madrid
+atletico,  Atlético Madrid|Club Atlético de Madrid,                 city:madrid
 getafe,    Getafe|Getafe CF|Getafe Club de Fútbol,     city:madrid    # Getafe - city in madrid metro area
 rayo,      Rayo Vallecano|Rayo Vallecano de Madrid, city:madrid
 
@@ -26,7 +26,7 @@ athletic,  Athletic Bilbao,                 city:bilbao
 granada,   Granada|Granada CF|Granada Club de Fútbol,  city:granada
 osasuna,   Osasuna|CA Osasuna|Club Atlético Osasuna,   city:pamplona
 celta,     Real Club Celta Vigo|Real Club Celta de Vigo, city:vigo
-deportivo, Deportivo de La Coruña|Deportivo da Coruña|Real Club Deportivo La Coruña, city:acoruna
+deportivo, Deportivo La Coruña|Deportivo de La Coruña|Deportivo da Coruña|Real Club Deportivo La Coruña, city:acoruna
 mallorca,  RCD Mallorca|Real CD Mallorca|Real Club Deportivo Mallorca, city:palma
 realsociedad, Real Sociedad|Real Sociedad de Fútbol, city:sansebastian
 valladolid, Real Valladolid|Real Valladolid CF|Real Valladolid Club de Fútbol, city:valladolid
