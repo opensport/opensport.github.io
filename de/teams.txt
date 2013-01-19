@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+###  bundesliga
+##  18 teams
 
 ## nb: three letter codes (tags) taken from official bundesliga.de site
 
