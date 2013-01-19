@@ -8,28 +8,27 @@
 ##
 ## official -> lfp.fr/ligue1 (french) / ligue1.com (english)
 ##
-## two/three letter codes from -> http://en.wikipedia.org/wiki/2012–13_Ligue_1
+## two/three letter codes from -> http://en.wikipedia.org/wiki/2012â€“13_Ligue_1
 
 paris,        Paris St. Germain|Paris S.Germai|Paris Saint Germain|Paris Saint-Germain, PSG,  city:paris
-montpellier,  HSC Montpellier|Montpellier|Montpellier Hérault SC,  MHS,     city:montpellier
+montpellier,  HSC Montpellier|Montpellier|Montpellier HÃ©rault SC,  MHS,     city:montpellier
 lille,        OSC Lille|Lille OSC|LOSC Lille,    LIL,         city:lille
 marseille,    Olympique Marseille|Olympique de Marseille,  OM,   city:marseille
 
-
 lyon,         Olympique Lyonnais,  OL, city:lyon
 bordeaux,     Girondins de Bordeaux|FC Girondins de Bordeaux|Football Club des Girondins de Bordeaux, BOR, city:bordeaux
-nice,         OGC Nice|Olympique Gymnaste Club Nice Côte d'Azur,  NIC,    city:nice
+nice,         OGC Nice|Olympique Gymnaste Club Nice CÃ´te d'Azur,  NIC,    city:nice
 rennes,       Stade Rennais FC|Stade Rennais Football Club, REN, city:rennes
 lorient,      FC Lorient,  LOR,  city:lorient
 valenciennes, Valenciennes FC,  VAL,  city:valenciennes
-saintetienne, AS Saint-Étienne|Association Sportive de Saint-Étienne Loire, STE, city:saintetienne
+saintetienne, AS Saint-Ã‰tienne|Association Sportive de Saint-Ã‰tienne Loire, STE, city:saintetienne
 toulouse,     Toulouse FC,  TFC,  city:toulouse
 bastia,       SC Bastia|Sporting Club de Bastia,  BAS,   city:bastia
 brest,        Stade Brestois|Stade Brestois 29,  BRS,  city:brest
-sochaux,      FC Sochaux-Montbéliard|Football Club Sochaux-Montbéliard, SOC, city:sochaux
+sochaux,      FC Sochaux-MontbÃ©liard|Football Club Sochaux-MontbÃ©liard, SOC, city:sochaux
 ajaccio,      AC Ajaccio|Athletic Club Ajaccio,   ACA,  city:ajaccio
-evian,        Évian TG|Évian TG FC|Évian Thonon Gaillard FC,  EVI, city:thononlesbains
+evian,        Ã‰vian TG|Ã‰vian TG FC|Ã‰vian Thonon Gaillard FC,  EVI, city:thononlesbains
 reims,        Stade de Reims|Stade Reims,  REI, city:reims
-troyes,       ES Troyes AC|ESTAC Troyes|Espérance Sportive Troyes Aube Champagne, TRO,   city:troyes
+troyes,       ES Troyes AC|ESTAC Troyes|EspÃ©rance Sportive Troyes Aube Champagne, TRO,   city:troyes
 nancy,        AS Nancy|AS Nancy-Lorraine|Association Sportive Nancy-Lorraine,  NAL, city:nancy
 
