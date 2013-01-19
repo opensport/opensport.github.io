@@ -5,32 +5,32 @@ gre, Greece, GRE, gr
 rus, Russia,     RUS, ru
 cze, Czech Republic,   CZE, cz
 ned, Netherlands,  NED, nl
-den, Dänemark,     DEN, dk
-ger, Deutschland|Germany,  GER, de
+den, Denmark,     DEN, dk
+ger, Germany,  GER, de
 por, Portugal,     POR, pt
-esp, Spanien|Spain,      ESP, es
-ita, Italien|Italy,      ITA, it
+esp, Spain,      ESP, es
+ita, Italy,      ITA, it
 irl, Irland,       IRL, ie
-cro, Kroatien|Croatia,     CRO, hr
+cro, Croatia,     CRO, hr
 ukr, Ukraine,      UKR, ua
-swe, Schweden|Sweden,     SWE, se
-fra, Frankreich|France,   FRA, fr
+swe, Sweden,     SWE, se
+fra, France,   FRA, fr
 eng, England,      ENG, en
 
 ## some more teams for wm quali
 
-fro, Färöer|Färöer Inseln,  FRO, fo
-kaz, Kasachstan,   KAZ, kz
-aut, Österreich|Austria,   AUT, at
-blr, Weißrussland, BLR, by
-fin, Finnland,     FIN, fi
-geo, Georgien,     GEO, ge
+fro, Faroe Islands,  FRO, fo
+kaz, Kazakhstan,   KAZ, kz
+aut, Austria,   AUT, at
+blr, Belarus, BLR, by
+fin, Finland,     FIN, fi
+geo, Georgia,     GEO, ge
   
 ## some more teams for wm 2010
 
-sui, Schweiz|Switzerland,      SUI, ch 
-srb, Serbien,      SRB, rs
-svn, Slowenien,    SVN, si
-svk, Slowakei,     SVK, sk
-tur, Türkei|Turkey,  TUR, tr
-rou, Rumänien|Romania,   ROU, ro
+sui, Switzerland,      SUI, ch 
+srb, Serbia,      SRB, rs
+svn, Slovenia,    SVN, si
+svk, Slovakia,     SVK, sk
+tur, Turkey,  TUR, tr
+rou, Romania,   ROU, ro
