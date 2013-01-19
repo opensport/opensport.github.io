@@ -5,6 +5,8 @@
 #  20 teams
 #  see -> http://es.wikipedia.org/wiki/Primera_División_de_España
 #      -> http://en.wikipedia.org/wiki/La_Liga
+#
+#  official -> lfp.es
 
 barcelona, FC Barcelona|Fútbol Club Barcelona,        city:barcelona
 espanyol,  Espanyol Barcelona|Real CD Espanyol|Real Club Deportivo Espanyol|Real Club Deportivo Español,  city:barcelona

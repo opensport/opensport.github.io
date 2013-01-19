@@ -35,7 +35,7 @@ fiorentina,   ACF Fiorentina|AC Firenze|Associazione Calcio Firenze Fiorentina, 
 
 palermo,      Palermo|US Palermo|Unione Sportiva Città di Palermo, PAL, city:palermo
 parma,        Parma FC|Parma Football Club, PAR, city:parma
-pescara,      Pescara Calcio,  PES,  city:pescara
+pescara,      Pescara Calcio|Delfino Pescara 1936,  PES,  city:pescara
 
 siena,        AC Siena|Associazione Calcio Siena, SIE, city:siena
 
