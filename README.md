@@ -16,12 +16,12 @@ Get a copy of the `sport.db` file. That's it.
 International w/ national teams (e.g. Austria, England, etc.)
 
 * [World Cup Quali 2012/13, World Cup 2010](https://github.com/geraldb/sport.db/tree/master/world)
-* [UEFA European Football Championship (Euro) 2012, 2008](https://github.com/geraldb/sport.db/tree/master/euro)
+* [UEFA European Football Championship (Euro) 2012, 2008](https://github.com/geraldb/sport.db/tree/master/europe)
 
 International w/ football club teams (e.g. FC Barcelona, Manchester Utd, etc.)
 
-* [UEFA Champions League 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/cl)
-* [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/cl)
+* [UEFA Champions League 2011/12, 2012/13](https://github.com/geraldb/sport.db/tree/master/club/europe)
+* [UEFA Europa League 2011/12](https://github.com/geraldb/sport.db/tree/master/club/europe)
 
 National leagues & cups w/ football club teams 
 
