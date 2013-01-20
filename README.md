@@ -1,7 +1,7 @@
 Welcome to `sport.db`
 =====================
 
-A Free Open Sports Database & Schema
+A Free Open Public Domain Sports Database & Schema
 
 ## Usage
 

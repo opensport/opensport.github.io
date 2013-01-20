@@ -1,6 +1,2 @@
-*.gem
-
-script/pkg
-
 # ignore komodo project files
 *.kpf
