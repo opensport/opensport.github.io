@@ -3,4 +3,8 @@
 
 *.kpf
 
+#############################
+# ignore dbs in root folder
+
+*.db
 

@@ -1,11 +1,29 @@
-Welcome to `sport.db`
-=====================
+# Welcome to `sport.db`
 
-A Free Open Public Domain Sports Database & Schema
+A free open public domain sports database & schema  
+for use in any (programming) language
+(e.g. uses plain text fixtures/data sets)
+
 
 ## Usage
 
-Get a copy of the `sport.db` file. That's it.
+Build yourself a copy of the `sport.db` from the plain text fixtures
+in three steps.
+
+Step 1:  Get a copy of the `world.db` fixtures
+
+    $ git clone git://github.com/geraldb/world.db.git
+
+Step 2:  Get a copy the `sport.db` fixtures
+
+    $ git clone git://github.com/geraldb/sport.db.git
+
+Step 3:  Let's build the `sport.db`
+
+    $ sportdb setup --include ./sport.db --worldinclude ./world.db
+
+That's it.
+
 
 ![](https://raw.github.com/geraldb/sport.db/master/i/sqlitestudio.png)
 
@@ -13,7 +31,7 @@ Get a copy of the `sport.db` file. That's it.
 
 ### Football (Soccer)
 
-See the [football.db docu](https://github.com/geraldb/football.db) for more.
+See the [football.db project](https://github.com/geraldb/football.db) for more.
 
 ### Hockey
 
@@ -107,45 +125,16 @@ The `sport.db` includes the following tables:
 
 ## Command Line Tool
 
-
-    sportdb - sport.db command line tool
-    
-    Usage: sportdb [options]
-      -c, --create                     Create DB Schema
-          --load                       Use Loader for Builtin Sports Data
-      -o, --output PATH                Output Path (default is .)
-      -i, --include PATH               Data Path (default is .)
-      -v, --version                    Show version
-          --verbose                    Show debug trace
-      -h, --help                       Show this message
-    
-    
-    Examples:
-       sportdb cl/teams cl/2012_13/cl                     # import champions league (cl)
-       sportdb -c                                         # create database schema
-
-
-See the [`sportdb` command line tool documentation](https://github.com/geraldb/sport.db.ruby) for more.
-
-
-## Build Your Own `sport.db` Version
-
-Step 1:  Create an empty database, that is, `sport.db`. Issue the command:
-
-    sportdb --create
-
-Step 2:  Add your events and game fixtures of choice. For example,
-let's use the Champions League 2012/13 and the World Cup 2012/13 Quali events and fixtures:
-
-    sportdb --include <your_path_to_fixtures> cl/teams cl/2012_13/cl
-    sportdb --include <your_path_to_fixtures> euro/teams world/2012_13/quali_2012_13
-
-That's it.
+To build your own `sport.db` copy
+use the `sportdb` command line tool.
+See the [`sportdb` command line tool project](https://github.com/geraldb/sport.db.ruby)
+for more.
 
 
 ## Plain Text Fixtures
 
-The `sportdb` lets you import fixtures in plain text. Example:
+The `sportdb` command line tool
+lets you import fixtures in plain text. Example:
 
 ```
 Spieltag 5
@@ -177,6 +166,8 @@ TBD
 ## Real World Usage
 
 [sport.db Web Admin](https://github.com/geraldb/sport.db.admin) - `sport.db` Web Admin Tool in Ruby on Rails (version 3.2 and up).
+
+[sport.db JSON API Service](https://github.com/geraldb/sport.db.api) -  `sport.db` Web Service / JSON API Service Sample
 
 [Sportbook](http://geraldb.github.com/sportbook) - A free, open source sports betting pool
 in Ruby on Rails (version 3.2 and up). 
