@@ -31,7 +31,15 @@ That's it.
 
 ### Football (Soccer)
 
-See the [`football.db` project](https://github.com/geraldb/football.db) for more.
+See the [`football.db` project](https://github.com/openfootball) for more.
+
+### Formula 1
+
+See the [`formula1.db` project](https://github.com/geraldb/formula1.db) for more.
+
+### (Alpine) Ski 
+
+See the [`ski.db` project](https://github.com/geraldb/ski.db) for more.
 
 ### (Ice) Hockey
 
@@ -128,10 +136,8 @@ The `sport.db` includes the following tables:
 
 ## Command Line Tool
 
-To build your own `sport.db` copy
-use the `sportdb` command line tool.
-See the [`sportdb` command line tool project](https://github.com/geraldb/sport.db.ruby)
-for more.
+To build your own `sport.db` copy use the `sportdb` command line tool.
+See the [`sportdb` command line tool project](https://github.com/geraldb/sport.db.ruby) for more.
 
 
 ## Plain Text Fixtures
@@ -140,30 +146,13 @@ The `sportdb` command line tool
 lets you import fixtures in plain text. Example:
 
 ```
-Spieltag 5
+Matchday 5
 
-23.09. 13:30   Liverpool FC - Manchester United  1:2
-23.09. 15:00   Newcastle United - Norwich City  1:0
-23.09. 16:00   Manchester City - Arsenal FC  1:1
+23.09. 13:30   Liverpool FC      - Manchester United  1:2
+23.09. 15:00   Newcastle United  - Norwich City  1:0
+23.09. 16:00   Manchester City   - Arsenal FC  1:1
 23.09. 16:00   Tottenham Hotspur - Queens Park Rangers  2:1
 ```
-
-The plain text format skips comments (starting with `#`) and blank lines. Example:
-
-```
-###
-#  Premier League
-#  - more info -> http://premierleague.com (official site)
-#                 http://en.wikipedia.org/wiki/Premier_League
-```
-
-### Format for Rounds
-
-TBD
-
-### Format for Fixtures
-
-TBD
 
 
 ## Real World Usage
