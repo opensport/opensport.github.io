@@ -161,7 +161,7 @@ Matchday 5
 
 [sport.db JSON API Service](https://github.com/geraldb/sport.db.api) -  `sport.db` Web Service / JSON API Service Sample
 
-[Sportbook](http://geraldb.github.com/sportbook) - A free, open source sports betting pool
+[Sportbook](https://github.com/geraldb/sportbook) - A free, open source sports betting pool
 in Ruby on Rails (version 3.2 and up). 
 
 
