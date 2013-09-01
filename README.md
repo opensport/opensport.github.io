@@ -14,28 +14,6 @@ Matchday 5
 23.09. 16:00   Tottenham Hotspur  2-1  Queens Park Rangers
 ```
 
-
-## Usage
-
-Build yourself a copy of the `sport.db` from the plain text fixtures
-in three steps.
-
-Step 1:  Get a copy of the `world.db` fixtures
-
-    $ git clone git://github.com/geraldb/world.db.git
-
-Step 2:  Get a copy the `sport.db` fixtures
-
-    $ git clone git://github.com/geraldb/sport.db.git
-
-Step 3:  Let's build the `sport.db`
-
-    $ sportdb setup --include ./sport.db --worldinclude ./world.db
-
-That's it.
-
-
-
 ## Event Data Sets
 
 ### Football (Soccer)
@@ -63,23 +41,46 @@ Anything missing? Add your leagues, teams, fixtures and more.
 
 
 
+## Usage
+
+Build yourself a copy of the `sport.db` from the plain text fixtures
+in three steps.
+
+Step 1:  Get a copy of the `world.db` fixtures
+
+    $ git clone git://github.com/geraldb/world.db.git
+
+Step 2:  Get a copy the `sport.db` fixtures
+
+    $ git clone git://github.com/geraldb/sport.db.git
+
+Step 3:  Let's build the `sport.db`
+
+    $ sportdb setup --include ./sport.db --worldinclude ./world.db
+
+That's it.
+
+
+## Command Line Tool
+
+Use the `sportdb` command line tool to build your own `sport.db` copy.
+See the [`sportdb` command line tool project](https://github.com/geraldb/sport.db.ruby) for more.
+
+
+
 ## Tables, Schema
 
 The `sport.db` includes the following tables:
 
 * teams
 * games
+* leagues
+* seasons
 * events
   * events_teams (join table)
 * rounds
 * groups
   * groups_teams (join table)
-
-
-## Command Line Tool
-
-To build your own `sport.db` copy use the `sportdb` command line tool.
-See the [`sportdb` command line tool project](https://github.com/geraldb/sport.db.ruby) for more.
 
 
 
