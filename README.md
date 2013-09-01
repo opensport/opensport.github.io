@@ -14,7 +14,7 @@ Matchday 5
 23.09. 16:00   Tottenham Hotspur  2-1  Queens Park Rangers
 ```
 
-## Event Data Sets
+## Data Sets
 
 ### Football (Soccer)
 
