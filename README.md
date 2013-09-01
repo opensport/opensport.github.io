@@ -2,7 +2,17 @@
 
 A free open public domain sports database & schema
 for use in any (programming) language
-(e.g. uses plain text fixtures/data sets)
+(e.g. uses plain text fixtures/data sets). Example:
+
+
+```
+Matchday 5
+
+23.09. 13:30   Liverpool FC       1-2  Manchester United
+23.09. 15:00   Newcastle United   1-0  Norwich City
+23.09. 16:00   Manchester City    1-1  Arsenal FC
+23.09. 16:00   Tottenham Hotspur  2-1  Queens Park Rangers
+```
 
 
 ## Usage
@@ -25,9 +35,8 @@ Step 3:  Let's build the `sport.db`
 That's it.
 
 
-![](https://raw.github.com/geraldb/sport.db/master/i/sqlitestudio.png)
 
-## Events
+## Event Data Sets
 
 ### Football (Soccer)
 
@@ -43,19 +52,15 @@ See the [`ski.db` project](https://github.com/geraldb/ski.db) for more.
 
 ### (Ice) Hockey
 
-* [National Hockey League (NHL) 2012](https://github.com/geraldb/sport.db/tree/master/nhl)
+* [National Hockey League (NHL)](https://github.com/geraldb/sport.db/tree/master/nhl)
 
 ### American Football
 
-* [Nation Football League (NFL) 2012](https://github.com/geraldb/sport.db/tree/master/nfl)
+* [Nation Football League (NFL)](https://github.com/geraldb/sport.db/tree/master/nfl)
+
 
 Anything missing? Add your leagues, teams, fixtures and more.
 
-
-## Demo
-
-Try the `sport.db` Web Admin demo running
-on Heroku [`sportdbdemo.herokuapp.com`](http://sportdbdemo.herokuapp.com).
 
 
 ## Tables, Schema
@@ -71,98 +76,20 @@ The `sport.db` includes the following tables:
   * groups_teams (join table)
 
 
-[add schema pic here]
-
-
-###  `teams` Table
-
-[tbd]
-
-    CREATE TABLE teams ( 
-        id         INTEGER         PRIMARY KEY AUTOINCREMENT NOT NULL,
-        title      VARCHAR( 255 )  NOT NULL,
-        title2     VARCHAR( 255 ),
-        [key]      VARCHAR( 255 )  NOT NULL,
-        tag        VARCHAR( 255 ),
-        created_at DATETIME        NOT NULL,
-        updated_at DATETIME        NOT NULL 
-    );
-
-
-###  `games` Table
-
-[tbd]
-
-    CREATE TABLE games ( 
-        id           INTEGER         PRIMARY KEY AUTOINCREMENT NOT NULL,
-        round_id     INTEGER         NOT NULL,
-        pos          INTEGER         NOT NULL,
-        group_id     INTEGER,
-        team1_id     INTEGER         NOT NULL,
-        team2_id     INTEGER         NOT NULL,
-        play_at      DATETIME        NOT NULL,
-        knockout     BOOLEAN         DEFAULT 'f'   NOT NULL,
-        home         BOOLEAN         DEFAULT 't'   NOT NULL,
-        score1       INTEGER,
-        score2       INTEGER,
-        score3       INTEGER,
-        score4       INTEGER,
-        score5       INTEGER,
-        score6       INTEGER,
-        next_game_id INTEGER,
-        prev_game_id INTEGER,
-        toto12x      VARCHAR( 255 ),
-        [key]        VARCHAR( 255 ),
-        created_at   DATETIME        NOT NULL,
-        updated_at   DATETIME        NOT NULL 
-    );
-
-
-###  `events` Table
-
-[tbd]
-
-    CREATE TABLE events ( 
-        id         INTEGER         PRIMARY KEY AUTOINCREMENT NOT NULL,
-        title      VARCHAR( 255 )  NOT NULL,
-        [key]      VARCHAR( 255 )  NOT NULL,
-        start_at   DATETIME        NOT NULL,
-        created_at DATETIME        NOT NULL,
-        updated_at DATETIME        NOT NULL 
-    );
-
-
-
-
 ## Command Line Tool
 
 To build your own `sport.db` copy use the `sportdb` command line tool.
 See the [`sportdb` command line tool project](https://github.com/geraldb/sport.db.ruby) for more.
 
 
-## Plain Text Fixtures
-
-The `sportdb` command line tool
-lets you import fixtures in plain text. Example:
-
-```
-Matchday 5
-
-23.09. 13:30   Liverpool FC      - Manchester United  1:2
-23.09. 15:00   Newcastle United  - Norwich City  1:0
-23.09. 16:00   Manchester City   - Arsenal FC  1:1
-23.09. 16:00   Tottenham Hotspur - Queens Park Rangers  2:1
-```
-
 
 ## Real World Usage
 
 [sport.db Web Admin](https://github.com/geraldb/sport.db.admin) - `sport.db` Web Admin Tool in Ruby on Rails (version 3.2 and up).
 
-[sport.db JSON API Service](https://github.com/geraldb/sport.db.api) -  `sport.db` Web Service / JSON API Service Sample
+[sport.db HTTP JSON API Web Service](https://github.com/geraldb/sport.db.ruby) -  `sport.db` Web Service / HTTP JSON API
 
-[Sportbook](https://github.com/geraldb/sportbook) - A free, open source sports betting pool
-in Ruby on Rails (version 3.2 and up). 
+[Sportbook](https://github.com/openbookie/sportbook) - A free, open source sports betting pool in Ruby on Rails (version 3.2 and up). 
 
 
 ## Alternatives
@@ -179,4 +106,5 @@ Use it as you please with no restrictions whatsoever.
 
 ## Questions? Comments?
 
-Send them along to the [Open Sports Database & Friends Forum/Mailing List](http://groups.google.com/group/opensport). Thanks!
+Send them along to the [Open Sports Database & Friends Forum/Mailing List](http://groups.google.com/group/opensport).
+Thanks!
