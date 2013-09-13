@@ -1,6 +1,6 @@
 # Welcome to `sport.db`
 
-A free open public domain sports database & schema
+A free open public domain sports database 'n' schema
 for use in any (programming) language
 (e.g. uses plain text fixtures/data sets). 
 
@@ -51,9 +51,10 @@ See the [`ski.db` project](https://github.com/geraldb/ski.db) for more.
 See the [`nfl.db` project](https://github.com/geraldb/nfl.db) for more.
 
 
-### (Ice) Hockey
+### (Ice) Hockey / National Hockey League (NHL) 
 
-* [National Hockey League (NHL)](https://github.com/geraldb/sport.db/tree/master/nhl)
+See the [`nhl.db` project](https://github.com/geraldb/nhl.db) for more.
+
 
 
 Anything missing? Add your leagues, teams, fixtures and more.
@@ -80,7 +81,9 @@ The `sport.db` includes the following tables:
 * rounds
 * groups
   * groups_teams (join table)
-
+* tracks
+* races
+* records
 
 
 ## Real World Usage
