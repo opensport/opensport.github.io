@@ -48,12 +48,12 @@ See the [`ski.db` project](https://github.com/geraldb/ski.db) for more.
 
 ### American Football / Nation Football League (NFL)
 
-See the [`nfl.db` project](https://github.com/geraldb/nfl.db) for more.
+See the [`american-football.db` project](https://github.com/geraldb/american-football.db) for more.
 
 
 ### (Ice) Hockey / National Hockey League (NHL) 
 
-See the [`nhl.db` project](https://github.com/geraldb/nhl.db) for more.
+See the [`hockey.db` project](https://github.com/geraldb/hockey.db) for more.
 
 
 
