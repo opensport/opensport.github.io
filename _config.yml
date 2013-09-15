@@ -1,0 +1,10 @@
+## markdown: redcarpet
+
+markdown: kramdown
+
+
+exclude: ['README.md']
+
+safe: true
+lsi: false
+
