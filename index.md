@@ -10,7 +10,6 @@ Contents:
 
 * [What's `sport.db`?](#whatis)
 * [Data Sets](#data-sets)
-    * [Football (Soccer)](#football)
     * [Formula 1](#formula1)
     * [(Alpine) Ski](#ski)
     * [American Football / Nation Football League (NFL)](#american-football)
@@ -30,19 +29,6 @@ for use in any (programming) language (e.g. uses plain text fixtures/data sets).
 
 ## Data Sets  {#data-sets}
 
-### Football (Soccer)   {#football}
-
-See the [Open Football Data (`football.db`) repos](https://github.com/openfootball) for more.
-Example:
-
-~~~
-Matchday 5
-
-23.09. 13:30   Liverpool FC       1-2  Manchester United
-23.09. 15:00   Newcastle United   1-0  Norwich City
-23.09. 16:00   Manchester City    1-1  Arsenal FC
-23.09. 16:00   Tottenham Hotspur  2-1  Queens Park Rangers
-~~~
 
 ### Formula 1   {#formula1}
 
@@ -50,7 +36,7 @@ See the [`formula1.db` repo](https://github.com/opensport/formula1.db) for more.
 Example:
 
 ~~~
-############################################################
+##########################################################
 # Grand Prix Monaco 2013 - Round 6 of 19 // 26 May 2013 
 
 # | Pos | Driver | Team | Laps | Time/Retired
@@ -64,20 +50,87 @@ Example:
 7 Fernando Alonso Ferrari 78 +26.7 secs
 ~~~
 
+
 ### (Alpine) Ski  {#ski}
 
 See the [`ski.db` repo](https://github.com/opensport/ski.db) for more.
+Example:
 
+~~~
+#############################
+# Ski Alpine 2013/14 - Men
+
+(1)  27 Oct 2013  9:30  Sölden (AUT)       / Riesenslalom
+
+(2)  17 Nov 2013 10:00  Levi (FIN)         / Slalom
+(3)  30 Nov 2013 20:00  Lake Louise (CAN)  / Abfahrt
+
+(4)   1 Dec 2013 19:00  Lake Louise (CAN)  / Super G
+(5)   6 Dec 2013 19:00  Beaver Creek (USA) / Abfahrt
+(6)   7 Dec 2013 18:45  Beaver Creek (USA) / Super G
+(7)   8 Dec 2013 17:45  Beaver Creek (USA) / Riesenslalom
+(8)  14 Dec 2013 10:00  Val d'Isere (FRA)  / Riesenslalom
+(9)  15 Dec 2013  9:30  Val d'Isere (FRA)  / Slalom
+(10) 20 Dec 2013 12:15  Val Gardena (ITA)  / Super G
+(11) 21 Dec 2013 12:15  Val d'Isere (FRA)  / Abfahrt
+(12) 22 Dec 2013  9:30  Alta Badia (ITA)   / Riesenslalom
+
+~~~
 
 ### American Football / Nation Football League (NFL) {#american-football}
 
 See the [`american-football.db` repo](https://github.com/opensport/american-football.db) for more.
+Example:
+
+~~~
+###################################################
+# National Football League (NFL) 2012/13 Playoffs
+
+(19) Round 19 - Divisional Playoffs  (Knockout)
+
+Jan/12  Baltimore Ravens   38-35  Denver Broncos        (AFC)  # Sports Authority Field
+Jan/13  Houston Texans     28-41  New England Patriots  (AFC)  # Gillette Stadium
+
+Jan/12  Green Bay Backers  31-45  San Francisco 49ers  (NFC)   # Candlestick Park
+Jan/13  Seattle Seahawks   28-30  Atlanta Falcons      (NFC)   # Georgia Dome
+
+
+(20) Round 20 - Conference Championships (Knockout)
+
+Jan/20  Baltimore Ravens      28-13  New England Patriots   (AFC Championship)   # Gillette Stadium
+Jan/20  San Francisco 49ers   28-24  Atlanta Falcons        (NFC Championsip)    # Georgia Dome
+
+
+##########################
+# Super Bowl XLVII
+
+(21) Round 21 - Super Bowl XLVII  (Knockout)   //  February 3
+
+Feb/3  Baltimore Ravens   34-31 (7-3, 14-3, 7-17, 6-8)  San Francisco 49ers   # Superdome  - New Orleans, Louisiana
+~~~
 
 
 ### (Ice) Hockey / National Hockey League (NHL)  {#hockey}
 
-See the [`hockey.db` repo](https://github.com/opensport/hockey.db) for more.
+See the [`hockey.db` repo](https://github.com/opensport/hockey.db) for more. Example:
 
+~~~
+######################################
+# National Hockey League (NHL) Teams
+
+njdevils,     New Jersey Devils,   East/Atlantic, NJD, us, city:newark
+nyislanders,  New York Islanders,  East/Atlantic, NYI, us, city:newyork
+nyrangers,    New York Rangers,    East/Atlantic, NYR, us, city:newyork
+phiflyers,    Philadelphia Flyers, East/Atlantic, PHI, us, city:philadelphia
+pitpenguins,  Pittsburgh Penguins, East/Atlantic, PIT, us, city:pittsburgh
+
+bosbruis,   Boston Bruis,        East/Northeast, BOS, us, city:boston
+bufabres,  Buffalo Sabres,      East/Northeast, BUF, us, city:buffalo
+montreal, Montreal Canadiens,  East/Northeast, MTL, ca, city:montreal
+ottawa,   Ottawa Senators,     East/Northeast, OTT, ca, city:ottawa
+toronto,  Toronto Maple Leafs, East/Northeast, TOR, ca, city:toronto
+...
+~~~
 
 
 Anything missing? Add your leagues, teams, fixtures and more.
